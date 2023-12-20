@@ -1,3 +1,6 @@
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
+
 // @ts-check
 // `@type` JSDoc annotations allow editor autocompletion and type checking
 // (when paired with `@ts-check`).
@@ -7,7 +10,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
-const config = {
+const config:Config = {
   title: "My Site",
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
@@ -56,7 +59,7 @@ const config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
-      }),
+      }) satisfies Preset.Options,
     ],
   ],
 
@@ -135,7 +138,7 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-    }),
+    }) satisfies Preset.ThemeConfig,
 
   plugins: [
     async function myPlugin(context, options) {
