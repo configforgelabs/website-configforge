@@ -1,8 +1,9 @@
 ---
 slug: long-blog-post
 title: Long Blog Post
-authors: endi
+authors: tobias
 tags: [hello, docusaurus]
+image: https://i.imgur.com/mErPwqL.png
 ---
 
 This is the summary of a very long blog post,

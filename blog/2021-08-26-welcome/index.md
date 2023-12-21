@@ -1,8 +1,9 @@
 ---
 slug: welcome
 title: Welcome
-authors: [slorber, yangshun]
+authors: tobias
 tags: [facebook, hello, docusaurus]
+image: https://i.imgur.com/mErPwqL.png
 ---
 
 [Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
