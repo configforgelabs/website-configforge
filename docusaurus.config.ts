@@ -1,5 +1,6 @@
-import type { Config } from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import path from "node:path";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 // @ts-check
 // `@type` JSDoc annotations allow editor autocompletion and type checking
@@ -8,6 +9,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from "prism-react-renderer";
+import { GiscusConfig } from "./src/components/Comment";
 
 /** @type {import('@docusaurus/types').Config} */
 const config: Config = {
@@ -41,31 +43,30 @@ const config: Config = {
     [
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/justinnio/website/edit/main/",
+          editUrl: "https://github.com/justinnio/website/edit/main/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/justinnio/website/edit/main/",
+          editUrl: "https://github.com/justinnio/website/edit/main/",
+          authorsMapPath: "authors.yml",
         },
         theme: {
           customCss: "./src/css/custom.css",
         },
-      }) satisfies Preset.Options,
+      } satisfies Preset.Options,
     ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
@@ -138,9 +139,19 @@ const config: Config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-    }) satisfies Preset.ThemeConfig,
+      giscus: {
+        repo: "kuizuo/blog",
+        repoId: "MDEwOlJlcG9zaXRvcnkzOTc2MjU2MTI=",
+        category: "General",
+        categoryId: "DIC_kwDOF7NJDM4CPK95",
+        theme: "light",
+        darkTheme: "dark_dimmed",
+      } satisfies Partial<GiscusConfig>,
+    } satisfies Preset.ThemeConfig,
 
   plugins: [
+    "docusaurus-plugin-sass",
+
     async function myPlugin(context, options) {
       return {
         name: "docusaurus-tailwindcss",
