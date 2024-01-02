@@ -31,15 +31,13 @@ export default function BlogPostGridItems({
 }: BlogPostItemsProps): JSX.Element {
   return (
     <>
-      {items.map(({ content: BlogPostContent }, i) => {
-
-
-        const { metadata: blogMetaData, frontMatter, ...rest } = BlogPostContent;
-
-        console.log("frontMatter", frontMatter, rest)
+      {items.map(({ content: BlogPostContent, ...rest }, i) => {
+        const { metadata: blogMetaData, frontMatter } = BlogPostContent;
 
         const { title, image } = frontMatter;
-        const { permalink, date, tags } = blogMetaData;
+        const { permalink, date, tags, authors } = blogMetaData;
+
+        const authorData = authors.length > 0 ? authors[0] : null;
         const dateObj = new Date(date);
         const dateString = `${dateObj.getFullYear()}-${(
           "0" +
@@ -78,56 +76,23 @@ export default function BlogPostGridItems({
               office.
             </p>
             <div className="flex items-center space-x-4">
-              <img
-                className="w-10 h-10 rounded-full"
-                src={
-                  "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
-                }
-                alt="Jese Leos avatar"
-              />
+              {authorData && authorData.imageURL && (
+                <img
+                  className="w-10 h-10 rounded-full"
+                  src={authorData.imageURL}
+                  alt="Jese Leos avatar"
+                />
+              )}
+
               <div className="font-medium dark:text-white">
-                <div>Jese Leos</div>
+                {authorData && <div>{authorData.name}</div>}
+
                 <div className="text-sm font-normal text-gray-500 dark:text-gray-400">
                   {dateString} · 16 min read
                 </div>
               </div>
             </div>
           </article>
-
-          // <div key={blogMetaData.permalink}>
-          //   <Link to={permalink} className={styles.itemTitle}>
-          //     {title}
-          //   </Link>
-          //   <div className={styles.itemTags}>
-          //     {tags.length > 0 && (
-          //       <>
-          //         <svg width="1em" height="1em" viewBox="0 0 24 24">
-          //           <path
-          //             fill="currentColor"
-          //             fill-rule="evenodd"
-          //             d="M10 15h4V9h-4v6Zm0 2v3a1 1 0 0 1-2 0v-3H5a1 1 0 0 1 0-2h3V9H5a1 1 0 1 1 0-2h3V4a1 1 0 1 1 2 0v3h4V4a1 1 0 0 1 2 0v3h3a1 1 0 0 1 0 2h-3v6h3a1 1 0 0 1 0 2h-3v3a1 1 0 0 1-2 0v-3h-4Z"
-          //           ></path>
-          //         </svg>
-          //         {tags
-          //           .slice(0, 2)
-          //           .map(({ label, permalink: tagPermalink }, index) => {
-          //             return (
-          //               <>
-          //                 {index !== 0 && "/"}
-          //                 <Tag
-          //                   label={label}
-          //                   permalink={tagPermalink}
-          //                   key={tagPermalink}
-          //                   className={"tag"}
-          //                 />
-          //               </>
-          //             );
-          //           })}
-          //       </>
-          //     )}
-          //   </div>
-          //   <div className={styles.itemDate}>{dateString}</div>
-          // </div>
         );
       })}
     </>

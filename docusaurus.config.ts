@@ -55,7 +55,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/justinnio/website/edit/main/",
-          authorsMapPath: "authors1.yml",
+          authorsMapPath: "authors.yml",
         },
         theme: {
           customCss: "./src/css/custom.css",

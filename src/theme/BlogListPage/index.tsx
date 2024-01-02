@@ -10,7 +10,6 @@ import type { Props } from "@theme/BlogListPage";
 
 import SearchMetadata from "@theme/SearchMetadata";
 
-
 import MyLayout from "../MyLayout";
 import BlogPostGridItems from "../BlogPostGridItems";
 
