@@ -7,13 +7,10 @@ import {
 } from "@docusaurus/theme-common";
 import BackToTopButton from "@theme/BackToTopButton";
 import type { Props } from "@theme/BlogListPage";
-import BlogListPaginator from "@theme/BlogListPaginator";
-import BlogPostItems from "@theme/BlogPostItems";
+
 import SearchMetadata from "@theme/SearchMetadata";
 
-import Translate from "@docusaurus/Translate";
 
-import styles from "./styles.module.scss";
 import MyLayout from "../MyLayout";
 import BlogPostGridItems from "../BlogPostGridItems";
 
