@@ -7,9 +7,9 @@ import {
 } from "@docusaurus/theme-common";
 import BackToTopButton from "@theme/BackToTopButton";
 import type { Props } from "@theme/BlogListPage";
-
+import BlogListPaginator from "@theme/BlogListPaginator";
 import SearchMetadata from "@theme/SearchMetadata";
-
+import BlogLayout from "@theme/BlogLayout";
 import MyLayout from "../MyLayout";
 import BlogPostGridItems from "../BlogPostGridItems";
 
@@ -29,7 +29,7 @@ function BlogListPageContent(props: Props) {
   const { metadata, items } = props;
 
   return (
-    <MyLayout>
+    <BlogLayout>
       <section className="bg-white dark:bg-gray-900">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
@@ -43,11 +43,14 @@ function BlogListPageContent(props: Props) {
           </div>
         </div>
       </section>
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-4">
         <BlogPostGridItems items={items} />
       </div>
+      <div className="mt-4">
+        <BlogListPaginator metadata={metadata} />
+      </div>
       <BackToTopButton />
-    </MyLayout>
+    </BlogLayout>
   );
 }
 

@@ -31,11 +31,14 @@ export default function BlogPostGridItems({
 }: BlogPostItemsProps): JSX.Element {
   return (
     <>
-      {items.map(({ content: BlogPostContent, ...rest }, i) => {
-        const { metadata: blogMetaData, frontMatter } = BlogPostContent;
+      {items.map(({ content: BlogPostContent,  }, i) => {
+        const { metadata: blogMetaData, frontMatter, assets, ...rest } = BlogPostContent;
 
-        const { title, image } = frontMatter;
-        const { permalink, date, tags, authors } = blogMetaData;
+        const { title, image: frontMatterImage } = frontMatter;
+
+        const image = assets.image ?? frontMatterImage
+
+        const { permalink, date, tags, authors, description } = blogMetaData;
 
         const authorData = authors.length > 0 ? authors[0] : null;
         const dateObj = new Date(date);
@@ -49,7 +52,7 @@ export default function BlogPostGridItems({
             <a href="#">
               <img
                 className="mb-5 rounded-lg"
-                src={image}
+                src={image} 
                 alt="office laptop working"
               />
             </a>
@@ -71,9 +74,7 @@ export default function BlogPostGridItems({
               </Link>
             </h2>
             <p className="mb-4 font-light text-gray-500 dark:text-gray-400">
-              Over the past year, Volosoft has undergone many changes! After
-              months of preparation and some hard work, we moved to our new
-              office.
+              {description}
             </p>
             <div className="flex items-center space-x-4">
               {authorData && authorData.imageURL && (
