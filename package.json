@@ -11,7 +11,8 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "pull": "cross-var docu-notion -n %DOCU_NOTION_INTEGRATION_TOKEN% -r %DOCU_NOTION_ROOT_PAGE%"
   },
   "dependencies": {
     "@docusaurus/core": "3.0.1",
@@ -19,8 +20,10 @@
     "@giscus/react": "^2.4.0",
     "@iconify/react": "^4.1.1",
     "@mdx-js/react": "^3.0.0",
+    "@sillsdev/docu-notion": "^0.15.0",
     "autoprefixer": "^10.4.16",
     "clsx": "^2.0.0",
+    "cross-var": "^1.1.0",
     "dayjs": "^1.11.10",
     "docusaurus-plugin-sass": "^0.2.5",
     "dotenv": "^16.3.1",
