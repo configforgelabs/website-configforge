@@ -59,6 +59,7 @@ const config: Config = {
           editUrl: "https://github.com/justinnio/website/edit/main/",
           authorsMapPath: "authors.yml",
           postsPerPage: Number(process.env.REACT_APP_POSTS_PER_PAGE),
+          blogPostComponent: '@theme/BlogPostPage',
         },
         theme: {
           customCss: "./src/css/custom.css",
