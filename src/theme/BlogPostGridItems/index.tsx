@@ -31,12 +31,17 @@ export default function BlogPostGridItems({
 }: BlogPostItemsProps): JSX.Element {
   return (
     <>
-      {items.map(({ content: BlogPostContent,  }, i) => {
-        const { metadata: blogMetaData, frontMatter, assets, ...rest } = BlogPostContent;
+      {items.map(({ content: BlogPostContent }, i) => {
+        const {
+          metadata: blogMetaData,
+          frontMatter,
+          assets,
+          ...rest
+        } = BlogPostContent;
 
         const { title, image: frontMatterImage } = frontMatter;
 
-        const image = assets.image ?? frontMatterImage
+        const image = assets.image ?? frontMatterImage;
 
         const { permalink, date, tags, authors, description } = blogMetaData;
 
@@ -49,13 +54,13 @@ export default function BlogPostGridItems({
 
         return (
           <article className="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
+            <Link to={permalink}>
               <img
                 className="mb-5 rounded-lg"
-                src={image} 
+                src={image}
                 alt="office laptop working"
               />
-            </a>
+            </Link>
             {tags.length > 0 &&
               tags.map((tag) => {
                 return (
