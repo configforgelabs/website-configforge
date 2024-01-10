@@ -1,6 +1,7 @@
 import path from "node:path";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import 'dotenv/config';
 
 // @ts-check
 // `@type` JSDoc annotations allow editor autocompletion and type checking
@@ -10,6 +11,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 import { themes as prismThemes } from "prism-react-renderer";
 import { GiscusConfig } from "./src/components/Comment";
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config: Config = {
@@ -56,6 +58,8 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/justinnio/website/edit/main/",
           authorsMapPath: "authors.yml",
+          postsPerPage: Number(process.env.REACT_APP_POSTS_PER_PAGE),
+          blogPostComponent: '@theme/BlogPostPage',
         },
         theme: {
           customCss: "./src/css/custom.css",
