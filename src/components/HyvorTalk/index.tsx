@@ -20,7 +20,6 @@ export default function HyvorTalkComponent() {
                 'comment:published': () => console.log('Comment published'),
             }}
         />
-
     );
 
 
