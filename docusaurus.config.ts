@@ -1,7 +1,7 @@
 import path from "node:path";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
-import 'dotenv/config';
+import "dotenv/config";
 
 // @ts-check
 // `@type` JSDoc annotations allow editor autocompletion and type checking
@@ -11,7 +11,6 @@ import 'dotenv/config';
 
 import { themes as prismThemes } from "prism-react-renderer";
 import { GiscusConfig } from "./src/components/Comment";
-
 
 /** @type {import('@docusaurus/types').Config} */
 const config: Config = {
@@ -46,12 +45,6 @@ const config: Config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       {
-        docs: {
-          sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/justinnio/website/edit/main/",
-        },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
@@ -59,8 +52,9 @@ const config: Config = {
           editUrl: "https://github.com/justinnio/website/edit/main/",
           authorsMapPath: "authors.yml",
           postsPerPage: Number(process.env.REACT_APP_POSTS_PER_PAGE),
-          blogPostComponent: '@theme/BlogPostPage',
+          blogPostComponent: "@theme/BlogPostPage",
         },
+        docs: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -80,12 +74,7 @@ const config: Config = {
           src: "img/logo.svg",
         },
         items: [
-          {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
-            position: "left",
-            label: "Tutorial",
-          },
+          { to: "/docs", label: "Knowledge Base", position: "left" },
           { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/facebook/docusaurus",
@@ -155,6 +144,14 @@ const config: Config = {
 
   plugins: [
     "docusaurus-plugin-sass",
+    [
+      "./src/plugin/plugin-content-docs",
+      {
+        path: "docs",
+        sidebarPath: "./sidebars.ts",
+        editUrl: "https://github.com/justinnio/website/edit/main/",
+      },
+    ],
 
     async function myPlugin(context, options) {
       return {
