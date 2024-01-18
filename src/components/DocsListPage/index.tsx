@@ -3,7 +3,7 @@ import useGlobalData, { usePluginData } from "@docusaurus/useGlobalData";
 import MyLayout from "@site/src/theme/MyLayout";
 import DocCard from "../DocCard";
 
-export default function Blogs() {
+export default function DocsListPage() {
   const globalData = useGlobalData();
 
   const docs =
