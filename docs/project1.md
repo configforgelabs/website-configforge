@@ -6,6 +6,7 @@ tags:
   - Test
   - Azure
   - Project
+image: https://i.imgur.com/mErPwqL.png
 ---
 
 This is the project description.
