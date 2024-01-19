@@ -144,14 +144,6 @@ const config: Config = {
 
   plugins: [
     "docusaurus-plugin-sass",
-    [
-      "./src/plugin/plugin-content-docs",
-      {
-        path: "docs",
-        sidebarPath: "./sidebars.ts",
-        editUrl: "https://github.com/justinnio/website/edit/main/",
-      },
-    ],
 
     async function myPlugin(context, options) {
       return {
