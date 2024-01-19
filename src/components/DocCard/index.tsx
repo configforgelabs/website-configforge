@@ -6,7 +6,7 @@ export default function DocCard({ item }) {
 
   return (
     <article className="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      {frontMatterImage && (
+      {/* {frontMatterImage && (
         <Link to={permalink}>
           <img
             className="mb-5 rounded-lg"
@@ -14,7 +14,7 @@ export default function DocCard({ item }) {
             alt="office laptop working"
           />
         </Link>
-      )}
+      )} */}
       {tags.length > 0 &&
         tags.map((tag) => {
           return (
