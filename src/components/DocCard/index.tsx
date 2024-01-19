@@ -1,6 +1,6 @@
 import Link from "@docusaurus/Link";
 
-export default function DocItem({ item }) {
+export default function DocCard({ item }) {
   const { permalink, title } = item;
 
   return (

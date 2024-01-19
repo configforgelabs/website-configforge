@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: lts/*
       - name: Install dependencies
-        run: npm run install
+        run: npm i
       - name: Pull from Notion
         env:
           DOCU_NOTION_INTEGRATION_TOKEN: ${{ secrets.DOCU_NOTION_INTEGRATION_TOKEN }}

@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import MyLayout from "../theme/MyLayout";
-import BlogPostGridItems from "../theme/BlogPostGridItems";
 import useGlobalData, { usePluginData } from "@docusaurus/useGlobalData";
-import DocItem from "../components/DocItem";
+import MyLayout from "@site/src/theme/MyLayout";
+import DocCard from "../DocCard";
 
-export default function Blogs() {
+export default function DocsListPage() {
   const globalData = useGlobalData();
 
   const docs =
@@ -26,7 +25,7 @@ export default function Blogs() {
         </div>
       </section>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-4">
-        {docs.map(doc => <DocItem item={doc} key={doc.permalink}/>)}
+        {docs.map(doc => <DocCard item={doc} key={doc.permalink}/>)}
       </div>
     </MyLayout>
   );
