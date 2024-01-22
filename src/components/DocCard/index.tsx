@@ -1,8 +1,6 @@
 import Link from "@docusaurus/Link";
 
 export default function DocCard({ item }) {
-  console.log("itemhere", item);
-
   const { permalink, title, tags, description } = item;
 
   return (
