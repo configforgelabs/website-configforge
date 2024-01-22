@@ -73,7 +73,11 @@ const config: Config = {
           src: "img/logo.svg",
         },
         items: [
-          { to: "/docs/intro", label: "Knowledge Base", position: "left" },
+          {
+            to: "/docs/0983b565-54ad-4dee-9c1e-1950f76ee833",
+            label: "Knowledge Base",
+            position: "left",
+          },
           { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/facebook/docusaurus",
@@ -85,10 +89,6 @@ const config: Config = {
       footer: {
         style: "dark",
         links: [
-          {
-            title: "Docs",
-            items: [{ to: "/docs/intro", label: "Knowledge Base", position: "left" }],
-          },
           {
             title: "Community",
             items: [
