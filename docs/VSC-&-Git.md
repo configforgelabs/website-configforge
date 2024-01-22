@@ -1,6 +1,6 @@
 ---
 title: VSC & Git
-sidebar_position: 13
+sidebar_position: 12
 slug: /6a3e358f-5836-48b3-a8fc-47e74b2c23ff
 ---
 

@@ -74,7 +74,7 @@ const config: Config = {
         },
         items: [
           {
-            to: "/docs/0983b565-54ad-4dee-9c1e-1950f76ee833",
+            to: "/docs/intro",
             label: "Knowledge Base",
             position: "left",
           },
