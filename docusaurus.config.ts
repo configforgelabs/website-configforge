@@ -10,7 +10,6 @@ import "dotenv/config";
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from "prism-react-renderer";
-import { GiscusConfig } from "./src/components/Comment";
 
 /** @type {import('@docusaurus/types').Config} */
 const config: Config = {
@@ -74,7 +73,7 @@ const config: Config = {
           src: "img/logo.svg",
         },
         items: [
-          { to: "/docs", label: "Knowledge Base", position: "left" },
+          { to: "/docs/intro", label: "Knowledge Base", position: "left" },
           { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/facebook/docusaurus",
@@ -88,12 +87,7 @@ const config: Config = {
         links: [
           {
             title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
+            items: [{ to: "/docs/intro", label: "Knowledge Base", position: "left" }],
           },
           {
             title: "Community",
@@ -132,19 +126,18 @@ const config: Config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-      giscus: {
-        repo: "kuizuo/blog",
-        repoId: "MDEwOlJlcG9zaXRvcnkzOTc2MjU2MTI=",
-        category: "General",
-        categoryId: "DIC_kwDOF7NJDM4CPK95",
-        theme: "light",
-        darkTheme: "dark_dimmed",
-      } satisfies Partial<GiscusConfig>,
     } satisfies Preset.ThemeConfig,
 
   plugins: [
     "docusaurus-plugin-sass",
-
+    [
+      "./src/plugin/plugin-content-docs",
+      {
+        path: "docs",
+        sidebarPath: "./sidebars.ts",
+        editUrl: "https://github.com/justinnio/website/edit/main/",
+      },
+    ],
     async function myPlugin(context, options) {
       return {
         name: "docusaurus-tailwindcss",
