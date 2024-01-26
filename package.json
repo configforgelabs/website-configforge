@@ -20,7 +20,7 @@
     "@giscus/react": "^2.4.0",
     "@hyvor/hyvor-talk-react": "^0.0.2",
     "@iconify/react": "^4.1.1",
-    "@justinnio/docu-notion": "^0.1.5",
+    "@justinnio/docu-notion": "^0.2.1",
     "@mdx-js/react": "^3.0.0",
     "autoprefixer": "^10.4.16",
     "clsx": "^2.0.0",
