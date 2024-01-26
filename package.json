@@ -21,7 +21,7 @@
     "@hyvor/hyvor-talk-react": "^0.0.2",
     "@iconify/react": "^4.1.1",
     "@mdx-js/react": "^3.0.0",
-    "@justinnio/docu-notion": "^0.1.0",
+    "@justinnio/docu-notion": "^0.1.4",
     "autoprefixer": "^10.4.16",
     "clsx": "^2.0.0",
     "cross-var": "^1.1.0",
