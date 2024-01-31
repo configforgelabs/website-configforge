@@ -1,12 +1,12 @@
 ---
-title: Project 1
-sidebar_position: 0
-slug: /project1
+title: Project 4
+sidebar_position: 3
+slug: /project4
 keywords: [Project]
-tags: [Project, Azure]
+tags: [Project, Entra ID]
 image: https://i.imgur.com/mErPwqL.png
 last_update: 
- date: 2024-01-31
+ date: 2024-01-30
  author: tobias
 ---
 
