@@ -13,20 +13,20 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config: Config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "JustInn - Tobias Schüle",
+  tagline: "M365 & Azure Architect",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
+  url: "https://justinn.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "justinnio", // Usually your GitHub org/user name.
+  projectName: "website", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -45,10 +45,25 @@ const config: Config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       {
         blog: {
+          path: 'blog',
+          // routeBasePath: '/',
+          editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
+            `https://github.com/justinnio/website/edit/master/${blogDirPath}/${blogPath}`,
+          editLocalizedFiles: false,
+          blogTitle: "JustInn's Blog",
+          blogDescription: 'Blog',
+          blogSidebarCount: 10,
+          blogSidebarTitle: "JustInn's Blog",
           showReadingTime: true,
+          readingTime: ({ content, frontMatter, defaultReadingTime }) =>
+            defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
+          feedOptions: {
+            type: 'all',
+            title: "JustInn's Blog RSS Feed",
+            copyright: `Copyright © ${new Date().getFullYear()} Tobias Schüle - JustInn<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
+          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/justinnio/website/edit/main/",
           authorsMapPath: "authors.yml",
           postsPerPage: Number(process.env.REACT_APP_POSTS_PER_PAGE),
           blogPostComponent: "@theme/BlogPostPage",
@@ -57,6 +72,7 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
+
       } satisfies Preset.Options,
     ],
   ],
@@ -84,6 +100,11 @@ const config: Config = {
             label: "GitHub",
             position: "right",
           },
+          {
+            to: "/projects",
+            label: "Projects",
+            position: "left",
+          }
         ],
       },
       footer: {
@@ -93,51 +114,53 @@ const config: Config = {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                label: 'About',
+                to: '/about',
               },
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                label: 'GitHub',
+                href: 'https://github.com/justinnio',
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/tobias-schuele/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Tobias Schüle - JustInn<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
       },
       prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        additionalLanguages: ['powershell'],
+        defaultLanguage: 'powershell',
+      },
+      liveCodeBlock: {
+        playgroundPosition: 'top',
       },
     } satisfies Preset.ThemeConfig,
 
   plugins: [
+    require.resolve('docusaurus-plugin-image-zoom'),
     "docusaurus-plugin-sass",
     [
       "./src/plugin/plugin-content-docs",
       {
         path: "docs",
         sidebarPath: "./sidebars.ts",
-        editUrl: "https://github.com/justinnio/website/edit/main/",
+        editUrl: "https://github.com/justinnio/website/edit/master/",
       },
-    ]
+    ],
+    async function myPlugin(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
+    },
   ],
 };
 
