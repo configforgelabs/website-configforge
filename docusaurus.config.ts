@@ -114,10 +114,6 @@ const config: Config = {
             title: "Community",
             items: [
               {
-                label: 'About',
-                to: '/about',
-              },
-              {
                 label: 'GitHub',
                 href: 'https://github.com/justinnio',
               },
