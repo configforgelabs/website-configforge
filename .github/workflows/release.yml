@@ -24,7 +24,7 @@ jobs:
       - name: Pull Docs from Notion
         env:
           DOCU_NOTION_INTEGRATION_TOKEN: ${{ secrets.DOCU_NOTION_INTEGRATION_TOKEN }}
-          DOCU_NOTION_DOCS_PAGE: ${{ secrets.DOCU_NOTION_ROOT_PAGE }}
+          DOCU_NOTION_DOCS_PAGE: ${{ secrets.DOCU_NOTION_DOCS_PAGE }}
         run: npm run pulldocs
       - name: Pull Blog from Notion
         env:
