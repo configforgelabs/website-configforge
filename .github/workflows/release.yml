@@ -30,6 +30,7 @@ jobs:
         env:
           DOCU_NOTION_INTEGRATION_TOKEN: ${{ secrets.DOCU_NOTION_INTEGRATION_TOKEN }}
           DOCU_NOTION_BLOG_PAGE: ${{ secrets.DOCU_NOTION_BLOG_PAGE }}
+          DOCU_NOTION_BLOG_PATH: ${{ secrets.DOCU_NOTION_BLOG_PATH}}
         run: npm run pullblog
       - name: Build And Deploy
         id: builddeploy
