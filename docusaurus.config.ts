@@ -44,16 +44,17 @@ const config: Config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       {
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/justinnio/website/edit/main/",
-          authorsMapPath: "authors.yml",
-          postsPerPage: Number(process.env.REACT_APP_POSTS_PER_PAGE),
-          blogPostComponent: "@theme/BlogPostPage",
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl: "https://github.com/justinnio/website/edit/main/",
+        //   authorsMapPath: "authors.yml",
+        //   postsPerPage: Number(process.env.REACT_APP_POSTS_PER_PAGE),
+        //   blogPostComponent: "@theme/BlogPostPage",
+        // },
         docs: false,
+        blog: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -136,6 +137,18 @@ const config: Config = {
         path: "docs",
         sidebarPath: "./sidebars.ts",
         editUrl: "https://github.com/justinnio/website/edit/main/",
+      },
+    ],
+    [
+      "./src/plugin/plugin-content-blog",
+      {
+        showReadingTime: true,
+        // Please change this to your repo.
+        // Remove this to remove the "edit this page" links.
+        editUrl: "https://github.com/justinnio/website/edit/main/",
+        authorsMapPath: "authors.yml",
+        postsPerPage: Number(process.env.REACT_APP_POSTS_PER_PAGE),
+        blogPostComponent: "@theme/BlogPostPage",
       },
     ],
     async function myPlugin(context, options) {

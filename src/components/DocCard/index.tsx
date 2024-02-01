@@ -1,12 +1,24 @@
 import Link from "@docusaurus/Link";
 
-export default function DocCard({ item }) {
-  const { permalink, title, tags, description } = item;
+interface TagModel {
+  label: string;
+  permalink: string;
+}
+
+export interface DocCardProps {
+  permalink: string;
+  title: string;
+  tags?: TagModel[];
+  description: string;
+}
+
+export default function DocCard(props: DocCardProps) {
+  const { permalink, title, tags, description } = props;
 
   return (
     <article className="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
       <Link to={permalink}></Link>
-      {tags.length > 0 &&
+      {tags && tags.length > 0 &&
         tags.map((tag) => {
           return (
             <span
