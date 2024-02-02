@@ -1,27 +1,11 @@
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
 
-import Heading from "@theme/Heading";
-import styles from "./index.module.css";
-
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header
-      className={clsx("hero hero--primary", "bg-red-500", styles.heroBanner)}
-    >
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-      </div>
-    </header>
-  );
-}
+import Hero from "../components/Home/Hero";
+import LatestPosts from "../components/Home/LatestPosts";
+import LatestDocs from "../components/Home/LatestDocs";
+import ServicesOverview from "../components/Home/ServicesOverview";
+import Testimonials from "../components/Home/Testimonials";
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -30,10 +14,11 @@ export default function Home() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+      <Hero />
+      <LatestPosts />
+      <ServicesOverview />
+      <LatestDocs />
+      <Testimonials />
     </Layout>
   );
 }

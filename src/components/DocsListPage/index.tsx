@@ -30,7 +30,13 @@ export default function DocsListPage() {
       </section>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-4">
         {docs.map((doc) => (
-          <DocCard item={doc} key={doc.permalink} />
+          <DocCard
+            permalink={doc.permalink}
+            title={doc.title}
+            tags={doc.tags}
+            description={doc.description}
+            key={doc.permalink}
+          />
         ))}
       </div>
     </MyLayout>
