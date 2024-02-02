@@ -83,12 +83,17 @@ const config: Config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "My Site",
+        title: "Home",
         logo: {
-          alt: "My Site Logo",
+          alt: "Home",
           src: "img/logo.svg",
         },
         items: [
+          {
+            to: "/about",
+            label: "About",
+            position: "left",
+          },
           {
             to: "/docs/intro",
             label: "Knowledge Base",
