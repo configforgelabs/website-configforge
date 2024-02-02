@@ -44,17 +44,31 @@ const config: Config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       {
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl: "https://github.com/justinnio/website/edit/main/",
-        //   authorsMapPath: "authors.yml",
-        //   postsPerPage: Number(process.env.REACT_APP_POSTS_PER_PAGE),
-        //   blogPostComponent: "@theme/BlogPostPage",
-        // },
+        blog: {
+          path: 'blog',
+          // routeBasePath: '/',
+          editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
+            `https://github.com/justinnio/website/edit/master/${blogDirPath}/${blogPath}`,
+          editLocalizedFiles: false,
+          blogTitle: "JustInn's Blog",
+          blogDescription: 'Blog',
+          blogSidebarCount: 10,
+          blogSidebarTitle: "JustInn's Blog",
+          showReadingTime: true,
+          readingTime: ({ content, frontMatter, defaultReadingTime }) =>
+            defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
+          feedOptions: {
+            type: 'all',
+            title: "JustInn's Blog RSS Feed",
+            copyright: `Copyright © ${new Date().getFullYear()} Tobias Schüle - JustInn<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
+          },
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          authorsMapPath: "authors.yml",
+          postsPerPage: Number(process.env.REACT_APP_POSTS_PER_PAGE),
+          blogPostComponent: "@theme/BlogPostPage",
+        },
         docs: false,
-        blog: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
