@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TestimonialCard() {
   return (
-    <figure className="p-6 bg-gray-50 rounded dark:bg-gray-800 w-full rounded-lg">
+    <div className="p-6 bg-gray-50 rounded dark:bg-gray-800 w-full rounded-lg">
       <div className="text-sm text-gray-500 dark:text-gray-400">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
           Solid foundation for any project
@@ -26,6 +26,6 @@ export default function TestimonialCard() {
           </div>
         </div>
       </figcaption>
-    </figure>
+    </div>
   );
 }

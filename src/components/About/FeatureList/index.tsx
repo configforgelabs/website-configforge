@@ -57,12 +57,12 @@ export default function FeatureList() {
       <div className="py-8 px-4 mx-auto space-y-12 max-w-screen-xl lg:space-y-20 sm:py-16 lg:px-6">
         {FEATURE_LIST.map((option, index) => (
           <div
-            className="gap-8 items-center lg:grid lg:grid-cols-2 xl:gap-16"
+            className="gap-8 items-center grid lg:grid-cols-2 xl:gap-16"
             key={option.id}
           >
             <div
-              className={`text-gray-500 sm:text-lg dark:text-gray-400 ${
-                index % 2 === 0 ? "order-1" : "order-2"
+              className={`text-gray-500 sm:text-lg dark:text-gray-400 order-2 ${
+                index % 2 === 0 ? "lg:order-1" : "lg:order-2"
               }`}
             >
               <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
@@ -95,8 +95,8 @@ export default function FeatureList() {
               </p>
             </div>
             <img
-              className={`hidden mb-4 w-full lg:mb-0 lg:flex rounded-lg ${
-                index % 2 === 0 ? "order-2" : "order-1"
+              className={`mb-4 h-[300px] lg:h-auto w-full lg:mb-0 lg:flex rounded-lg order-1 ${
+                index % 2 === 0 ? "lg:order-2" : "lg:order-1"
               }`}
               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-1.png"
               alt="office feature image"
