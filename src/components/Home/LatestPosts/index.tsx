@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import useGlobalData, { usePluginData } from "@docusaurus/useGlobalData";
 import MyLayout from "@site/src/theme/MyLayout";
 import DocCard from "../../DocCard";
+import Button from "../../ui/Button";
 
 export interface LatestPostsProps {}
 
@@ -29,16 +30,11 @@ export default function LatestPosts(props: LatestPostsProps) {
             </div>
           </div>
           <div className="ml-auto">
-            <button
-              type="button"
-              className="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-solid border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-            >
-              View more
-            </button>
+            <Button className="hidden lg:inline">View more</Button>
           </div>
         </div>
       </section>
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 px-12">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 px-5 lg:px-12">
         {posts.map((doc) => (
           <DocCard
             permalink={doc.metadata.permalink}
@@ -46,8 +42,12 @@ export default function LatestPosts(props: LatestPostsProps) {
             tags={doc.metadata.tags}
             description={doc.metadata.description}
             key={doc.metadata.permalink}
+            image={doc.metadata.frontMatter.image}
           />
         ))}
+      </div>
+      <div className="ml-auto">
+        <Button className="inline lg:hidden w-full">View more</Button>
       </div>
     </div>
   );
