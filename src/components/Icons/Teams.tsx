@@ -7,7 +7,7 @@ export const Teams = forwardRef<SVGSVGElement, SvgIconProps>(
     return (
       <Icon {...props}>
         <svg
-          fill={color}
+          fill={"none"}
           height="inherit"
           ref={forwardedRef}
           viewBox="0 0 26 22"

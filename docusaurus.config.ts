@@ -49,7 +49,6 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
-
       } satisfies Preset.Options,
     ],
   ],
@@ -60,33 +59,50 @@ const config: Config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "Home",
         logo: {
           alt: "Home",
-          src: "img/logo.svg",
+          src: "img/logo.png",
         },
         items: [
           {
+            to: "/",
+            label: "Home",
+            position: "right",
+          },
+          {
             to: "/about",
             label: "About",
-            position: "left",
+            position: "right",
+          },
+          { to: "/blog", label: "Blog", position: "right" },
+          {
+            to: "/projects",
+            label: "Project Offers",
+            position: "right",
           },
           {
             to: "/docs/intro",
             label: "Knowledge Base",
-            position: "left",
-          },
-          { to: "/blog", label: "Blog", position: "left" },
-          {
-            href: "https://github.com/facebook/docusaurus",
-            label: "GitHub",
             position: "right",
           },
           {
-            to: "/projects",
-            label: "Projects",
-            position: "left",
-          }
+            to: "/script",
+            label: "Script",
+            position: "right",
+          },
+          {
+            to: "/contact",
+            label: "Contact",
+            position: "right",
+          },
+          {
+            type: "localeDropdown",
+            position: "right",
+          },
+          {
+            type: "search",
+            position: "right",
+          },
         ],
       },
       footer: {
@@ -96,12 +112,12 @@ const config: Config = {
             title: "Community",
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/justinnio',
+                label: "GitHub",
+                href: "https://github.com/justinnio",
               },
               {
-                label: 'LinkedIn',
-                href: 'https://www.linkedin.com/in/tobias-schuele/',
+                label: "LinkedIn",
+                href: "https://www.linkedin.com/in/tobias-schuele/",
               },
             ],
           },
@@ -109,16 +125,16 @@ const config: Config = {
         copyright: `Copyright © ${new Date().getFullYear()} Tobias Schüle - JustInn<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
       },
       prism: {
-        additionalLanguages: ['powershell'],
-        defaultLanguage: 'powershell',
+        additionalLanguages: ["powershell"],
+        defaultLanguage: "powershell",
       },
       liveCodeBlock: {
-        playgroundPosition: 'top',
+        playgroundPosition: "top",
       },
     } satisfies Preset.ThemeConfig,
 
   plugins: [
-    require.resolve('docusaurus-plugin-image-zoom'),
+    require.resolve("docusaurus-plugin-image-zoom"),
     "docusaurus-plugin-sass",
     [
       "./src/plugin/plugin-content-docs",
@@ -131,28 +147,28 @@ const config: Config = {
     [
       "./src/plugin/plugin-content-blog",
       {
-        path: 'blog',
-          // routeBasePath: '/',
-          editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-            `https://github.com/justinnio/website/edit/master/${blogDirPath}/${blogPath}`,
-          editLocalizedFiles: false,
-          blogTitle: "JustInn's Blog",
-          blogDescription: 'Blog',
-          blogSidebarCount: 10,
-          blogSidebarTitle: "JustInn's Blog",
-          showReadingTime: true,
-          readingTime: ({ content, frontMatter, defaultReadingTime }) =>
-            defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
-          feedOptions: {
-            type: 'all',
-            title: "JustInn's Blog RSS Feed",
-            copyright: `Copyright © ${new Date().getFullYear()} Tobias Schüle - JustInn<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          authorsMapPath: "authors.yml",
-          postsPerPage: Number(process.env.REACT_APP_POSTS_PER_PAGE),
-          blogPostComponent: "@theme/BlogPostPage",
+        path: "blog",
+        // routeBasePath: '/',
+        editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
+          `https://github.com/justinnio/website/edit/master/${blogDirPath}/${blogPath}`,
+        editLocalizedFiles: false,
+        blogTitle: "JustInn's Blog",
+        blogDescription: "Blog",
+        blogSidebarCount: 10,
+        blogSidebarTitle: "JustInn's Blog",
+        showReadingTime: true,
+        readingTime: ({ content, frontMatter, defaultReadingTime }) =>
+          defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
+        feedOptions: {
+          type: "all",
+          title: "JustInn's Blog RSS Feed",
+          copyright: `Copyright © ${new Date().getFullYear()} Tobias Schüle - JustInn<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
+        },
+        // Please change this to your repo.
+        // Remove this to remove the "edit this page" links.
+        authorsMapPath: "authors.yml",
+        postsPerPage: Number(process.env.REACT_APP_POSTS_PER_PAGE),
+        blogPostComponent: "@theme/BlogPostPage",
       },
     ],
     async function myPlugin(context, options) {

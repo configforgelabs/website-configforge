@@ -9,8 +9,6 @@ export interface LatestDocsProps {}
 export default function LatestDocs(props: LatestDocsProps) {
   const globalData = useGlobalData();
 
-  console.log("globalData", globalData);
-
   const docs =
     globalData &&
     globalData["docusaurus-plugin-content-docs"] &&
@@ -18,15 +16,17 @@ export default function LatestDocs(props: LatestDocsProps) {
       ? globalData["docusaurus-plugin-content-docs"]["default"]["allDocs"]
       : [];
 
+  const topSixDocs = docs.slice(0, 6);
+
   return (
     <div className="relative py-16 lg:py-24 px-4 mx-auto max-w-screen-xl container">
       <section className="bg-white dark:bg-gray-900 mb-8  lg:mb-12">
         <div className="max-w-screen-xl lg:px-6 flex items-end">
           <div className="max-w-screen-sm text-center">
-            <h2 className="text-left text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            <h2 className="text-left text-4xl tracking-tight font-extra-bold text-gray-900 dark:text-white">
               Knowledge Base
             </h2>
-            <div className="font-light text-left text-gray-500 sm:text-xl dark:text-gray-400">
+            <div className="font-regular text-left text-[20px] text-gray-500 sm:text-xl dark:text-gray-400">
               We use an agile approach to test assumptions and connect with the
               needs of your audience early and often.
             </div>
@@ -38,7 +38,7 @@ export default function LatestDocs(props: LatestDocsProps) {
         </div>
       </section>
       <div className="grid gap-y-8 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 md:px-12">
-        {docs.map((doc) => (
+        {topSixDocs.map((doc) => (
           <DocCard
             permalink={doc.permalink}
             title={doc.title}

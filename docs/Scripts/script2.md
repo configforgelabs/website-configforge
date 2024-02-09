@@ -3,7 +3,9 @@ title: Script 2
 sidebar_position: 1
 slug: /script2
 keywords: [Script]
-tags: [Script]
+description: Script description
+tags: [Script, PowerShell]
+image: https://i.imgur.com/mErPwqL.png
 ---
 
 

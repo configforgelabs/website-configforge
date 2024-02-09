@@ -14,12 +14,12 @@ export default function Hero() {
       <div className="lg:hidden relative w-full h-[270px]">
         <img src={BannerImage} className=" object-cover w-full h-full" />
       </div>
-      <div className="relative py-8 px-4 w-[343px] md:w-[600px] lg:w-auto mx-auto md:max-w-screen-xl lg:pt-[76px] lg:pb-[116px]  py-16 z-1 shadow-sm rounded-md lg:shadow-none">
-        <div className="mb-6 pt-[40px] lg:max-w-[432px] lg:mb-0 bg-white md:pt-16 md:pb-12 md:px-12 rounded-lg">
-          <h1 className="mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl">
+      <div className="relative py-8 px-4 w-[343px] md:w-[500px] lg:w-auto mx-auto md:max-w-screen-xl lg:pt-[76px] lg:pb-[116px]  py-16 z-1 shadow-sm rounded-md lg:shadow-none">
+        <div className="mb-6 pt-[40px] lg:max-w-[455px] lg:mb-0 bg-white md:pt-16 md:pb-12 md:px-12 rounded-lg">
+          <h1 className="mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl text-gray-950">
             Hello! I’m Tobias Schüle and it’s my blog
           </h1>
-          <p className="font-light text-gray-500 lg:mb-12 text-[18px] md:text-lg lg:text-xl">
+          <p className="font-regular text-gray-500 lg:mb-12 text-[18px] md:text-lg lg:text-xl">
             Here I will share the problems and solutions encountered by various
             technology stacks.
           </p>

@@ -7,10 +7,10 @@ export default function Testimonials() {
       <section className="bg-white dark:bg-gray-900">
         <div className="px-4 mx-auto max-w-screen-xl lg:px-6">
           <div className="mx-auto max-w-screen-sm md:text-center mb-8 lg:mb-16">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            <h2 className="mb-4 text-4xl tracking-tight font-extra-bold text-gray-900 dark:text-white">
               Testimonials
             </h2>
-            <p className="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+            <p className="font-regular text-[20px] text-gray-500 sm:text-xl dark:text-gray-400">
               Explore the whole collection of open-source web components and
               elements built with the utility classes from Tailwind
             </p>

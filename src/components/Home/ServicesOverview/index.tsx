@@ -46,7 +46,7 @@ export default function ServicesOverview() {
             />
           </article>
           <div>
-            <div className="text-4xl font-extrabold">
+            <div className="text-4xl font-extra-bold text-gray-900">
               Short overview services offered
             </div>
             <div className="my-8 border border-solid w-full border-gray-200"></div>
@@ -81,7 +81,7 @@ export default function ServicesOverview() {
                 </article>
               ))}
               <div className="my-8 border border-solid w-full border-gray-200"></div>
-              <div>
+              <div className=" text-sm font-regular text-gray-500">
                 Deliver great service experiences fast - without the complexity
                 of traditional ITSM solutions.Accelerate critical development
                 work, eliminate toil, and deploy changes with ease.
