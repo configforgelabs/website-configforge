@@ -47,8 +47,8 @@ export default function Footer() {
                 </a>
               </div>
               <div className="mb-[32px] lg:mb-4">
-                <a href="/script" className="hover:underline text-white">
-                  Script
+                <a href="/resources" className="hover:underline text-white">
+                  Resources
                 </a>
               </div>
             </ul>

@@ -86,8 +86,8 @@ const config: Config = {
             position: "right",
           },
           {
-            to: "/script",
-            label: "Script",
+            to: "/resources",
+            label: "Resources",
             position: "right",
           },
           {
