@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import useGlobalData, { usePluginData } from "@docusaurus/useGlobalData";
-import MyLayout from "@site/src/theme/MyLayout";
-import DocCard from "../../DocCard";
 import Button from "../../ui/Button";
+import DocCard from "../../DocCard";
 
 export interface LatestPostsProps {}
 
@@ -16,15 +15,17 @@ export default function LatestPosts(props: LatestPostsProps) {
       ? globalData["docusaurus-plugin-content-blog"]["default"]["posts"]
       : [];
 
+  const topSixPosts = posts.slice(0, 6);
+
   return (
     <div className="relative py-24 px-4 mx-auto max-w-screen-xl container">
       <section className="bg-white dark:bg-gray-900 mb-8  lg:mb-12">
         <div className="px-4 max-w-screen-xl lg:px-6 flex items-end ">
           <div className="max-w-screen-sm text-center ">
-            <h2 className="mb-4 text-left text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            <h2 className="mb-4 text-left text-4xl tracking-tight font-extra-bold text-gray-900 dark:text-white">
               Latest Posts
             </h2>
-            <div className="font-light text-left text-gray-500 sm:text-xl dark:text-gray-400">
+            <div className="font-regular text-left text-[20px] text-gray-500 sm:text-xl dark:text-gray-400">
               We use an agile approach to test assumptions and connect with the
               needs of your audience early and often.
             </div>
@@ -34,8 +35,8 @@ export default function LatestPosts(props: LatestPostsProps) {
           </div>
         </div>
       </section>
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 px-5 lg:px-12">
-        {posts.map((doc) => (
+      <div className="grid gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3 lg:px-12">
+        {topSixPosts.map((doc) => (
           <DocCard
             permalink={doc.metadata.permalink}
             title={doc.metadata.title}
@@ -46,7 +47,7 @@ export default function LatestPosts(props: LatestPostsProps) {
           />
         ))}
       </div>
-      <div className="ml-auto">
+      <div className="ml-auto mt-8">
         <Button className="inline lg:hidden w-full">View more</Button>
       </div>
     </div>

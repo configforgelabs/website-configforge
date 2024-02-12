@@ -3,7 +3,7 @@ import { CheckIcon } from "@heroicons/react/24/solid";
 
 const FEATURE_LIST = [
   {
-    id: 1,
+    id: "01",
     title: "Humans First",
     description:
       "I never forget that there are real people behind the screens. When I choose and switch tech, it’s not just about tech functionality;",
@@ -16,21 +16,21 @@ const FEATURE_LIST = [
       "I’m thinking about the team's comfort and experience as well.",
   },
   {
-    id: 2,
+    id: "02",
     title: "Fast and Secure",
     description:
       "Spot-on, fast, and secure – these 3 deliverables are a guarantee in all my projects which is why companies come to me. I double-check everything to make sure their data’s locked down tight and their systems are solid, so they don't have to worry about it.",
     features: ["Quick Results", "Strong Security", "Reliable Performance"],
   },
   {
-    id: 3,
+    id: "03",
     title: "Partner, Not A Freelancer",
     description:
       "I am not here to just provide a service, send invoice, and leave. I am a partner who makes sure my clients are always covered, ahead of the curve, and ready for what's next.",
     features: ["Long-Term Plans", "Ongoing Help", "Staying Ahead"],
   },
   {
-    id: 4,
+    id: "04",
     title: "Battle-Tested And Proven",
     description:
       "If my results aren’t built to last, my business won’t either. I find and set up tech that doesn’t just solve the present issue but one that’s going to keep them going strong into the future.",
@@ -41,7 +41,7 @@ const FEATURE_LIST = [
     ],
   },
   {
-    id: 5,
+    id: "05",
     title: "Planned Growth, Not Accidental Luck",
     description:
       "I help my clients make informed technology decisions that seamlessly align with their business strategies.",
@@ -65,11 +65,11 @@ export default function FeatureList() {
                 index % 2 === 0 ? "lg:order-1" : "lg:order-2"
               }`}
             >
-              <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                <span className="text-primary">{index + 1}. </span>
-                {option.title}
+              <h2 className="mb-4 text-3xl lg:text-4xl tracking-tight font-extra-bold text-gray-900 dark:text-white flex gap-x-2">
+                <span className="text-primary-700 block">{option.id}. </span>
+                <span className="block">{option.title}</span>
               </h2>
-              <p className="mb-8 font-light lg:text-xl border-b border-solid border-t-0 border-x-0 pb-8 border-gray-200">
+              <p className="mb-8 font-regular text-[20px] lg:text-xl border-b border-solid border-t-0 border-x-0 pb-8 border-gray-200">
                 {option.description}
               </p>
               <ul
@@ -80,7 +80,7 @@ export default function FeatureList() {
                   option.features.length > 0 &&
                   option.features.map((feature) => (
                     <li className="flex space-x-3 items-center">
-                      <div className="w-4 h-4 bg-primary flex items-center justify-center rounded-full">
+                      <div className="w-4 h-4 bg-primary-700 flex items-center justify-center rounded-full">
                         <CheckIcon className="flex-shrink-0 w-3 h-3 text-white"></CheckIcon>
                       </div>
                       <span className="text-base font-medium leading-tight text-gray-900 dark:text-white">
@@ -89,7 +89,7 @@ export default function FeatureList() {
                     </li>
                   ))}
               </ul>
-              <p className="mb-8 font-light lg:text-xl">
+              <p className="mb-8 font-regular text-[20px]">
                 Deliver great service experiences fast - without the complexity
                 of traditional ITSM solutions.
               </p>

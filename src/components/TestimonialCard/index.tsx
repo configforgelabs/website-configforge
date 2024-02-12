@@ -19,11 +19,13 @@ export default function TestimonialCard() {
           src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
           alt="profile picture"
         />
-        <div className="space-y-0.5 font-medium dark:text-white">
-          <div>Bonnie Green</div>
-          <div className="text-sm font-light text-gray-500 dark:text-gray-400">
-            CTO at Open AI
-          </div>
+        <div>
+          <span className="block font-semi-bold text-gray-900 text-base">
+            Bonnie Green
+          </span>
+          <span className="text-[14px] font-regular text-gray-500 dark:text-gray-400">
+            Web developer @themesberg
+          </span>
         </div>
       </figcaption>
     </div>

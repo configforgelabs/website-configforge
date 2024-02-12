@@ -1,4 +1,6 @@
 import Link from "@docusaurus/Link";
+import Paper from "../Icons/Paper";
+import Video from "../Icons/Video";
 
 interface TagModel {
   label: string;
@@ -10,45 +12,50 @@ export interface DocCardProps {
   title: string;
   tags?: TagModel[];
   description: string;
-  image: string;
+  image?: string;
 }
 
 export default function DocCard(props: DocCardProps) {
   const { permalink, title, tags, description, image } = props;
 
   return (
-    <div className="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-       {image && (
+    <article className="bg-white shadow-[0px_4px_6px_-1px_rgba(0,0,0,10%)] rounded-sm p-6 flex flex-col justify-between">
+      {image && (
         <Link to={permalink}>
-          <img
-            className="mb-5 rounded-lg"
-            src={image}
-            alt="office laptop working"
-          />
+          <div className="w-full h-[192px] rounded-[8px] relative overflow-hidden">
+            <img
+              src={image}
+              className=" object-cover object-center w-full h-full"
+            />
+          </div>
         </Link>
       )}
-
-      <div className="flex flex-wrap gap-2">
-        {tags &&
-          tags.length > 0 &&
-          tags.map((tag) => {
-            return (
-              <span
-                className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900"
-                key={tag.label}
-              >
-                {tag.label}
-              </span>
-            );
-          })}
+      <div className="mt-6">
+        <div className="flex flex-wrap gap-1">
+          {tags.map((tag) => (
+            <span className="bg-primary-100 text-primary-800 font-medium me-2 px-2.5 py-0.5 rounded inline-flex items-center justify-center gap-x-1">
+              <Paper className="w-3 h-3" />
+              <span className="text-xs">{tag.label}</span>
+            </span>
+          ))}
+        </div>
+        <div className="font-bold text-gray-900 text-xl mt-2">{title}</div>
+        <p className="mt-2 font-medium text-gray-500 text-sm">{description}</p>
       </div>
-
-      <h2 className="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        <Link to={permalink}>{title}</Link>
-      </h2>
-      <p className="mb-4 font-light text-gray-500 dark:text-gray-400">
-        {description}
-      </p>
-    </div>
+      {/* <div className="mt-5 lg:mt-auto flex space-x-3 items-center">
+        <div className=" h-[40px] w-[40px] relative rounded-full overflow-hidden">
+          <img
+            src={"nai"}
+            className=" object-cover w-full h-full object-center"
+          />
+        </div>
+        <div>
+          <span className="text-gray-900 font-medium text-sm">author name</span>
+          <span className="text-gray-500 block text-sm font-regular -mt-1">
+            publish date
+          </span>
+        </div>
+      </div> */}
+    </article>
   );
 }
