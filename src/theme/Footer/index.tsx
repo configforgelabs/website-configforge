@@ -9,44 +9,44 @@ import Youtube from "@site/src/components/Icons/Youtube";
 export default function Footer() {
   return (
     <footer className="bg-gray-900 dark:bg-gray-800">
-      <div className="p-4 py-6 mx-auto max-w-screen-xl md:p-8 lg:-10">
-        <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
+      <div className="p-4 py-[48px] lg:py-6 mx-auto max-w-screen-xl md:p-8 lg:-10">
+        <div className="lg:grid grid-cols-2 gap-8 lg:grid-cols-6">
           <div className="col-span-2">
             <a
               href="#"
-              className="flex items-center mb-2 text-2xl font-semibold text-gray-900 sm:mb-0 dark:text-white"
+              className="flex items-center mb-2 text-2xl font-semibold text-gray-900 sm:mb-0 dark:text-white w-[140px] lg:w-auto"
             >
               <img src="/img/light-logo.png" />
             </a>
-            <p className="my-3 font-light text-gray-300 dark:text-gray-400">
+            <p className="my-3 font-light text-gray-300 dark:text-gray-400 text-xs lg:text-sm">
               I’m Tobias Schüle and I started justinn.com as my personal blog
               where I can share my How To guides and opinions on everything
               Microsoft 365, Microsoft Entra and Azure.
             </p>
           </div>
-          <div className="lg:mx-auto col-span-2">
-            <ul className="text-gray-500 dark:text-gray-400">
-              <div className="mb-4">
+          <div className="lg:mx-auto mt-[40px] lg:mt-0 lg:col-span-2 font-semi-bold lg:font-regular text-sm">
+            <ul className="text-gray-500 dark:text-gray-400 p-0">
+              <div className="mb-[32px] lg:mb-4">
                 <a href="/about" className="hover:underline text-white">
                   About
                 </a>
               </div>
-              <div className="mb-4">
+              <div className="mb-[32px] lg:mb-4">
                 <a href="/blog" className="hover:underline text-white">
                   Blog
                 </a>
               </div>
-              <div className="mb-4">
+              <div className="mb-[32px] lg:mb-4">
                 <a href="/projects" className="hover:underline text-white">
                   Project Offers
                 </a>
               </div>
-              <div className="mb-4">
+              <div className="mb-[32px] lg:mb-4">
                 <a href="/docs/intro" className="hover:underline text-white">
                   Knowledge Base
                 </a>
               </div>
-              <div className="mb-4">
+              <div className="mb-[32px] lg:mb-4">
                 <a href="/script" className="hover:underline text-white">
                   Script
                 </a>
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
           <div className="col-span-2">
             <div className="flex flex-col">
-              <div className="text-white mb-4 text-sm font-semibold">
+              <div className="text-white mb-4 text-sm font-semi-bold">
                 Subscribe
               </div>
               <form action="#" className="flex w-full max-w-sm lg:ml-auto">
@@ -92,47 +92,47 @@ export default function Footer() {
                   Subscribe
                 </button>
               </form>
-              <div className="text-gray-300/60 mt-3 text-xs font-semibold">
+              <div className="text-gray-300/60 mt-3 text-[12px] lg:text-xs font-regular lg:font-semibold">
                 We care about the protection of your data. Read our Privacy
                 Policy.
               </div>
-              <div className="text-white mt-6 mb-4 text-sm font-semibold">
+              <div className="text-white mt-[40px] lg:mt-6 mb-4 text-sm font-semi-bold">
                 Follow
               </div>
-              <div className="border-b-0 border-x-0 border-t border-solid border-gray-900 border-opacity-10 flex justify-between">
+              <div className="border-b-0 border-x-0 border-t border-solid border-gray-900 border-opacity-10 gap-x-[11px] flex justify-between">
                 <a
                   href="https://example.com"
-                  className="w-14 h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
+                  className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <LinkedIn className="w-4 h-4 " />
                 </a>
                 <a
                   href="https://example.com"
-                  className="w-14 h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
+                  className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <RSS className="w-4 h-4" />
                 </a>
                 <a
                   href="https://example.com"
-                  className="w-14 h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
+                  className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <Youtube className="w-4 h-4" />
                 </a>
                 <a
                   href="https://example.com"
-                  className="w-14 h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
+                  className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <Github className="w-6 h-6" />
                 </a>
                 <a
                   href="https://example.com"
-                  className="w-14 h-14 bg-[#F9FCFF] flex justify-center items-center rounded-md text-transparent"
+                  className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center rounded-md text-transparent"
                 >
                   <TeamsBlack className="w-[26px] h-[22px]" />
                 </a>
                 <a
                   href="https://example.com"
-                  className="w-14 h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
+                  className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <Gmail className="w-[22px] h-[22px]" />
                 </a>
@@ -140,16 +140,16 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-10"></hr>
-        <div className="flex justify-between">
-          <span className="block text-sm text-center text-gray-500 dark:text-gray-400">
+        <hr className="my-6 mt-[56px] lg:mt-10 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-10"></hr>
+        <div className="text-center md:flex justify-between">
+          <span className="block text-xs text-center text-gray-500 dark:text-gray-400">
             © 2024 JustInn. All rights reserved.
           </span>
-          <div className="flex gap-x-5">
-            <span className="block text-sm text-center text-gray-500 dark:text-gray-400">
+          <div className="text-center md:flex gap-x-5">
+            <span className="block text-xs text-center text-gray-500 dark:text-gray-400 my-3 md:my-0">
               Privacy Policy
             </span>
-            <span className="block text-sm text-center text-gray-500 dark:text-gray-400">
+            <span className="block text-xs text-center text-gray-500 dark:text-gray-400">
               Terms of Use
             </span>
           </div>
