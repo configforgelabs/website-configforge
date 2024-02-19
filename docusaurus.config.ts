@@ -38,6 +38,9 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+  customFields: {
+    placeholderImageURL: "https://placehold.co/600x400",
+  },
 
   presets: [
     [
@@ -68,30 +71,32 @@ const config: Config = {
             to: "/",
             label: "Home",
             position: "right",
+            activeBaseRegex: "/^$|/$"
           },
           {
-            to: "/about",
+            to: "about",
             label: "About",
             position: "right",
           },
-          { to: "/blog", label: "Blog", position: "right" },
+          { to: "blog", label: "Blog", position: "right" },
           {
-            to: "/projects",
+            to: "projects",
             label: "Project Offers",
             position: "right",
           },
           {
-            to: "/docs/intro",
+            to: "docs/intro",
             label: "Knowledge Base",
             position: "right",
+            activeBasePath: "/docs"
           },
           {
-            to: "/resources",
+            to: "resources",
             label: "Resources",
             position: "right",
           },
           {
-            to: "/contact",
+            to: "contact",
             label: "Contact",
             position: "right",
           },

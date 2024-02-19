@@ -1,6 +1,7 @@
 import Link from "@docusaurus/Link";
 import Paper from "../Icons/Paper";
 import Video from "../Icons/Video";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 interface TagModel {
   label: string;
@@ -18,18 +19,25 @@ export interface DocCardProps {
 export default function DocCard(props: DocCardProps) {
   const { permalink, title, tags, description, image } = props;
 
+  const configContext = useDocusaurusContext();
+
+  const { customFields } = configContext.siteConfig;
+
+  const imageSrc = image ?? (customFields?.placeholderImageURL as string);
+
   return (
     <article className="bg-white shadow-[0px_4px_6px_-1px_rgba(0,0,0,10%)] rounded-sm p-6 flex flex-col justify-between">
-      {image && (
+      {imageSrc && (
         <Link to={permalink}>
           <div className="w-full h-[192px] rounded-[8px] relative overflow-hidden">
             <img
-              src={image}
+              src={imageSrc}
               className=" object-cover object-center w-full h-full"
             />
           </div>
         </Link>
       )}
+
       <div className="mt-6">
         <div className="flex flex-wrap gap-1">
           {tags.map((tag) => (
@@ -39,7 +47,10 @@ export default function DocCard(props: DocCardProps) {
             </span>
           ))}
         </div>
-        <div className="font-bold text-gray-900 text-xl mt-2">{title}</div>
+        <Link to={permalink}>
+          <div className="font-bold text-gray-900 text-xl mt-2">{title}</div>
+        </Link>
+
         <p className="mt-2 font-medium text-gray-500 text-sm">{description}</p>
       </div>
       {/* <div className="mt-5 lg:mt-auto flex space-x-3 items-center">
