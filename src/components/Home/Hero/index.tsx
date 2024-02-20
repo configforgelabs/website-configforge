@@ -9,13 +9,13 @@ import BannerImage from "@site/static/img/home-hero.png";
 export default function Hero() {
   return (
     <section
-      className={`lg:bg-[url('/static/img/home-hero.png')] bg-no-repeat bg-cover bg-center bg-white lg:bg-gray-700`}
+      className={`lg:bg-[url('/static/img/home-hero.png')] bg-no-repeat bg-cover bg-center bg-white lg:bg-gray-700 lg:h-[calc(100vh-100px)]`}
     >
       <div className="lg:hidden relative w-full h-[270px]">
         <img src={BannerImage} className=" object-cover w-full h-full" />
       </div>
-      <div className="relative py-8 px-4 w-[343px] md:w-[500px] lg:w-auto mx-auto md:max-w-screen-xl lg:pt-[76px] lg:pb-[116px]  py-16 z-1 shadow-sm rounded-md lg:shadow-none">
-        <div className="mb-6 pt-[40px] lg:max-w-[455px] lg:mb-0 bg-white md:pt-16 md:pb-12 md:px-12 rounded-lg">
+      <div className="flex w-[343px] md:w-[500px] h-full lg:w-auto mx-auto md:max-w-screen-xl  ">
+        <div className="mb-6 h-min mt-6 md:mt-[74px] pt-[40px] lg:max-w-[455px] lg:mb-0 bg-white md:pt-16 pb-8 md:pb-12 px-6 md:px-12 rounded-lg shadow-md lg:shadow-none z-1">
           <h1 className="mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl text-gray-950">
             Hello! I’m Tobias Schüle and it’s my blog
           </h1>
