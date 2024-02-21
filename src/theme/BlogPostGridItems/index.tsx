@@ -53,52 +53,51 @@ export default function BlogPostGridItems({
         ).slice(-2)}-${("0" + dateObj.getDate()).slice(-2)}`;
 
         return (
-          <article className="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <Link to={permalink}>
+          <Link to={permalink} className={"hover:no-underline"}>
+            <article className="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
               <img
                 className="mb-5 rounded-lg"
                 src={image}
                 alt="office laptop working"
               />
-            </Link>
-            {tags.length > 0 &&
-              tags.map((tag) => {
-                return (
-                  <span
-                    className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900"
-                    key={tag.label}
-                  >
-                    {tag.label}
-                  </span>
-                );
-              })}
 
-            <h2 className="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              <Link to={permalink} className={styles.itemTitle}>
+              {tags.length > 0 &&
+                tags.map((tag) => {
+                  return (
+                    <span
+                      className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900"
+                      key={tag.label}
+                    >
+                      {tag.label}
+                    </span>
+                  );
+                })}
+
+              <h2 className="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {title}
-              </Link>
-            </h2>
-            <p className="mb-4 font-light text-gray-500 dark:text-gray-400">
-              {description}
-            </p>
-            <div className="flex items-center space-x-4">
-              {authorData && authorData.imageURL && (
-                <img
-                  className="w-10 h-10 rounded-full"
-                  src={authorData.imageURL}
-                  alt="Jese Leos avatar"
-                />
-              )}
+              </h2>
+              <p className="mb-4 font-light text-gray-500 dark:text-gray-400">
+                {description}
+              </p>
+              <div className="flex items-center space-x-4">
+                {authorData && authorData.imageURL && (
+                  <img
+                    className="w-10 h-10 rounded-full"
+                    src={authorData.imageURL}
+                    alt="Jese Leos avatar"
+                  />
+                )}
 
-              <div className="font-medium dark:text-white">
-                {authorData && <div>{authorData.name}</div>}
+                <div className="font-medium dark:text-white">
+                  {authorData && <div>{authorData.name}</div>}
 
-                <div className="text-sm font-normal text-gray-500 dark:text-gray-400">
-                  {dateString} · 16 min read
+                  <div className="text-sm font-normal text-gray-500 dark:text-gray-400">
+                    {dateString} · 16 min read
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </Link>
         );
       })}
     </>
