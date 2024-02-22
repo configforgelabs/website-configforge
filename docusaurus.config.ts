@@ -172,7 +172,7 @@ const config: Config = {
         // Please change this to your repo.
         // Remove this to remove the "edit this page" links.
         authorsMapPath: "authors.yml",
-        postsPerPage: Number(process.env.REACT_APP_POSTS_PER_PAGE),
+        postsPerPage: 9,
         blogPostComponent: "@theme/BlogPostPage",
       },
     ],
