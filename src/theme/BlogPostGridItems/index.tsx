@@ -5,6 +5,7 @@ import type { Props as BlogPostItemsProps } from "@theme/BlogPostItems";
 import Tag from "@theme/Tag";
 
 import styles from "./styles.module.scss";
+import Paper from "@site/src/components/Icons/Paper";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -64,11 +65,9 @@ export default function BlogPostGridItems({
               {tags.length > 0 &&
                 tags.map((tag) => {
                   return (
-                    <span
-                      className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900"
-                      key={tag.label}
-                    >
-                      {tag.label}
+                    <span className="bg-primary-100 text-primary-800 font-medium me-2 px-2.5 py-0.5 rounded inline-flex items-center justify-center gap-x-1">
+                      <Paper className="w-3 h-3" />
+                      <span className="text-xs">{tag.label}</span>
                     </span>
                   );
                 })}
@@ -76,10 +75,10 @@ export default function BlogPostGridItems({
               <h2 className="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {title}
               </h2>
-              <p className="mb-4 font-light text-gray-500 dark:text-gray-400">
+              <p className="mb-4 font-medium text-gray-500 dark:text-gray-400">
                 {description}
               </p>
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-3">
                 {authorData && authorData.imageURL && (
                   <img
                     className="w-10 h-10 rounded-full"
@@ -88,8 +87,8 @@ export default function BlogPostGridItems({
                   />
                 )}
 
-                <div className="font-medium dark:text-white">
-                  {authorData && <div>{authorData.name}</div>}
+                <div className="dark:text-white">
+                  {authorData && <div className="text-sm text-gray-900 font-medium">{authorData.name}</div>}
 
                   <div className="text-sm font-normal text-gray-500 dark:text-gray-400">
                     {dateString} · 16 min read
