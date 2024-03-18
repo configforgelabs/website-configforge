@@ -27,7 +27,7 @@ export default function DocCard(props: DocCardProps) {
 
   return (
     <Link to={permalink} className={"hover:no-underline"}>
-      <article className="bg-white shadow-[0px_4px_6px_-1px_rgba(0,0,0,10%)] rounded-sm p-6 flex flex-col justify-between">
+      <article className="bg-white shadow-[0px_4px_6px_-1px_rgba(0,0,0,10%)] rounded-sm p-6 flex flex-col justify-between h-full">
         {imageSrc && (
           <div className="w-full h-[192px] rounded-[8px] relative overflow-hidden">
             <img
@@ -37,7 +37,7 @@ export default function DocCard(props: DocCardProps) {
           </div>
         )}
 
-        <div className="mt-6">
+        <div className="mt-6 flex-1 flex flex-col">
           <div className="flex flex-wrap gap-1">
             {tags.map((tag) => (
               <span className="bg-primary-100 text-primary-800 font-medium me-2 px-2.5 py-0.5 rounded inline-flex items-center justify-center gap-x-1">
@@ -46,11 +46,11 @@ export default function DocCard(props: DocCardProps) {
               </span>
             ))}
           </div>
-          <div className="font-bold text-gray-900 text-xl mt-2">{title}</div>
+          <div className="font-bold text-gray-900 text-xl my-2">{title}</div>
 
-          <p className="mt-2 font-medium text-gray-500 text-sm">
+          <div className="mt-auto font-medium text-gray-500 text-sm">
             {description}
-          </p>
+          </div>
         </div>
       </article>
     </Link>
