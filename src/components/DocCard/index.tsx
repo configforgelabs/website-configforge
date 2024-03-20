@@ -48,7 +48,7 @@ export default function DocCard(props: DocCardProps) {
           </div>
           <div className="font-bold text-gray-900 text-xl my-2">{title}</div>
 
-          <div className="mt-auto font-medium text-gray-500 text-sm">
+          <div className="font-medium text-gray-500 text-sm">
             {description}
           </div>
         </div>
