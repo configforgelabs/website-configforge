@@ -12,8 +12,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "pulldocs": "cross-var docu-notion -n %DOCU_NOTION_INTEGRATION_TOKEN% -r %DOCU_NOTION_DOCS_PAGE% -t \"*\" -m \"./docs\"",
-    "pullblog": "cross-var docu-notion -n %DOCU_NOTION_INTEGRATION_TOKEN% -r %DOCU_NOTION_BLOG_PAGE% -t \"*\" -m \"./blog\""
+    "pulldocs": "cross-var docu-notion -n %DOCU_NOTION_INTEGRATION_TOKEN% -r %DOCU_NOTION_DOCS_PAGE% -t \"*\" -m \"./docs\" --status-tag \"*\"",
+    "pullblog": "cross-var docu-notion -n %DOCU_NOTION_INTEGRATION_TOKEN% -r %DOCU_NOTION_BLOG_PAGE% -t \"*\" -m \"./blog\" --status-tag \"*\""
   },
   "dependencies": {
     "@docusaurus/core": "3.0.1",
@@ -33,6 +33,7 @@
     "docusaurus-plugin-image-zoom": "^1.0.1",
     "docusaurus-plugin-sass": "^0.2.5",
     "dotenv": "^16.3.1",
+    "flowbite-react": "^0.7.2",
     "framer-motion": "^10.16.16",
     "postcss": "^8.4.32",
     "prism-react-renderer": "^2.3.0",
