@@ -12,8 +12,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "pulldocs": "cross-var docu-notion -n %DOCU_NOTION_INTEGRATION_TOKEN% -r %DOCU_NOTION_DOCS_PAGE%",
-    "pullblog": "cross-var docu-notion -n %DOCU_NOTION_INTEGRATION_TOKEN% -r %DOCU_NOTION_BLOG_PAGE% -m \"./blog\""
+    "pulldocs": "cross-var docu-notion -n %DOCU_NOTION_INTEGRATION_TOKEN% -r %DOCU_NOTION_DOCS_PAGE% -t \"*\" -m \"./docs\"",
+    "pullblog": "cross-var docu-notion -n %DOCU_NOTION_INTEGRATION_TOKEN% -r %DOCU_NOTION_BLOG_PAGE% -t \"*\" -m \"./blog\""
   },
   "dependencies": {
     "@docusaurus/core": "3.0.1",
@@ -23,7 +23,7 @@
     "@heroicons/react": "^2.1.1",
     "@hyvor/hyvor-talk-react": "^0.0.2",
     "@iconify/react": "^4.1.1",
-    "@justinnio/docu-notion": "^0.2.1",
+    "@justinnio/docu-notion": "^0.2.2",
     "@mdx-js/react": "^3.0.0",
     "autoprefixer": "^10.4.16",
     "clsx": "^2.0.0",
