@@ -2,16 +2,20 @@ import { useEffect, useState } from "react";
 import useGlobalData, { usePluginData } from "@docusaurus/useGlobalData";
 import MyLayout from "@site/src/theme/MyLayout";
 import DocCard from "../DocCard";
+import { sortDocs } from "@site/src/lib/utils";
 
 export default function DocsListPage() {
   const globalData = useGlobalData();
 
   const docs =
     globalData &&
-    globalData["docusaurus-plugin-content-docs"] &&
-    globalData["docusaurus-plugin-content-docs"]["default"]
+      globalData["docusaurus-plugin-content-docs"] &&
+      globalData["docusaurus-plugin-content-docs"]["default"]
       ? globalData["docusaurus-plugin-content-docs"]["default"]["allDocs"]
       : [];
+
+  const sortedDocs = docs.sort(sortDocs)
+
 
   return (
     <MyLayout>
@@ -29,7 +33,7 @@ export default function DocsListPage() {
         </div>
       </section>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-4">
-        {docs.map((doc) => (
+        {sortedDocs.map((doc) => (
           <DocCard
             permalink={doc.permalink}
             title={doc.title}

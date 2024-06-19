@@ -19,14 +19,17 @@ async function docPluginEnhanced(context, options) {
 
       const { setGlobalData } = actions;
 
+      const stagingVersions = loadedVersions && loadedVersions.length > 0 && loadedVersions[0].docs
+        ? loadedVersions[0].docs
+        : []
+
+
       setGlobalData({
         breadcrumbs: options.breadcrumbs,
         path: options.path,
         versions: loadedVersions,
         allDocs:
-          loadedVersions && loadedVersions.length > 0 && loadedVersions[0].docs
-            ? loadedVersions[0].docs
-            : [],
+          stagingVersions,
       });
     },
   };
