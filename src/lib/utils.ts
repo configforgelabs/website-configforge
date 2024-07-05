@@ -18,3 +18,18 @@ export function removeQuotations(stringValue: string) {
 
   return stagingValue
 }
+
+export function sortDocs(a: any, b: any) {
+  const aDate = a.frontMatter?.last_update?.date;
+  const bDate = b.frontMatter?.last_update?.date;
+
+
+  if (aDate < bDate) {
+    return 1;
+  }
+  if (bDate < aDate) {
+    return -1;
+  }
+
+  return 0;
+}
