@@ -2,6 +2,7 @@ import Link from "@docusaurus/Link";
 import Paper from "../Icons/Paper";
 import Video from "../Icons/Video";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { removeQuotations } from "@site/src/lib/utils";
 
 interface TagModel {
   label: string;
@@ -49,7 +50,7 @@ export default function DocCard(props: DocCardProps) {
           <div className="font-bold text-gray-900 text-xl my-2">{title}</div>
 
           <div className="font-medium text-gray-500 text-sm">
-            {description}
+            {removeQuotations(description)}
           </div>
         </div>
       </article>
