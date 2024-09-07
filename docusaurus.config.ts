@@ -13,8 +13,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config: Config = {
-  title: "JustInn - Tobias Schüle",
-  tagline: "M365 & Azure Architect",
+  title: "JustInnovate - Tobias Schuele",
+  tagline: "M365 Architect & Automation Engineer",
   favicon: "img/branding/favicon.png",
 
   // Set the production url of your site here
@@ -39,7 +39,7 @@ const config: Config = {
     locales: ["en"],
   },
   customFields: {
-    placeholderImageURL: "https://placehold.co/600x400",
+    placeholderImageURL: "https://ourcloudnetwork.com/wp-content/uploads/2023/10/Protecting-breakglassreakglass-accounts-with-Azure-Automation.png",
   },
 
   presets: [
@@ -169,7 +169,7 @@ const config: Config = {
         feedOptions: {
           type: "all",
           title: "JustInn's Blog RSS Feed",
-          copyright: `Copyright © ${new Date().getFullYear()} Tobias Schüle - JustInn<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
+          copyright: `Copyright © ${new Date().getFullYear()} Tobias Schüle - JustInnovate<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
         },
         // Please change this to your repo.
         // Remove this to remove the "edit this page" links.

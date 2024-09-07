@@ -5,7 +5,6 @@ slug: /project1
 keywords: [Project]
 description: Project description
 tags: [Project, Azure]
-image: https://i.imgur.com/mErPwqL.png
 last_update: 
  date: 2024-01-31
  author: tobias
