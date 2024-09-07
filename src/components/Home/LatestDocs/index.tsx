@@ -4,15 +4,15 @@ import MyLayout from "@site/src/theme/MyLayout";
 import DocCard from "../../DocCard";
 import Button from "../../ui/Button";
 
-export interface LatestDocsProps {}
+export interface LatestDocsProps { }
 
 export default function LatestDocs(props: LatestDocsProps) {
   const globalData = useGlobalData();
 
   const docs =
     globalData &&
-    globalData["docusaurus-plugin-content-docs"] &&
-    globalData["docusaurus-plugin-content-docs"]["default"]
+      globalData["docusaurus-plugin-content-docs"] &&
+      globalData["docusaurus-plugin-content-docs"]["default"]
       ? globalData["docusaurus-plugin-content-docs"]["default"]["allDocs"]
       : [];
 
@@ -27,13 +27,14 @@ export default function LatestDocs(props: LatestDocsProps) {
               Knowledge Base
             </h2>
             <div className="font-regular text-left text-[20px] text-gray-500 sm:text-xl dark:text-gray-400">
-              We use an agile approach to test assumptions and connect with the
-              needs of your audience early and often.
+              Delve into our Knowledge Base, a repository of expert articles and practical guides designed to support your journey in mastering Microsoft 365 and automation.
             </div>
           </div>
 
           <div className="ml-auto">
-            <Button className="hidden lg:inline">View more</Button>
+            <a href="/docs/intro">
+              <Button className="hidden lg:inline">View more</Button>
+            </a>
           </div>
         </div>
       </section>

@@ -4,6 +4,8 @@ import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import { FaAngleRight } from "react-icons/fa6";
 import { FaChevronRight } from "react-icons/fa6";
 import { CodeBracketIcon } from "@heroicons/react/24/solid";
+import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import { ArrowUpOnSquareStackIcon } from "@heroicons/react/24/solid";
 import Chart from "../../Icons/Chart";
 
 const SERVICES = [
@@ -11,25 +13,40 @@ const SERVICES = [
     id: 1,
     textColor: "text-primary-600",
     icon: <Lock className="w-4 h-4" />,
-    title: "Private repos",
+    title: "Microsoft 365 Architecture Design",
     description:
-      "Host code that you don't want to share with the world in private GitHub repos only accessible to you and people you share them with.",
+      "We tailor Microsoft 365 solutions to align with your business goals, ensuring a scalable and secure infrastructure that enhances collaboration and productivity across your organization.",
+    link: "/docs/intro",
+
   },
   {
     id: 2,
     textColor: "text-purple-600",
-    icon: <Chart className="w-4 h-4" />,
-    title: "Dependency graph",
+    icon: <CheckCircleIcon className="w-4 h-4" />,
+    title: "Security and Compliance Management",
     description:
-      "See the packages your project depends on, the repositories that depend on them, and any vulnerabilities detected in their dependencies.",
+      "Protect your data and ensure compliance with industry standards by leveraging advanced security features and best practices in Microsoft 365.",
+    link: "/docs/intro",
   },
   {
     id: 3,
     textColor: "text-teal-500",
     icon: <CodeBracketIcon className="w-4 h-4" />,
-    title: "Code scanning",
+    title: "Automation",
     description:
-      "Find vulnerabilities in custom code using static analysis. Prevent new vulnerabilities from being introduced by scanning every pull request.",
+      "Automate complex administrative tasks within Microsoft 365, enhancing system management and operational efficiency.",
+    link: "/docs/intro",
+
+  },
+  {
+    id: 3,
+    textColor: "text-teal-500",
+    icon: <ArrowUpOnSquareStackIcon className="w-4 h-4" />,
+    title: "Migrations",
+    description:
+      "We ensure a smooth and efficient migration process with minimal disruption to your business operations. Our expertise covers a wide range of Microsoft products, enabling you to leverage the full capabilities of the cloud while maintaining data integrity and security.",
+    link: "/docs/intro",
+
   },
 ];
 
@@ -67,8 +84,8 @@ export default function ServicesOverview() {
                       </p>
 
                       <a
-                        href="#"
-                        title=""
+                        href={option.link}
+                        title={option.title}
                         className={`flex items-center ${option.textColor} hover:underline dark:text-primary-500`}
                       >
                         <span className="text-base leading-none font-semibold">
@@ -82,9 +99,7 @@ export default function ServicesOverview() {
               ))}
               <div className="my-8 border border-solid w-full border-gray-200"></div>
               <div className=" text-sm font-regular text-gray-500">
-                Deliver great service experiences fast - without the complexity
-                of traditional ITSM solutions.Accelerate critical development
-                work, eliminate toil, and deploy changes with ease.
+                We are committed to empowering your organization with the tools and strategies needed to succeed in a dynamic digital landscape. Whether it's improving efficiency, enhancing security, or driving innovation, we're here to support your journey towards digital transformation.
               </div>
             </div>
           </div>

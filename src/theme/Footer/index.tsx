@@ -19,7 +19,7 @@ export default function Footer() {
               <img src="/img/light-logo.png" />
             </a>
             <p className="my-3 font-light text-gray-300 dark:text-gray-400 text-xs lg:text-sm">
-              I’m Tobias Schüle and I started justinn.com as my personal blog
+              I’m Tobias Schuele and I started justinn.io as my personal blog
               where I can share my How To guides and opinions on everything
               Microsoft 365, Microsoft Entra and Azure.
             </p>
@@ -101,37 +101,31 @@ export default function Footer() {
               </div>
               <div className="border-b-0 border-x-0 border-t border-solid border-gray-900 border-opacity-10 gap-x-[11px] flex justify-between">
                 <a
-                  href="https://example.com"
+                  href="https://www.linkedin.com/in/tobias-schuele/"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <LinkedIn className="w-4 h-4 " />
                 </a>
                 <a
-                  href="https://example.com"
+                  href="https://justinn.io/blog/rss.xml"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <RSS className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://example.com"
-                  className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
-                >
-                  <Youtube className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://example.com"
+                  href="https://github.com/JustInnIO"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <Github className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://example.com"
+                  href="sip:tobias@justinn.io"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center rounded-md text-transparent"
                 >
                   <TeamsBlack className="w-[26px] h-[22px]" />
                 </a>
                 <a
-                  href="https://example.com"
+                  href="mailto:tobias@justinn.io"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <Gmail className="w-[22px] h-[22px]" />

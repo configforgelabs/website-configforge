@@ -15,7 +15,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config: Config = {
   title: "JustInn - Tobias Schüle",
   tagline: "M365 & Azure Architect",
-  favicon: "img/favicon.ico",
+  favicon: "img/branding/favicon.png",
 
   // Set the production url of your site here
   url: "https://justinn.io",
@@ -64,7 +64,9 @@ const config: Config = {
       navbar: {
         logo: {
           alt: "Home",
-          src: "img/logo.png",
+          src: "img/branding/logo-color.png",
+          width: 196,
+          height: 60,
         },
         items: [
           {

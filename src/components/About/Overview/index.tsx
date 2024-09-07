@@ -11,14 +11,14 @@ export default function Overview() {
             </div>
             <div className="text-gray-500 text-[18px]">
               I’ve spent years providing technical solutions to leading
-              businesses, building successful cloud platforms, and DevOps
-              products for global businesses.
+              businesses, building successful cloud platforms, and automations
+              for global businesses.
             </div>
           </div>
           <div className="flex flex-col space-y-4 text-gray-500 text-[18px]">
             <div className="text-lg mb-4">
-              I believe technology should work for businesses.It should make
-              life simple.Yet technology is painfully time-consuming, difficult
+              I believe technology should work for businesses. It should make
+              life simple. Yet technology is painfully time-consuming, difficult
               to understand, and hard to execute.
             </div>
             <div className="text-lg">

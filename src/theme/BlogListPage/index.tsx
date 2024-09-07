@@ -37,8 +37,7 @@ function BlogListPageContent(props: Props) {
               Blog
             </h2>
             <p className="font-normal text-gray-500 text-xl dark:text-gray-400">
-              We use an agile approach to test assumptions and connect with the
-              needs of your audience early and often.
+              Stay informed with our latest blog updates, where we share expert analyses and practical guides on leveraging Microsoft 365 for optimal productivity and seamless automation.
             </p>
           </div>
         </div>

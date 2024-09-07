@@ -8,12 +8,13 @@ const FEATURE_LIST = [
     description:
       "I never forget that there are real people behind the screens. When I choose and switch tech, it’s not just about tech functionality;",
     features: [
-      "Durable Solutions",
-      "Trusted Experience",
-      "Strong Infrastructure",
+      "Tailored Tech",
+      "Clear Communication",
+      "Understanding Needs",
     ],
     bottomDescription:
       "I’m thinking about the team's comfort and experience as well.",
+    imageurl: "/img/about/humansfirst.jpeg",
   },
   {
     id: "02",
@@ -21,6 +22,7 @@ const FEATURE_LIST = [
     description:
       "Spot-on, fast, and secure – these 3 deliverables are a guarantee in all my projects which is why companies come to me. I double-check everything to make sure their data’s locked down tight and their systems are solid, so they don't have to worry about it.",
     features: ["Quick Results", "Strong Security", "Reliable Performance"],
+    imageurl: "/img/about/fastandsecure.jpeg",
   },
   {
     id: "03",
@@ -28,6 +30,7 @@ const FEATURE_LIST = [
     description:
       "I am not here to just provide a service, send invoice, and leave. I am a partner who makes sure my clients are always covered, ahead of the curve, and ready for what's next.",
     features: ["Long-Term Plans", "Ongoing Help", "Staying Ahead"],
+    imageurl: "/img/about/humansfirst.jpeg",
   },
   {
     id: "04",
@@ -39,6 +42,7 @@ const FEATURE_LIST = [
       "Trusted Experience",
       "Strong Infrastructure",
     ],
+    imageurl: "/img/about/humansfirst.jpeg",
   },
   {
     id: "05",
@@ -48,7 +52,9 @@ const FEATURE_LIST = [
     features: ["Aligned Technology", "Supportive Growth", "Smart Choices"],
     bottomDescription:
       "My focus is on ensuring that each new technological component complements their overarching goals, enabling them to remain aligned and progress effectively.",
+    imageurl: "/img/about/humansfirst.jpeg",
   },
+
 ];
 
 export default function FeatureList() {
@@ -61,9 +67,8 @@ export default function FeatureList() {
             key={option.id}
           >
             <div
-              className={`text-gray-500 sm:text-lg dark:text-gray-400 order-2 ${
-                index % 2 === 0 ? "lg:order-1" : "lg:order-2"
-              }`}
+              className={`text-gray-500 sm:text-lg dark:text-gray-400 order-2 ${index % 2 === 0 ? "lg:order-1" : "lg:order-2"
+                }`}
             >
               <h2 className="mb-4 text-3xl lg:text-4xl tracking-tight font-extra-bold text-gray-900 dark:text-white flex gap-x-2">
                 <span className="text-primary-700 block">{option.id}. </span>
@@ -90,15 +95,13 @@ export default function FeatureList() {
                   ))}
               </ul>
               <p className="mb-8 font-regular text-[20px]">
-                Deliver great service experiences fast - without the complexity
-                of traditional ITSM solutions.
+                {option.bottomDescription}
               </p>
             </div>
             <img
-              className={`mb-4 h-[300px] lg:h-auto w-full lg:mb-0 lg:flex rounded-lg order-1 ${
-                index % 2 === 0 ? "lg:order-2" : "lg:order-1"
-              }`}
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-1.png"
+              className={`mb-4 h-[300px] lg:h-auto w-full lg:mb-0 lg:flex rounded-lg order-1 ${index % 2 === 0 ? "lg:order-2" : "lg:order-1"
+                }`}
+              src={option.imageurl}
               alt="office feature image"
             />
           </div>

@@ -3,15 +3,15 @@ import useGlobalData, { usePluginData } from "@docusaurus/useGlobalData";
 import Button from "../../ui/Button";
 import DocCard from "../../DocCard";
 
-export interface LatestPostsProps {}
+export interface LatestPostsProps { }
 
 export default function LatestPosts(props: LatestPostsProps) {
   const globalData = useGlobalData();
 
   const posts =
     globalData &&
-    globalData["docusaurus-plugin-content-blog"] &&
-    globalData["docusaurus-plugin-content-blog"]["default"]
+      globalData["docusaurus-plugin-content-blog"] &&
+      globalData["docusaurus-plugin-content-blog"]["default"]
       ? globalData["docusaurus-plugin-content-blog"]["default"]["posts"]
       : [];
 
@@ -26,12 +26,13 @@ export default function LatestPosts(props: LatestPostsProps) {
               Latest Posts
             </h2>
             <div className="font-regular text-left text-[20px] text-gray-500 sm:text-xl dark:text-gray-400">
-              We use an agile approach to test assumptions and connect with the
-              needs of your audience early and often.
+              Dive into expert insights and innovative solutions with our latest blog posts, where we unravel the complexities of Microsoft 365 and automation to empower your digital transformation journey!
             </div>
           </div>
           <div className="ml-auto">
-            <Button className="hidden lg:inline">View more</Button>
+            <a href="/blog">
+              <Button className="hidden lg:inline">View more</Button>
+            </a>
           </div>
         </div>
       </section>

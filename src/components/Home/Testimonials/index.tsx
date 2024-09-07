@@ -18,9 +18,27 @@ export default function Testimonials() {
         </div>
       </section>
       <div className="grid gap-y-8 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-4">
-        <TestimonialCard />
-        <TestimonialCard />
-        <TestimonialCard />
+        <TestimonialCard
+          title="Solid foundation for any project"
+          quote="This is a very complex and beautiful set of elements. Under the hood it comes with the best things from 2 different worlds: Figma and Tailwind."
+          name="Bonnie Green"
+          role="Web developer @themesberg"
+          imageUrl="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+        />
+        <TestimonialCard
+          title="Amazing tool for developers"
+          quote="Using these components has accelerated our development time significantly. The integration with Tailwind makes it incredibly easy to use."
+          name="John Doe"
+          role="Senior Developer @examplecorp"
+          imageUrl="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+        />
+        <TestimonialCard
+          title="Highly recommend for any team"
+          quote="The flexibility and design quality are unmatched. It has become a staple in our workflow, enabling us to deliver projects faster."
+          name="Jane Smith"
+          role="Lead Designer @designhub"
+          imageUrl="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+        />
       </div>
       <div className="flex justify-center mt-16">
         <button
