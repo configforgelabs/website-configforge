@@ -76,16 +76,17 @@ const config: Config = {
             activeBaseRegex: "/^$|/$"
           },
           {
+            to: "services",
+            label: "Service Offers",
+            position: "right",
+          },
+          {
             to: "about",
             label: "About",
             position: "right",
           },
           { to: "blog", label: "Blog", position: "right" },
-          {
-            to: "projects",
-            label: "Project Offers",
-            position: "right",
-          },
+
           {
             to: "docs/intro",
             label: "Knowledge Base",
