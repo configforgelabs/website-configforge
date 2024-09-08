@@ -41,7 +41,7 @@ export default function Hero() {
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="sip:tobias@justinn.io"
+              href="https://teams.microsoft.com/l/chat/0/0?users=tobias@justinn.io"
               className="w-14 h-14 bg-[#111928] flex justify-center items-center rounded-md text-transparent"
             >
               <Teams className="w-[26px] h-[22px]" />
