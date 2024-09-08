@@ -7,7 +7,6 @@ authors: [Tobias]
 date: 2024-01-31
 keywords: [Azure]
 tags: [Azure]
-image: 
 ---
 
 
