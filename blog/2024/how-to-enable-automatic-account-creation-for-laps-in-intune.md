@@ -8,6 +8,7 @@ tags: [Azure]
 image: https://ourcloudnetwork.com/wp-content/uploads/2023/12/How-to-Create-a-Local-Admin-Account-on-Windows-Devices-with-Intune.png
 date: 2024-02-08
 authors: tobias
+last_edited: 2024-01-03
 ---
 
 

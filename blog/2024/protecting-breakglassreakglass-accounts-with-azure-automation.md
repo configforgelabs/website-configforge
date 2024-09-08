@@ -6,8 +6,11 @@ keywords: [Azure]
 description: Fifth blog entry
 tags: [Azure]
 image: https://ourcloudnetwork.com/wp-content/uploads/2023/10/Protecting-breakglassreakglass-accounts-with-Azure-Automation.png
-date: 2024-02-05
-authors: tobias
+#date: 2024-02-05
+#authors: tobias
+last_update:
+  date: 1/1/2000
+  author: tobias
 ---
 
 
