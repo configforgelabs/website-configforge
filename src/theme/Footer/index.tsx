@@ -119,7 +119,7 @@ export default function Footer() {
                   <Github className="w-6 h-6" />
                 </a>
                 <a
-                  href="sip:tobias@justinn.io"
+                  href="https://teams.microsoft.com/l/chat/0/0?users=tobias@justinn.io"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center rounded-md text-transparent"
                 >
                   <TeamsBlack className="w-[26px] h-[22px]" />
