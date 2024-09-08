@@ -1,15 +1,18 @@
 ---
-title: How to Create and Manage Access Reviews for Group Owners
-sidebar_position: 5
+title: PLACEHOLDER 2
+description: "Sixth blog entry"
+sidebar_position: 1
 slug: /how-to-create-and-manage-access-reviews-for-group-owners
+authors: [Tobias]
+date: 2024-01-31
 keywords: [Azure]
-description: Sixth blog entry
 tags: [Azure]
 image: https://ourcloudnetwork.com/wp-content/uploads/2023/12/How-to-create-and-manage-access-reviews-for-group-owners.png
-date: 2024-02-06
-authors: tobias
 ---
 
+
+
+Test copy from ourcloudnetwork.com
 
 
 Access Reviews in Microsoft Entra provide a way to continuously review access to resources in your tenant. More importantly, you as the owner of your tenant can enable resource owners (of groups or Teams) to govern external users’ access to said resources themselves, thus reducing your workload and shifting the responsibility.
@@ -26,7 +29,7 @@ Access reviews for group owners are disabled by default. To enable this feature,
 1. Expand **Identity Governance** and select **Access reviews**.
 2. Select **Settings**, then enable **Group owners can create and manage access reviews for groups they own**.
 
-	![](./662094784.png)
+	![](./how-to-create-and-manage-access-reviews-for-group-owners.99102242-f9e5-4208-9d1b-7fa1baa09d9b.png)
 
 
 # **Enable Group owner access reviews with Microsoft Graph PowerShell** {#46f9fb90af52450191c5d00fb097fb63}
@@ -57,11 +60,11 @@ Any user who is the owner of a group will now be able to create access reviews f
 1. While signed in to your standard user account (without any roles) open the [Identity Governance Access Reviews blade](https://entra.microsoft.com/#view/Microsoft_AAD_ERM/DashboardBlade/~/Controls).
 2. Click **New access review**.
 
-	![](./19706416.png)
+	![](./how-to-create-and-manage-access-reviews-for-group-owners.21cc574d-67df-4478-af3d-0985909aecea.png)
 
 3. On the **Review type** page, you will only have the option to set the **Review scope** to **Select Teams + groups**. Click **Select groups** and you will see only the groups you own, choose your target group and click **Select**.
 
-	![](./95060668.png)
+	![](./how-to-create-and-manage-access-reviews-for-group-owners.9189c099-0f3e-40d8-ba69-a49f7e3d2d1b.png)
 
 4. In our scenario, I am going to create a single-stage review for the group owners to conduct. On the Reviews page, you will have the option to select specific reviewers.
 
@@ -77,7 +80,7 @@ Any user who is the owner of a group will now be able to create access reviews f
 	_**When managing guest users, there should never be a time when their access to your data is not being governed or reviewed. Of course, change these settings to as you prefer, but ensure the end date is set to never when reviewing guest users.**_
 
 
-	![](./1960400110.png)
+	![](./how-to-create-and-manage-access-reviews-for-group-owners.7af02981-56c1-4393-be34-251fe9b4749e.png)
 
 5. The **Upon completion settings** allow you to define important settings around automatic remediation.
 	- **Auto-apply results to resource:** If the user’s access is denied, their access to the resource will be removed automatically after the review is completed, otherwise manual remediation is required.
@@ -91,11 +94,11 @@ Any user who is the owner of a group will now be able to create access reviews f
 		- Block the user from signing in for 30 days, then remove the user from the tenant.
 	- **At end of review, send notification to:** Sends a notification to specific users.
 
-		![](./1666297691.png)
+		![](./how-to-create-and-manage-access-reviews-for-group-owners.c230ef76-4611-4159-a559-3a9c247cd0dd.png)
 
 6. For the remaining options on the settings page, while they do not impact the outcome, they enable you to review notifications and reminders for the review and also provide helpful information such as the last sign-in date for the guest user. This will help you decide on whether to remove access or not.
 
-	![](./1850741378.png)
+	![](./how-to-create-and-manage-access-reviews-for-group-owners.0035dabe-dda5-49a7-bc43-717f594ad11d.png)
 
 7. Click **Review + create**, then define a review name and click **Create**.
 
@@ -105,25 +108,25 @@ Any user who is the owner of a group will now be able to create access reviews f
 When the access review begins (as defined by the start date within the review settings), the reviewer of the group will receive a notification email with a link to start the review.
 
 
-![](./2138817586.png)
+![](./how-to-create-and-manage-access-reviews-for-group-owners.8ef125eb-0cfd-461e-9f4c-bc07672a3740.png)
 
 
 The link will take them to the Access reviews blade within [https://myaccess.microsoft.com/.](https://myaccess.microsoft.com/) You can also navigate directly to that link and then select the name of the access review you want to begin.
 
 
-![](./299501458.png)
+![](./how-to-create-and-manage-access-reviews-for-group-owners.ef2e3941-5420-4732-8e93-322707de30c8.png)
 
 
 As you can see, Entra is recommending that because the user has been inactive in the tenant for over 30 days, it should be denied access to the resource.
 
 
-![](./430291524.png)
+![](./how-to-create-and-manage-access-reviews-for-group-owners.b5c59799-9f9b-41a5-bf76-241f780fbebd.png)
 
 
 Once access is denied, it will show as denied in the list. This action can be reversed if an incorrect decision is made.
 
 
-![](./433854424.png)
+![](./how-to-create-and-manage-access-reviews-for-group-owners.8957aa16-8fbb-496d-86fb-5675712d522b.png)
 
 
 # **Impact of denying access in an Access review** {#ec9dc88ec5a94ab2ad359f5b871071fd}

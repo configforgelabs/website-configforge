@@ -1,16 +1,18 @@
 ---
-title: How to Create a Local Admin Account on Windows Devices with Intune
-sidebar_position: 6
+title: PLACEHOLDER 3
+description: "Description"
+sidebar_position: 2
 slug: /how-to-enable-automatic-account-creation-for-laps-in-intune
+authors: [Tobias]
+date: 2024-01-31
 keywords: [Azure]
-description: Seventh blog entry
 tags: [Azure]
-image: https://ourcloudnetwork.com/wp-content/uploads/2023/12/How-to-Create-a-Local-Admin-Account-on-Windows-Devices-with-Intune.png
-date: 2024-02-08
-authors: tobias
-last_edited: 2024-01-03
+image: 
 ---
 
+
+
+Test copy from ourcloudnetwork.com
 
 
 In this tutorial, I will show you how to create a new local administrator account on your Windows devices using Microsoft Intune. While there are a few preferred methods among professionals and MVPs for creating local admin accounts, here we are going to use a simple PowerShell script for the detection and creation of the account.
@@ -116,20 +118,20 @@ Both the detection script and remediation script first need to be saved into a P
 1. Log in to **Microsoft Intune**.
 2. Select **Devices** then **Remediations**.
 
-	![](./2087523864.png)
+	![](./how-to-enable-automatic-account-creation-for-laps-in-intune.0648964c-7a73-4a9e-afba-f959280bd67d.png)
 
 3. Select **Create Script package**.
 4. Define the basic remediation settings such as the **name** of the package and a meaningful **description**.
 
-	![](./1650708964.png)
+	![](./how-to-enable-automatic-account-creation-for-laps-in-intune.fb8bf7bc-78c0-4479-a36d-b7ae6e0dc3c2.png)
 
 5. On the settings page, upload both script files to the corresponding location, then ensure the script is not run in the users context and the enforce script signature check is set to No. As all of the workstations in scope of this package should be 64-bit, set **Run script in 64-bit PowerShell** to **Yes**.
 
-	![](./99030132.png)
+	![](./how-to-enable-automatic-account-creation-for-laps-in-intune.00737807-7dc7-4402-8d17-2194011d13bf.png)
 
 1. On the **Assignments** page, assign the package to the target group of users and define the frequency at which the remediation package will run.
 
-	![](./1559781962.png)
+	![](./how-to-enable-automatic-account-creation-for-laps-in-intune.7a15b922-ce76-4acc-91d4-8af0359259fc.png)
 
 2. Then click **Create**.
 
@@ -139,11 +141,11 @@ Both the detection script and remediation script first need to be saved into a P
 You should allow the remediation package some time to run based on the schedule you defined. Otherwise you can run the remediation package manually on a target device as a test from the Intune devices blade.
 
 
-![](./1940650662.png)
+![](./how-to-enable-automatic-account-creation-for-laps-in-intune.a6147d35-bd21-4ecd-9183-b591849ff7d4.png)
 
 
 To monitor the status of your deployment, select the remediation package and click the **Overview** menu option. You will immediately see a high level overview of the total devices that have been detected and remediated. You can also see more detailed information on the **Device status** menu page, like below:
 
 
-![](./1550846755.png)
+![](./how-to-enable-automatic-account-creation-for-laps-in-intune.440e6b6d-4c62-454e-8011-95046ad321ed.png)
 

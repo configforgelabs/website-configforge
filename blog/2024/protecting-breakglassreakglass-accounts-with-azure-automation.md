@@ -1,17 +1,21 @@
 ---
-title: Protect Microsoft 365 Break Glass Accounts with Azure Automation
-sidebar_position: 4
+title: PLACEHOLDER 1
+description: "Fifth blog entry"
+sidebar_position: 0
 slug: /protecting-breakglassreakglass-accounts-with-azure-automation
-keywords: [Azure]
-description: Fifth blog entry
-tags: [Azure]
-image: https://ourcloudnetwork.com/wp-content/uploads/2023/10/Protecting-breakglassreakglass-accounts-with-Azure-Automation.png
-#date: 2024-02-05
-#authors: tobias
-last_update:
-  date: 1/1/2000
-  author: tobias
+authors: [Tobias,Christoph]
+date: 2024-01-31
+keywords: [Azure,Project]
+tags: [Azure,Project]
+last_update: 
+ date: 2024-09-08
+ author: [Tobias]
+image:  https://ourcloudnetwork.com/wp-content/uploads/2023/10/Protecting-breakglassreakglass-accounts-with-Azure-Automation.png
 ---
+
+
+
+Test copy from ourcloudnetwork.com
 
 
 
@@ -134,7 +138,7 @@ Send-MgUserMail -UserId $from -BodyParameter $body
 The output of the script will look like the following:
 
 
-![](./697086386.png)
+![](./protecting-breakglassreakglass-accounts-with-azure-automation.62c7611d-4016-4688-b207-cea01a08a304.png)
 
 
 # **Automating on a schedule with Azure Automation** {#a33d9176107645ed8dce26bdb27b588a}
@@ -164,11 +168,11 @@ Connect-MgGraph -Identity
 I like to test this using the Runbook Test pane before publishing it to production. While editing your Runbook, select **Test pane**.
 
 
-![](./1809217348.png)
+![](./protecting-breakglassreakglass-accounts-with-azure-automation.6852442b-d68a-4b53-93ac-729da8f57243.png)
 
 
 From here you can execute your script to validate it is functioning as expected.
 
 
-![](./1553035954.png)
+![](./protecting-breakglassreakglass-accounts-with-azure-automation.31c4ea46-f25b-4e0a-8beb-5b60cb54c5b5.png)
 

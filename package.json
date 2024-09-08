@@ -16,6 +16,7 @@
     "pullblog": "cross-var docu-notion -n %DOCU_NOTION_INTEGRATION_TOKEN% -r %DOCU_NOTION_BLOG_PAGE% -t \"*\" -m \"./blog\" --status-tag \"*\""
   },
   "dependencies": {
+    "@justinnio/docu-notion": "^0.3.3",
     "@docusaurus/core": "3.4.0",
     "@docusaurus/preset-classic": "3.4.0",
     "@docusaurus/theme-live-codeblock": "^3.4.0",
@@ -23,7 +24,6 @@
     "@heroicons/react": "^2.1.1",
     "@hyvor/hyvor-talk-react": "^0.0.2",
     "@iconify/react": "^4.1.1",
-    "@justinnio/docu-notion": "^0.3.0",
     "@mdx-js/react": "^3.0.0",
     "autoprefixer": "^10.4.16",
     "clsx": "^2.0.0",
