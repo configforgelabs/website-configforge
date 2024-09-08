@@ -2,10 +2,13 @@
 title: Script 2
 sidebar_position: 1
 slug: /script2
-keywords: [Script]
-description: Script description
-tags: [Script, PowerShell]
-image: https://i.imgur.com/mErPwqL.png
+authors: Tobias
+date: 2024-01-22
+keywords: [Script,PowerShell]
+tags: [Script,PowerShell]
+last_update: 
+ date: 2024-09-08
+ author: [Tobias]
 ---
 
 
