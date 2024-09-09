@@ -37,9 +37,9 @@ const ContactFromSection = () => {
             htmlFor="default-checkbox"
             className="ms-1 text-xs font-medium text-gray-500 "
           >
-            By submitting this form, you confirm that you have read and agree to{" "}
+            By submitting this form, you confirm that you have read and agree to JustInn's {" "}
             <span className="text-gray-900 underline">
-              Flowbite’s Terms of Service
+              Terms of Service
             </span>{" "}
             and{" "}
             <span className="text-gray-900 underline">Privacy Statement</span>

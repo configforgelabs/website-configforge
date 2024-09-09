@@ -6,6 +6,7 @@ import Tag from "@theme/Tag";
 
 import styles from "./styles.module.scss";
 import Paper from "@site/src/components/Icons/Paper";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -43,6 +44,9 @@ export default function BlogPostGridItems({
         const { title, image: frontMatterImage } = frontMatter;
 
         const image = assets.image ?? frontMatterImage;
+        const configContext = useDocusaurusContext();
+        const { customFields } = configContext.siteConfig;
+        const imageSrc = image ?? (customFields?.placeholderImageURL as string);
 
         const { permalink, date, tags, authors, description } = blogMetaData;
 
@@ -58,8 +62,8 @@ export default function BlogPostGridItems({
             <article className="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
               <img
                 className="mb-5 rounded-lg"
-                src={image}
-                alt="office laptop working"
+                src={imageSrc}
+                alt="Blog post image"
               />
 
               {tags.length > 0 &&
@@ -83,7 +87,7 @@ export default function BlogPostGridItems({
                   <img
                     className="w-10 h-10 rounded-full"
                     src={authorData.imageURL}
-                    alt="Jese Leos avatar"
+                    alt="Author Avatar"
                   />
                 )}
 

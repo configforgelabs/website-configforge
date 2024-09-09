@@ -18,24 +18,28 @@ const contactInfo = [
     title: "Email us:",
     about:
       "Email us for general queries, including marketing and partnership opportunities.",
-    address: "hello@company.com",
+    address: "contact@justinn.io",
   },
   {
     icon: <MapPin className="w-12 h-12" />,
     title: "Call us:",
     about:
       "Call us to speak to a member of our team. We are always happy to help.",
-    address: "+1 (646) 786-5060",
+    address: "+49 30 23322426",
   },
   {
     icon: <Phone className="w-12 h-12" />,
     title: "Support",
-    about: "Check out helpful resources, FAQs and developer tools.",
-    address: "Support center",
+    about: "Check out helpful resources, FAQs and instructions.",
+    address: "https://justinn.io/docs/intro",
   },
 ];
 
 const ContactInfoCard = ({ icon, title, about, address }: TConatctInfoCard) => {
+  const isEmail = title === "Email us:";
+  const isPhone = title === "Call us:";
+  const isSupport = title === "Support";
+
   return (
     <div className=" text-center">
       <div className="w-[64px] h-[64px] relative mx-auto bg-gray-100 rounded-full flex justify-center items-center">
@@ -46,16 +50,15 @@ const ContactInfoCard = ({ icon, title, about, address }: TConatctInfoCard) => {
         {about}
       </p>
       <div className="mt-1">
-        {title == "Support" ? (
-          <button className="w-[134px] h-[34px] text-primary-700 border bg-transparent border-primary-700 rounded-lg flex gap-x-2 items-center mx-auto justify-center cursor-pointer">
-            <span>{address}</span>
-            <LuArrowRight />
-          </button>
-        ) : (
-          <span className="text-sm font-bold text-primary-700">{address}</span>
-        )}
+        <a
+          href={isEmail ? `mailto:${address}` : isPhone ? `tel:${address}` : isSupport ? `${address}` : "#"}
+          className="text-sm font-bold text-primary-700"
+        >
+          {address}
+        </a>
+
       </div>
-    </div>
+    </div >
   );
 };
 
@@ -65,6 +68,7 @@ const ContactAddressSection = () => {
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-[64px] ">
         {contactInfo.map((contact) => (
           <ContactInfoCard
+            key={contact.title}
             icon={contact.icon}
             title={contact.title}
             about={contact.about}
@@ -75,5 +79,6 @@ const ContactAddressSection = () => {
     </Container>
   );
 };
+
 
 export default ContactAddressSection;

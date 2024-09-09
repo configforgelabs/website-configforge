@@ -3,6 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import "dotenv/config";
 
+
 // @ts-check
 // `@type` JSDoc annotations allow editor autocompletion and type checking
 // (when paired with `@ts-check`).
@@ -52,8 +53,12 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
+        googleTagManager: {
+          containerId: 'GTM-KCHFMND6',
+        },
       } satisfies Preset.Options,
     ],
+
   ],
 
   themeConfig:
@@ -84,15 +89,38 @@ const config: Config = {
           },
           {
             to: "services",
-            label: "Service Offers",
+            label: "Services",
             position: "right",
+            items: [
+              {
+                label: "Microsoft 365 Architecture Design",
+                to: "architecture",
+              },
+              {
+                label: "Automation",
+                to: "automation",
+              },
+            ],
           },
           {
             to: "about",
             label: "About",
             position: "right",
+            // I want to  add a sub page to About
+
           },
-          { to: "blog", label: "Blog", position: "right" },
+          {
+            to: "blog",
+            label: "Blog",
+            position: "right",
+            items: [
+              {
+                label: "Blog Archive",
+                to: "blogarchive",
+              }
+            ],
+          },
+
 
           {
             to: "docs/intro",
@@ -149,6 +177,7 @@ const config: Config = {
     } satisfies Preset.ThemeConfig,
 
   plugins: [
+
     require.resolve("docusaurus-plugin-image-zoom"),
     "docusaurus-plugin-sass",
     [

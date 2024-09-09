@@ -3,14 +3,14 @@ const inputFields = [
     label: "First Name",
     id: "first-name",
     name: "firstName",
-    placeHolder: "Bonnie",
+    placeHolder: "John",
     type: "text",
   },
   {
     label: "Last Name",
     id: "last-name",
     name: "lastName",
-    placeHolder: "Green",
+    placeHolder: "Doe",
     type: "text",
   },
   {
@@ -24,7 +24,7 @@ const inputFields = [
     label: "Phone number",
     id: "phone-number",
     name: "phoneNumber",
-    placeHolder: "+(12) 345 6789",
+    placeHolder: "+49 30 22222",
     type: "text",
   },
 ];
