@@ -16,7 +16,7 @@ const SERVICES = [
     title: "Microsoft 365 Architecture Design",
     description:
       "We tailor Microsoft 365 solutions to align with your business goals, ensuring a scalable and secure infrastructure that enhances collaboration and productivity across your organization.",
-    link: "/docs/intro",
+    link: "/services",
 
   },
   {
@@ -26,7 +26,7 @@ const SERVICES = [
     title: "Security and Compliance Management",
     description:
       "Protect your data and ensure compliance with industry standards by leveraging advanced security features and best practices in Microsoft 365.",
-    link: "/docs/intro",
+    link: "/services",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const SERVICES = [
     title: "Automation",
     description:
       "Automate complex administrative tasks within Microsoft 365, enhancing system management and operational efficiency.",
-    link: "/docs/intro",
+    link: "/services",
 
   },
   {
@@ -45,7 +45,7 @@ const SERVICES = [
     title: "Migrations",
     description:
       "We ensure a smooth and efficient migration process with minimal disruption to your business operations. Our expertise covers a wide range of Microsoft products, enabling you to leverage the full capabilities of the cloud while maintaining data integrity and security.",
-    link: "/docs/intro",
+    link: "/services",
 
   },
 ];

@@ -5,12 +5,19 @@ import Github from "../../Icons/Github";
 import Teams from "../../Icons/Teams";
 import Gmail from "../../Icons/Gmail";
 import BannerImage from "@site/static/img/home-hero-gray.jpg";
+import { HiEye, HiInformationCircle } from "react-icons/hi";
+import { Alert } from "flowbite-react";
 
 export default function Hero() {
   return (
+
     <section
+
       className={`lg:bg-[url('/static/img/home-hero-gray.jpg')] bg-no-repeat bg-cover bg-center bg-white lg:bg-gray-700 lg:h-[calc(100vh-100px)]`}
     >
+      <Alert additionalContent="We are currently working on improving this site. Some features may be incomplete or unavailable. Thank you for your patience and understanding." color="warning" rounded icon={HiInformationCircle}>
+        <span className="font-medium">Notice</span> This Website is Under Development
+      </Alert>
       <div className="lg:hidden relative w-full h-[270px]">
         <img src={BannerImage} className=" object-cover w-full h-full" />
       </div>

@@ -4,7 +4,7 @@ description: "Fifth blog entry"
 sidebar_position: 0
 slug: /protecting-breakglassreakglass-accounts-with-azure-automation
 authors: [Tobias,Christoph]
-date: 2024-01-31
+date: 2024-08-31
 keywords: [Azure,Project]
 tags: [Azure,Project]
 last_update: 

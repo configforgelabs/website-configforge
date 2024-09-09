@@ -16,7 +16,7 @@ export default function LatestDocs(props: LatestDocsProps) {
       ? globalData["docusaurus-plugin-content-docs"]["default"]["allDocs"]
       : [];
 
-  const topSixDocs = docs.slice(0, 3);
+  const topSixDocs = docs.slice(0, 6);
 
   return (
     <div className="relative py-16 lg:py-24 px-4 mx-auto max-w-screen-xl container">
