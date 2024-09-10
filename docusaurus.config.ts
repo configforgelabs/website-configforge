@@ -125,8 +125,6 @@ const config: Config = {
               }
             ],
           },
-
-
           {
             to: "docs/intro",
             label: "Knowledge Base",
