@@ -40,9 +40,8 @@ const featuresData = [
 function App() {
     const { siteConfig } = useDocusaurusContext();
     return (
-        <Layout
-            title={`Automation`}
-            description="Description will go into a meta tag in <head />"
+        <Layout title={`Automation`}
+        // description=""
         >
             <RoundedIconsFeatureSection
                 title="Automation"

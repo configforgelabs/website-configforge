@@ -40,9 +40,8 @@ const featuresData = [
 function App() {
     const { siteConfig } = useDocusaurusContext();
     return (
-        <Layout
-            title={`M365 Architecture Design`}
-            description="Description will go into a meta tag in <head />"
+        <Layout title={`M365 Architecture Design`}
+        // description=""
         >
             <RoundedIconsFeatureSection
                 title="Microsoft 365 Architecture Design"

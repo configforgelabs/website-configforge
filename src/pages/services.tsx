@@ -57,7 +57,7 @@ const Services: React.FC = () => {
     return (
         <Layout
             title={`${siteConfig.title}`}
-            description="Description will go into a meta tag in <head />"
+        //description=""
         >
             <section className="bg-white antialiased dark:bg-gray-900">
                 <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6 lg:py-24">

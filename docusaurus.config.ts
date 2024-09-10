@@ -76,9 +76,7 @@ const config: Config = {
       navbar: {
         logo: {
           alt: "Home",
-          src: "img/branding/logo-color.png",
-          width: 196,
-          height: 60,
+          src: "img/branding/logo-color-menu.png",
         },
         items: [
           {
@@ -92,6 +90,10 @@ const config: Config = {
             label: "Services",
             position: "right",
             items: [
+              {
+                label: "Overview",
+                to: "services",
+              },
               {
                 label: "Microsoft 365 Architecture Design",
                 to: "architecture",
@@ -110,12 +112,15 @@ const config: Config = {
 
           },
           {
-            to: "blog",
             label: "Blog",
             position: "right",
             items: [
               {
-                label: "Blog Archive",
+                label: "Overview",
+                to: "blog",
+              },
+              {
+                label: "Archive",
                 to: "blogarchive",
               }
             ],

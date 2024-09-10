@@ -110,13 +110,16 @@ const BlogArchive: React.FC = () => {
                     __html: JSON.stringify(breadcrumbStructuredData),
                 }}
             />
-            <Layout title="Blog Archive">
-                <header className={clsx('hero hero--primary', styles.heroBanner)}>
-                    <div className="container">
-                        <h1 className="hero__title">Blog Archive</h1>
-                        <p className="hero__subtitle">Here you can find all blog posts chronologically</p>
-                    </div>
-                </header>
+            <Layout title="Blog Archive"
+            // description=""
+            >
+                <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-6 lg:py-16">
+                    <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-5xl">
+                        Blog Archive
+                    </h2>
+                    <p className="text-gray-500 dark:text-gray-400 sm:px-8 sm:text-lg lg:px-32 xl:px-64">
+                        Here you can find all blog posts chronologically
+                    </p></div>
                 <main>
                     {yearsOfPosts && yearsOfPosts.length > 0 && (
                         <section className={styles.features}>

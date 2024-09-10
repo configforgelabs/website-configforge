@@ -9,8 +9,8 @@ const ContactUs = () => {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`Contact`}
+    // description=""
     >
       <ContactBannerSection />
       <div className="px-5 lg:px-0">

@@ -24,7 +24,7 @@ export default function Hero() {
       <div className="flex w-[343px] md:w-[500px] h-full lg:w-auto mx-auto md:max-w-screen-xl  ">
         <div className="mb-6 h-min mt-6 md:mt-[74px] pt-[40px] lg:max-w-[555px] lg:mb-0 bg-white md:pt-16 pb-8 md:pb-12 px-6 md:px-12 rounded-lg shadow-md lg:shadow-none z-1">
           <h1 className="mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl text-gray-950">
-            Welcome to the heart of innovation, led by Tobias Schuele.          </h1>
+            Welcome to the heart of innovation, led by Tobias Schuele</h1>
           <p className="font-regular text-gray-500 lg:mb-12 text-[18px] md:text-lg lg:text-xl">
             Here, we share insights, solutions, and stories from the front lines of technology. Dive into our blog for the latest on how we tackle challenges across diverse tech stacks.
           </p>

@@ -102,7 +102,7 @@ export default function FeatureList() {
               className={`mb-4 h-[300px] lg:h-auto w-full lg:mb-0 lg:flex rounded-lg order-1 ${index % 2 === 0 ? "lg:order-2" : "lg:order-1"
                 }`}
               src={option.imageurl}
-              alt="office feature image"
+              alt="Image"
             />
           </div>
         ))}

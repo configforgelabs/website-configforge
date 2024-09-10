@@ -11,8 +11,8 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`Home`}
+      description="Welcome to the heart of innovation, led by Tobias Schuele"
     >
       <Hero />
       <LatestPosts />
