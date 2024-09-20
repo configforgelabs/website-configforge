@@ -36,25 +36,25 @@ export default function Hero() {
               <LinkedIn className="w-4 h-4" />
             </a>
             <a
-              href="https://justinn.io/blog/rss.xml"
+              href="https://innovationforge.com/blog/rss.xml"
               className="w-14 h-14 bg-[#111928] flex justify-center items-center text-white rounded-md"
             >
               <RSS className="w-4 h-4" />
             </a>
             <a
-              href="https://github.com/JustInnIO"
+              href="https://github.com/innovationforgecom"
               className="w-14 h-14 bg-[#111928] flex justify-center items-center text-white rounded-md"
             >
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="https://teams.microsoft.com/l/chat/0/0?users=tobias@justinn.io"
+              href="https://teams.microsoft.com/l/chat/0/0?users=tobias@innovationforge.com"
               className="w-14 h-14 bg-[#111928] flex justify-center items-center rounded-md text-transparent"
             >
               <Teams className="w-[26px] h-[22px]" />
             </a>
             <a
-              href="mailto:tobias@justinn.io"
+              href="mailto:tobias@innovationforge.com"
               className="w-14 h-14 bg-[#111928] flex justify-center items-center text-white rounded-md"
             >
               <Gmail className="w-[22px] h-[22px]" />

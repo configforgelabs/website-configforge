@@ -19,7 +19,7 @@ export default function Footer() {
               <img src="/img/light-logo.png" />
             </a>
             <p className="my-3 font-light text-gray-300 dark:text-gray-400 text-xs lg:text-sm">
-              I’m Tobias Schuele and I started justinn.io as my personal blog
+              I’m Tobias Schuele and I started InnovationForge.com as my personal blog
               where I can share my How To guides and opinions on everything
               Microsoft 365, Microsoft Entra and Azure.
             </p>
@@ -107,7 +107,7 @@ export default function Footer() {
                   <LinkedIn className="w-4 h-4 " />
                 </a>
                 <a
-                  href="https://justinn.io/blog/rss.xml"
+                  href="https://innovationforge.com/blog/rss.xml"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <RSS className="w-4 h-4" />
@@ -125,7 +125,7 @@ export default function Footer() {
                   <TeamsBlack className="w-[26px] h-[22px]" />
                 </a>
                 <a
-                  href="mailto:tobias@justinn.io"
+                  href="mailto:tobias@innovationforge.com"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <Gmail className="w-[22px] h-[22px]" />
@@ -137,7 +137,7 @@ export default function Footer() {
         <hr className="my-6 mt-[56px] lg:mt-10 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-10"></hr>
         <div className="text-center md:flex justify-between">
           <span className="block text-xs text-center text-gray-500 dark:text-gray-400">
-            © 2024 JustInn. All rights reserved.
+            © 2024 InnovationForge. All rights reserved.
           </span>
           <div className="text-center md:flex gap-x-5">
             <span className="block text-xs text-center text-gray-500 dark:text-gray-400 my-3 md:my-0">

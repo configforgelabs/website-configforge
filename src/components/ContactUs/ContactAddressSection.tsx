@@ -18,7 +18,7 @@ const contactInfo = [
     title: "Email us:",
     about:
       "Email us for general queries, including marketing and partnership opportunities.",
-    address: "contact@justinn.io",
+    address: "contact@innovationdocs.com",
   },
   {
     icon: <MapPin className="w-12 h-12" />,
@@ -31,7 +31,7 @@ const contactInfo = [
     icon: <Phone className="w-12 h-12" />,
     title: "Support",
     about: "Check out helpful resources, FAQs and instructions.",
-    address: "https://justinn.io/docs/intro",
+    address: "https://innovationforge/docs/intro",
   },
 ];
 
