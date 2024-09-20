@@ -16,7 +16,7 @@
     "pullblog": "cross-var docu-notion -n %DOCU_NOTION_INTEGRATION_TOKEN% -r %DOCU_NOTION_BLOG_PAGE% -t \"*\" -m \"./blog\" --status-tag \"*\""
   },
   "dependencies": {
-    "@justinnio/docu-notion": "^0.3.5",
+    "@innovationforge/docu-notion": "^0.3.5",
     "@docusaurus/core": "3.4.0",
     "@docusaurus/preset-classic": "3.4.0",
     "@docusaurus/theme-live-codeblock": "^3.4.0",
