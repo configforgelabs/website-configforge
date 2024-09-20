@@ -113,13 +113,13 @@ export default function Footer() {
                   <RSS className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://github.com/JustInnIO"
+                  href="https://github.com/innovationforgecom"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <Github className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://teams.microsoft.com/l/chat/0/0?users=tobias@justinn.io"
+                  href="https://teams.microsoft.com/l/chat/0/0?users=tobias@innovationforge.com"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center rounded-md text-transparent"
                 >
                   <TeamsBlack className="w-[26px] h-[22px]" />

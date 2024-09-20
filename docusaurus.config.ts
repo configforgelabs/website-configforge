@@ -105,10 +105,18 @@ const config: Config = {
             ],
           },
           {
-            to: "about",
             label: "About",
             position: "right",
-            // I want to  add a sub page to About
+            items: [
+              {
+                label: "Company",
+                to: "aboutcompany",
+              },
+              {
+                label: "Tobias",
+                to: "about",
+              }
+            ],
 
           },
           {
@@ -159,7 +167,7 @@ const config: Config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/justinnio",
+                href: "https://github.com/innovationforgecom",
               },
               {
                 label: "LinkedIn",
@@ -188,7 +196,7 @@ const config: Config = {
       {
         path: "docs",
         sidebarPath: "./sidebars.ts",
-        editUrl: "https://github.com/justinnio/website/edit/master/",
+        editUrl: "https://github.com/innovationforgecom/website/edit/master/",
       },
     ],
     [
@@ -197,7 +205,7 @@ const config: Config = {
         path: "blog",
         // routeBasePath: '/',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/justinnio/website/edit/master/${blogDirPath}/${blogPath}`,
+          `https://github.com/innovationforgecom/website/edit/master/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
         blogTitle: "JustInn's Blog",
         blogDescription: "Blog",
