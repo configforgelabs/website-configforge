@@ -26,7 +26,7 @@ export default function Hero() {
           <h1 className="mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl text-gray-950">
             Turning Vision into Innovation</h1>
           <p className="font-regular text-gray-500 lg:mb-12 text-[18px] md:text-lg lg:text-xl">
-            Join Tobias Schüle at InnovationForge, where expertise in Microsoft 365 and cloud automation helps transform your tech landscape.
+            Join Tobias Schuele at InnovationForge, where expertise in Microsoft 365 and cloud automation helps transform your tech landscape.
           </p>
           <div className="pt-8 border-b-0 border-x-0 border-t border-solid border-gray-900 border-opacity-10 flex justify-between">
             <a

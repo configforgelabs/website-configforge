@@ -19,7 +19,7 @@ export default function Footer() {
               <img src="/img/light-logo.png" />
             </a> */}
             <p className="my-3 font-light text-gray-300 dark:text-gray-400 text-xs lg:text-sm">
-              I'm Tobias Schüle, and I founded InnovationForge.com as a platform to share my expertise in Microsoft 365, Automation and Azure.
+              I'm Tobias Schuele, and I founded InnovationForge.com as a platform to share my expertise in Microsoft 365, Automation and Azure.
               Through this site, I provide how-to guides, insights, and solutions for businesses looking to optimize their cloud environments and
               automation strategies.
             </p>

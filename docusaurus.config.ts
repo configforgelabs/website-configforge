@@ -177,7 +177,7 @@ const config: Config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tobias Schüle - InnovationForge<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
+        copyright: `Copyright © ${new Date().getFullYear()} Tobias Schuele - InnovationForge<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
       },
       prism: {
         additionalLanguages: ["powershell"],
@@ -217,8 +217,8 @@ const config: Config = {
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         feedOptions: {
           type: "all",
-          title: "InnovationForge's Blog RSS Feed",
-          copyright: `Copyright © ${new Date().getFullYear()} Tobias Schüle - InnovationFor<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
+          title: "InnovationForge.com",
+          copyright: `Copyright © ${new Date().getFullYear()} Tobias Schuele - InnovationForge<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
         },
         // Please change this to your repo.
         // Remove this to remove the "edit this page" links.
