@@ -6,7 +6,7 @@ const FEATURE_LIST = [
     id: "01",
     title: "Humans First",
     description:
-      "I never forget that there are real people behind the screens. When I choose and switch tech, it’s not just about tech functionality;",
+      "I never forget that there are real people behind the screens. When I choose and switch tech, it’s not just about tech functionality.",
     features: [
       "Tailored Tech",
       "Clear Communication",

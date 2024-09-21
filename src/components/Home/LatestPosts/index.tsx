@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import useGlobalData, { usePluginData } from "@docusaurus/useGlobalData";
 import Button from "../../ui/Button";
-import DocCard from "../../DocCard";
+import DocCard from "../../BlogCard";
 
 export interface LatestPostsProps { }
 

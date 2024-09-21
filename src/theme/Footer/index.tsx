@@ -12,16 +12,16 @@ export default function Footer() {
       <div className="p-4 py-[48px] lg:py-6 mx-auto max-w-screen-xl md:p-8 lg:-10">
         <div className="lg:grid grid-cols-2 gap-8 lg:grid-cols-6">
           <div className="col-span-2">
-            <a
+            {/* <a
               href="#"
               className="flex items-center mb-2 text-2xl font-semibold text-gray-900 sm:mb-0 dark:text-white w-[140px] lg:w-auto"
             >
               <img src="/img/light-logo.png" />
-            </a>
+            </a> */}
             <p className="my-3 font-light text-gray-300 dark:text-gray-400 text-xs lg:text-sm">
-              I’m Tobias Schuele and I started InnovationForge.com as my personal blog
-              where I can share my How To guides and opinions on everything
-              Microsoft 365, Microsoft Entra and Azure.
+              I'm Tobias Schüle, and I founded InnovationForge.com as a platform to share my expertise in Microsoft 365, Automation and Azure.
+              Through this site, I provide how-to guides, insights, and solutions for businesses looking to optimize their cloud environments and
+              automation strategies.
             </p>
           </div>
           <div className="lg:mx-auto mt-[40px] lg:mt-0 lg:col-span-2 font-semi-bold lg:font-regular text-sm">
@@ -36,21 +36,21 @@ export default function Footer() {
                   Blog
                 </a>
               </div>
-              <div className="mb-[32px] lg:mb-4">
+              {/* <div className="mb-[32px] lg:mb-4">
                 <a href="/services" className="hover:underline text-white">
                   Project Offers
                 </a>
-              </div>
+              </div> */}
               <div className="mb-[32px] lg:mb-4">
                 <a href="/docs/intro" className="hover:underline text-white">
                   Knowledge Base
                 </a>
               </div>
-              <div className="mb-[32px] lg:mb-4">
+              {/* <div className="mb-[32px] lg:mb-4">
                 <a href="/resources" className="hover:underline text-white">
                   Resources
                 </a>
-              </div>
+              </div> */}
             </ul>
           </div>
           <div className="col-span-2">
@@ -113,7 +113,7 @@ export default function Footer() {
                   <RSS className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://github.com/innovationforgecom"
+                  href="https://github.com/InnovationForge-com"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <Github className="w-6 h-6" />

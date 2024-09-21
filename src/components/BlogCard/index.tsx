@@ -29,14 +29,14 @@ export default function DocCard(props: DocCardProps) {
   return (
     <Link to={permalink} className={"hover:no-underline"}>
       <article className="bg-white shadow-[0px_4px_6px_-1px_rgba(0,0,0,10%)] rounded-sm p-6 flex flex-col justify-between h-full">
-        {/* {imageSrc && (
+        {imageSrc && (
           <div className="w-full h-[192px] rounded-[8px] relative overflow-hidden">
             <img
               src={imageSrc}
               className=" object-cover object-center w-full h-full"
             />
           </div>
-        )} */}
+        )}
 
         <div className="mt-6 flex-1 flex flex-col">
           <div className="flex flex-wrap gap-1">

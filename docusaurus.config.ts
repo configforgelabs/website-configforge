@@ -26,7 +26,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "innovationforkcom", // Usually your GitHub org/user name.
+  organizationName: "InnovationForge-com", // Usually your GitHub org/user name.
   projectName: "website", // Usually your repo name.
 
   onBrokenLinks: "throw",
@@ -85,38 +85,39 @@ const config: Config = {
             position: "right",
             activeBaseRegex: "/^$|/$"
           },
-          {
-            to: "services",
-            label: "Services",
-            position: "right",
-            items: [
-              {
-                label: "Overview",
-                to: "services",
-              },
-              {
-                label: "Microsoft 365 Architecture Design",
-                to: "architecture",
-              },
-              {
-                label: "Automation",
-                to: "automation",
-              },
-            ],
-          },
+          // {
+          //   to: "services",
+          //   label: "Services",
+          //   position: "right",
+          //   items: [
+          //     {
+          //       label: "Overview",
+          //       to: "services",
+          //     },
+          //     {
+          //       label: "Microsoft 365 Architecture Design",
+          //       to: "architecture",
+          //     },
+          //     {
+          //       label: "Automation",
+          //       to: "automation",
+          //     },
+          //   ],
+          // },
           {
             label: "About",
             position: "right",
-            items: [
-              {
-                label: "Company",
-                to: "aboutcompany",
-              },
-              {
-                label: "Tobias",
-                to: "about",
-              }
-            ],
+            to: "about",
+            // items: [
+            //   {
+            //     label: "Company",
+            //     to: "aboutcompany",
+            //   },
+            //   {
+            //     label: "Tobias",
+            //     to: "about",
+            //   }
+            // ],
 
           },
           {
@@ -139,20 +140,20 @@ const config: Config = {
             position: "right",
             activeBasePath: "/docs"
           },
-          {
-            to: "resources",
-            label: "Resources",
-            position: "right",
-          },
-          {
-            to: "contact",
-            label: "Contact",
-            position: "right",
-          },
-          {
-            type: "localeDropdown",
-            position: "right",
-          },
+          // {
+          //   to: "resources",
+          //   label: "Resources",
+          //   position: "right",
+          // },
+          // {
+          //   to: "contact",
+          //   label: "Contact",
+          //   position: "right",
+          // },
+          // {
+          //   type: "localeDropdown",
+          //   position: "right",
+          // },
           {
             type: "search",
             position: "right",
@@ -167,7 +168,7 @@ const config: Config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/innovationforgecom",
+                href: "https://github.com/InnovationForge-com",
               },
               {
                 label: "LinkedIn",
@@ -196,7 +197,7 @@ const config: Config = {
       {
         path: "docs",
         sidebarPath: "./sidebars.ts",
-        editUrl: "https://github.com/innovationforgecom/website/edit/master/",
+        editUrl: "https://github.com/InnovationForge-com/website/edit/master/",
       },
     ],
     [
@@ -205,7 +206,7 @@ const config: Config = {
         path: "blog",
         // routeBasePath: '/',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/innovationforgecom/website/edit/master/${blogDirPath}/${blogPath}`,
+          `https://github.com/InnovationForge-com/website/edit/master/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
         blogTitle: "InnovationForge's Blog",
         blogDescription: "Blog",
@@ -216,8 +217,8 @@ const config: Config = {
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         feedOptions: {
           type: "all",
-          title: "InnovationFork's Blog RSS Feed",
-          copyright: `Copyright © ${new Date().getFullYear()} Tobias Schüle - InnovationFork<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
+          title: "InnovationForge's Blog RSS Feed",
+          copyright: `Copyright © ${new Date().getFullYear()} Tobias Schüle - InnovationFor<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
         },
         // Please change this to your repo.
         // Remove this to remove the "edit this page" links.

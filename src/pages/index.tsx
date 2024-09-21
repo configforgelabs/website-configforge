@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <Layout
       title={`Home`}
-      description="Welcome to the heart of innovation, led by Tobias Schuele"
+      description="Turning Vision into Innovation"
     >
       <Hero />
       <LatestPosts />
-      <ServicesOverview />
+      {/* <ServicesOverview /> */}
       <LatestDocs />
-      <Testimonials />
+      {/* <Testimonials /> */}
     </Layout>
   );
 }

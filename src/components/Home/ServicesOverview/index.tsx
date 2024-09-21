@@ -58,7 +58,7 @@ export default function ServicesOverview() {
           <article>
             <img
               className="object-cover w-full rounded-lg"
-              src="/img/services-overview.png"
+              src="/img/services-overview.jpg"
               alt="featured image"
             />
           </article>
