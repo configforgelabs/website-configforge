@@ -18,7 +18,7 @@ import type { Props } from "@theme/BlogPostPage";
 import type { BlogSidebar } from "@docusaurus/plugin-content-blog";
 import HyvorTalkComponent from "@site/src/components/HyvorTalk";
 import useGlobalData from "@docusaurus/useGlobalData";
-import DocCard from "@site/src/components/DocCard";
+import BlogCard from "@site/src/components/BlogCard";
 
 function BlogPostPageContent({
   sidebar,
@@ -41,8 +41,8 @@ function BlogPostPageContent({
 
   const posts =
     globalData &&
-    globalData["docusaurus-plugin-content-blog"] &&
-    globalData["docusaurus-plugin-content-blog"]["default"]
+      globalData["docusaurus-plugin-content-blog"] &&
+      globalData["docusaurus-plugin-content-blog"]["default"]
       ? globalData["docusaurus-plugin-content-blog"]["default"]["posts"]
       : [];
 
@@ -84,7 +84,7 @@ function BlogPostPageContent({
       )} */}
       <div className="grid gap-8 mt-12 mb-4 sm:grid-cols-2 lg:grid-cols-3">
         {latestPosts.map((doc) => (
-          <DocCard
+          <BlogCard
             permalink={doc.metadata.permalink}
             title={doc.metadata.title}
             tags={doc.metadata.tags}

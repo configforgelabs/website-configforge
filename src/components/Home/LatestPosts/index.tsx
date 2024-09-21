@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import useGlobalData, { usePluginData } from "@docusaurus/useGlobalData";
 import Button from "../../ui/Button";
-import DocCard from "../../BlogCard";
+import BlogCard from "../../BlogCard";
 
 export interface LatestPostsProps { }
 
@@ -38,7 +38,7 @@ export default function LatestPosts(props: LatestPostsProps) {
       </section>
       <div className="grid gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3 lg:px-12">
         {topSixPosts.map((doc) => (
-          <DocCard
+          <BlogCard
             permalink={doc.metadata.permalink}
             title={doc.metadata.title}
             tags={doc.metadata.tags}
