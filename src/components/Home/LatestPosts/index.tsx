@@ -49,7 +49,9 @@ export default function LatestPosts(props: LatestPostsProps) {
         ))}
       </div>
       <div className="ml-auto mt-8">
-        <Button className="inline lg:hidden w-full">View more</Button>
+        <a href="/blog">
+          <Button className="block lg:hidden w-full">View more</Button>
+        </a>
       </div>
     </div>
   );

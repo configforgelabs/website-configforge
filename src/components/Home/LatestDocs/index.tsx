@@ -31,6 +31,7 @@ export default function LatestDocs(props: LatestDocsProps) {
             </div>
           </div>
 
+          {/* Desktop view */}
           <div className="ml-auto">
             <a href="/docs/intro">
               <Button className="hidden lg:inline">View more</Button>
@@ -50,8 +51,11 @@ export default function LatestDocs(props: LatestDocsProps) {
           />
         ))}
       </div>
+      {/* Mobile view */}
       <div className="ml-auto mt-10">
-        <Button className="inline lg:hidden w-full">View more</Button>
+        <a href="/docs/intro">
+          <Button className="inline lg:hidden w-full">View more</Button>
+        </a>
       </div>
     </div>
   );
