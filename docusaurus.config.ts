@@ -79,38 +79,38 @@ const config: Config = {
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
-      // algolia: {
-      //   // The application ID provided by Algolia
-      //   appId: 'DSZCBEOTTQ',
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'DSZCBEOTTQ',
 
-      //   // Public API key: it is safe to commit it
-      //   apiKey: '2bc73651f502022ed21de5749c492913',
+        // Public API key: it is safe to commit it
+        apiKey: '2bc73651f502022ed21de5749c492913',
 
-      //   indexName: 'innovationforge',
+        indexName: 'innovationforge',
 
-      //   // Optional: see doc section below
-      //   contextualSearch: true,
+        // Optional: see doc section below
+        contextualSearch: true,
 
-      //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-      //   externalUrlRegex: 'external\\.com|innovationforge\\.com',
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'external\\.com|innovationforge\\.com',
 
-      //   // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-      //   replaceSearchResultPathname: {
-      //     from: '/docs/', // or as RegExp: /\/docs\//
-      //     to: '/',
-      //   },
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        replaceSearchResultPathname: {
+          from: '/docs/', // or as RegExp: /\/docs\//
+          to: '/',
+        },
 
-      //   // Optional: Algolia search parameters
-      //   searchParameters: {},
+        // Optional: Algolia search parameters
+        searchParameters: {},
 
-      //   // Optional: path for search page that enabled by default (`false` to disable it)
-      //   searchPagePath: 'search',
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
 
-      //   // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
-      //   insights: false,
+        // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+        insights: false,
 
-      //   //... other Algolia params
-      // },
+        //... other Algolia params
+      },
 
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
@@ -230,7 +230,7 @@ const config: Config = {
     } satisfies Preset.ThemeConfig,
 
   plugins: [
-    require.resolve('docusaurus-lunr-search'),
+    // require.resolve('docusaurus-lunr-search'),
     require.resolve("docusaurus-plugin-image-zoom"),
     "docusaurus-plugin-sass",
     [
