@@ -1,7 +1,7 @@
 ---
 title: PLACEHOLDER 3
 description: "Description"
-sidebar_position: 2
+sidebar_position: 1
 slug: /how-to-enable-automatic-account-creation-for-laps-in-intune
 authors: [Tobias]
 date: 2024-01-31
