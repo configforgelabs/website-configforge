@@ -128,25 +128,25 @@ const config: Config = {
             position: "right",
             activeBaseRegex: "/^$|/$",
           },
-          // {
-          //   to: "services",
-          //   label: "Services",
-          //   position: "right",
-          //   items: [
-          //     {
-          //       label: "Overview",
-          //       to: "services",
-          //     },
-          //     {
-          //       label: "Microsoft 365 Architecture Design",
-          //       to: "architecture",
-          //     },
-          //     {
-          //       label: "Automation",
-          //       to: "automation",
-          //     },
-          //   ],
-          // },
+          {
+            to: "services",
+            label: "Services",
+            position: "right",
+            items: [
+              {
+                label: "Overview",
+                to: "services",
+              },
+              {
+                label: "Microsoft 365 Architecture Design",
+                to: "architecture",
+              },
+              {
+                label: "Automation",
+                to: "automation",
+              },
+            ],
+          },
           {
             label: "About",
             position: "right",
