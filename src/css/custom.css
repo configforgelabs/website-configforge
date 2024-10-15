@@ -76,10 +76,16 @@
 
 .navbar .navbar__link--active {
   border-bottom: 2px solid #1a56db;
+  /* border-bottom: 2px solid red; */
+
 }
 
 .navbar .navbar__link:hover,
 .navbar__link--active {
   color: var(--ifm-navbar-link-color);
   border-bottom: 2px solid #1a56db;
+}
+
+.dropdown .navbar__link {
+  padding-bottom: 8.5px;
 }

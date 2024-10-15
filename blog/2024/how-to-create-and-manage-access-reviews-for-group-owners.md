@@ -1,7 +1,7 @@
 ---
 title: PLACEHOLDER 2
 description: "Sixth blog entry"
-sidebar_position: 1
+sidebar_position: 0
 slug: /how-to-create-and-manage-access-reviews-for-group-owners
 authors: [Tobias]
 date: 2024-01-31

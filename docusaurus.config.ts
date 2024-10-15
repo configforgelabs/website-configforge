@@ -3,7 +3,6 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import "dotenv/config";
 
-
 // @ts-check
 // `@type` JSDoc annotations allow editor autocompletion and type checking
 // (when paired with `@ts-check`).
@@ -11,6 +10,7 @@ import "dotenv/config";
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from "prism-react-renderer";
+import { HiZoomIn } from "react-icons/hi";
 
 /** @type {import('@docusaurus/types').Config} */
 const config: Config = {
@@ -40,7 +40,8 @@ const config: Config = {
     locales: ["en"],
   },
   customFields: {
-    placeholderImageURL: "https://ourcloudnetwork.com/wp-content/uploads/2023/10/Protecting-breakglassreakglass-accounts-with-Azure-Automation.png",
+    placeholderImageURL:
+      "https://ourcloudnetwork.com/wp-content/uploads/2023/10/Protecting-breakglassreakglass-accounts-with-Azure-Automation.png",
   },
 
   presets: [
@@ -54,21 +55,22 @@ const config: Config = {
           customCss: "./src/css/custom.css",
         },
         googleTagManager: {
-          containerId: 'GTM-KCHFMND6',
+          containerId: "GTM-KCHFMND6",
         },
       } satisfies Preset.Options,
     ],
-
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
       zoom: {
-        selector: '.markdown > img',
-        background: {
-          light: 'rgb(255, 255, 255)',
-          dark: 'rgb(50, 50, 50)'
+        selector: ".markdown :not(em) > img",
+        config: {
+          background: {
+            light: "rgb(255, 255, 255)",
+            dark: "rgb(50, 50, 50)",
+          },
         },
         // config: {
         //   // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
@@ -81,30 +83,30 @@ const config: Config = {
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: 'DSZCBEOTTQ',
+        appId: "DSZCBEOTTQ",
 
         // Public API key: it is safe to commit it
-        apiKey: '2bc73651f502022ed21de5749c492913',
+        apiKey: "2bc73651f502022ed21de5749c492913",
 
-        indexName: 'innovationforge',
+        indexName: "innovationforge",
 
         // Optional: see doc section below
         contextualSearch: true,
 
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: 'external\\.com|innovationforge\\.com',
+        externalUrlRegex: "external\\.com|innovationforge\\.com",
 
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
         replaceSearchResultPathname: {
-          from: '/docs/', // or as RegExp: /\/docs\//
-          to: '/',
+          from: "/docs/", // or as RegExp: /\/docs\//
+          to: "/",
         },
 
         // Optional: Algolia search parameters
         searchParameters: {},
 
         // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'search',
+        searchPagePath: "search",
 
         // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
         insights: false,
@@ -124,7 +126,7 @@ const config: Config = {
             to: "/",
             label: "Home",
             position: "right",
-            activeBaseRegex: "/^$|/$"
+            activeBaseRegex: "/^$|/$",
           },
           // {
           //   to: "services",
@@ -159,7 +161,6 @@ const config: Config = {
             //     to: "about",
             //   }
             // ],
-
           },
           {
             label: "Blog",
@@ -172,14 +173,14 @@ const config: Config = {
               {
                 label: "Archive",
                 to: "blogarchive",
-              }
+              },
             ],
           },
           {
             to: "docs/intro",
             label: "Knowledge Base",
             position: "right",
-            activeBasePath: "/docs"
+            activeBasePath: "/docs",
           },
           // {
           //   to: "resources",
