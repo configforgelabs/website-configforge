@@ -12,8 +12,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "pulldocs": "cross-var docu-notion -n secret_XO5kcBUFbJX3qdKi1WEnTFSQriBF5aIDf5d25J7TrHw -r c0ee0d7d202042a6826211fb039f2909 -t \"*\" -m \"./docs\" --status-tag \"*\"",
-    "pullblog": "cross-var docu-notion -n secret_XO5kcBUFbJX3qdKi1WEnTFSQriBF5aIDf5d25J7TrHw -r 1578dc87b44d458d9654b56d573ae4f3 -t \"*\" -m \"./blog\" --status-tag \"*\""
+    "pulldocs": "cross-var docu-notion -n %DOCU_NOTION_INTEGRATION_TOKEN% -r %DOCU_NOTION_DOCS_PAGE% -t \"*\" -m \"./docs\" --status-tag \"*\"",
+    "pullblog": "cross-var docu-notion -n %DOCU_NOTION_INTEGRATION_TOKEN% -r %DOCU_NOTION_BLOG_PAGE% -t \"*\" -m \"./blog\" --status-tag \"*\""
   },
   "dependencies": {
     "@docusaurus/core": "3.4.0",
