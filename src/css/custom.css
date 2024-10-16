@@ -77,7 +77,6 @@
 .navbar .navbar__link--active {
   border-bottom: 2px solid #1a56db;
   /* border-bottom: 2px solid red; */
-
 }
 
 .navbar .navbar__link:hover,
@@ -86,6 +85,22 @@
   border-bottom: 2px solid #1a56db;
 }
 
+.dropdown--show .navbar__link{
+  color: var(--ifm-navbar-link-color);
+  border-bottom: 2px solid #1a56db;
+}
+
 .dropdown .navbar__link {
   padding-bottom: 8.5px;
+}
+
+.dropdown .dropdown__link {
+  padding-bottom: 8.5px;
+}
+
+.dropdown--right .dropdown__menu {
+  width: max-content;
+  left: 0;
+  right: 0;
+  margin-top: 35px;
 }
