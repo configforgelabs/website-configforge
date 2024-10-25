@@ -43,7 +43,6 @@ const config: Config = {
     placeholderImageURL:
       "https://ourcloudnetwork.com/wp-content/uploads/2023/10/Protecting-breakglassreakglass-accounts-with-Azure-Automation.png",
   },
-
   presets: [
     [
       "classic",
@@ -60,7 +59,6 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
@@ -129,8 +127,9 @@ const config: Config = {
             activeBaseRegex: "/^$|/$",
           },
           {
-            to: "services",
+            to: "#",
             label: "Services",
+            className: "dropdown-toggle",
             position: "right",
             items: [
               {
@@ -164,7 +163,9 @@ const config: Config = {
           },
           {
             label: "Blog",
+            to: "#",
             position: "right",
+            className: "dropdown-toggle",
             items: [
               {
                 label: "Overview",
@@ -229,7 +230,6 @@ const config: Config = {
         playgroundPosition: "top",
       },
     } satisfies Preset.ThemeConfig,
-
   plugins: [
     // require.resolve('docusaurus-lunr-search'),
     require.resolve("docusaurus-plugin-image-zoom"),

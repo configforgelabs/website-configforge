@@ -77,7 +77,6 @@
 .navbar .navbar__link--active {
   border-bottom: 2px solid #1a56db;
   /* border-bottom: 2px solid red; */
-
 }
 
 .navbar .navbar__link:hover,
@@ -86,6 +85,55 @@
   border-bottom: 2px solid #1a56db;
 }
 
+.dropdown--show .navbar__link {
+  color: var(--ifm-navbar-link-color);
+  border-bottom: 2px solid #1a56db;
+}
+
 .dropdown .navbar__link {
   padding-bottom: 8.5px;
+}
+
+.dropdown .dropdown__link {
+  padding-bottom: 8.5px;
+}
+
+.dropdown--right .dropdown__menu {
+  width: max-content;
+  left: 0;
+  right: 0;
+  margin-top: 35px;
+}
+.navbar__link.dropdown-toggle::after {
+  content: ""; /* Clear default content */
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: none;
+  background-image: url(../../static/img/chevron-down.svg); /* Custom arrow SVG */
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 4px;
+  margin-bottom: 4px;
+  vertical-align: middle;
+  transform: rotate(180deg); /* Default state: downward arrow */
+}
+
+/* Style when the dropdown is expanded */
+.navbar__link.dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(0deg); /* Rotate the arrow upward when expanded */
+}
+
+.dropdown__menu li {
+  color: #6b7280;
+}
+
+.dropdown__menu li :hover {
+  background: #1a56db1a;
+  color: #1a56db;
+}
+
+.dropdown__menu li .dropdown__link--active{
+  background: #1a56db1a;
+  color: #1a56db;
 }
