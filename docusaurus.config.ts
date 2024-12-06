@@ -133,10 +133,6 @@ const config: Config = {
             position: "right",
             items: [
               {
-                label: "Overview",
-                to: "services",
-              },
-              {
                 label: "Microsoft 365 Architecture Design",
                 to: "architecture",
               },
