@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import clsx from "clsx";
+import { useLocation, useHistory } from "@docusaurus/router";
 import {
   isRegexpStringMatch,
   useCollapsible,
@@ -11,6 +12,7 @@ import {
 } from "@docusaurus/theme-common/internal";
 import NavbarNavLink from "@theme/NavbarItem/NavbarNavLink";
 import NavbarItem, { type LinkLikeNavbarItemProps } from "@theme/NavbarItem";
+
 import type {
   DesktopOrMobileNavBarItemProps,
   Props,
@@ -125,7 +127,9 @@ function DropdownNavbarItemMobile({
 }: DesktopOrMobileNavBarItemProps) {
   const localPathname = useLocalPathname();
   const containsActive = containsActiveItems(items, localPathname);
-
+  const [dropdownSelectable, setActive] = useState(false);
+  const location = useLocation();
+  const history = useHistory();
   const { collapsed, toggleCollapsed, setCollapsed } = useCollapsible({
     initialState: () => !containsActive,
   });
@@ -145,15 +149,19 @@ function DropdownNavbarItemMobile({
     >
       <NavbarNavLink
         role="button"
+        href={props.to ? undefined : "#"}
         className={clsx(
           styles.dropdownNavbarItemMobile,
           "menu__link menu__link--sublist menu__link--sublist-caret",
           className
         )}
+        activeClassName={!collapsed ? "menu__link--active" : ""}
         {...props}
         onClick={(e) => {
           e.preventDefault();
           toggleCollapsed();
+          setActive(!dropdownSelectable);
+          window.location.pathname !== props.to ? history.push(props.to) : "";
         }}
       >
         {props.children ?? props.label}

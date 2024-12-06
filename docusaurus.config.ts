@@ -127,7 +127,7 @@ const config: Config = {
             activeBaseRegex: "/^$|/$",
           },
           {
-            to: "#",
+            to: "/services",
             label: "Services",
             className: "dropdown-toggle",
             position: "right",
@@ -163,7 +163,7 @@ const config: Config = {
           },
           {
             label: "Blog",
-            to: "#",
+            to: "/blog",
             position: "right",
             className: "dropdown-toggle",
             items: [
