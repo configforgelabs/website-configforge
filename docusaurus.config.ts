@@ -126,22 +126,22 @@ const config: Config = {
             position: "right",
             activeBaseRegex: "/^$|/$",
           },
-          {
-            to: "/services",
-            label: "Services",
-            className: "dropdown-toggle",
-            position: "right",
-            items: [
-              {
-                label: "Microsoft 365 Architecture Design",
-                to: "architecture",
-              },
-              {
-                label: "Automation",
-                to: "automation",
-              },
-            ],
-          },
+          // {
+          //   to: "/services",
+          //   label: "Services",
+          //   className: "dropdown-toggle",
+          //   position: "right",
+          //   items: [
+          //     {
+          //       label: "Microsoft 365 Architecture Design",
+          //       to: "architecture",
+          //     },
+          //     {
+          //       label: "Automation",
+          //       to: "automation",
+          //     },
+          //   ],
+          // },
           {
             label: "About",
             position: "right",
@@ -163,10 +163,6 @@ const config: Config = {
             position: "right",
             className: "dropdown-toggle",
             items: [
-              {
-                label: "Overview",
-                to: "blog",
-              },
               {
                 label: "Archive",
                 to: "blogarchive",
