@@ -14,7 +14,7 @@ export const LinkedIn = forwardRef<SVGSVGElement, SvgIconProps>(
           width="inherit"
           {...props}
         >
-          <g clip-path="url(#clip0_91_1206)">
+          <g clipPath="url(#clip0_91_1206)">
             <path
               d="M4.17294 15.8369H-0.000976562V5.05438H4.17294V15.8369ZM0.694633 15.1413H3.47733V5.74999H0.694633V15.1413Z"
               fill="currentColor"

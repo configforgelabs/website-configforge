@@ -42,11 +42,11 @@ export default function LatestDocs(props: LatestDocsProps) {
       <div className="grid gap-y-8 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 md:px-12">
         {topSixDocs.map((doc) => (
           <DocCard
+            key={`doc-card-${doc.permalink}`}
             permalink={doc.permalink}
             title={doc.title}
             tags={doc.tags}
             description={doc.description}
-            key={doc.permalink}
             image={doc.frontMatter.image}
           />
         ))}
