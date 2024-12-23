@@ -250,6 +250,7 @@ const config: Config = {
         readingTime: ({ content, frontMatter, defaultReadingTime }) =>
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         feedOptions: {
+          xslt: true,
           type: "all",
           title: "InnovationForge.com",
           copyright: `Copyright © ${new Date().getFullYear()} Tobias Schuele - InnovationForge<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
