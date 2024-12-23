@@ -16,9 +16,9 @@
     "pullblog": "cross-var docu-notion -n %DOCU_NOTION_INTEGRATION_TOKEN% -r %DOCU_NOTION_BLOG_PAGE% -t \"*\" -m \"./blog\" --status-tag \"*\""
   },
   "dependencies": {
-    "@docusaurus/core": "3.4.0",
-    "@docusaurus/preset-classic": "3.4.0",
-    "@docusaurus/theme-live-codeblock": "^3.5.2",
+    "@docusaurus/core": "^3.6.3",
+    "@docusaurus/preset-classic": "^3.6.3",
+    "@docusaurus/theme-live-codeblock": "^3.6.3",
     "@giscus/react": "^2.4.0",
     "@heroicons/react": "^2.1.5",
     "@hyvor/hyvor-talk-react": "^0.0.2",
@@ -46,9 +46,9 @@
     "tailwindcss": "^3.4.12"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.4.0",
-    "@docusaurus/tsconfig": "^3.5.2",
-    "@docusaurus/types": "^3.4.0",
+    "@docusaurus/module-type-aliases": "^3.6.3",
+    "@docusaurus/tsconfig": "^3.6.3",
+    "@docusaurus/types": "^3.6.3",
     "typescript": "^5.6.2"
   },
   "browserslist": {

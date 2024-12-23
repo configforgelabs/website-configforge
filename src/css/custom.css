@@ -137,3 +137,56 @@
   background: #1a56db1a;
   color: #1a56db;
 }
+
+/* Search input styling */
+.DocSearch-Button {
+  height: 40px !important;
+  padding: 0 12px !important;
+  border: 1px solid #e5e7eb !important;
+  background: white !important;
+}
+
+.DocSearch-SearchBar {
+  padding: 16px !important;
+}
+
+.DocSearch-Form {
+  box-shadow: 0 0 0 1px #1a56db !important;
+}
+
+.DocSearch-MagnifierLabel {
+  color: #1a56db !important;
+  margin-right: 12px !important;
+}
+
+.DocSearch-Input {
+  font-size: 16px !important;
+}
+
+.DocSearch-Input:focus {
+  box-shadow: none !important;
+}
+/* Search button hover state */
+.DocSearch-Button:hover {
+  border-color: #1a56db !important;
+  box-shadow: none !important;
+}
+
+/* Ensure the border color stays the same when focused */
+.DocSearch-Button:focus {
+  border-color: #1a56db !important;
+  box-shadow: none !important;
+}
+
+/* .DocSearch-Dropdown-Container {
+  color: #1a56db !important;
+} */
+/* .DocSearch-Hit-source {
+  color: #1a56db !important;
+} */
+/* .DocSearch-Hit {
+  background-color: #1a56db !important;
+} */
+/* #docsearch-list {
+  background-color: #1a56db !important;
+} */

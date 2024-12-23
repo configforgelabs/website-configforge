@@ -14,7 +14,7 @@ export const Chart = forwardRef<SVGSVGElement, SvgIconProps>(
           width="inherit"
           {...props}
         >
-          <g clip-path="url(#clip0_632_1605)">
+          <g clipPath="url(#clip0_632_1605)">
             <path
               d="M0.941176 9.77775C0.420706 9.77775 0 10.176 0 10.6666V15.1111C0 15.6018 0.420706 16 0.941176 16C1.46165 16 1.88235 15.6018 1.88235 15.1111V10.6666C1.88235 10.176 1.46165 9.77775 0.941176 9.77775Z"
               fill="#6C2BD9"

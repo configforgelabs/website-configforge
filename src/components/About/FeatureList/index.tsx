@@ -64,7 +64,7 @@ export default function FeatureList() {
         {FEATURE_LIST.map((option, index) => (
           <div
             className="gap-8 items-center grid lg:grid-cols-2 xl:gap-16"
-            key={option.id}
+            key={`feature-${option.id}`}
           >
             <div
               className={`text-gray-500 sm:text-lg dark:text-gray-400 order-2 ${index % 2 === 0 ? "lg:order-1" : "lg:order-2"
@@ -84,9 +84,12 @@ export default function FeatureList() {
                 {option.features &&
                   option.features.length > 0 &&
                   option.features.map((feature) => (
-                    <li className="flex space-x-3 items-center">
+                    <li 
+                      key={`${option.id}-feature-${feature}`}
+                      className="flex space-x-3 items-center"
+                    >
                       <div className="w-4 h-4 bg-primary-700 flex items-center justify-center rounded-full">
-                        <CheckIcon className="flex-shrink-0 w-3 h-3 text-white"></CheckIcon>
+                        <CheckIcon className="flex-shrink-0 w-3 h-3 text-white" />
                       </div>
                       <span className="text-base font-medium leading-tight text-gray-900 dark:text-white">
                         {feature}
@@ -102,7 +105,7 @@ export default function FeatureList() {
               className={`mb-4 h-[300px] lg:h-auto w-full lg:mb-0 lg:flex rounded-lg order-1 ${index % 2 === 0 ? "lg:order-2" : "lg:order-1"
                 }`}
               src={option.imageurl}
-              alt="Image"
+              alt={`${option.title} illustration`}
             />
           </div>
         ))}

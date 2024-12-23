@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import { ThemeClassNames } from "@docusaurus/theme-common";
-import { useDoc } from "@docusaurus/theme-common/internal";
+import { useDoc } from "@docusaurus/plugin-content-docs/client";
 import Heading from "@theme/Heading";
 import MDXContent from "@theme/MDXContent";
 import Paper from "@site/src/components/Icons/Paper";
@@ -40,7 +40,10 @@ export default function DocItemContent({ children }) {
           {tagsExists && (
             <div className="flex flex-wrap gap-1 justify-start mb-1.5">
               {tags.map((tag) => (
-                <span className="bg-primary-100 text-primary-800 font-medium me-2 px-2.5 py-0.5 rounded inline-flex items-center justify-center gap-x-1">
+                <span 
+                  key={`doc-tag-${tag.label}`}
+                  className="bg-primary-100 text-primary-800 font-medium me-2 px-2.5 py-0.5 rounded inline-flex items-center justify-center gap-x-1"
+                >
                   <Paper className="w-3 h-3" />
                   <span className="text-xs">{tag.label}</span>
                 </span>
