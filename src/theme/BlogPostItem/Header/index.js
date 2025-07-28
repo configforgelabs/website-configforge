@@ -25,7 +25,9 @@ export default function BlogPostItemHeader() {
           ))}
         </div>
       )}
-      <BlogPostItemHeaderTitle />
+      <BlogPostItemHeaderTitle 
+        className="items-center justify-center text-center mt-8"
+      />
       <div className="flex items-center justify-center gap-x-4 mb-8">
         <BlogPostItemHeaderAuthors />
         <BlogPostItemHeaderInfo />
