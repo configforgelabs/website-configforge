@@ -8,10 +8,10 @@
 .docusaurus
 .cache-loader
 
-# Docusaurus pages from Notion
-/docs
-/blog
-/i18n
+# # Docusaurus pages from Notion
+# /docs
+# /blog
+# /i18n
 
 # Misc
 .DS_Store
