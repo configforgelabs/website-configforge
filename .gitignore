@@ -9,9 +9,9 @@
 .cache-loader
 
 # # Docusaurus pages from Notion
-# /docs
-# /blog
-# /i18n
+/docs
+/blog
+/i18n
 
 # Misc
 .DS_Store

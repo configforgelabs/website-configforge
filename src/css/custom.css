@@ -190,3 +190,223 @@
 /* #docsearch-list {
   background-color: #1a56db !important;
 } */
+
+/* Specific documentation container links */
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > article > div > ul > li > a {
+  color: #1a56db !important;
+}
+
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > article > div > ul > li > a:hover {
+  color: #1a56db !important;
+  text-decoration: underline !important;
+}
+
+/* Dark theme version */
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > article > div > ul > li > a {
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > article > div > ul > li > a:hover {
+  color: #60a5fa !important;
+  text-decoration: underline !important;
+}
+
+ 
+/* Updated: More specific targeting for page content only */
+
+/* Blog post main content links */
+main[class*="blog"] .markdown a,
+.theme-blog-post-paginator .theme-blog-post-paginator__link a {
+  color: #1a56db !important;
+}
+
+main[class*="blog"] .markdown a:hover,
+.theme-blog-post-paginator .theme-blog-post-paginator__link a:hover {
+  color: #1a56db !important;
+  text-decoration: underline !important;
+}
+
+/* Documentation main content links */
+main[class*="docPage"] .markdown a,
+.theme-doc-markdown .markdown a {
+  color: #1a56db !important;
+}
+
+main[class*="docPage"] .markdown a:hover,
+.theme-doc-markdown .markdown a:hover {
+  color: #1a56db !important;
+  text-decoration: underline !important;
+}
+
+/* Table of Contents styling - change from green to blue */
+.table-of-contents a:hover,
+.table-of-contents__link:hover {
+  color: #1a56db !important;
+  text-decoration: none !important;
+}
+
+.table-of-contents .table-of-contents__link--active {
+  color: #1a56db !important;
+  font-weight: bold !important;
+}
+
+/* Pagination navigation styling */
+/* Next pagination label */
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > nav > a.pagination-nav__link.pagination-nav__link--next > div.pagination-nav__label {
+  color: #1a56db !important;
+}
+
+/* Previous pagination label */
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > nav > a.pagination-nav__link.pagination-nav__link--prev > div.pagination-nav__label {
+  color: #1a56db !important;
+}
+
+/* Hover effect for entire pagination links */
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > nav > a.pagination-nav__link.pagination-nav__link--next:hover {
+  color: #1a56db !important;
+}
+
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > nav > a.pagination-nav__link.pagination-nav__link--prev:hover {
+  color: #1a56db !important;
+}
+
+/* Dark theme versions */
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > nav > a.pagination-nav__link.pagination-nav__link--next > div.pagination-nav__label {
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > nav > a.pagination-nav__link.pagination-nav__link--prev > div.pagination-nav__label {
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > nav > a.pagination-nav__link.pagination-nav__link--next:hover {
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > nav > a.pagination-nav__link.pagination-nav__link--prev:hover {
+  color: #60a5fa !important;
+}
+
+
+/* Pagination navigation label styling */
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > nav > a.pagination-nav__link.pagination-nav__link--next > div.pagination-nav__label {
+  color: #1a56db !important;
+}
+
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > nav > a.pagination-nav__link.pagination-nav__link--next > div.pagination-nav__label:hover {
+  color: #1a56db !important;
+  text-decoration: underline !important;
+}
+
+/* Dark theme version for pagination navigation label */
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > nav > a.pagination-nav__link.pagination-nav__link--next > div.pagination-nav__label {
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > nav > a.pagination-nav__link.pagination-nav__link--next > div.pagination-nav__label:hover {
+  color: #60a5fa !important;
+  text-decoration: underline !important;
+}
+
+/* Document footer tags styling - comprehensive selector for multiple variations */
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > article > footer > div.theme-doc-footer-tags-row.row.margin-bottom--sm > div > ul > li > a,
+#__docusaurus_skipToContent_fallback > div > div > main > article > footer > div:nth-child(1) > ul > li > a {
+  color: #1a56db !important;
+}
+
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > article > footer > div.theme-doc-footer-tags-row.row.margin-bottom--sm > div > ul > li > a:hover,
+#__docusaurus_skipToContent_fallback > div > div > main > article > footer > div:nth-child(1) > ul > li > a:hover {
+  color: #1a56db !important;
+  text-decoration: underline !important;
+  border-color: #1a56db !important;
+}
+
+/* Dark theme version for document footer tags - comprehensive */
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > article > footer > div.theme-doc-footer-tags-row.row.margin-bottom--sm > div > ul > li > a,
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > article > footer > div:nth-child(1) > ul > li > a {
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > article > footer > div.theme-doc-footer-tags-row.row.margin-bottom--sm > div > ul > li > a:hover,
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > article > footer > div:nth-child(1) > ul > li > a:hover {
+  color: #60a5fa !important;
+  text-decoration: underline !important;
+  border-color: #60a5fa !important;
+}
+
+/* Document footer edit meta link styling */
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > article > footer > div.theme-doc-footer-edit-meta-row.row > div:nth-child(1) > a {
+  color: #1a56db !important;
+}
+
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > article > footer > div.theme-doc-footer-edit-meta-row.row > div:nth-child(1) > a:hover {
+  color: #1a56db !important;
+  text-decoration: underline !important;
+}
+
+/* Dark theme version for document footer edit meta link */
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > article > footer > div.theme-doc-footer-edit-meta-row.row > div:nth-child(1) > a {
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > article > footer > div.theme-doc-footer-edit-meta-row.row > div:nth-child(1) > a:hover {
+  color: #60a5fa !important;
+  text-decoration: underline !important;
+}
+
+/* Active breadcrumb item styling */
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > article > nav > ul > li.breadcrumbs__item.breadcrumbs__item--active > span {
+  color: #1a56db !important;
+}
+
+/* Dark theme version for active breadcrumb item */
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > article > nav > ul > li.breadcrumbs__item.breadcrumbs__item--active > span {
+  color: #60a5fa !important;
+}
+
+/* Pagination navigation border styling - only on hover */
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > nav > a:hover {
+  border-color: #1a56db !important;
+}
+
+/* Dark theme version for pagination navigation borders - only on hover */
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div.docItemContainer_c0TR > nav > a:hover {
+  border-color: #60a5fa !important;
+}
+
+/* Footer link styling - hover effect for multiple items */
+#__docusaurus > footer > div > div.lg\:grid.grid-cols-2.gap-8.lg\:grid-cols-6 > div.lg\:mx-auto.mt-\[40px\].lg\:mt-0.lg\:col-span-2.font-semi-bold.lg\:font-regular.text-sm > ul > div > a:hover {
+  color: #1a56db !important;
+}
+
+/* Dark theme version for footer links - hover effect */
+[data-theme="dark"] #__docusaurus > footer > div > div.lg\:grid.grid-cols-2.gap-8.lg\:grid-cols-6 > div.lg\:mx-auto.mt-\[40px\].lg\:mt-0.lg\:col-span-2.font-semi-bold.lg\:font-regular.text-sm > ul > div > a:hover {
+  color: #60a5fa !important;
+}
+
+/* Edit this page links - common selector for multiple variations */
+#__docusaurus_skipToContent_fallback footer a[href*="edit"],
+#__docusaurus_skipToContent_fallback > div > div > main > article > footer > div.col.margin-top--sm > a {
+  color: #1a56db !important;
+}
+
+#__docusaurus_skipToContent_fallback footer a[href*="edit"]:hover,
+#__docusaurus_skipToContent_fallback > div > div > main > article > footer > div.col.margin-top--sm > a:hover {
+  color: #1a56db !important;
+  text-decoration: underline !important;
+}
+
+/* Dark theme version for edit this page links */
+[data-theme="dark"] #__docusaurus_skipToContent_fallback footer a[href*="edit"],
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > article > footer > div.col.margin-top--sm > a {
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] #__docusaurus_skipToContent_fallback footer a[href*="edit"]:hover,
+[data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > article > footer > div.col.margin-top--sm > a:hover {
+  color: #60a5fa !important;
+  text-decoration: underline !important;
+}
+
+
+
