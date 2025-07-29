@@ -21,7 +21,7 @@ Access Reviews in Microsoft Entra provide a way to continuously review access to
 Many organisations rely on the collaboration features available in Microsoft 365, like Microsoft Teams, to work with external organisations on projects. A convenient way of doing this is by inviting said external users as guests to your organisation, this comes with its governance challenges, which Access reviews will solve.
 
 
-# **Enable group owners to manage access reviews** {#c1ffd71921ef45a9bf4464c96a1dda8f}
+## **Enable group owners to manage access reviews** {#c1ffd71921ef45a9bf4464c96a1dda8f}
 
 
 Access reviews for group owners are disabled by default. To enable this feature, log in to your Microsoft Entra tenant as a Global Administrator and follow the below steps:
@@ -32,7 +32,7 @@ Access reviews for group owners are disabled by default. To enable this feature,
 	![](./how-to-create-and-manage-access-reviews-for-group-owners.99102242-f9e5-4208-9d1b-7fa1baa09d9b.png)
 
 
-# **Enable Group owner access reviews with Microsoft Graph PowerShell** {#46f9fb90af52450191c5d00fb097fb63}
+## **Enable Group owner access reviews with Microsoft Graph PowerShell** {#46f9fb90af52450191c5d00fb097fb63}
 
 
 You can also enable this feature using Microsoft Graph PowerShell.
@@ -52,10 +52,11 @@ Update-MgBetaPolicyAccessReviewPolicy -BodyParameter $params
 ```
 
 
-# **Create a new access review as a group owner** {#f461ccd402454a1eb99f40dfdbc6d0d3}
+## **Create a new access review as a group owner** {#f461ccd402454a1eb99f40dfdbc6d0d3}
 
 
 Any user who is the owner of a group will now be able to create access reviews for groups they own through the Microsoft Entra admin center. Follow the below steps to create a new access review.
+
 
 1. While signed in to your standard user account (without any roles) open the [Identity Governance Access Reviews blade](https://entra.microsoft.com/#view/Microsoft_AAD_ERM/DashboardBlade/~/Controls).
 2. Click **New access review**.
@@ -102,7 +103,9 @@ Any user who is the owner of a group will now be able to create access reviews f
 
 7. Click **Review + create**, then define a review name and click **Create**.
 
-# **Completing the Access Review** {#906dce5363d44650b5e1c05387a384df}
+
+
+## **Completing the Access Review** {#906dce5363d44650b5e1c05387a384df}
 
 
 When the access review begins (as defined by the start date within the review settings), the reviewer of the group will receive a notification email with a link to start the review.
@@ -129,7 +132,7 @@ Once access is denied, it will show as denied in the list. This action can be re
 ![](./how-to-create-and-manage-access-reviews-for-group-owners.8957aa16-8fbb-496d-86fb-5675712d522b.png)
 
 
-# **Impact of denying access in an Access review** {#ec9dc88ec5a94ab2ad359f5b871071fd}
+## **Impact of denying access in an Access review** {#ec9dc88ec5a94ab2ad359f5b871071fd}
 
 
 Once the reviewer has actioned the review and denied the guest access to the resource, once the review is complete, the guest access will be removed from the resource.
@@ -138,7 +141,7 @@ Once the reviewer has actioned the review and denied the guest access to the res
 This only happens once the duration period is finished and not instantly. For example, if the review duration is 2 days and you deny access on the first day, the guest will still have access for anther day, before their access is removed.
 
 
-# **Wrapping up** {#5f3024b894ef406ab7f224f1b8026cba}
+## **Wrapping up** {#5f3024b894ef406ab7f224f1b8026cba}
 
 
 Access reviews are a powerful tool to ensure that guest users in your tenant do not retain access to resources for longer than they need. In this post, I have demonstrated how to can delegate permission to create access reviews to the owner of groups and hence collaborative resources in your tenant.
