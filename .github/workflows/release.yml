@@ -33,6 +33,13 @@ jobs:
           DOCU_NOTION_BLOG_PAGE: ${{ secrets.DOCU_NOTION_BLOG_PAGE }}
           DOCU_NOTION_BLOG_PATH: ${{ secrets.DOCU_NOTION_BLOG_PATH}}
         run: npm run pullblog
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff --staged --quiet || git commit -m "Auto-update docs and blog from Notion [skip ci]"
+          git push
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
