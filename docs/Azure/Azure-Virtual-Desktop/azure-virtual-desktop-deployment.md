@@ -8,22 +8,19 @@ date: 2024-03-27
 keywords: [Azure Virtual Desktop,FSLogix,Entra,Cloud Kerberos Trust]
 tags: [Azure Virtual Desktop,FSLogix,Entra,Cloud Kerberos Trust]
 last_update: 
- date: 2024-12-06
+ date: 2025-07-30
  author: Tobias
 ---
 
 
 
-### FSLogix {#ba106c701fb14a9d8a41c37d4261ed7f}
-
-
-#### Cloud Keberos Ticket Retrieval Enabled {#23930720e2c54032a1318d7931152fc8}
+## Cloud Keberos Ticket Retrieval Enabled {#23930720e2c54032a1318d7931152fc8}
 
 
 [https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-kerberos#cloudkerberosticketretrievalenabled](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-kerberos#cloudkerberosticketretrievalenabled)
 
 
-#### Configuration examples {#46f23780e50945f78baf913f97d5009e}
+### Configuration examples {#46f23780e50945f78baf913f97d5009e}
 
 
 Example FSLogix configuration recommendations by Microsoft
