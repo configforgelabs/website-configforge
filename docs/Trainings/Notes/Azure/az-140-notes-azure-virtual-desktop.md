@@ -1,14 +1,14 @@
 ---
 title: AZ-140 - Azure Virtual Desktop
-description: "AZ-140 notes"
+description: "Comprehensive guide on Azure Virtual Desktop setup, network requirements, identity services, storage, and troubleshooting tips."
 sidebar_position: 0
 slug: /az-140-notes-azure-virtual-desktop
 authors: [Tobias]
 date: 2023-07-12
-keywords: [Azure,Trainings,Notes,AVD,Virtual Desktop]
-tags: [Azure,Trainings,Notes,AVD,Virtual Desktop]
+keywords: [Azure Virtual Desktop,AVD,FSLogix]
+tags: [Azure Virtual Desktop,AVD,FSLogix]
 last_update: 
- date: 2025-07-29
+ date: 2025-07-31
  author: Tobias
 ---
 

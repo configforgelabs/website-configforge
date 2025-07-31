@@ -1,14 +1,14 @@
 ---
 title: Automation
-description: "Automate complex administrative tasks within Microsoft 365, enhancing system management and operational efficiency."
+description: ""
 sidebar_position: 2
 slug: /service-automation
 authors: [Tobias]
 date: 2024-01-31
-keywords: [Project]
-tags: [Project]
+keywords: [Automation,Service,Overview]
+tags: [Automation,Service,Overview]
 last_update: 
- date: 2025-02-12
+ date: 2025-07-31
  author: Tobias
 ---
 

@@ -1,14 +1,14 @@
 ---
 title: AVD vs W365
-description: "How to configure Scaling Plan for AVD"
+description: ""
 sidebar_position: 1
 slug: /avd-vs-w365
 authors: [Tobias]
 date: 2024-03-04
-keywords: [Azure Virtual Desktop,W365,Azure,Intune]
-tags: [Azure Virtual Desktop,W365,Azure,Intune]
+keywords: [AVD,W365]
+tags: [AVD,W365]
 last_update: 
- date: 2024-09-08
+ date: 2025-07-31
  author: Tobias
 ---
 

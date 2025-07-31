@@ -1,14 +1,14 @@
 ---
 title: M365 Monitoring
-description: "List of monitoring solutions for M365 with Azure Automation"
+description: ""
 sidebar_position: 0
 slug: /monitoringwithazureautomation
 authors: [Tobias]
 date: 2025-02-28
-keywords: [Azure Automation,Monitoring,Certificate,Secrets]
-tags: [Azure Automation,Monitoring,Certificate,Secrets]
+keywords: [Monitoring,Microsoft 365,Azure Automation]
+tags: [Monitoring,Microsoft 365,Azure Automation]
 last_update: 
- date: 2025-02-28
+ date: 2025-07-31
  author: Tobias
 ---
 
