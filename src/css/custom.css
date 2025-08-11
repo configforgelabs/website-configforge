@@ -6,36 +6,171 @@
 /* Import Opsora Design System - Must be first */
 @import './design-system.css';
 
-/* Map Docusaurus (Infima) to Opsora design tokens */
+/* Enhanced Docusaurus (Infima) to Opsora Design System Mapping */
 :root {
-  /* Primary Colors */
+  /* Font Families */
+  --ifm-font-family-base: var(--font-sans);
+  --ifm-font-family-monospace: var(--font-mono);
+
+  /* Primary Brand Colors */
   --ifm-color-primary: oklch(var(--primary));
-  --ifm-color-primary-dark: oklch(var(--primary));
-  --ifm-color-primary-darker: oklch(var(--primary));
-  --ifm-color-primary-darkest: oklch(var(--primary));
-  --ifm-color-primary-light: oklch(var(--primary));
-  --ifm-color-primary-lighter: oklch(var(--primary));
-  --ifm-color-primary-lightest: oklch(var(--primary));
+  --ifm-color-primary-dark: color-mix(in oklch, oklch(var(--primary)) 90%, black);
+  --ifm-color-primary-darker: color-mix(in oklch, oklch(var(--primary)) 80%, black);
+  --ifm-color-primary-darkest: color-mix(in oklch, oklch(var(--primary)) 70%, black);
+  --ifm-color-primary-light: color-mix(in oklch, oklch(var(--primary)) 90%, white);
+  --ifm-color-primary-lighter: color-mix(in oklch, oklch(var(--primary)) 95%, white);
+  --ifm-color-primary-lightest: color-mix(in oklch, oklch(var(--primary)) 98%, white);
 
-  /* Layout & Typography */
-  --ifm-font-family-base: ui-sans-serif, system-ui, -apple-system, "Inter", Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
-  --ifm-global-radius: var(--radius);
-  --ifm-code-font-size: 95%;
-
-  /* Backgrounds */
+  /* Background Colors */
   --ifm-background-color: oklch(var(--background));
+  --ifm-background-surface-color: oklch(var(--card));
   --ifm-navbar-background-color: oklch(var(--card));
   --ifm-footer-background-color: oklch(var(--card));
+  --ifm-sidebar-background-color: oklch(var(--sidebar));
 
   /* Text Colors */
   --ifm-font-color-base: oklch(var(--foreground));
+  --ifm-font-color-secondary: oklch(var(--muted-foreground));
   --ifm-heading-color: oklch(var(--foreground));
+  --ifm-link-color: oklch(var(--primary));
+  --ifm-link-hover-color: color-mix(in oklch, oklch(var(--primary)) 80%, black);
 
-  /* Code Highlighting */
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Border and Outline Colors */
+  --ifm-color-emphasis-0: oklch(var(--background));
+  --ifm-color-emphasis-100: oklch(var(--muted));
+  --ifm-color-emphasis-200: oklch(var(--border));
+  --ifm-color-emphasis-300: oklch(var(--border));
+  --ifm-color-emphasis-400: oklch(var(--muted-foreground));
+  --ifm-color-emphasis-500: oklch(var(--foreground));
+  --ifm-color-emphasis-600: oklch(var(--foreground));
+  --ifm-color-emphasis-700: oklch(var(--foreground));
+  --ifm-color-emphasis-800: oklch(var(--foreground));
+  --ifm-color-emphasis-900: oklch(var(--foreground));
+  --ifm-color-emphasis-1000: oklch(var(--foreground));
 
-  /* Layout */
-  --ifm-navbar-height: 100px;
+  /* Layout & Geometry */
+  --ifm-global-radius: var(--radius);
+  --ifm-navbar-height: 4rem;
+  --ifm-navbar-padding-horizontal: 1rem;
+  --ifm-navbar-padding-vertical: 0.5rem;
+  --ifm-navbar-item-padding-horizontal: 0.75rem;
+  --ifm-navbar-item-padding-vertical: 0.5rem;
+
+  /* Code and Syntax Highlighting */
+  --ifm-code-font-size: 85%;
+  --ifm-code-background: oklch(var(--muted));
+  --ifm-code-border-radius: 0.75rem;
+  --ifm-code-padding-horizontal: 0.5rem;
+  --ifm-code-padding-vertical: 0.125rem;
+  --ifm-pre-background: oklch(var(--muted));
+  --ifm-pre-border-radius: 0.75rem;
+  --ifm-pre-color: oklch(var(--foreground));
+  --ifm-pre-line-height: 1.5;
+  --ifm-pre-padding: 1rem;
+
+  /* Table Styles */
+  --ifm-table-background: oklch(var(--card));
+  --ifm-table-border-color: oklch(var(--border));
+  --ifm-table-head-background: oklch(var(--muted));
+  --ifm-table-head-color: oklch(var(--foreground));
+  --ifm-table-stripe-background: color-mix(in oklch, oklch(var(--muted)) 50%, transparent);
+
+  /* Alert/Admonition Colors */
+  --ifm-alert-background-color: oklch(var(--card));
+  --ifm-alert-border-color: oklch(var(--border));
+  --ifm-alert-border-radius: 0.75rem;
+  --ifm-alert-border-width: 1px;
+  --ifm-alert-border-left-width: 4px;
+  --ifm-alert-color: oklch(var(--foreground));
+  --ifm-alert-padding-horizontal: 1rem;
+  --ifm-alert-padding-vertical: 0.75rem;
+
+  /* Blockquote */
+  --ifm-blockquote-background-color: oklch(var(--muted));
+  --ifm-blockquote-border-color: oklch(var(--primary));
+  --ifm-blockquote-border-left-width: 4px;
+  --ifm-blockquote-color: oklch(var(--foreground));
+  --ifm-blockquote-font-size: 1rem;
+  --ifm-blockquote-padding-horizontal: 1rem;
+  --ifm-blockquote-padding-vertical: 0.5rem;
+
+  /* Breadcrumb */
+  --ifm-breadcrumb-border-radius: 0.5rem;
+  --ifm-breadcrumb-color-active: oklch(var(--primary));
+  --ifm-breadcrumb-item-background-active: color-mix(in oklch, oklch(var(--primary)) 10%, transparent);
+  --ifm-breadcrumb-padding-horizontal: 0.5rem;
+  --ifm-breadcrumb-padding-vertical: 0.25rem;
+  --ifm-breadcrumb-separator: '/';
+  --ifm-breadcrumb-separator-color: oklch(var(--muted-foreground));
+
+  /* Button */
+  --ifm-button-background-color: oklch(var(--primary));
+  --ifm-button-border-color: oklch(var(--primary));
+  --ifm-button-border-radius: 0.75rem;
+  --ifm-button-border-width: 1px;
+  --ifm-button-color: oklch(var(--primary-foreground));
+  --ifm-button-font-weight: 500;
+  --ifm-button-padding-horizontal: 1rem;
+  --ifm-button-padding-vertical: 0.5rem;
+  --ifm-button-size-multiplier: 1;
+  --ifm-button-transition-duration: 200ms;
+
+  /* Menu/Sidebar */
+  --ifm-menu-color: oklch(var(--sidebar-foreground));
+  --ifm-menu-color-background-active: oklch(var(--sidebar-accent));
+  --ifm-menu-color-background-hover: color-mix(in oklch, oklch(var(--sidebar-accent)) 50%, transparent);
+  --ifm-menu-link-padding-horizontal: 0.75rem;
+  --ifm-menu-link-padding-vertical: 0.5rem;
+
+  /* Dropdown */
+  --ifm-dropdown-background-color: oklch(var(--card));
+  --ifm-dropdown-border-color: oklch(var(--border));
+  --ifm-dropdown-hover-background-color: oklch(var(--accent));
+
+  /* Tabs */
+  --ifm-tabs-color: oklch(var(--muted-foreground));
+  --ifm-tabs-color-active: oklch(var(--primary));
+  --ifm-tabs-color-active-border: oklch(var(--primary));
+  --ifm-tabs-padding-horizontal: 1rem;
+  --ifm-tabs-padding-vertical: 0.75rem;
+
+  /* Pagination */
+  --ifm-pagination-color-active: oklch(var(--primary-foreground));
+  --ifm-pagination-background-active: oklch(var(--primary));
+  --ifm-pagination-border-radius: 0.5rem;
+  --ifm-pagination-hover-color: oklch(var(--primary));
+  --ifm-pagination-padding-horizontal: 0.75rem;
+  --ifm-pagination-padding-vertical: 0.5rem;
+
+  /* Card */
+  --ifm-card-background-color: oklch(var(--card));
+  --ifm-card-border-radius: 1rem;
+  --ifm-card-horizontal-spacing: 1.5rem;
+  --ifm-card-vertical-spacing: 1rem;
+
+  /* Focus Ring */
+  --ifm-focus-ring-color: oklch(var(--ring));
+  --ifm-focus-ring-width: 2px;
+
+  /* Z-index */
+  --ifm-z-index-dropdown: 100;
+  --ifm-z-index-fixed: 200;
+  --ifm-z-index-overlay: 400;
+
+  /* Transition */
+  --ifm-transition-fast: 200ms;
+  --ifm-transition-slow: 400ms;
+  --ifm-transition-timing-default: ease;
+
+  /* Hero Banner */
+  --ifm-hero-background-color: oklch(var(--background));
+  --ifm-hero-text-color: oklch(var(--foreground));
+
+  /* TOC */
+  --ifm-toc-border-color: oklch(var(--border));
+  --ifm-toc-link-color: oklch(var(--muted-foreground));
+  --ifm-toc-padding-horizontal: 0.5rem;
+  --ifm-toc-padding-vertical: 0.25rem;
 }
 
 @media screen and (max-width: 600px) {
