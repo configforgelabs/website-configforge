@@ -116,7 +116,7 @@ const config: Config = {
       image: "img/configforge-social-card.jpg",
       navbar: {
         logo: {
-          alt: "Home",
+          alt: "ConfigForge by Opsora",
           src: "img/branding/logo-color-menu.png",
         },
         items: [
