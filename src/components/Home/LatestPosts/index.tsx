@@ -34,6 +34,13 @@ export default function LatestPosts(props: LatestPostsProps) {
               <Button className="hidden lg:inline">View more</Button>
             </a>
           </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            Recent Posts
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Deep dives into Microsoft 365 and Azure implementations, troubleshooting guides, 
+            and practical solutions from real enterprise deployments.
+          </p>
         </div>
       </section>
       <div className="grid gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3 lg:px-12">
