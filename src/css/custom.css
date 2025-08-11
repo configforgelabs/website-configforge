@@ -374,13 +374,16 @@
 }
 /* Search button hover state */
 .DocSearch-Button:hover {
-  border-color: #1a56db !important;
+  border-color: oklch(var(--primary)) !important;
   box-shadow: none !important;
 }
 
-/* Ensure the border color stays the same when focused */
-.DocSearch-Button:focus {
-  border-color: #1a56db !important;
+/* Enhanced focus state for search button */
+.DocSearch-Button:focus,
+.DocSearch-Button:focus-visible {
+  border-color: oklch(var(--primary)) !important;
+  outline: 2px solid oklch(var(--ring)) !important;
+  outline-offset: 2px !important;
   box-shadow: none !important;
 }
 
