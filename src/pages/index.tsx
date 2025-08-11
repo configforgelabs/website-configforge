@@ -11,8 +11,8 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Home`}
-      description="Turning Vision into Innovation"
+      title={`ConfigForge - Microsoft 365 and Azure Guides`}
+      description="Practical docs, runbooks, and references for Microsoft 365 and Azure work by Opsora"
     >
       <Hero />
       <LatestPosts />
