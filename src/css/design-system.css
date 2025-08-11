@@ -396,17 +396,87 @@ th, td {
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
-  .btn-primary {
-    border: 2px solid currentColor;
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    border: 2px solid currentColor !important;
+    font-weight: 600;
   }
-  
+
   .card {
-    border: 2px solid oklch(var(--border));
+    border: 2px solid oklch(var(--border)) !important;
   }
-  
+
   a {
-    text-decoration: underline;
+    text-decoration: underline !important;
   }
+
+  .badge {
+    border: 1px solid currentColor;
+    font-weight: 600;
+  }
+
+  /* Enhanced focus indicators for high contrast */
+  :focus-visible {
+    outline: 3px solid currentColor !important;
+    outline-offset: 3px !important;
+  }
+}
+
+/* Enhanced focus management */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: oklch(var(--primary));
+  color: oklch(var(--primary-foreground));
+  padding: 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  z-index: 1000;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+
+.skip-to-content:focus {
+  top: 6px;
+}
+
+/* Keyboard navigation enhancements */
+.btn:focus-visible,
+.input:focus-visible,
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid oklch(var(--ring));
+  outline-offset: 2px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Ensure sufficient touch targets */
+.btn,
+a,
+button,
+[role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Print styles */
