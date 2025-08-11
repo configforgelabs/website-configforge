@@ -121,8 +121,13 @@ const config: Config = {
         },
         items: [
           {
-            to: "/docs",
+            to: "/docs/intro",
             label: "Docs",
+            position: "left",
+          },
+          {
+            to: "/blog",
+            label: "Blog",
             position: "left",
           },
           {
