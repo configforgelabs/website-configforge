@@ -208,6 +208,7 @@ const config: Config = {
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
           `https://github.com/opsora-io/configforge/edit/master/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
+        onUntruncatedBlogPosts: 'ignore',
         blogTitle: "ConfigForge Blog",
         blogDescription: "ConfigForge Blog - Microsoft 365 and Azure insights",
         blogSidebarCount: 10,
