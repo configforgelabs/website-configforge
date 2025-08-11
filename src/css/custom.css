@@ -51,19 +51,28 @@
   }
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode Infima mapping */
 [data-theme="dark"] {
-  --ifm-color-primary: var(--brand-blue-light);
-  --ifm-color-primary-dark: var(--brand-blue);
-  --ifm-color-primary-darker: var(--brand-blue-dark);
-  --ifm-color-primary-darkest: var(--brand-blue-dark);
-  --ifm-color-primary-light: var(--brand-blue-light);
-  --ifm-color-primary-lighter: var(--brand-blue-light);
-  --ifm-color-primary-lightest: var(--brand-blue-light);
-  --ifm-background-color: var(--background);
-  --ifm-navbar-background-color: var(--card);
-  --ifm-footer-background-color: var(--card);
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Primary Colors */
+  --ifm-color-primary: oklch(var(--primary));
+  --ifm-color-primary-dark: oklch(var(--primary));
+  --ifm-color-primary-darker: oklch(var(--primary));
+  --ifm-color-primary-darkest: oklch(var(--primary));
+  --ifm-color-primary-light: oklch(var(--primary));
+  --ifm-color-primary-lighter: oklch(var(--primary));
+  --ifm-color-primary-lightest: oklch(var(--primary));
+
+  /* Backgrounds */
+  --ifm-background-color: oklch(var(--background));
+  --ifm-navbar-background-color: oklch(var(--card));
+  --ifm-footer-background-color: oklch(var(--card));
+
+  /* Text Colors */
+  --ifm-font-color-base: oklch(var(--foreground));
+  --ifm-heading-color: oklch(var(--foreground));
+
+  /* Code Highlighting */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="dark"] hyvor-talk-comments {
