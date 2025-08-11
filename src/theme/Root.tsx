@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from '@docusaurus/Head';
 
 // Default implementation, that you can customize
 export default function Root({children}) {
@@ -15,21 +15,21 @@ export default function Root({children}) {
       "url": "https://opsora.io"
     },
     "author": {
-      "@type": "Organization", 
+      "@type": "Organization",
       "name": "Opsora"
     }
   };
 
   return (
     <>
-      <Helmet>
+      <Head>
         <meta name="theme-color" content="#2563EB" />
         <meta name="msapplication-navbutton-color" content="#2563EB" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}
         </script>
-      </Helmet>
+      </Head>
       {children}
     </>
   );
