@@ -173,7 +173,7 @@ const config: Config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tobias Schuele - InnovationForge<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
+        copyright: `ConfigForge is the knowledge hub by Opsora. © ${new Date().getFullYear()} Opsora.`,
       },
       prism: {
         additionalLanguages: ["powershell"],
@@ -213,8 +213,8 @@ const config: Config = {
         feedOptions: {
           xslt: true,
           type: "all",
-          title: "InnovationForge.com",
-          copyright: `Copyright © ${new Date().getFullYear()} Tobias Schuele - InnovationForge<p><a href="https://www.linkedin.com/in/tobias-schuele" class="footer_lin">LinkedIn</a></p>`,
+          title: "ConfigForge.com",
+          copyright: `ConfigForge is the knowledge hub by Opsora. © ${new Date().getFullYear()} Opsora.`,
         },
         // Please change this to your repo.
         // Remove this to remove the "edit this page" links.
