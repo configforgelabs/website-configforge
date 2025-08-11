@@ -2,10 +2,7 @@
 module.exports = {
   darkMode: ["class", '[data-theme="dark"]'],
   content: [
-    "./src/**/*.{js,jsx,ts,tsx,md,mdx}",
-    "./docs/**/*.{md,mdx}",
-    "./docusaurus.config.{js,ts}",
-    "./src/theme/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
     'node_modules/flowbite-react/lib/esm/**/*.js',
   ],
   theme: {
