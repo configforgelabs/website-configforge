@@ -1,34 +1,176 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * ConfigForge Custom Styles with Opsora Design System
+ * Enhanced Docusaurus styling with unified light/dark mode support
  */
 
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* Import Opsora Design System */
+/* Import Opsora Design System - Must be first */
 @import './design-system.css';
 
-/* You can override the default Infima variables here. */
+/* Enhanced Docusaurus (Infima) to Opsora Design System Mapping */
 :root {
-  /* Map Docusaurus to Opsora tokens */
-  --ifm-color-primary: var(--brand-blue);
-  --ifm-color-primary-dark: var(--brand-blue-dark);
-  --ifm-color-primary-darker: var(--brand-blue-dark);
-  --ifm-color-primary-darkest: var(--brand-blue-dark);
-  --ifm-color-primary-light: var(--brand-blue-light);
-  --ifm-color-primary-lighter: var(--brand-blue-light);
-  --ifm-color-primary-lightest: var(--brand-blue-light);
-  --ifm-font-family-base: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", sans-serif;
-  --ifm-global-radius: var(--radius);
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Font Families */
+  --ifm-font-family-base: var(--font-sans);
+  --ifm-font-family-monospace: var(--font-mono);
 
-  --ifm-navbar-height: 100px;
+  /* Primary Brand Colors */
+  --ifm-color-primary: oklch(var(--primary));
+  --ifm-color-primary-dark: color-mix(in oklch, oklch(var(--primary)) 90%, black);
+  --ifm-color-primary-darker: color-mix(in oklch, oklch(var(--primary)) 80%, black);
+  --ifm-color-primary-darkest: color-mix(in oklch, oklch(var(--primary)) 70%, black);
+  --ifm-color-primary-light: color-mix(in oklch, oklch(var(--primary)) 90%, white);
+  --ifm-color-primary-lighter: color-mix(in oklch, oklch(var(--primary)) 95%, white);
+  --ifm-color-primary-lightest: color-mix(in oklch, oklch(var(--primary)) 98%, white);
+
+  /* Background Colors */
+  --ifm-background-color: oklch(var(--background));
+  --ifm-background-surface-color: oklch(var(--card));
+  --ifm-navbar-background-color: oklch(var(--card));
+  --ifm-footer-background-color: oklch(var(--card));
+  --ifm-sidebar-background-color: oklch(var(--sidebar));
+
+  /* Text Colors */
+  --ifm-font-color-base: oklch(var(--foreground));
+  --ifm-font-color-secondary: oklch(var(--muted-foreground));
+  --ifm-heading-color: oklch(var(--foreground));
+  --ifm-link-color: oklch(var(--primary));
+  --ifm-link-hover-color: color-mix(in oklch, oklch(var(--primary)) 80%, black);
+
+  /* Border and Outline Colors */
+  --ifm-color-emphasis-0: oklch(var(--background));
+  --ifm-color-emphasis-100: oklch(var(--muted));
+  --ifm-color-emphasis-200: oklch(var(--border));
+  --ifm-color-emphasis-300: oklch(var(--border));
+  --ifm-color-emphasis-400: oklch(var(--muted-foreground));
+  --ifm-color-emphasis-500: oklch(var(--foreground));
+  --ifm-color-emphasis-600: oklch(var(--foreground));
+  --ifm-color-emphasis-700: oklch(var(--foreground));
+  --ifm-color-emphasis-800: oklch(var(--foreground));
+  --ifm-color-emphasis-900: oklch(var(--foreground));
+  --ifm-color-emphasis-1000: oklch(var(--foreground));
+
+  /* Layout & Geometry */
+  --ifm-global-radius: var(--radius);
+  --ifm-navbar-height: 4rem;
+  --ifm-navbar-padding-horizontal: 1rem;
+  --ifm-navbar-padding-vertical: 0.5rem;
+  --ifm-navbar-item-padding-horizontal: 0.75rem;
+  --ifm-navbar-item-padding-vertical: 0.5rem;
+
+  /* Code and Syntax Highlighting */
+  --ifm-code-font-size: 85%;
+  --ifm-code-background: oklch(var(--muted));
+  --ifm-code-border-radius: 0.75rem;
+  --ifm-code-padding-horizontal: 0.5rem;
+  --ifm-code-padding-vertical: 0.125rem;
+  --ifm-pre-background: oklch(var(--muted));
+  --ifm-pre-border-radius: 0.75rem;
+  --ifm-pre-color: oklch(var(--foreground));
+  --ifm-pre-line-height: 1.5;
+  --ifm-pre-padding: 1rem;
+
+  /* Table Styles */
+  --ifm-table-background: oklch(var(--card));
+  --ifm-table-border-color: oklch(var(--border));
+  --ifm-table-head-background: oklch(var(--muted));
+  --ifm-table-head-color: oklch(var(--foreground));
+  --ifm-table-stripe-background: color-mix(in oklch, oklch(var(--muted)) 50%, transparent);
+
+  /* Alert/Admonition Colors */
+  --ifm-alert-background-color: oklch(var(--card));
+  --ifm-alert-border-color: oklch(var(--border));
+  --ifm-alert-border-radius: 0.75rem;
+  --ifm-alert-border-width: 1px;
+  --ifm-alert-border-left-width: 4px;
+  --ifm-alert-color: oklch(var(--foreground));
+  --ifm-alert-padding-horizontal: 1rem;
+  --ifm-alert-padding-vertical: 0.75rem;
+
+  /* Blockquote */
+  --ifm-blockquote-background-color: oklch(var(--muted));
+  --ifm-blockquote-border-color: oklch(var(--primary));
+  --ifm-blockquote-border-left-width: 4px;
+  --ifm-blockquote-color: oklch(var(--foreground));
+  --ifm-blockquote-font-size: 1rem;
+  --ifm-blockquote-padding-horizontal: 1rem;
+  --ifm-blockquote-padding-vertical: 0.5rem;
+
+  /* Breadcrumb */
+  --ifm-breadcrumb-border-radius: 0.5rem;
+  --ifm-breadcrumb-color-active: oklch(var(--primary));
+  --ifm-breadcrumb-item-background-active: color-mix(in oklch, oklch(var(--primary)) 10%, transparent);
+  --ifm-breadcrumb-padding-horizontal: 0.5rem;
+  --ifm-breadcrumb-padding-vertical: 0.25rem;
+  --ifm-breadcrumb-separator: '/';
+  --ifm-breadcrumb-separator-color: oklch(var(--muted-foreground));
+
+  /* Button */
+  --ifm-button-background-color: oklch(var(--primary));
+  --ifm-button-border-color: oklch(var(--primary));
+  --ifm-button-border-radius: 0.75rem;
+  --ifm-button-border-width: 1px;
+  --ifm-button-color: oklch(var(--primary-foreground));
+  --ifm-button-font-weight: 500;
+  --ifm-button-padding-horizontal: 1rem;
+  --ifm-button-padding-vertical: 0.5rem;
+  --ifm-button-size-multiplier: 1;
+  --ifm-button-transition-duration: 200ms;
+
+  /* Menu/Sidebar */
+  --ifm-menu-color: oklch(var(--sidebar-foreground));
+  --ifm-menu-color-background-active: oklch(var(--sidebar-accent));
+  --ifm-menu-color-background-hover: color-mix(in oklch, oklch(var(--sidebar-accent)) 50%, transparent);
+  --ifm-menu-link-padding-horizontal: 0.75rem;
+  --ifm-menu-link-padding-vertical: 0.5rem;
+
+  /* Dropdown */
+  --ifm-dropdown-background-color: oklch(var(--card));
+  --ifm-dropdown-border-color: oklch(var(--border));
+  --ifm-dropdown-hover-background-color: oklch(var(--accent));
+
+  /* Tabs */
+  --ifm-tabs-color: oklch(var(--muted-foreground));
+  --ifm-tabs-color-active: oklch(var(--primary));
+  --ifm-tabs-color-active-border: oklch(var(--primary));
+  --ifm-tabs-padding-horizontal: 1rem;
+  --ifm-tabs-padding-vertical: 0.75rem;
+
+  /* Pagination */
+  --ifm-pagination-color-active: oklch(var(--primary-foreground));
+  --ifm-pagination-background-active: oklch(var(--primary));
+  --ifm-pagination-border-radius: 0.5rem;
+  --ifm-pagination-hover-color: oklch(var(--primary));
+  --ifm-pagination-padding-horizontal: 0.75rem;
+  --ifm-pagination-padding-vertical: 0.5rem;
+
+  /* Card */
+  --ifm-card-background-color: oklch(var(--card));
+  --ifm-card-border-radius: 1rem;
+  --ifm-card-horizontal-spacing: 1.5rem;
+  --ifm-card-vertical-spacing: 1rem;
+
+  /* Focus Ring */
+  --ifm-focus-ring-color: oklch(var(--ring));
+  --ifm-focus-ring-width: 2px;
+
+  /* Z-index */
+  --ifm-z-index-dropdown: 100;
+  --ifm-z-index-fixed: 200;
+  --ifm-z-index-overlay: 400;
+
+  /* Transition */
+  --ifm-transition-fast: 200ms;
+  --ifm-transition-slow: 400ms;
+  --ifm-transition-timing-default: ease;
+
+  /* Hero Banner */
+  --ifm-hero-background-color: oklch(var(--background));
+  --ifm-hero-text-color: oklch(var(--foreground));
+
+  /* TOC */
+  --ifm-toc-border-color: oklch(var(--border));
+  --ifm-toc-link-color: oklch(var(--muted-foreground));
+  --ifm-toc-padding-horizontal: 0.5rem;
+  --ifm-toc-padding-vertical: 0.25rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -37,19 +179,28 @@
   }
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode Infima mapping */
 [data-theme="dark"] {
-  --ifm-color-primary: var(--brand-blue-light);
-  --ifm-color-primary-dark: var(--brand-blue);
-  --ifm-color-primary-darker: var(--brand-blue-dark);
-  --ifm-color-primary-darkest: var(--brand-blue-dark);
-  --ifm-color-primary-light: var(--brand-blue-light);
-  --ifm-color-primary-lighter: var(--brand-blue-light);
-  --ifm-color-primary-lightest: var(--brand-blue-light);
-  --ifm-background-color: var(--background);
-  --ifm-navbar-background-color: var(--card);
-  --ifm-footer-background-color: var(--card);
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Primary Colors */
+  --ifm-color-primary: oklch(var(--primary));
+  --ifm-color-primary-dark: oklch(var(--primary));
+  --ifm-color-primary-darker: oklch(var(--primary));
+  --ifm-color-primary-darkest: oklch(var(--primary));
+  --ifm-color-primary-light: oklch(var(--primary));
+  --ifm-color-primary-lighter: oklch(var(--primary));
+  --ifm-color-primary-lightest: oklch(var(--primary));
+
+  /* Backgrounds */
+  --ifm-background-color: oklch(var(--background));
+  --ifm-navbar-background-color: oklch(var(--card));
+  --ifm-footer-background-color: oklch(var(--card));
+
+  /* Text Colors */
+  --ifm-font-color-base: oklch(var(--foreground));
+  --ifm-heading-color: oklch(var(--foreground));
+
+  /* Code Highlighting */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="dark"] hyvor-talk-comments {
@@ -58,6 +209,25 @@
   --ht-color-box: #000000;
   --ht-color-box-text: #ffffff;
   --ht-box-border: 0px solid #aaaaaa;
+}
+
+/* Enhanced Dark Mode Specific Overrides */
+[data-theme="dark"] {
+  /* Code highlighting enhancements */
+  --docusaurus-highlighted-code-line-bg: color-mix(in oklch, oklch(var(--primary)) 15%, transparent);
+
+  /* Search styling for dark mode */
+  --docsearch-primary-color: oklch(var(--primary));
+  --docsearch-text-color: oklch(var(--foreground));
+  --docsearch-modal-background: oklch(var(--card));
+  --docsearch-searchbox-background: oklch(var(--background));
+  --docsearch-searchbox-focus-background: oklch(var(--background));
+  --docsearch-hit-color: oklch(var(--foreground));
+  --docsearch-muted-color: oklch(var(--muted-foreground));
+  --docsearch-modal-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+  /* Enhanced table styling */
+  --ifm-table-stripe-background: color-mix(in oklch, oklch(var(--muted)) 30%, transparent);
 }
 
 @tailwind base;
@@ -127,73 +297,125 @@
 
 /* Sidebar active menu highlight */
 .menu__link--active {
-  background: color-mix(in oklab, var(--primary) 12%, transparent) !important;
+  background: color-mix(in oklab, oklch(var(--primary)) 12%, transparent) !important;
   border-radius: 10px !important;
-  color: var(--primary) !important;
+  color: oklch(var(--primary)) !important;
 }
 
 .menu__link:hover {
-  background: color-mix(in oklab, var(--primary) 8%, transparent) !important;
+  background: color-mix(in oklab, oklch(var(--primary)) 8%, transparent) !important;
   border-radius: 10px !important;
+}
+
+.menu__link:focus-visible {
+  outline: 2px solid oklch(var(--ring)) !important;
+  outline-offset: 2px !important;
 }
 
 /* TOC active link styling */
 .table-of-contents__link--active {
-  color: var(--primary) !important;
+  color: oklch(var(--primary)) !important;
   font-weight: 600 !important;
 }
 
 .table-of-contents__link:hover {
-  color: var(--primary) !important;
+  color: oklch(var(--primary)) !important;
+}
+
+.table-of-contents__link:focus-visible {
+  outline: 2px solid oklch(var(--ring)) !important;
+  outline-offset: 2px !important;
+  border-radius: 4px !important;
 }
 
 /* Pagination styling */
 .pagination-nav__link {
   border-radius: var(--radius) !important;
-  border: 1px solid var(--border) !important;
+  border: 1px solid oklch(var(--border)) !important;
 }
 
 .pagination-nav__link:hover {
-  border-color: var(--primary) !important;
-  box-shadow: 0 0 0 1px var(--primary) !important;
+  border-color: oklch(var(--primary)) !important;
+  box-shadow: 0 0 0 1px oklch(var(--primary)) !important;
+}
+
+.pagination-nav__link:focus-visible {
+  outline: 2px solid oklch(var(--ring)) !important;
+  outline-offset: 2px !important;
 }
 
 /* Footer styling */
 .footer {
-  background: var(--card) !important;
-  border-top: 1px solid var(--border) !important;
+  background: oklch(var(--card)) !important;
+  border-top: 1px solid oklch(var(--border)) !important;
 }
 
 .footer__title {
-  color: var(--foreground) !important;
+  color: oklch(var(--foreground)) !important;
 }
 
 .footer__item {
-  color: var(--muted-foreground) !important;
+  color: oklch(var(--muted-foreground)) !important;
 }
 
 .footer__link-item:hover {
-  color: var(--primary) !important;
+  color: oklch(var(--primary)) !important;
 }
 
 /* Navbar enhancements */
 .navbar {
-  background: var(--card) !important;
-  border-bottom: 1px solid var(--border) !important;
+  background: oklch(var(--card)) !important;
+  border-bottom: 1px solid oklch(var(--border)) !important;
   backdrop-filter: blur(8px);
 }
 
+/* Primary button styling for navbar */
+.navbar .btn-primary {
+  background: oklch(var(--primary)) !important;
+  color: oklch(var(--primary-foreground)) !important;
+  border: 1px solid oklch(var(--primary)) !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.navbar .btn-primary:hover {
+  background: color-mix(in oklch, oklch(var(--primary)) 90%, transparent) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px color-mix(in oklch, oklch(var(--primary)) 25%, transparent) !important;
+}
+
+.navbar .btn-primary:focus-visible {
+  outline: 2px solid oklch(var(--ring)) !important;
+  outline-offset: 2px !important;
+}
+
+/* Enhanced focus states for navbar links */
+.navbar__link:focus-visible {
+  outline: 2px solid oklch(var(--primary)) !important;
+  outline-offset: 2px !important;
+  border-radius: 4px !important;
+}
+
+/* Enhanced focus states for footer links */
+.footer__link-item:focus-visible {
+  outline: 2px solid oklch(var(--primary)) !important;
+  outline-offset: 2px !important;
+  border-radius: 4px !important;
+}
+
 .navbar__title {
-  color: var(--foreground) !important;
+  color: oklch(var(--foreground)) !important;
 }
 
 .navbar__link {
-  color: var(--muted-foreground) !important;
+  color: oklch(var(--muted-foreground)) !important;
 }
 
 .navbar__link:hover,
 .navbar__link--active {
-  color: var(--primary) !important;
+  color: oklch(var(--primary)) !important;
 }
 
 .navbar__logo {
@@ -315,13 +537,16 @@
 }
 /* Search button hover state */
 .DocSearch-Button:hover {
-  border-color: #1a56db !important;
+  border-color: oklch(var(--primary)) !important;
   box-shadow: none !important;
 }
 
-/* Ensure the border color stays the same when focused */
-.DocSearch-Button:focus {
-  border-color: #1a56db !important;
+/* Enhanced focus state for search button */
+.DocSearch-Button:focus,
+.DocSearch-Button:focus-visible {
+  border-color: oklch(var(--primary)) !important;
+  outline: 2px solid oklch(var(--ring)) !important;
+  outline-offset: 2px !important;
   box-shadow: none !important;
 }
 
@@ -553,4 +778,54 @@ main[class*="docPage"] .markdown a:hover,
 [data-theme="dark"] #__docusaurus_skipToContent_fallback > div > div > main > article > footer > div.col.margin-top--sm > a:hover {
   color: #60a5fa !important;
   text-decoration: underline !important;
+}
+
+/* Custom utilities for new blog cards */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Enhanced shadow utilities */
+.shadow-glow {
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.1), 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Blog card specific styles */
+.blog-card-gradient {
+  position: relative;
+}
+
+.blog-card-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.blog-card-gradient:hover::before {
+  opacity: 1;
 }

@@ -17,10 +17,16 @@ export function Footer() {
             >
               <img src="/img/light-logo.png" />
             </a> */}
+<<<<<<< HEAD
             <p className="my-3 font-light text-gray-300 dark:text-gray-400 text-sm lg:text-base leading-relaxed">
               I'm Tobias Schuele, and I founded InnovationForge.com as a platform to share my expertise in Microsoft 365, Automation and Azure.
               Through this site, I provide how-to guides, insights, and solutions for businesses looking to optimize their cloud environments and
               automation strategies.
+=======
+            <p className="my-3 font-light text-gray-300 dark:text-gray-400 text-xs lg:text-sm">
+              ConfigForge is the knowledge hub by Opsora, featuring practical documentation, runbooks, and templates for Microsoft 365 and Azure work.
+              Find guides, solutions, and best practices from real-world projects.
+>>>>>>> origin/master
             </p>
           </div>
           <div className="lg:mx-auto mt-[40px] lg:mt-0 lg:col-span-2 font-medium text-sm">
@@ -109,30 +115,50 @@ export function Footer() {
                   <LinkedIn className="w-4 h-4" />
                 </a>
                 <a
+<<<<<<< HEAD
                   href="https://innovationforge.com/blog/rss.xml"
                   className="w-12 h-12 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 flex justify-center items-center text-gray-700 dark:text-gray-300 rounded-lg transition-all duration-200 hover:scale-105"
                   title="RSS Feed"
+=======
+                  href="https://configforge.opsora.io/blog/rss.xml"
+                  className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
+>>>>>>> origin/master
                 >
                   <RSS className="w-4 h-4" />
                 </a>
                 <a
+<<<<<<< HEAD
                   href="https://github.com/InnovationForge-com"
                   className="w-12 h-12 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 flex justify-center items-center text-gray-700 dark:text-gray-300 rounded-lg transition-all duration-200 hover:scale-105"
                   title="GitHub"
+=======
+                  href="https://github.com/opsora-io"
+                  className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
+>>>>>>> origin/master
                 >
                   <Github className="w-5 h-5" />
                 </a>
                 <a
+<<<<<<< HEAD
                   href="https://teams.microsoft.com/l/chat/0/0?users=tobias@innovationforge.com"
                   className="w-12 h-12 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 flex justify-center items-center rounded-lg transition-all duration-200 hover:scale-105"
                   title="Microsoft Teams"
+=======
+                  href="https://teams.microsoft.com/l/chat/0/0?users=tobias@opsora.io"
+                  className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center rounded-md text-transparent"
+>>>>>>> origin/master
                 >
                   <TeamsBlack className="w-6 h-5" />
                 </a>
                 <a
+<<<<<<< HEAD
                   href="mailto:tobias@innovationforge.com"
                   className="w-12 h-12 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 flex justify-center items-center text-gray-700 dark:text-gray-300 rounded-lg transition-all duration-200 hover:scale-105"
                   title="Email"
+=======
+                  href="mailto:tobias@opsora.io"
+                  className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
+>>>>>>> origin/master
                 >
                   <Gmail className="w-5 h-5" />
                 </a>
@@ -140,10 +166,17 @@ export function Footer() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <hr className="my-8 border-gray-800 dark:border-gray-700"></hr>
         <div className="text-center md:flex justify-between items-center">
           <span className="block text-sm text-center text-gray-400 dark:text-gray-500">
             © 2024 InnovationForge. All rights reserved.
+=======
+        <hr className="my-6 mt-[56px] lg:mt-10 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-10"></hr>
+        <div className="text-center md:flex justify-between">
+          <span className="block text-xs text-center text-gray-500 dark:text-gray-400">
+            © 2024 Opsora. All rights reserved.
+>>>>>>> origin/master
           </span>
           <div className="text-center md:flex gap-x-6 mt-4 md:mt-0">
             <a href="/privacy" className="block text-sm text-center text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200 my-2 md:my-0">

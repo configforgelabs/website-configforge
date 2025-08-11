@@ -86,13 +86,13 @@ const config: Config = {
         // Public API key: it is safe to commit it
         apiKey: "2bc73651f502022ed21de5749c492913",
 
-        indexName: "innovationforge",
+        indexName: "configforge",
 
         // Optional: see doc section below
         contextualSearch: true,
 
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: "external\\.com|innovationforge\\.com",
+        externalUrlRegex: "external\\.com|opsora\\.io",
 
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
         replaceSearchResultPathname: {
@@ -116,7 +116,7 @@ const config: Config = {
       image: "img/configforge-social-card.jpg",
       navbar: {
         logo: {
-          alt: "Home",
+          alt: "ConfigForge by Opsora",
           src: "img/branding/logo-color-menu.png",
         },
         items: [
@@ -197,7 +197,7 @@ const config: Config = {
       {
         path: "docs",
         sidebarPath: "./sidebars.ts",
-        editUrl: "https://github.com/InnovationForge-com/website/edit/master/",
+        editUrl: "https://github.com/opsora-io/configforge/edit/master/",
       },
     ],
     [
@@ -206,12 +206,13 @@ const config: Config = {
         path: "blog",
         // routeBasePath: '/',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/InnovationForge-com/website/edit/master/${blogDirPath}/${blogPath}`,
+          `https://github.com/opsora-io/configforge/edit/master/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
-        blogTitle: "InnovationForge's Blog",
-        blogDescription: "Blog",
+        onUntruncatedBlogPosts: 'ignore',
+        blogTitle: "ConfigForge Blog",
+        blogDescription: "ConfigForge Blog - Microsoft 365 and Azure insights",
         blogSidebarCount: 10,
-        blogSidebarTitle: "InnovationForge's Blog",
+        blogSidebarTitle: "ConfigForge Blog",
         showReadingTime: true,
         readingTime: ({ content, frontMatter, defaultReadingTime }) =>
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
