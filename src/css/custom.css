@@ -150,14 +150,19 @@
 
 /* Sidebar active menu highlight */
 .menu__link--active {
-  background: color-mix(in oklab, var(--primary) 12%, transparent) !important;
+  background: color-mix(in oklab, oklch(var(--primary)) 12%, transparent) !important;
   border-radius: 10px !important;
-  color: var(--primary) !important;
+  color: oklch(var(--primary)) !important;
 }
 
 .menu__link:hover {
-  background: color-mix(in oklab, var(--primary) 8%, transparent) !important;
+  background: color-mix(in oklab, oklch(var(--primary)) 8%, transparent) !important;
   border-radius: 10px !important;
+}
+
+.menu__link:focus-visible {
+  outline: 2px solid oklch(var(--ring)) !important;
+  outline-offset: 2px !important;
 }
 
 /* TOC active link styling */
