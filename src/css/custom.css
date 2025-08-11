@@ -184,12 +184,17 @@
 /* Pagination styling */
 .pagination-nav__link {
   border-radius: var(--radius) !important;
-  border: 1px solid var(--border) !important;
+  border: 1px solid oklch(var(--border)) !important;
 }
 
 .pagination-nav__link:hover {
-  border-color: var(--primary) !important;
-  box-shadow: 0 0 0 1px var(--primary) !important;
+  border-color: oklch(var(--primary)) !important;
+  box-shadow: 0 0 0 1px oklch(var(--primary)) !important;
+}
+
+.pagination-nav__link:focus-visible {
+  outline: 2px solid oklch(var(--ring)) !important;
+  outline-offset: 2px !important;
 }
 
 /* Footer styling */
