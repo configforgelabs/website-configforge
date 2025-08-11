@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class", '[data-theme="dark"]'],
+  darkMode: ['class', '[data-theme="dark"]'],
   content: [
     "./src/**/*.{js,jsx,ts,tsx,md,mdx}",
     "./docs/**/*.{md,mdx}",
@@ -11,69 +11,60 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Design System Colors using OKLCH
-        background: 'oklch(var(--background))',
-        foreground: 'oklch(var(--foreground))',
-        card: {
-          DEFAULT: 'oklch(var(--card))',
-          foreground: 'oklch(var(--card-foreground))',
-        },
-        popover: {
-          DEFAULT: '#ffffff',
-          foreground: '#0f172a',
-        },
+        // Opsora Design System Colors
+        border: "oklch(var(--border))",
+        input: "oklch(var(--input))",
+        ring: "oklch(var(--ring))",
+        background: "oklch(var(--background))",
+        foreground: "oklch(var(--foreground))",
         primary: {
-          DEFAULT: '#3b82f6',
-          foreground: '#ffffff',
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
-          950: '#172554',
+          DEFAULT: "oklch(var(--primary))",
+          foreground: "oklch(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: '#6b7280',
-          foreground: '#ffffff',
-        },
-        muted: {
-          DEFAULT: '#f9fafb',
-          foreground: '#6b7280',
-        },
-        accent: {
-          DEFAULT: '#f3f4f6',
-          foreground: '#111827',
+          DEFAULT: "oklch(var(--secondary))",
+          foreground: "oklch(var(--secondary-foreground))",
         },
         destructive: {
-          DEFAULT: '#ef4444',
-          foreground: '#ffffff',
+          DEFAULT: "oklch(var(--destructive))",
+          foreground: "oklch(var(--destructive-foreground))",
         },
-        border: '#e5e7eb',
-        input: '#d1d5db',
-        ring: '#3b82f6',
+        muted: {
+          DEFAULT: "oklch(var(--muted))",
+          foreground: "oklch(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "oklch(var(--accent))",
+          foreground: "oklch(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "oklch(var(--popover))",
+          foreground: "oklch(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "oklch(var(--card))",
+          foreground: "oklch(var(--card-foreground))",
+        },
+        // Chart colors from design system
         chart: {
-          1: '#3b82f6',
-          2: '#ef4444',
-          3: '#22c55e',
-          4: '#f59e0b',
-          5: '#8b5cf6',
+          1: "oklch(var(--chart-1))",
+          2: "oklch(var(--chart-2))",
+          3: "oklch(var(--chart-3))",
+          4: "oklch(var(--chart-4))",
+          5: "oklch(var(--chart-5))",
         },
+        // Sidebar colors from design system
         sidebar: {
-          DEFAULT: '#f8fafc',
-          foreground: '#0f172a',
-          primary: '#3b82f6',
-          'primary-foreground': '#ffffff',
-          accent: '#f1f5f9',
-          'accent-foreground': '#0f172a',
-          border: '#e2e8f0',
-          ring: '#3b82f6',
+          DEFAULT: "oklch(var(--sidebar))",
+          foreground: "oklch(var(--sidebar-foreground))",
+          primary: "oklch(var(--sidebar-primary))",
+          'primary-foreground': "oklch(var(--sidebar-primary-foreground))",
+          accent: "oklch(var(--sidebar-accent))",
+          'accent-foreground': "oklch(var(--sidebar-accent-foreground))",
+          border: "oklch(var(--sidebar-border))",
+          ring: "oklch(var(--sidebar-ring))",
         },
-        // Brand Colors
+        // Brand Colors (maintain existing for compatibility)
         brand: {
           blue: '#2563eb',
           'blue-dark': '#1d4ed8',
@@ -336,10 +327,18 @@ module.exports = {
           '@apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none': {},
         },
         '.btn-primary': {
-          '@apply bg-primary text-primary-foreground hover:bg-primary/90': {},
+          '@apply bg-primary text-primary-foreground': {},
+          'background': '#2563eb !important',
+          'color': 'white !important',
+          '&:hover': {
+            'background': '#1d4ed8 !important'
+          }
         },
         '.btn-secondary': {
-          '@apply bg-secondary text-secondary-foreground hover:bg-secondary/80': {},
+          '@apply bg-secondary text-secondary-foreground': {},
+          '&:hover': {
+            'background-color': 'color-mix(in oklch, oklch(var(--secondary)) 80%, transparent)'
+          }
         },
         '.btn-outline': {
           '@apply border border-input bg-background hover:bg-accent hover:text-accent-foreground': {},

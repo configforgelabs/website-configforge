@@ -15,7 +15,7 @@ import { HiZoomIn } from "react-icons/hi";
 /** @type {import('@docusaurus/types').Config} */
 const config: Config = {
   title: "ConfigForge · by Opsora",
-  tagline: "Guides & templates for Microsoft 365 and Azure work",
+  tagline: "Practical docs, runbooks, and references for Microsoft 365 and Azure",
   favicon: "img/branding/favicon.png",
 
   // Set the production url of your site here
@@ -77,7 +77,7 @@ const config: Config = {
       colorMode: {
         defaultMode: "light",
         disableSwitch: false,
-        respectPrefersColorScheme: true,
+        respectPrefersColorScheme: false,
       },
       algolia: {
         // The application ID provided by Algolia

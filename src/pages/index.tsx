@@ -3,7 +3,8 @@ import Layout from "@theme/Layout";
 
 import Hero from "../components/Home/Hero";
 import LatestPosts from "../components/Home/LatestPosts";
-import LatestDocs from "../components/Home/LatestDocs";
+import KBHighlights from "../components/Home/KBHighlights";
+import ValueProposition from "../components/Home/ValueProposition";
 import ServicesOverview from "../components/Home/ServicesOverview";
 import Testimonials from "../components/Home/Testimonials";
 
@@ -16,8 +17,9 @@ export default function Home() {
     >
       <Hero />
       <LatestPosts />
+      <KBHighlights />
+      <ValueProposition />
       {/* <ServicesOverview /> */}
-      <LatestDocs />
       {/* <Testimonials /> */}
     </Layout>
   );
