@@ -13,21 +13,35 @@
 /* Import Opsora Design System */
 @import './design-system.css';
 
-/* You can override the default Infima variables here. */
+/* Map Docusaurus (Infima) to Opsora design tokens */
 :root {
-  /* Map Docusaurus to Opsora tokens */
-  --ifm-color-primary: var(--brand-blue);
-  --ifm-color-primary-dark: var(--brand-blue-dark);
-  --ifm-color-primary-darker: var(--brand-blue-dark);
-  --ifm-color-primary-darkest: var(--brand-blue-dark);
-  --ifm-color-primary-light: var(--brand-blue-light);
-  --ifm-color-primary-lighter: var(--brand-blue-light);
-  --ifm-color-primary-lightest: var(--brand-blue-light);
-  --ifm-font-family-base: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", sans-serif;
+  /* Primary Colors */
+  --ifm-color-primary: oklch(var(--primary));
+  --ifm-color-primary-dark: oklch(var(--primary));
+  --ifm-color-primary-darker: oklch(var(--primary));
+  --ifm-color-primary-darkest: oklch(var(--primary));
+  --ifm-color-primary-light: oklch(var(--primary));
+  --ifm-color-primary-lighter: oklch(var(--primary));
+  --ifm-color-primary-lightest: oklch(var(--primary));
+
+  /* Layout & Typography */
+  --ifm-font-family-base: ui-sans-serif, system-ui, -apple-system, "Inter", Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
   --ifm-global-radius: var(--radius);
   --ifm-code-font-size: 95%;
+
+  /* Backgrounds */
+  --ifm-background-color: oklch(var(--background));
+  --ifm-navbar-background-color: oklch(var(--card));
+  --ifm-footer-background-color: oklch(var(--card));
+
+  /* Text Colors */
+  --ifm-font-color-base: oklch(var(--foreground));
+  --ifm-heading-color: oklch(var(--foreground));
+
+  /* Code Highlighting */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
+  /* Layout */
   --ifm-navbar-height: 100px;
 }
 
