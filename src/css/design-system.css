@@ -212,11 +212,19 @@
   }
   
   .btn-outline {
-    @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground px-4 py-2;
+    @apply border border-input bg-background px-4 py-2;
   }
-  
+
+  .btn-outline:hover {
+    @apply bg-accent text-accent-foreground;
+  }
+
   .btn-ghost {
-    @apply hover:bg-accent hover:text-accent-foreground px-4 py-2;
+    @apply px-4 py-2;
+  }
+
+  .btn-ghost:hover {
+    @apply bg-accent text-accent-foreground;
   }
   
   /* Card Styles */
