@@ -188,15 +188,15 @@
 }
 
 .footer__title {
-  color: var(--foreground) !important;
+  color: oklch(var(--foreground)) !important;
 }
 
 .footer__item {
-  color: var(--muted-foreground) !important;
+  color: oklch(var(--muted-foreground)) !important;
 }
 
 .footer__link-item:hover {
-  color: var(--primary) !important;
+  color: oklch(var(--primary)) !important;
 }
 
 /* Navbar enhancements */
