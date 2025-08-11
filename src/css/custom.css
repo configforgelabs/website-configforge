@@ -223,6 +223,25 @@
   box-shadow: 0 4px 12px color-mix(in oklch, oklch(var(--primary)) 25%, transparent) !important;
 }
 
+.navbar .btn-primary:focus-visible {
+  outline: 2px solid oklch(var(--ring)) !important;
+  outline-offset: 2px !important;
+}
+
+/* Enhanced focus states for navbar links */
+.navbar__link:focus-visible {
+  outline: 2px solid oklch(var(--primary)) !important;
+  outline-offset: 2px !important;
+  border-radius: 4px !important;
+}
+
+/* Enhanced focus states for footer links */
+.footer__link-item:focus-visible {
+  outline: 2px solid oklch(var(--primary)) !important;
+  outline-offset: 2px !important;
+  border-radius: 4px !important;
+}
+
 .navbar__title {
   color: oklch(var(--foreground)) !important;
 }
