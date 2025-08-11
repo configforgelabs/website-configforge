@@ -184,7 +184,11 @@
   }
   
   a {
-    @apply transition-colors hover:text-primary;
+    @apply transition-colors;
+  }
+
+  a:hover {
+    @apply text-primary;
   }
 }
 
@@ -275,7 +279,11 @@
   }
   
   .nav-link-inactive {
-    @apply text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50;
+    @apply text-gray-600 dark:text-gray-300;
+  }
+
+  .nav-link-inactive:hover {
+    @apply text-blue-600 dark:text-blue-400 bg-gray-50 dark:bg-gray-800;
   }
   
   /* Hero Section Styles */
