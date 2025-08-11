@@ -233,7 +233,11 @@
   }
   
   .card-hover {
-    @apply hover:shadow-lg transition-all duration-300;
+    @apply transition-all duration-300;
+  }
+
+  .card-hover:hover {
+    @apply shadow-lg;
   }
   
   .card-primary {
