@@ -11,13 +11,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Opsora Design System Colors using OKLCH
-        background: 'oklch(var(--background))',
-        foreground: 'oklch(var(--foreground))',
+        // Modern Opsora Design System Colors using OKLCH
+        background: {
+          DEFAULT: 'oklch(var(--background))',
+          elevated: 'oklch(var(--background-elevated))',
+        },
+        foreground: {
+          DEFAULT: 'oklch(var(--foreground))',
+          muted: 'oklch(var(--foreground-muted))',
+          subtle: 'oklch(var(--foreground-subtle))',
+        },
         card: {
           DEFAULT: 'oklch(var(--card))',
-          foreground: 'oklch(var(--card-foreground))',
+          elevated: 'oklch(var(--card-elevated))',
         },
+        surface: 'oklch(var(--surface))',
         popover: {
           DEFAULT: 'oklch(var(--card))',
           foreground: 'oklch(var(--card-foreground))',
