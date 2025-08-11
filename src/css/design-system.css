@@ -373,7 +373,9 @@ th, td {
   color: transparent;
 }
 
-/* Accessibility enhancements */
+/* Enhanced Accessibility Support */
+
+/* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -382,6 +384,13 @@ th, td {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+    transform: none !important;
+  }
+
+  /* Disable hover transforms in reduced motion */
+  .card-hover:hover,
+  .btn:hover {
+    transform: none !important;
   }
 }
 
