@@ -1,0 +1,267 @@
+/* Opsora Design System - Unified Light & Dark Mode for Docusaurus */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System Color Variables */
+:root {
+    /* Base font & radius */
+    --radius: 16px;
+    --font-sans: ui-sans-serif, -apple-system, "Segoe UI", Inter, Roboto, Arial, "Noto Sans", sans-serif;
+
+    /* Light mode (OKLCH) - Opsora brand tokens */
+    --background: 99% 0.01 255;
+    /* near-white #FEFEFE */
+    --foreground: 18% 0.02 255;
+    /* near-black #2D2D2D */
+    --card: 98% 0.01 255;
+    /* card bg #FCFCFC */
+    --card-foreground: 18% 0.02 255;
+    --popover: 98% 0.01 255;
+    --popover-foreground: 18% 0.02 255;
+    --primary: 65% 0.20 259;
+    /* Opsora blue #2563EB */
+    --primary-foreground: 99% 0.01 255;
+    --secondary: 92% 0.03 255;
+    /* light gray #EBEBEB */
+    --secondary-foreground: 18% 0.02 255;
+    --muted: 95% 0.01 255;
+    /* muted bg #F3F3F3 */
+    --muted-foreground: 48% 0.02 255;
+    /* muted text #737373 */
+    --accent: 82% 0.10 259;
+    /* accent blue #93C5FD */
+    --accent-foreground: 18% 0.02 255;
+    --destructive: 58% 0.25 27;
+    /* red #DC2626 */
+    --destructive-foreground: 99% 0.01 255;
+    --border: 86% 0.02 255;
+    /* border #D4D4D4 */
+    --input: 86% 0.02 255;
+    --ring: 65% 0.20 259;
+    /* focus ring - Opsora blue */
+
+    /* Chart colors */
+    --chart-1: 65% 0.20 259;
+    /* primary blue */
+    --chart-2: 58% 0.25 27;
+    /* red */
+    --chart-3: 70% 0.15 142;
+    /* green */
+    --chart-4: 75% 0.20 85;
+    /* yellow */
+    --chart-5: 60% 0.18 290;
+    /* purple */
+
+    /* Sidebar colors */
+    --sidebar: 97% 0.01 255;
+    --sidebar-foreground: 18% 0.02 255;
+    --sidebar-primary: 65% 0.20 259;
+    --sidebar-primary-foreground: 99% 0.01 255;
+    --sidebar-accent: 92% 0.03 255;
+    --sidebar-accent-foreground: 18% 0.02 255;
+    --sidebar-border: 86% 0.02 255;
+    --sidebar-ring: 65% 0.20 259;
+
+    /* Brand specific colors for Docusaurus compatibility */
+    --brand-blue: #2563eb;
+    --brand-blue-dark: #1d4ed8;
+    --brand-blue-light: #3b82f6;
+}
+
+/* Dark mode - Enhanced Opsora tokens */
+.dark,
+[data-theme="dark"] {
+    --background: 14% 0.02 255;
+    /* dark bg #0B0F14 */
+    --foreground: 93% 0.02 255;
+    /* light text #ECECEC */
+    --card: 18% 0.02 255;
+    /* dark card #1F2937 */
+    --card-foreground: 93% 0.02 255;
+    --popover: 18% 0.02 255;
+    --popover-foreground: 93% 0.02 255;
+    --primary: 65% 0.20 259;
+    /* keep brand blue #2563EB */
+    --primary-foreground: 99% 0.01 255;
+    --secondary: 28% 0.02 255;
+    /* dark secondary #374151 */
+    --secondary-foreground: 93% 0.02 255;
+    --muted: 22% 0.02 255;
+    /* dark muted #2D3748 */
+    --muted-foreground: 65% 0.02 255;
+    /* muted text #9CA3AF */
+    --accent: 36% 0.04 259;
+    /* dark accent #4B5563 */
+    --accent-foreground: 93% 0.02 255;
+    --destructive: 50% 0.15 27;
+    /* dark red #B91C1C */
+    --destructive-foreground: 93% 0.02 255;
+    --border: 34% 0.02 255;
+    /* dark border #374151 */
+    --input: 34% 0.02 255;
+    --ring: 70% 0.20 259;
+    /* brighter focus ring for dark */
+
+    /* Dark chart colors */
+    --chart-1: 65% 0.20 259;
+    /* primary blue */
+    --chart-2: 50% 0.15 27;
+    /* red */
+    --chart-3: 65% 0.12 142;
+    /* green */
+    --chart-4: 70% 0.18 85;
+    /* yellow */
+    --chart-5: 58% 0.16 290;
+    /* purple */
+
+    /* Dark sidebar colors */
+    --sidebar: 16% 0.02 255;
+    /* darker sidebar */
+    --sidebar-foreground: 93% 0.02 255;
+    --sidebar-primary: 65% 0.20 259;
+    --sidebar-primary-foreground: 99% 0.01 255;
+    --sidebar-accent: 28% 0.02 255;
+    --sidebar-accent-foreground: 93% 0.02 255;
+    --sidebar-border: 34% 0.02 255;
+    --sidebar-ring: 70% 0.20 259;
+}
+
+/* Base styles */
+html,
+body {
+    background: oklch(var(--background));
+    color: oklch(var(--foreground));
+    font-family: var(--font-sans);
+}
+
+/* Component utilities for Docusaurus + Tailwind */
+@layer components {
+
+    /* Buttons */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+        transition: all 0.15s ease-in-out;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn:focus-visible {
+        outline: 2px solid oklch(var(--ring));
+        outline-offset: 2px;
+    }
+
+    .btn-primary {
+        background: #2563eb !important;
+        color: white !important;
+    }
+
+    .btn-primary:hover {
+        background: #1d4ed8 !important;
+        color: white !important;
+        text-decoration: none !important;
+    }
+
+    .btn-outline {
+        border: 1px solid oklch(var(--border)) !important;
+        color: oklch(var(--foreground)) !important;
+        background: transparent !important;
+    }
+
+    .btn-outline:hover {
+        background: oklch(var(--accent)) !important;
+        color: oklch(var(--accent-foreground)) !important;
+    }
+
+    .btn-ghost {
+        background: transparent !important;
+        color: oklch(var(--foreground)) !important;
+    }
+
+    .btn-ghost:hover {
+        background: oklch(var(--accent)) !important;
+        color: oklch(var(--accent-foreground)) !important;
+    }
+
+    /* Cards */
+    .card {
+        border-radius: 0.75rem;
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+        padding: 1.5rem;
+        background: oklch(var(--card));
+        color: oklch(var(--card-foreground));
+        transition: all 0.15s ease-in-out;
+        border: 1px solid oklch(var(--border));
+    }
+
+    .card-hover:hover {
+        transform: translateY(-0.125rem);
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+
+    /* Hero */
+    .hero-gradient {
+        background: linear-gradient(180deg, color-mix(in oklab, oklch(var(--primary)) 8%, transparent), transparent);
+    }
+
+    .hero-title {
+        font-size: clamp(1.875rem, 5vw, 3rem);
+        font-weight: 600;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1rem, 2.5vw, 1.125rem);
+        opacity: 0.9;
+        line-height: 1.5;
+    }
+
+    /* Badges/Tags */
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 9999px;
+        padding: 0.25rem 0.625rem;
+        font-size: 0.75rem;
+        background: color-mix(in oklab, oklch(var(--primary)) 12%, transparent);
+        color: oklch(var(--primary));
+    }
+
+    /* Focus & accessibility */
+    :focus-visible {
+        outline: 2px solid oklch(var(--ring));
+        outline-offset: 2px;
+    }
+
+    /* Code blocks */
+    code,
+    pre {
+        border-radius: 0.75rem !important;
+    }
+
+    /* Tables */
+    thead {
+        background: color-mix(in oklab, currentColor 10%, transparent);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+    .btn,
+    .card,
+    .card-hover:hover {
+        transition: none;
+    }
+
+    .card-hover:hover {
+        transform: none;
+    }
+}
