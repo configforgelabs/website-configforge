@@ -14,8 +14,8 @@ import { HiZoomIn } from "react-icons/hi";
 
 /** @type {import('@docusaurus/types').Config} */
 const config: Config = {
-  title: "InnovationForge - Tobias Schuele",
-  tagline: "M365 Architect & Automation Expert",
+  title: "ConfigForge · by Opsora",
+  tagline: "Guides & templates for Microsoft 365 and Azure work",
   favicon: "img/branding/favicon.png",
 
   // Set the production url of your site here
@@ -121,59 +121,20 @@ const config: Config = {
         },
         items: [
           {
-            to: "/",
-            label: "Home",
-            position: "right",
-            activeBaseRegex: "/^$|/$",
-          },
-          // {
-          //   to: "/services",
-          //   label: "Services",
-          //   className: "dropdown-toggle",
-          //   position: "right",
-          //   items: [
-          //     {
-          //       label: "Microsoft 365 Architecture Design",
-          //       to: "architecture",
-          //     },
-          //     {
-          //       label: "Automation",
-          //       to: "automation",
-          //     },
-          //   ],
-          // },
-          {
-            label: "About",
-            position: "right",
-            to: "about",
-            // items: [
-            //   {
-            //     label: "Company",
-            //     to: "aboutcompany",
-            //   },
-            //   {
-            //     label: "Tobias",
-            //     to: "about",
-            //   }
-            // ],
+            to: "/docs",
+            label: "Docs",
+            position: "left",
           },
           {
-            label: "Blog",
-            to: "/blog",
-            position: "right",
-            className: "dropdown-toggle",
-            items: [
-              {
-                label: "Archive",
-                to: "blogarchive",
-              },
-            ],
+            to: "/resources",
+            label: "Resources",
+            position: "left",
           },
           {
-            to: "docs/intro",
-            label: "Knowledge Base",
+            href: "https://opsora.io",
+            label: "Back to Opsora",
             position: "right",
-            activeBasePath: "/docs",
+            className: "btn btn-primary",
           },
           // {
           //   to: "resources",
