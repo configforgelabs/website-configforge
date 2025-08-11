@@ -86,7 +86,7 @@ const config: Config = {
         // Public API key: it is safe to commit it
         apiKey: "2bc73651f502022ed21de5749c492913",
 
-        indexName: "innovationforge",
+        indexName: "configforge",
 
         // Optional: see doc section below
         contextualSearch: true,
