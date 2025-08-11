@@ -201,9 +201,26 @@
 
 /* Navbar enhancements */
 .navbar {
-  background: var(--card) !important;
-  border-bottom: 1px solid var(--border) !important;
+  background: oklch(var(--card)) !important;
+  border-bottom: 1px solid oklch(var(--border)) !important;
   backdrop-filter: blur(8px);
+}
+
+/* Primary button styling for navbar */
+.navbar .btn-primary {
+  background: oklch(var(--primary)) !important;
+  color: oklch(var(--primary-foreground)) !important;
+  border: 1px solid oklch(var(--primary)) !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.navbar .btn-primary:hover {
+  background: color-mix(in oklch, oklch(var(--primary)) 90%, transparent) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px color-mix(in oklch, oklch(var(--primary)) 25%, transparent) !important;
 }
 
 .navbar__title {
