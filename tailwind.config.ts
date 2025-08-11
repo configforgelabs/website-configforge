@@ -70,8 +70,10 @@ module.exports = {
           DEFAULT: 'oklch(var(--warning))',
           foreground: 'oklch(var(--warning-foreground))',
         },
-        border: 'oklch(var(--border))',
-        input: 'oklch(var(--input))',
+        border: {
+          DEFAULT: 'oklch(var(--border))',
+          strong: 'oklch(var(--border-strong))',
+        },
         ring: 'oklch(var(--ring))',
         chart: {
           1: 'oklch(var(--primary))',
