@@ -208,10 +208,10 @@ const config: Config = {
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
           `https://github.com/opsora-io/configforge/edit/master/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
-        blogTitle: "InnovationForge's Blog",
-        blogDescription: "Blog",
+        blogTitle: "ConfigForge Blog",
+        blogDescription: "ConfigForge Blog - Microsoft 365 and Azure insights",
         blogSidebarCount: 10,
-        blogSidebarTitle: "InnovationForge's Blog",
+        blogSidebarTitle: "ConfigForge Blog",
         showReadingTime: true,
         readingTime: ({ content, frontMatter, defaultReadingTime }) =>
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
