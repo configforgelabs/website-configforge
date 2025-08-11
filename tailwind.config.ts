@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class", '[data-theme="dark"]'],
+  darkMode: ["class"],
   content: [
     "./src/**/*.{js,jsx,ts,tsx,md,mdx}",
     "./docs/**/*.{md,mdx}",
@@ -11,29 +11,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Modern Opsora Design System Colors using OKLCH
-        background: {
-          DEFAULT: 'oklch(var(--background))',
-          elevated: 'oklch(var(--background-elevated))',
-        },
-        foreground: {
-          DEFAULT: 'oklch(var(--foreground))',
-          muted: 'oklch(var(--foreground-muted))',
-          subtle: 'oklch(var(--foreground-subtle))',
-        },
+        // Design System Colors following template
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
         card: {
-          DEFAULT: 'oklch(var(--card))',
-          elevated: 'oklch(var(--card-elevated))',
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
         },
-        surface: 'oklch(var(--surface))',
         popover: {
-          DEFAULT: 'oklch(var(--card))',
-          foreground: 'oklch(var(--card-foreground))',
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
         },
         primary: {
-          DEFAULT: 'oklch(var(--primary))',
-          hover: 'oklch(var(--primary-hover))',
-          subtle: 'oklch(var(--primary-subtle))',
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
           50: '#eff6ff',
           100: '#dbeafe',
           200: '#bfdbfe',
@@ -47,118 +38,46 @@ module.exports = {
           950: '#172554',
         },
         secondary: {
-          DEFAULT: 'oklch(var(--secondary))',
-          foreground: 'oklch(var(--secondary-foreground))',
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
         },
         muted: {
-          DEFAULT: 'oklch(var(--muted))',
-          foreground: 'oklch(var(--muted-foreground))',
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
         },
         accent: {
-          DEFAULT: 'oklch(var(--accent))',
-          foreground: 'oklch(var(--accent-foreground))',
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
         },
         destructive: {
-          DEFAULT: 'oklch(var(--destructive))',
-          foreground: 'oklch(var(--destructive-foreground))',
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
         },
-        success: {
-          DEFAULT: 'oklch(var(--success))',
-          foreground: 'oklch(var(--success-foreground))',
-        },
-        warning: {
-          DEFAULT: 'oklch(var(--warning))',
-          foreground: 'oklch(var(--warning-foreground))',
-        },
-        border: {
-          DEFAULT: 'oklch(var(--border))',
-          strong: 'oklch(var(--border-strong))',
-        },
-        ring: 'oklch(var(--ring))',
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
         chart: {
-          1: 'oklch(var(--primary))',
-          2: 'oklch(var(--destructive))',
-          3: 'oklch(var(--success))',
-          4: 'oklch(var(--warning))',
-          5: 'oklch(var(--accent))',
+          1: 'hsl(var(--chart-1))',
+          2: 'hsl(var(--chart-2))',
+          3: 'hsl(var(--chart-3))',
+          4: 'hsl(var(--chart-4))',
+          5: 'hsl(var(--chart-5))',
         },
         sidebar: {
-          DEFAULT: 'oklch(var(--sidebar))',
-          foreground: 'oklch(var(--sidebar-foreground))',
-          primary: 'oklch(var(--sidebar-primary))',
-          'primary-foreground': 'oklch(var(--sidebar-primary-foreground))',
-          accent: 'oklch(var(--sidebar-accent))',
-          'accent-foreground': 'oklch(var(--sidebar-accent-foreground))',
-          border: 'oklch(var(--sidebar-border))',
-          ring: 'oklch(var(--sidebar-ring))',
+          DEFAULT: 'hsl(var(--sidebar))',
+          foreground: 'hsl(var(--sidebar-foreground))',
+          primary: 'hsl(var(--sidebar-primary))',
+          'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+          accent: 'hsl(var(--sidebar-accent))',
+          'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+          border: 'hsl(var(--sidebar-border))',
+          ring: 'hsl(var(--sidebar-ring))',
         },
-        // Brand Colors for backward compatibility
+        // Brand Colors
         brand: {
           blue: '#2563eb',
           'blue-dark': '#1d4ed8',
           'blue-light': '#3b82f6',
-        },
-        gray: {
-          "950": "#0a0a0a",
-          "900": "#171717",
-          "800": "#262626",
-          "700": "#404040",
-          "600": "#525252",
-          "500": "#737373",
-          "400": "#a3a3a3",
-          "300": "#d4d4d4",
-          "200": "#e5e5e5",
-          "100": "#f5f5f5",
-          "50": "#fafafa",
-        },
-        red: {
-          "900": "#7f1d1d",
-          "800": "#991b1b",
-          "700": "#b91c1c",
-          "600": "#dc2626",
-          "500": "#ef4444",
-          "400": "#f87171",
-          "300": "#fca5a5",
-          "200": "#fecaca",
-          "100": "#fee2e2",
-          "50": "#fef2f2",
-        },
-        green: {
-          "900": "#14532d",
-          "800": "#166534",
-          "700": "#15803d",
-          "600": "#16a34a",
-          "500": "#22c55e",
-          "400": "#4ade80",
-          "300": "#86efac",
-          "200": "#bbf7d0",
-          "100": "#dcfce7",
-          "50": "#f0fdf4",
-        },
-        blue: {
-          "950": "#172554",
-          "900": "#1e3a8a",
-          "800": "#1e40af",
-          "700": "#1d4ed8",
-          "600": "#2563eb",
-          "500": "#3b82f6",
-          "400": "#60a5fa",
-          "300": "#93c5fd",
-          "200": "#bfdbfe",
-          "100": "#dbeafe",
-          "50": "#eff6ff",
-        },
-        yellow: {
-          "900": "#78350f",
-          "800": "#92400e",
-          "700": "#b45309",
-          "600": "#d97706",
-          "500": "#f59e0b",
-          "400": "#fbbf24",
-          "300": "#fcd34d",
-          "200": "#fde68a",
-          "100": "#fef3c7",
-          "50": "#fffbeb",
         },
       },
       borderRadius: {
@@ -169,7 +88,6 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          'var(--font-sans)',
           'system-ui',
           '-apple-system',
           'BlinkMacSystemFont',
@@ -179,9 +97,12 @@ module.exports = {
           'Arial',
           '"Noto Sans"',
           'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
         ],
         mono: [
-          'var(--font-mono)',
           '"Fira Code"',
           '"JetBrains Mono"',
           'Menlo',
@@ -191,6 +112,21 @@ module.exports = {
           '"Courier New"',
           'monospace',
         ],
+      },
+      fontSize: {
+        xs: ['0.75rem', { lineHeight: '1rem' }],
+        sm: ['0.875rem', { lineHeight: '1.25rem' }],
+        base: ['1rem', { lineHeight: '1.5rem' }],
+        lg: ['1.125rem', { lineHeight: '1.75rem' }],
+        xl: ['1.25rem', { lineHeight: '1.75rem' }],
+        '2xl': ['1.5rem', { lineHeight: '2rem' }],
+        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
+        '5xl': ['3rem', { lineHeight: '1' }],
+        '6xl': ['3.75rem', { lineHeight: '1' }],
+        '7xl': ['4.5rem', { lineHeight: '1' }],
+        '8xl': ['6rem', { lineHeight: '1' }],
+        '9xl': ['8rem', { lineHeight: '1' }],
       },
       spacing: {
         '18': '4.5rem',
@@ -250,8 +186,8 @@ module.exports = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'gradient-primary': 'linear-gradient(135deg, oklch(var(--primary)) 0%, color-mix(in oklch, oklch(var(--primary)) 80%, transparent) 100%)',
-        'gradient-secondary': 'linear-gradient(135deg, oklch(var(--secondary)) 0%, oklch(var(--muted)) 100%)',
+        'gradient-primary': 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)',
+        'gradient-secondary': 'linear-gradient(135deg, #64748b 0%, #94a3b8 100%)',
       },
       backdropBlur: {
         xs: '2px',
@@ -260,53 +196,26 @@ module.exports = {
         DEFAULT: {
           css: {
             maxWidth: 'none',
-            color: 'oklch(var(--foreground))',
-            '--tw-prose-body': 'oklch(var(--foreground))',
-            '--tw-prose-headings': 'oklch(var(--foreground))',
-            '--tw-prose-lead': 'oklch(var(--muted-foreground))',
-            '--tw-prose-links': 'oklch(var(--primary))',
-            '--tw-prose-bold': 'oklch(var(--foreground))',
-            '--tw-prose-counters': 'oklch(var(--muted-foreground))',
-            '--tw-prose-bullets': 'oklch(var(--muted-foreground))',
-            '--tw-prose-hr': 'oklch(var(--border))',
-            '--tw-prose-quotes': 'oklch(var(--foreground))',
-            '--tw-prose-quote-borders': 'oklch(var(--border))',
-            '--tw-prose-captions': 'oklch(var(--muted-foreground))',
-            '--tw-prose-code': 'oklch(var(--foreground))',
-            '--tw-prose-pre-code': 'oklch(var(--muted-foreground))',
-            '--tw-prose-pre-bg': 'oklch(var(--muted))',
-            '--tw-prose-th-borders': 'oklch(var(--border))',
-            '--tw-prose-td-borders': 'oklch(var(--border))',
+            color: 'hsl(var(--foreground))',
+            '--tw-prose-body': 'hsl(var(--foreground))',
+            '--tw-prose-headings': 'hsl(var(--foreground))',
+            '--tw-prose-lead': 'hsl(var(--muted-foreground))',
+            '--tw-prose-links': 'hsl(var(--primary))',
+            '--tw-prose-bold': 'hsl(var(--foreground))',
+            '--tw-prose-counters': 'hsl(var(--muted-foreground))',
+            '--tw-prose-bullets': 'hsl(var(--muted-foreground))',
+            '--tw-prose-hr': 'hsl(var(--border))',
+            '--tw-prose-quotes': 'hsl(var(--foreground))',
+            '--tw-prose-quote-borders': 'hsl(var(--border))',
+            '--tw-prose-captions': 'hsl(var(--muted-foreground))',
+            '--tw-prose-code': 'hsl(var(--foreground))',
+            '--tw-prose-pre-code': 'hsl(var(--muted-foreground))',
+            '--tw-prose-pre-bg': 'hsl(var(--muted))',
+            '--tw-prose-th-borders': 'hsl(var(--border))',
+            '--tw-prose-td-borders': 'hsl(var(--border))',
           },
         },
       },
-    },
-    fontWeight: {
-      thin: "100",
-      "extra-light": "200",
-      light: "300",
-      regular: "400",
-      medium: "500",
-      semibold: "600",
-      "semi-bold": "600",
-      bold: "700",
-      "extra-bold": "800",
-      black: "900",
-    },
-    fontSize: {
-      xs: "0.75rem",
-      sm: "0.875rem",
-      base: "1rem",
-      lg: "1.215rem",
-      xl: "1.25rem",
-      "2xl": "1.5rem",
-      "3xl": "1.875rem",
-      "4xl": "2.25rem",
-      "5xl": "3rem",
-      "6xl": "3.75rem",
-      "7xl": "4.5rem",
-      "8xl": "6rem",
-      "9xl": "8rem",
     },
   },
   plugins: [
@@ -314,7 +223,7 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
-    // Enhanced design system utilities plugin
+    // Design system utilities plugin
     function({ addUtilities, addComponents, theme }) {
       addUtilities({
         '.text-balance': {
@@ -323,95 +232,38 @@ module.exports = {
         '.text-pretty': {
           'text-wrap': 'pretty',
         },
-        '.gradient-text': {
-          'background': `linear-gradient(135deg, oklch(var(--primary)), color-mix(in oklch, oklch(var(--primary)) 80%, oklch(var(--accent))))`,
-          'background-clip': 'text',
-          '-webkit-background-clip': 'text',
-          'color': 'transparent',
-        },
-        '.shadow-glow': {
-          'box-shadow': '0 0 20px color-mix(in oklch, oklch(var(--primary)) 15%, transparent)',
-        },
       })
-
+      
       addComponents({
         '.btn': {
-          '@apply inline-flex items-center justify-center rounded-2xl text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none': {},
+          '@apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none': {},
         },
         '.btn-sm': {
-          '@apply h-8 px-3 text-xs': {},
+          '@apply h-9 px-3': {},
         },
-        '.btn-md': {
-          '@apply h-10 px-4': {},
+        '.btn-default': {
+          '@apply h-10 px-4 py-2': {},
         },
         '.btn-lg': {
           '@apply h-11 px-8': {},
         },
         '.btn-primary': {
-          'background': 'oklch(var(--primary))',
-          'color': 'oklch(var(--primary-foreground))',
-          '&:hover': {
-            'background': 'color-mix(in oklch, oklch(var(--primary)) 90%, black)',
-          },
+          '@apply bg-primary text-primary-foreground hover:bg-primary/90': {},
         },
         '.btn-secondary': {
-          'background': 'oklch(var(--secondary))',
-          'color': 'oklch(var(--secondary-foreground))',
-          '&:hover': {
-            'background': 'color-mix(in oklch, oklch(var(--secondary)) 80%, black)',
-          },
+          '@apply bg-secondary text-secondary-foreground hover:bg-secondary/80': {},
         },
         '.btn-outline': {
-          'border': '1px solid oklch(var(--border))',
-          'background': 'transparent',
-          'color': 'oklch(var(--foreground))',
-          '&:hover': {
-            'background': 'oklch(var(--accent))',
-            'color': 'oklch(var(--accent-foreground))',
-          },
+          '@apply border border-input bg-background hover:bg-accent hover:text-accent-foreground': {},
         },
         '.btn-ghost': {
-          'background': 'transparent',
-          'color': 'oklch(var(--foreground))',
-          '&:hover': {
-            'background': 'oklch(var(--accent))',
-            'color': 'oklch(var(--accent-foreground))',
-          },
+          '@apply hover:bg-accent hover:text-accent-foreground': {},
         },
         '.card': {
-          '@apply rounded-2xl border shadow-sm': {},
-          'background': 'oklch(var(--card))',
-          'color': 'oklch(var(--card-foreground))',
-          'border-color': 'oklch(var(--border))',
-        },
-        '.card-hover': {
-          '@apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1': {},
+          '@apply rounded-lg border bg-card text-card-foreground shadow-sm': {},
         },
         '.input': {
-          '@apply flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50': {},
-        },
-        '.badge': {
-          '@apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium': {},
-        },
-        '.badge-primary': {
-          'background': 'color-mix(in oklch, oklch(var(--primary)) 12%, transparent)',
-          'color': 'oklch(var(--primary))',
-        },
-        '.badge-secondary': {
-          'background': 'oklch(var(--muted))',
-          'color': 'oklch(var(--muted-foreground))',
-        },
-        '.badge-success': {
-          'background': 'color-mix(in oklch, oklch(var(--success)) 12%, transparent)',
-          'color': 'oklch(var(--success))',
-        },
-        '.badge-warning': {
-          'background': 'color-mix(in oklch, oklch(var(--warning)) 12%, transparent)',
-          'color': 'oklch(var(--warning))',
-        },
-        '.badge-destructive': {
-          'background': 'color-mix(in oklch, oklch(var(--destructive)) 12%, transparent)',
-          'color': 'oklch(var(--destructive))',
+          '@apply flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50': {},
         },
       })
     },
