@@ -183,8 +183,8 @@
 
 /* Footer styling */
 .footer {
-  background: var(--card) !important;
-  border-top: 1px solid var(--border) !important;
+  background: oklch(var(--card)) !important;
+  border-top: 1px solid oklch(var(--border)) !important;
 }
 
 .footer__title {
