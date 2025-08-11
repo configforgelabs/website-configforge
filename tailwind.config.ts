@@ -339,7 +339,7 @@ module.exports = {
           '@apply bg-primary text-primary-foreground': {},
         },
         '.btn-secondary': {
-          '@apply bg-secondary text-secondary-foreground hover:bg-secondary/80': {},
+          '@apply bg-secondary text-secondary-foreground': {},
         },
         '.btn-outline': {
           '@apply border border-input bg-background hover:bg-accent hover:text-accent-foreground': {},
