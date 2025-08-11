@@ -27,17 +27,6 @@ export default function DocCard(props: DocCardProps) {
   return (
     <Link to={permalink} className="hover:no-underline group">
       <article className="h-full bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-2xl hover:shadow-primary-500/10 dark:hover:shadow-primary-400/10 transition-all duration-300 overflow-hidden backdrop-blur-sm p-6 flex flex-col justify-between group-hover:-translate-y-1">
-        {imageSrc && (
-          <div className="w-full h-[192px] rounded-xl relative overflow-hidden mb-4">
-            <img
-              src={imageSrc}
-              className="object-cover object-center w-full h-full transition-transform duration-300 group-hover:scale-105"
-              alt={title}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </div>
-        )}
-
         <div className="flex-1 flex flex-col">
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag) => (
