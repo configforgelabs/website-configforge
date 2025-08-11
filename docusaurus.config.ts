@@ -19,15 +19,15 @@ const config: Config = {
   favicon: "img/branding/favicon.png",
 
   // Set the production url of your site here
-  url: "https://innovationforge.com",
+  url: "https://configforge.opsora.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "InnovationForge-com", // Usually your GitHub org/user name.
-  projectName: "website", // Usually your repo name.
+  organizationName: "opsora", // Usually your GitHub org/user name.
+  projectName: "configforge", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -113,7 +113,7 @@ const config: Config = {
       },
 
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/configforge-social-card.jpg",
       navbar: {
         logo: {
           alt: "Home",
