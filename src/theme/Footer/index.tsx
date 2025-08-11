@@ -19,9 +19,8 @@ export default function Footer() {
               <img src="/img/light-logo.png" />
             </a> */}
             <p className="my-3 font-light text-gray-300 dark:text-gray-400 text-xs lg:text-sm">
-              I'm Tobias Schuele, and I founded InnovationForge.com as a platform to share my expertise in Microsoft 365, Automation and Azure.
-              Through this site, I provide how-to guides, insights, and solutions for businesses looking to optimize their cloud environments and
-              automation strategies.
+              ConfigForge is the knowledge hub by Opsora, featuring practical documentation, runbooks, and templates for Microsoft 365 and Azure work.
+              Find guides, solutions, and best practices from real-world projects.
             </p>
           </div>
           <div className="lg:mx-auto mt-[40px] lg:mt-0 lg:col-span-2 font-semi-bold lg:font-regular text-sm">
@@ -107,25 +106,25 @@ export default function Footer() {
                   <LinkedIn className="w-4 h-4 " />
                 </a>
                 <a
-                  href="https://innovationforge.com/blog/rss.xml"
+                  href="https://configforge.opsora.io/blog/rss.xml"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <RSS className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://github.com/InnovationForge-com"
+                  href="https://github.com/opsora-io"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <Github className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://teams.microsoft.com/l/chat/0/0?users=tobias@innovationforge.com"
+                  href="https://teams.microsoft.com/l/chat/0/0?users=tobias@opsora.io"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center rounded-md text-transparent"
                 >
                   <TeamsBlack className="w-[26px] h-[22px]" />
                 </a>
                 <a
-                  href="mailto:tobias@innovationforge.com"
+                  href="mailto:tobias@opsora.io"
                   className="w-14 h-12 lg:h-14 bg-[#F9FCFF] flex justify-center items-center text-black rounded-md"
                 >
                   <Gmail className="w-[22px] h-[22px]" />
@@ -137,7 +136,7 @@ export default function Footer() {
         <hr className="my-6 mt-[56px] lg:mt-10 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-10"></hr>
         <div className="text-center md:flex justify-between">
           <span className="block text-xs text-center text-gray-500 dark:text-gray-400">
-            © 2024 InnovationForge. All rights reserved.
+            © 2024 Opsora. All rights reserved.
           </span>
           <div className="text-center md:flex gap-x-5">
             <span className="block text-xs text-center text-gray-500 dark:text-gray-400 my-3 md:my-0">
