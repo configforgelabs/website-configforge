@@ -206,7 +206,7 @@ const config: Config = {
         path: "blog",
         // routeBasePath: '/',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/InnovationForge-com/website/edit/master/${blogDirPath}/${blogPath}`,
+          `https://github.com/opsora-io/configforge/edit/master/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
         blogTitle: "InnovationForge's Blog",
         blogDescription: "Blog",
