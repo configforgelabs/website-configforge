@@ -1,21 +1,83 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class", '[data-theme="dark"]'],
-  content: ["./src/**/*.{js,jsx,ts,tsx}", 'node_modules/flowbite-react/lib/esm/**/*.js',],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx,md,mdx}",
+    "./docs/**/*.{md,mdx}",
+    "./docusaurus.config.{js,ts}",
+    "./src/theme/**/*.{js,jsx,ts,tsx}",
+    'node_modules/flowbite-react/lib/esm/**/*.js',
+  ],
   theme: {
     extend: {
       colors: {
+        // Design System Colors using OKLCH
+        background: 'oklch(var(--background))',
+        foreground: 'oklch(var(--foreground))',
+        card: {
+          DEFAULT: 'oklch(var(--card))',
+          foreground: 'oklch(var(--card-foreground))',
+        },
+        popover: {
+          DEFAULT: 'oklch(var(--popover))',
+          foreground: 'oklch(var(--popover-foreground))',
+        },
         primary: {
-          "900": "#233876",
-          "800": "#1E429F",
-          "700": "#1A56DB",
-          "600": "#1C64F2",
-          "500": "#3F83F8",
-          "400": "#76A9FA",
-          "300": "#A4CAFE",
-          "200": "#C3DDFD",
-          "100": "#E1EFFE",
-          "50": "#EBF5FF",
+          DEFAULT: 'oklch(var(--primary))',
+          foreground: 'oklch(var(--primary-foreground))',
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
+        },
+        secondary: {
+          DEFAULT: 'oklch(var(--secondary))',
+          foreground: 'oklch(var(--secondary-foreground))',
+        },
+        muted: {
+          DEFAULT: 'oklch(var(--muted))',
+          foreground: 'oklch(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'oklch(var(--accent))',
+          foreground: 'oklch(var(--accent-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'oklch(var(--destructive))',
+          foreground: 'oklch(var(--destructive-foreground))',
+        },
+        border: 'oklch(var(--border))',
+        input: 'oklch(var(--input))',
+        ring: 'oklch(var(--ring))',
+        chart: {
+          1: 'oklch(var(--chart-1))',
+          2: 'oklch(var(--chart-2))',
+          3: 'oklch(var(--chart-3))',
+          4: 'oklch(var(--chart-4))',
+          5: 'oklch(var(--chart-5))',
+        },
+        sidebar: {
+          DEFAULT: 'oklch(var(--sidebar))',
+          foreground: 'oklch(var(--sidebar-foreground))',
+          primary: 'oklch(var(--sidebar-primary))',
+          'primary-foreground': 'oklch(var(--sidebar-primary-foreground))',
+          accent: 'oklch(var(--sidebar-accent))',
+          'accent-foreground': 'oklch(var(--sidebar-accent-foreground))',
+          border: 'oklch(var(--sidebar-border))',
+          ring: 'oklch(var(--sidebar-ring))',
+        },
+        // Brand Colors
+        brand: {
+          blue: '#2563eb',
+          'blue-dark': '#1d4ed8',
+          'blue-light': '#3b82f6',
         },
         gray: {
           "950": "#151D28",
@@ -127,6 +189,103 @@ module.exports = {
           "50": "#FDF2F8",
         },
       },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
+        xl: 'calc(var(--radius) + 4px)',
+      },
+      fontFamily: {
+        sans: [
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          '"Noto Sans"',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
+        mono: [
+          '"Fira Code"',
+          '"JetBrains Mono"',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          '"Liberation Mono"',
+          '"Courier New"',
+          'monospace',
+        ],
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '128': '32rem',
+        '144': '36rem',
+      },
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'fade-up': 'fadeUp 0.5s ease-out',
+        'fade-down': 'fadeDown 0.5s ease-out',
+        'slide-up': 'slideUp 0.3s ease-out',
+        'slide-down': 'slideDown 0.3s ease-out',
+        'scale-in': 'scaleIn 0.2s ease-out',
+        'bounce-gentle': 'bounceGentle 2s infinite',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeDown: {
+          '0%': { opacity: '0', transform: 'translateY(-30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        slideDown: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        scaleIn: {
+          '0%': { transform: 'scale(0.9)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        bounceGentle: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-5px)' },
+        },
+      },
+      boxShadow: {
+        'xs': '0 1px 2px 0 rgb(0 0 0 / 0.05)',
+        'glow': '0 0 20px rgb(37 99 235 / 0.15)',
+        'glow-lg': '0 0 40px rgb(37 99 235 / 0.25)',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-primary': 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)',
+        'gradient-secondary': 'linear-gradient(135deg, #64748b 0%, #94a3b8 100%)',
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
     },
     fontWeight: {
       thin: "100",
@@ -155,7 +314,47 @@ module.exports = {
       "9xl": "8rem",
     },
   },
-  plugins: [ require('flowbite/plugin'),],
+  plugins: [
+    require('flowbite/plugin'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+    // Custom plugin for design system utilities
+    function({ addUtilities, addComponents, theme }) {
+      addUtilities({
+        '.text-balance': {
+          'text-wrap': 'balance',
+        },
+        '.text-pretty': {
+          'text-wrap': 'pretty',
+        },
+      })
+
+      addComponents({
+        '.btn': {
+          '@apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none': {},
+        },
+        '.btn-primary': {
+          '@apply bg-primary text-primary-foreground hover:bg-primary/90': {},
+        },
+        '.btn-secondary': {
+          '@apply bg-secondary text-secondary-foreground hover:bg-secondary/80': {},
+        },
+        '.btn-outline': {
+          '@apply border border-input bg-background hover:bg-accent hover:text-accent-foreground': {},
+        },
+        '.btn-ghost': {
+          '@apply hover:bg-accent hover:text-accent-foreground': {},
+        },
+        '.card': {
+          '@apply rounded-lg border bg-card text-card-foreground shadow-sm': {},
+        },
+        '.input': {
+          '@apply flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50': {},
+        },
+      })
+    },
+  ],
   corePlugins: {
     preflight: false,
   },
