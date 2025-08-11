@@ -4,8 +4,10 @@
  * work well for content-centric websites.
  */
 
-/* Import Opsora Design System - temporarily commented out for debugging */
-/* @import './design-system.css'; */
+/* Basic styles without complex Tailwind features */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* You can override the default Infima variables here. */
 :root {
