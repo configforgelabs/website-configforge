@@ -197,7 +197,7 @@ const config: Config = {
       {
         path: "docs",
         sidebarPath: "./sidebars.ts",
-        editUrl: "https://github.com/InnovationForge-com/website/edit/master/",
+        editUrl: "https://github.com/opsora-io/configforge/edit/master/",
       },
     ],
     [
