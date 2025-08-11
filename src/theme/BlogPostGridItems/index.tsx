@@ -3,6 +3,7 @@ import { Variants, motion, useMotionValue } from "framer-motion";
 import Link from "@docusaurus/Link";
 import type { Props as BlogPostItemsProps } from "@theme/BlogPostItems";
 import Tag from "@theme/Tag";
+import BlogCard from "@site/src/components/BlogCard";
 
 import styles from "./styles.module.scss";
 import Paper from "@site/src/components/Icons/Paper";
@@ -30,7 +31,7 @@ const item = {
 
 export default function BlogPostGridItems({
   items,
-}: BlogPostItemsProps): JSX.Element {
+}: BlogPostItemsProps): React.JSX.Element {
   return (
     <>
       {items.map(({ content: BlogPostContent }, index) => {
@@ -50,62 +51,19 @@ export default function BlogPostGridItems({
 
         const { permalink, date, tags, authors, description } = blogMetaData;
 
-        const authorData = authors.length > 0 ? authors[0] : null;
-        const dateObj = new Date(date);
-        const dateString = `${dateObj.getFullYear()}-${(
-          "0" +
-          (dateObj.getMonth() + 1)
-        ).slice(-2)}-${("0" + dateObj.getDate()).slice(-2)}`;
-
         return (
-          <Link 
+          <div 
             key={`blog-post-${permalink}`} 
-            to={permalink} 
-            className="hover:no-underline"
+            className="card card-hover transition-all duration-200"
           >
-            <article className="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <img
-                className="mb-5 rounded-lg"
-                src={imageSrc}
-                alt="Blog post image"
-              />
-
-              {tags.length > 0 &&
-                tags.map((tag) => (
-                  <span 
-                    key={`${permalink}-tag-${tag.label}`}
-                    className="bg-primary-100 text-primary-800 font-medium me-2 px-2.5 py-0.5 rounded inline-flex items-center justify-center gap-x-1"
-                  >
-                    <Paper className="w-3 h-3" />
-                    <span className="text-xs">{tag.label}</span>
-                  </span>
-                ))}
-
-              <h2 className="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                {title}
-              </h2>
-              <p className="mb-4 font-medium text-gray-500 dark:text-gray-400">
-                {description}
-              </p>
-              <div className="flex items-center space-x-3">
-                {authorData && authorData.imageURL && (
-                  <img
-                    className="w-10 h-10 rounded-full"
-                    src={authorData.imageURL}
-                    alt="Author Avatar"
-                  />
-                )}
-
-                <div className="dark:text-white">
-                  {authorData && <div className="text-sm text-gray-900 font-medium">{authorData.name}</div>}
-
-                  <div className="text-sm font-normal text-gray-500 dark:text-gray-400">
-                    {dateString} · 16 min read
-                  </div>
-                </div>
-              </div>
-            </article>
-          </Link>
+            <BlogCard
+              permalink={permalink}
+              title={title}
+              tags={tags}
+              description={description}
+              image={imageSrc}
+            />
+          </div>
         );
       })}
     </>

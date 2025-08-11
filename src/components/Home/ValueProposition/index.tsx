@@ -8,8 +8,8 @@ export default function ValueProposition() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
         </svg>
       ),
-      title: "Production-Tested",
-      description: "Every guide and template comes from real enterprise deployments. No theoretical examples—only solutions that work in production environments."
+      title: "From Real Projects",
+      description: "Every guide and template comes from my actual enterprise deployments. No theoretical examples—only solutions that work in production environments."
     },
     {
       icon: (
@@ -17,8 +17,8 @@ export default function ValueProposition() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      title: "Copy-Paste Ready",
-      description: "Skip the research phase. Our PowerShell scripts, ARM templates, and configurations are ready to adapt for your environment."
+      title: "Ready to Use",
+      description: "Skip the research phase. My PowerShell scripts, ARM templates, and configurations are ready to adapt for your environment."
     },
     {
       icon: (
@@ -26,8 +26,8 @@ export default function ValueProposition() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
         </svg>
       ),
-      title: "Enterprise Patterns",
-      description: "Learn the architectural patterns that scale from SMB to enterprise. Governance, security, and compliance built in from day one."
+      title: "Patterns I Use",
+      description: "Learn the architectural patterns I implement from SMB to enterprise. Governance, security, and compliance built in from day one."
     },
     {
       icon: (
@@ -35,8 +35,8 @@ export default function ValueProposition() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       ),
-      title: "Comprehensive Documentation",
-      description: "Step-by-step implementation guides with troubleshooting sections, prerequisites, and post-deployment validation steps."
+      title: "My Documentation Style",
+      description: "Step-by-step implementation guides with troubleshooting sections, prerequisites, and post-deployment validation steps — how I work."
     },
     {
       icon: (
@@ -71,11 +71,12 @@ export default function ValueProposition() {
             Why ConfigForge
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Built for Real-World IT Teams
+            How ConfigForge relates to Opsora
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            ConfigForge provides the practical resources you need to implement, manage, and scale Microsoft 365 and Azure 
-            environments without the trial-and-error typically required.
+            I do client work under Opsora (architecture, implementations, migrations). 
+            I document patterns here on ConfigForge so others can reuse them. 
+            Want me to apply this in your tenant? Work with me on Opsora.
           </p>
         </div>
 
@@ -96,30 +97,63 @@ export default function ValueProposition() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="card bg-white dark:bg-gray-800 p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Ready to streamline your Microsoft 365 and Azure work?
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Access our complete library of guides, templates, and runbooks used in real enterprise deployments.
+        {/* What you'll find here */}
+        <div className="mt-16 text-center">
+          <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+            What you'll find here
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+            <div>
+              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="h-8 w-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Guides & notes</h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">concise write-ups from real implementations</p>
+            </div>
+            <div>
+              <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="h-8 w-8 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v6a2 2 0 002 2h6a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Templates & checklists</h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">starting points I refine on projects</p>
+            </div>
+            <div>
+              <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="h-8 w-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Tools I built</h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">small utilities that save time</p>
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 max-w-2xl mx-auto mb-12">
+            <p className="text-gray-700 dark:text-gray-300 italic">
+              I don't sell runbooks here. Everything is shared for learning and reuse.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/docs" 
+              className="btn btn-primary px-6 py-3 rounded-full font-semibold"
+            >
+              Browse Docs
+            </a>
+            <div className="text-center">
               <a 
-                href="/docs" 
-                className="btn btn-primary px-6 py-3 rounded-full font-semibold"
-              >
-                Explore Documentation
-              </a>
-              <a 
-                href="https://opsora.io" 
+                href="https://opsora.io/contact?utm_source=configforge&utm_medium=callout&utm_campaign=book" 
                 className="btn btn-outline px-6 py-3 rounded-full font-semibold"
-                target="_blank"
-                rel="noopener noreferrer"
               >
-                Need Implementation Help?
+                Book a consultation
               </a>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">handled via Opsora</p>
             </div>
           </div>
         </div>

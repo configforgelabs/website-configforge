@@ -33,8 +33,7 @@ export default function LatestPosts(props: LatestPostsProps) {
             Recent Posts
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Deep dives into Microsoft 365 and Azure implementations, troubleshooting guides, 
-            and practical solutions from real enterprise deployments.
+            Recent notes from my Microsoft 365 and Azure work. Short reads with concrete steps you can apply immediately—no fluff.
           </p>
         </div>
 

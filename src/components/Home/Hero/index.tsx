@@ -11,11 +11,10 @@ export default function Hero() {
             <h1 className="hero-title text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               ConfigForge — 
               <br />
-              <span className="text-blue-600">Practical Microsoft 365 & Azure Guides</span>
+              <span className="text-blue-600">guides & tools I use in Microsoft 365 and Azure work</span>
             </h1>
             <p className="hero-subtitle text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">
-              Real-world documentation, runbooks, and templates from enterprise deployments. 
-              Built by Opsora for admins who need results, not theory.
+              I publish practical guides and tools. If you need hands-on help, you can <strong>book me via Opsora</strong>.
             </p>
             
             {/* Quick Value Props */}
@@ -24,19 +23,19 @@ export default function Hero() {
                 <svg className="h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
                 </svg>
-                <span className="text-gray-700 dark:text-gray-300">Production-tested</span>
+                <span className="text-gray-700 dark:text-gray-300">From real projects</span>
               </div>
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <svg className="h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
-                <span className="text-gray-700 dark:text-gray-300">Enterprise patterns</span>
+                <span className="text-gray-700 dark:text-gray-300">My knowledge base</span>
               </div>
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <svg className="h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                <span className="text-gray-700 dark:text-gray-300">Copy-paste ready</span>
+                <span className="text-gray-700 dark:text-gray-300">Tools I built</span>
               </div>
             </div>
             
@@ -46,16 +45,10 @@ export default function Hero() {
                 className="btn btn-primary px-8 py-4 text-lg font-semibold rounded-full" 
                 href="/docs"
               >
-                Browse Documentation
+                Browse Docs
                 <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
-              <a 
-                className="btn btn-outline px-8 py-4 text-lg font-semibold rounded-full" 
-                href="/blog"
-              >
-                Read Latest Posts
               </a>
             </div>
           </div>
@@ -72,7 +65,7 @@ export default function Hero() {
                 by Opsora
               </h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-6">
-                From the team behind enterprise Microsoft 365 and Azure architectures
+                My personal knowledge base and tools hub
               </p>
               
               {/* Stats */}
@@ -90,11 +83,11 @@ export default function Hero() {
               <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
                 <a 
                   className="text-blue-600 hover:text-blue-700 text-sm font-medium"
-                  href="https://opsora.io"
+                  href="https://opsora.io/?utm_source=configforge&utm_medium=brand-card&utm_campaign=visit"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Visit Opsora.io →
+                  Work with me on Opsora →
                 </a>
               </div>
             </div>
