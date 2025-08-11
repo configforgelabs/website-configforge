@@ -32,7 +32,8 @@ module.exports = {
         },
         primary: {
           DEFAULT: 'oklch(var(--primary))',
-          foreground: 'oklch(var(--primary-foreground))',
+          hover: 'oklch(var(--primary-hover))',
+          subtle: 'oklch(var(--primary-subtle))',
           50: '#eff6ff',
           100: '#dbeafe',
           200: '#bfdbfe',
