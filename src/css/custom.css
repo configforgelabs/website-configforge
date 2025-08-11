@@ -224,16 +224,16 @@
 }
 
 .navbar__title {
-  color: var(--foreground) !important;
+  color: oklch(var(--foreground)) !important;
 }
 
 .navbar__link {
-  color: var(--muted-foreground) !important;
+  color: oklch(var(--muted-foreground)) !important;
 }
 
 .navbar__link:hover,
 .navbar__link--active {
-  color: var(--primary) !important;
+  color: oklch(var(--primary)) !important;
 }
 
 .navbar__logo {
