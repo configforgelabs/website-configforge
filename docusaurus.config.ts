@@ -15,7 +15,7 @@ import { HiZoomIn } from "react-icons/hi";
 /** @type {import('@docusaurus/types').Config} */
 const config: Config = {
   title: "ConfigForge · by Opsora",
-  tagline: "Guides & templates for Microsoft 365 and Azure work",
+  tagline: "Practical docs, runbooks, and references for Microsoft 365 and Azure",
   favicon: "img/branding/favicon.png",
 
   // Set the production url of your site here
@@ -37,7 +37,19 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en", "de"],
+    localeConfigs: {
+      en: {
+        label: "English",
+        direction: "ltr",
+        htmlLang: "en-US",
+      },
+      de: {
+        label: "Deutsch",
+        direction: "ltr",
+        htmlLang: "de-DE",
+      },
+    },
   },
   customFields: {
     placeholderImageURL:
@@ -86,13 +98,13 @@ const config: Config = {
         // Public API key: it is safe to commit it
         apiKey: "2bc73651f502022ed21de5749c492913",
 
-        indexName: "configforge",
+        indexName: "innovationforge",
 
         // Optional: see doc section below
         contextualSearch: true,
 
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: "external\\.com|opsora\\.io",
+        externalUrlRegex: "external\\.com|innovationforge\\.com",
 
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
         replaceSearchResultPathname: {
@@ -116,7 +128,7 @@ const config: Config = {
       image: "img/configforge-social-card.jpg",
       navbar: {
         logo: {
-          alt: "ConfigForge by Opsora",
+          alt: "Home",
           src: "img/branding/logo-color-menu.png",
         },
         items: [
@@ -141,20 +153,10 @@ const config: Config = {
             position: "right",
             className: "btn btn-primary",
           },
-          // {
-          //   to: "resources",
-          //   label: "Resources",
-          //   position: "right",
-          // },
-          // {
-          //   to: "contact",
-          //   label: "Contact",
-          //   position: "right",
-          // },
-          // {
-          //   type: "localeDropdown",
-          //   position: "right",
-          // },
+          {
+            type: "localeDropdown",
+            position: "right",
+          },
           {
             type: "search",
             position: "right",
@@ -187,6 +189,12 @@ const config: Config = {
       liveCodeBlock: {
         playgroundPosition: "top",
       },
+      scripts: [
+        {
+          src: '/js/language-theme-persistence.js',
+          async: false,
+        },
+      ],
     } satisfies Preset.ThemeConfig,
   plugins: [
     // require.resolve('docusaurus-lunr-search'),
@@ -197,7 +205,7 @@ const config: Config = {
       {
         path: "docs",
         sidebarPath: "./sidebars.ts",
-        editUrl: "https://github.com/opsora-io/configforge/edit/master/",
+        editUrl: "https://github.com/InnovationForge-com/website/edit/master/",
       },
     ],
     [
@@ -206,13 +214,12 @@ const config: Config = {
         path: "blog",
         // routeBasePath: '/',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/opsora-io/configforge/edit/master/${blogDirPath}/${blogPath}`,
+          `https://github.com/InnovationForge-com/website/edit/master/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
-        onUntruncatedBlogPosts: 'ignore',
-        blogTitle: "ConfigForge Blog",
-        blogDescription: "ConfigForge Blog - Microsoft 365 and Azure insights",
+        blogTitle: "InnovationForge's Blog",
+        blogDescription: "Blog",
         blogSidebarCount: 10,
-        blogSidebarTitle: "ConfigForge Blog",
+        blogSidebarTitle: "InnovationForge's Blog",
         showReadingTime: true,
         readingTime: ({ content, frontMatter, defaultReadingTime }) =>
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
