@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "ConfigForge · by Opsora",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Startseite",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Blog": {
+    "message": "Blog", 
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.Resources": {
+    "message": "Ressourcen",
+    "description": "Navbar item with label Resources"
+  },
+  "item.label.Back to Opsora": {
+    "message": "Zurück zu Opsora",
+    "description": "Navbar item with label Back to Opsora"
+  }
+}
