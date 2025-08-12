@@ -12,7 +12,7 @@ last_update:
  author: Tobias
 ---
 
-Something
 
-<!-- truncate -->
+
+Something
 

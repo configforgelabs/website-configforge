@@ -37,7 +37,19 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en", "de"],
+    localeConfigs: {
+      en: {
+        label: "English",
+        direction: "ltr",
+        htmlLang: "en-US",
+      },
+      de: {
+        label: "Deutsch",
+        direction: "ltr", 
+        htmlLang: "de-DE",
+      },
+    },
   },
   customFields: {
     placeholderImageURL:
@@ -77,7 +89,7 @@ const config: Config = {
       colorMode: {
         defaultMode: "light",
         disableSwitch: false,
-        respectPrefersColorScheme: false,
+        respectPrefersColorScheme: true,
       },
       algolia: {
         // The application ID provided by Algolia
@@ -141,20 +153,10 @@ const config: Config = {
             position: "right",
             className: "btn btn-primary",
           },
-          // {
-          //   to: "resources",
-          //   label: "Resources",
-          //   position: "right",
-          // },
-          // {
-          //   to: "contact",
-          //   label: "Contact",
-          //   position: "right",
-          // },
-          // {
-          //   type: "localeDropdown",
-          //   position: "right",
-          // },
+          {
+            type: "localeDropdown",
+            position: "right",
+          },
           {
             type: "search",
             position: "right",
@@ -187,6 +189,12 @@ const config: Config = {
       liveCodeBlock: {
         playgroundPosition: "top",
       },
+      scripts: [
+        {
+          src: '/js/language-theme-persistence.js',
+          async: false,
+        },
+      ],
     } satisfies Preset.ThemeConfig,
   plugins: [
     // require.resolve('docusaurus-lunr-search'),

@@ -1,0 +1,42 @@
+{
+  "links.title": {
+    "message": "Nützliche Links",
+    "description": "The title of the footer links section"
+  },
+  "copyright": {
+    "message": "© {year} ConfigForge · by {opsora} — Alle Rechte vorbehalten.",
+    "description": "The footer copyright"
+  },
+  "contact.title": {
+    "message": "Kontakt",
+    "description": "The title of the contact section"
+  },
+  "navigation.title": {
+    "message": "Navigation",
+    "description": "The title of the navigation section"
+  },
+  "topics.title": {
+    "message": "Beliebte Themen",
+    "description": "The title of the popular topics section"
+  },
+  "privacy": {
+    "message": "Datenschutz",
+    "description": "Privacy link text"
+  },
+  "imprint": {
+    "message": "Impressum",
+    "description": "Imprint link text"
+  },
+  "knowledge.first": {
+    "message": "Wissen-zuerst",
+    "description": "Knowledge-first status pill"
+  },
+  "tools.built": {
+    "message": "Tools die ich gebaut habe",
+    "description": "Tools I built status pill"
+  },
+  "opensource.friendly": {
+    "message": "Open-Source freundlich", 
+    "description": "Open-source friendly status pill"
+  }
+}

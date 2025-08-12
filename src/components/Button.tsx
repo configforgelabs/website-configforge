@@ -36,7 +36,6 @@ export default function Button({
   
   const buttonClasses = [
     'btn',
-    'no-underline hover:no-underline',
     variantClasses[variant],
     sizeClasses[size],
     disabled && 'opacity-50 cursor-not-allowed',
@@ -49,7 +48,6 @@ export default function Button({
       href={href}
       onClick={onClick}
       disabled={disabled}
-      style={{ textDecoration: 'none' }}
     >
       {children}
     </Comp>

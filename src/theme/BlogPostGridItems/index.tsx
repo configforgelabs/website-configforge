@@ -52,9 +52,13 @@ export default function BlogPostGridItems({
         const { permalink, date, tags, authors, description } = blogMetaData;
 
         return (
-          <div 
-            key={`blog-post-${permalink}`} 
-            className="card card-hover transition-all duration-200"
+          <motion.div 
+            key={`blog-post-${permalink}`}
+            variants={item}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: index * 0.1 }}
+            style={{ height: '100%' }}
           >
             <BlogCard
               permalink={permalink}
@@ -63,7 +67,7 @@ export default function BlogPostGridItems({
               description={description}
               image={imageSrc}
             />
-          </div>
+          </motion.div>
         );
       })}
     </>
