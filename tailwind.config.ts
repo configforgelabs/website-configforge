@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: ['class', '[data-theme="dark"]'],
   content: [
     "./src/**/*.{js,jsx,ts,tsx,md,mdx}",
     "./docs/**/*.{md,mdx}",
@@ -11,73 +11,173 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Design System Colors following template
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
-        },
+        // Opsora Design System Colors
+        border: "oklch(var(--border))",
+        input: "oklch(var(--input))",
+        ring: "oklch(var(--ring))",
+        background: "oklch(var(--background))",
+        foreground: "oklch(var(--foreground))",
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
-          950: '#172554',
+          DEFAULT: "oklch(var(--primary))",
+          foreground: "oklch(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
+          DEFAULT: "oklch(var(--secondary))",
+          foreground: "oklch(var(--secondary-foreground))",
         },
         destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
+          DEFAULT: "oklch(var(--destructive))",
+          foreground: "oklch(var(--destructive-foreground))",
         },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
+        muted: {
+          DEFAULT: "oklch(var(--muted))",
+          foreground: "oklch(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "oklch(var(--accent))",
+          foreground: "oklch(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "oklch(var(--popover))",
+          foreground: "oklch(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "oklch(var(--card))",
+          foreground: "oklch(var(--card-foreground))",
+        },
+        // Chart colors from design system
         chart: {
-          1: 'hsl(var(--chart-1))',
-          2: 'hsl(var(--chart-2))',
-          3: 'hsl(var(--chart-3))',
-          4: 'hsl(var(--chart-4))',
-          5: 'hsl(var(--chart-5))',
+          1: "oklch(var(--chart-1))",
+          2: "oklch(var(--chart-2))",
+          3: "oklch(var(--chart-3))",
+          4: "oklch(var(--chart-4))",
+          5: "oklch(var(--chart-5))",
         },
+        // Sidebar colors from design system
         sidebar: {
-          DEFAULT: 'hsl(var(--sidebar))',
-          foreground: 'hsl(var(--sidebar-foreground))',
-          primary: 'hsl(var(--sidebar-primary))',
-          'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-          accent: 'hsl(var(--sidebar-accent))',
-          'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-          border: 'hsl(var(--sidebar-border))',
-          ring: 'hsl(var(--sidebar-ring))',
+          DEFAULT: "oklch(var(--sidebar))",
+          foreground: "oklch(var(--sidebar-foreground))",
+          primary: "oklch(var(--sidebar-primary))",
+          'primary-foreground': "oklch(var(--sidebar-primary-foreground))",
+          accent: "oklch(var(--sidebar-accent))",
+          'accent-foreground': "oklch(var(--sidebar-accent-foreground))",
+          border: "oklch(var(--sidebar-border))",
+          ring: "oklch(var(--sidebar-ring))",
         },
-        // Brand Colors
+        // Brand Colors (maintain existing for compatibility)
         brand: {
           blue: '#2563eb',
           'blue-dark': '#1d4ed8',
           'blue-light': '#3b82f6',
+        },
+        gray: {
+          "950": "#151D28",
+          "900": "#111928",
+          "800": "#1F2A37",
+          "700": "#374151",
+          "600": "#4B5563",
+          "500": "#6B7280",
+          "400": "#9CA3AF",
+          "300": "#D1D5DB",
+          "200": "#E5E7EB",
+          "100": "#F3F4F6",
+          "50": "#F9FAFB",
+        },
+        red: {
+          "900": "#771D1D",
+          "800": "#9B1C1C",
+          "700": "#C81E1E",
+          "600": "#E02424",
+          "500": "#F05252",
+          "400": "#F98080",
+          "300": "#F8B4B4",
+          "200": "#FBD5D5",
+          "100": "#FDE8E8",
+          "50": "#FDF2F2",
+        },
+        orange: {
+          "900": "#771D1D",
+          "800": "#8A2C0D",
+          "700": "#B43403",
+          "600": "#D03801",
+          "500": "#FF5A1F",
+          "400": "#FF8A4C",
+          "300": "#FDBA8C",
+          "200": "#FCD9BD",
+          "100": "#FEECDC",
+          "50": "#FFF8F1",
+        },
+        yellow: {
+          "900": "#633112",
+          "800": "#723B13",
+          "700": "#8E4B10",
+          "600": "#9F580A",
+          "500": "#C27803",
+          "400": "#E3A008",
+          "300": "#FACA15",
+          "200": "#FCE96A",
+          "100": "#FDF6B2",
+          "50": "#FDFDEA",
+        },
+        green: {
+          "900": "#014737",
+          "800": "#03543F",
+          "700": "#046C4E",
+          "600": "#057A55",
+          "500": "#0E9F6E",
+          "400": "#31C48D",
+          "300": "#84E1BC",
+          "200": "#BCF0DA",
+          "100": "#DEF7EC",
+          "50": "#F3FAF7",
+        },
+        teal: {
+          "900": "#014451",
+          "800": "#05505C",
+          "700": "#036672",
+          "600": "#047481",
+          "500": "#0694A2",
+          "400": "#16BDCA",
+          "300": "#7EDCE2",
+          "200": "#AFECEF",
+          "100": "#D5F5F6",
+          "50": "#EDFAFA",
+        },
+        indigo: {
+          "900": "#362F78",
+          "800": "#42389D",
+          "700": "#5145CD",
+          "600": "#5850EC",
+          "500": "#6875F5",
+          "400": "#8DA2FB",
+          "300": "#B4C6FC",
+          "200": "#CDDBFE",
+          "100": "#E5EDFF",
+          "50": "#F0F5FF",
+        },
+        purple: {
+          "900": "#4A1D96",
+          "800": "#5521B5",
+          "700": "#6C2BD9",
+          "600": "#7E3AF2",
+          "500": "#9061F9",
+          "400": "#AC94FA",
+          "300": "#CABFFD",
+          "200": "#DCD7FE",
+          "100": "#EDEBFE",
+          "50": "#F6F5FF",
+        },
+        pink: {
+          "900": "#751A3D",
+          "800": "#99154B",
+          "700": "#BF125D",
+          "600": "#D61F69",
+          "500": "#E74694",
+          "400": "#F17EB8",
+          "300": "#F8B4D9",
+          "200": "#FAD1E8",
+          "100": "#FCE8F3",
+          "50": "#FDF2F8",
         },
       },
       borderRadius: {
@@ -112,21 +212,6 @@ module.exports = {
           '"Courier New"',
           'monospace',
         ],
-      },
-      fontSize: {
-        xs: ['0.75rem', { lineHeight: '1rem' }],
-        sm: ['0.875rem', { lineHeight: '1.25rem' }],
-        base: ['1rem', { lineHeight: '1.5rem' }],
-        lg: ['1.125rem', { lineHeight: '1.75rem' }],
-        xl: ['1.25rem', { lineHeight: '1.75rem' }],
-        '2xl': ['1.5rem', { lineHeight: '2rem' }],
-        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-        '5xl': ['3rem', { lineHeight: '1' }],
-        '6xl': ['3.75rem', { lineHeight: '1' }],
-        '7xl': ['4.5rem', { lineHeight: '1' }],
-        '8xl': ['6rem', { lineHeight: '1' }],
-        '9xl': ['8rem', { lineHeight: '1' }],
       },
       spacing: {
         '18': '4.5rem',
@@ -192,30 +277,33 @@ module.exports = {
       backdropBlur: {
         xs: '2px',
       },
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: 'none',
-            color: 'hsl(var(--foreground))',
-            '--tw-prose-body': 'hsl(var(--foreground))',
-            '--tw-prose-headings': 'hsl(var(--foreground))',
-            '--tw-prose-lead': 'hsl(var(--muted-foreground))',
-            '--tw-prose-links': 'hsl(var(--primary))',
-            '--tw-prose-bold': 'hsl(var(--foreground))',
-            '--tw-prose-counters': 'hsl(var(--muted-foreground))',
-            '--tw-prose-bullets': 'hsl(var(--muted-foreground))',
-            '--tw-prose-hr': 'hsl(var(--border))',
-            '--tw-prose-quotes': 'hsl(var(--foreground))',
-            '--tw-prose-quote-borders': 'hsl(var(--border))',
-            '--tw-prose-captions': 'hsl(var(--muted-foreground))',
-            '--tw-prose-code': 'hsl(var(--foreground))',
-            '--tw-prose-pre-code': 'hsl(var(--muted-foreground))',
-            '--tw-prose-pre-bg': 'hsl(var(--muted))',
-            '--tw-prose-th-borders': 'hsl(var(--border))',
-            '--tw-prose-td-borders': 'hsl(var(--border))',
-          },
-        },
-      },
+    },
+    fontWeight: {
+      thin: "100",
+      "extra-light": "200",
+      light: "300",
+      regular: "400",
+      medium: "500",
+      semibold: "600",
+      "semi-bold": "600",
+      bold: "700",
+      "extra-bold": "800",
+      black: "900",
+    },
+    fontSize: {
+      xs: "0.75rem",
+      sm: "0.875rem",
+      base: "1rem",
+      lg: "1.215rem",
+      xl: "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem",
+      "5xl": "3rem",
+      "6xl": "3.75rem",
+      "7xl": "4.5rem",
+      "8xl": "6rem",
+      "9xl": "8rem",
     },
   },
   plugins: [
@@ -223,7 +311,7 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
-    // Design system utilities plugin
+    // Custom plugin for design system utilities
     function({ addUtilities, addComponents, theme }) {
       addUtilities({
         '.text-balance': {
@@ -233,25 +321,24 @@ module.exports = {
           'text-wrap': 'pretty',
         },
       })
-      
+
       addComponents({
         '.btn': {
           '@apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none': {},
         },
-        '.btn-sm': {
-          '@apply h-9 px-3': {},
-        },
-        '.btn-default': {
-          '@apply h-10 px-4 py-2': {},
-        },
-        '.btn-lg': {
-          '@apply h-11 px-8': {},
-        },
         '.btn-primary': {
-          '@apply bg-primary text-primary-foreground hover:bg-primary/90': {},
+          '@apply bg-primary text-primary-foreground': {},
+          'background': '#2563eb !important',
+          'color': 'white !important',
+          '&:hover': {
+            'background': '#1d4ed8 !important'
+          }
         },
         '.btn-secondary': {
-          '@apply bg-secondary text-secondary-foreground hover:bg-secondary/80': {},
+          '@apply bg-secondary text-secondary-foreground': {},
+          '&:hover': {
+            'background-color': 'color-mix(in oklch, oklch(var(--secondary)) 80%, transparent)'
+          }
         },
         '.btn-outline': {
           '@apply border border-input bg-background hover:bg-accent hover:text-accent-foreground': {},
