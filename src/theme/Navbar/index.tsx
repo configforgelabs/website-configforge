@@ -7,7 +7,7 @@ export default function Navbar(props) {
     <>
       {/* Construction Notice Banner */}
       <div className={twMerge(
-        "bg-orange-500 dark:bg-orange-600",
+        "bg-orange-600 dark:bg-orange-700",
         "border-b-2 border-orange-600 dark:border-orange-700",
         "text-white dark:text-orange-50",
         "px-4 py-3",
