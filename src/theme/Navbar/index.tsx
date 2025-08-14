@@ -7,9 +7,9 @@ export default function Navbar(props) {
     <>
       {/* Construction Notice Banner */}
       <div className={twMerge(
-        "bg-yellow-400 dark:bg-yellow-600",
-        "border-b-2 border-yellow-500 dark:border-yellow-700",
-        "text-yellow-900 dark:text-yellow-100",
+        "bg-orange-500 dark:bg-orange-600",
+        "border-b-2 border-orange-600 dark:border-orange-700",
+        "text-white dark:text-orange-50",
         "px-4 py-3",
         "text-center",
         "shadow-lg"
@@ -17,7 +17,7 @@ export default function Navbar(props) {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-center gap-3">
             <span className="text-xl" role="img" aria-label="construction">🚧</span>
-            <span className="text-sm font-semibold bg-yellow-900/10 dark:bg-yellow-100/20 px-3 py-1.5 rounded-full">
+            <span className="text-sm font-semibold bg-black/10 dark:bg-white/20 px-3 py-1.5 rounded-full backdrop-blur-sm">
               ConfigForge is still under construction
             </span>
             <span className="text-xl" role="img" aria-label="construction">🚧</span>
