@@ -18,7 +18,7 @@ export default function Navbar(props) {
           <div className="flex items-center justify-center gap-3">
             <span className="text-xl" role="img" aria-label="construction">🚧</span>
             <span className="text-sm font-semibold bg-yellow-900/10 dark:bg-yellow-100/20 px-3 py-1.5 rounded-full">
-              This page is still under construction
+              ConfigForge is still under construction
             </span>
             <span className="text-xl" role="img" aria-label="construction">🚧</span>
           </div>
