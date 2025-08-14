@@ -6,21 +6,32 @@ export default function Navbar(props) {
   return (
     <>
       {/* Construction Notice Banner */}
-      <div className={twMerge(
-        "bg-orange-600 dark:bg-orange-700",
-        "border-b-2 border-orange-600 dark:border-orange-700",
-        "text-white dark:text-orange-50",
-        "px-4 py-3",
-        "text-center",
-        "shadow-lg"
-      )}>
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-center gap-3">
-            <span className="text-xl" role="img" aria-label="construction">🚧</span>
-            <span className="text-sm font-semibold bg-black/10 dark:bg-white/20 px-3 py-1.5 rounded-full backdrop-blur-sm">
+      <div
+        style={{
+          backgroundColor: '#D03801',
+          borderBottom: '2px solid #B43403',
+          color: 'white',
+          padding: '12px 16px',
+          textAlign: 'center' as const,
+          boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)'
+        }}
+      >
+        <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+            <span style={{ fontSize: '1.25rem' }} role="img" aria-label="construction">🚧</span>
+            <span
+              style={{
+                fontSize: '0.875rem',
+                fontWeight: '600',
+                backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                padding: '6px 12px',
+                borderRadius: '9999px',
+                backdropFilter: 'blur(2px)'
+              }}
+            >
               ConfigForge is still under construction
             </span>
-            <span className="text-xl" role="img" aria-label="construction">🚧</span>
+            <span style={{ fontSize: '1.25rem' }} role="img" aria-label="construction">🚧</span>
           </div>
         </div>
       </div>
