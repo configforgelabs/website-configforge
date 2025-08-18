@@ -43,9 +43,7 @@ export default function LatestPosts(props: LatestPostsProps) {
             {topSixPosts.map((doc, index) => (
               <div 
                 key={doc.metadata.permalink} 
-                className={`card card-hover transition-all duration-200 ${
-                  index === 0 ? 'md:col-span-2 lg:col-span-1 lg:row-span-2' : ''
-                }`}
+                className="card card-hover transition-all duration-200"
               >
                 <BlogCard
                   permalink={doc.metadata.permalink}

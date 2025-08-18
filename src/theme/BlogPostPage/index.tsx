@@ -1,4 +1,4 @@
-import React, { type ReactNode } from "react";
+import React, { type ReactNode, type ReactElement } from "react";
 import clsx from "clsx";
 import {
   HtmlClassNameProvider,
@@ -26,7 +26,7 @@ function BlogPostPageContent({
 }: {
   sidebar: BlogSidebar;
   children: ReactNode;
-}): JSX.Element {
+}): ReactElement {
   const { metadata, toc } = useBlogPost();
 
   const { nextItem, prevItem, frontMatter, permalink } = metadata;
@@ -101,7 +101,7 @@ function BlogPostPageContent({
   );
 }
 
-export default function BlogPostPage(props: Props): JSX.Element {
+export default function BlogPostPage(props: Props): ReactElement {
   const BlogPostContent = props.content;
   return (
     <BlogPostProvider content={props.content} isBlogPostPage>

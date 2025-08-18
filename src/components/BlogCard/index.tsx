@@ -23,7 +23,6 @@ export default function DocCard(props: DocCardProps) {
   const configContext = useDocusaurusContext();
   const { customFields } = configContext.siteConfig;
   const imageSrc = image ?? (customFields?.placeholderImageURL as string);
-
   return (
     <Link
       to={permalink}

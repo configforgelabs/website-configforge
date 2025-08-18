@@ -4,65 +4,19 @@
  * work well for content-centric websites.
  */
 
-/* Import Opsora Design System */
-@import './design-system.css';
-
-/* === OPSORA DOCUSAURUS INTEGRATION === */
-/* Map Docusaurus Infima tokens to Opsora design system */
-
+/* You can override the default Infima variables here. */
 :root {
-  /* Core Opsora to Infima mapping with browser fallbacks */
-  --ifm-color-primary: #2563eb; /* fallback */
-  --ifm-color-primary: oklch(var(--primary));
-  --ifm-color-primary-dark: #1d4ed8; /* fallback */
-  --ifm-color-primary-dark: oklch(var(--primary));
-  --ifm-color-primary-darker: #1e40af; /* fallback */
-  --ifm-color-primary-darker: oklch(var(--primary));
-  --ifm-color-primary-darkest: #1e3a8a; /* fallback */
-  --ifm-color-primary-darkest: oklch(var(--primary));
-  --ifm-color-primary-light: #3b82f6; /* fallback */
-  --ifm-color-primary-light: oklch(var(--primary));
-  --ifm-color-primary-lighter: #60a5fa; /* fallback */
-  --ifm-color-primary-lighter: oklch(var(--primary));
-  --ifm-color-primary-lightest: #93c5fd; /* fallback */
-  --ifm-color-primary-lightest: oklch(var(--primary));
-  
-  /* Background and text colors */
-  --ifm-background-color: var(--background);
-  --ifm-color-content: var(--foreground);
-  --ifm-color-content-secondary: var(--muted-foreground);
-  
-  /* Card and surface colors */
-  --ifm-card-background-color: var(--card);
-  --ifm-navbar-background-color: var(--card);
-  --ifm-footer-background-color: var(--card);
-  --ifm-sidebar-background-color: var(--card);
-  
-  /* Border and divider colors */
-  --ifm-color-emphasis-200: var(--border);
-  --ifm-color-emphasis-300: var(--border);
-  --ifm-hr-border-color: var(--border);
-  --ifm-toc-border-color: var(--border);
-  
-  /* Typography */
-  --ifm-font-family-base: var(--font-family);
-  --ifm-font-size-base: 16px;
-  --ifm-line-height-base: 1.6;
-  --ifm-heading-font-weight: 600;
-  
-  /* Spacing and layout */
-  --ifm-global-radius: var(--radius);
-  --ifm-navbar-height: 100px;
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
-  
-  /* Code highlighting */
-  --ifm-pre-background: var(--muted);
-  --ifm-code-background: var(--muted);
-    /* Code highlighting with fallback */
-  --prism-highlight-background: rgba(37, 99, 235, 0.15); /* fallback */
-  --prism-highlight-background: color-mix(in oklab, var(--primary) 15%, transparent);
-  --docusaurus-highlighted-code-line-bg: rgba(37, 99, 235, 0.15); /* fallback */
-  --docusaurus-highlighted-code-line-bg: color-mix(in oklab, var(--primary) 15%, transparent);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-navbar-height: 100px;
 }
 
 @media screen and (max-width: 600px) {
@@ -71,66 +25,33 @@
   }
 }
 
-/* Dark theme specific adjustments */
+/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  /* Enhanced primary colors for better contrast in dark mode with fallbacks */
-  --ifm-color-primary: #3b82f6; /* fallback */
-  --ifm-color-primary: oklch(var(--primary));
-  --ifm-color-primary-dark: #2563eb; /* fallback */
-  --ifm-color-primary-dark: oklch(var(--primary));
-  --ifm-color-primary-darker: #1d4ed8; /* fallback */
-  --ifm-color-primary-darker: oklch(var(--primary));
-  --ifm-color-primary-darkest: #1e40af; /* fallback */
-  --ifm-color-primary-darkest: oklch(var(--primary));
-  --ifm-color-primary-light: #60a5fa; /* fallback */
-  --ifm-color-primary-light: oklch(var(--primary));
-  --ifm-color-primary-lighter: #93c5fd; /* fallback */
-  --ifm-color-primary-lighter: oklch(var(--primary));
-  --ifm-color-primary-lightest: #dbeafe; /* fallback */
-  --ifm-color-primary-lightest: oklch(var(--primary));
-  
-  /* Dark theme backgrounds */
-  --ifm-background-color: var(--background);
-  --ifm-navbar-background-color: var(--card);
-  --ifm-footer-background-color: var(--card);
-  
-  /* Enhanced code highlighting for dark mode with fallback */
-  --docusaurus-highlighted-code-line-bg: rgba(37, 99, 235, 0.25); /* fallback */
-  --docusaurus-highlighted-code-line-bg: color-mix(in oklab, var(--primary) 25%, transparent);
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* === OPSORA COMPONENT ENHANCEMENTS === */
+[data-theme="dark"] hyvor-talk-comments {
+  /* colors */
 
-/* Navigation bar styling */
-.navbar {
-  background: var(--card) !important;
-  border-bottom: 1px solid var(--border) !important;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  --ht-color-box: #000000;
+  --ht-color-box-text: #ffffff;
+  --ht-box-border: 0px solid #aaaaaa;
 }
 
-.navbar__title {
-  color: var(--foreground) !important;
-  font-weight: 600;
-}
-
-.navbar__link {
-  color: var(--muted-foreground) !important;
-  transition: all 0.2s ease-in-out;
-  border-radius: 8px;
-  padding: 8px 12px !important;
-}
-
-.navbar__link:hover,
-.navbar__link--active {
-  color: var(--primary) !important;
-  background: color-mix(in oklab, var(--primary) 10%, transparent) !important;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .navbar__logo {
   width: 196px;
   height: 56px;
-  transition: all 0.2s ease-in-out;
 }
 
 @media screen and (max-width: 600px) {
@@ -140,216 +61,89 @@
   }
 }
 
-/* Enhanced dropdown styling */
-.navbar__item .dropdown__menu {
-  background: var(--card) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: var(--radius) !important;
-  box-shadow: var(--shadow-lg) !important;
-  margin-top: 8px !important;
+.navbar .navbar__item {
+  margin-left: 12px;
+  margin-right: 12px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
-.dropdown__link {
-  color: var(--muted-foreground) !important;
-  transition: all 0.2s ease-in-out;
-  border-radius: 6px;
-  margin: 2px 6px;
+.navbar .navbar__link {
+  border-bottom: 2px solid white;
 }
 
-.dropdown__link:hover,
-.dropdown__link--active {
-  background: color-mix(in oklab, var(--primary) 10%, transparent) !important;
-  color: var(--primary) !important;
+.navbar .navbar__link--active {
+  border-bottom: 2px solid #1a56db;
+  /* border-bottom: 2px solid red; */
 }
 
-/* Sidebar styling */
-.menu__link {
-  color: var(--muted-foreground) !important;
-  border-radius: 8px !important;
-  transition: all 0.2s ease-in-out;
+.navbar .navbar__link:hover,
+.navbar__link--active {
+  color: var(--ifm-navbar-link-color);
+  border-bottom: 2px solid #1a56db;
 }
 
-.menu__link--active {
-  background: color-mix(in oklab, var(--primary) 12%, transparent) !important;
-  border-radius: 8px !important;
-  color: var(--primary) !important;
-  font-weight: 600 !important;
+.dropdown--show .navbar__link {
+  color: var(--ifm-navbar-link-color);
+  border-bottom: 2px solid #1a56db;
 }
 
-.menu__link:hover {
-  background: color-mix(in oklab, var(--primary) 8%, transparent) !important;
-  border-radius: 8px !important;
-  color: var(--foreground) !important;
+.dropdown .navbar__link {
+  padding-bottom: 8.5px;
 }
 
-/* Table of Contents styling */
-.table-of-contents__link {
-  color: var(--muted-foreground) !important;
-  transition: all 0.2s ease-in-out;
+.dropdown .dropdown__link {
+  padding-bottom: 8.5px;
 }
 
-.table-of-contents__link--active {
-  color: var(--primary) !important;
-  font-weight: 600 !important;
+.dropdown--right .dropdown__menu {
+  width: max-content;
+  left: 0;
+  right: 0;
+  margin-top: 35px;
+}
+.navbar__link.dropdown-toggle::after {
+  content: ""; /* Clear default content */
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: none;
+  background-image: url(../../static/img/chevron-down.svg); /* Custom arrow SVG */
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 4px;
+  margin-bottom: 4px;
+  vertical-align: middle;
+  transform: rotate(180deg); /* Default state: downward arrow */
 }
 
-.table-of-contents__link:hover {
-  color: var(--primary) !important;
+/* Style when the dropdown is expanded */
+.navbar__link.dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(0deg); /* Rotate the arrow upward when expanded */
 }
 
-/* Content styling */
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
-  color: var(--foreground) !important;
+.dropdown__menu li {
+  color: #6b7280;
 }
 
-.markdown p,
-.markdown li {
-  color: var(--foreground) !important;
-  line-height: 1.7;
+.dropdown__menu li :hover {
+  background: #1a56db1a;
+  color: #1a56db;
 }
 
-.markdown a {
-  color: var(--primary) !important;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
+.dropdown__menu li .dropdown__link--active{
+  background: #1a56db1a;
+  color: #1a56db;
 }
 
-.markdown a:hover {
-  color: var(--primary) !important;
-  text-decoration: underline;
-}
-
-/* Code styling */
-.markdown pre,
-.markdown code {
-  border-radius: var(--radius) !important;
-}
-
-.markdown pre {
-  background: var(--muted) !important;
-  border: 1px solid var(--border) !important;
-}
-
-.markdown :not(pre) > code {
-  background: var(--muted) !important;
-  color: var(--foreground) !important;
-  padding: 4px 6px !important;
-  border-radius: 6px !important;
-  font-size: 0.875em !important;
-}
-
-/* Admonitions with Opsora styling */
-.admonition {
-  border-radius: var(--radius) !important;
-  border: 1px solid var(--border) !important;
-  background: var(--card) !important;
-  box-shadow: var(--shadow-sm) !important;
-  margin: 1.5rem 0 !important;
-}
-
-.admonition-heading {
-  background: var(--muted) !important;
-  color: var(--foreground) !important;
-  font-weight: 600 !important;
-}
-
-.admonition-content {
-  color: var(--foreground) !important;
-}
-
-/* Tables with Opsora styling */
-.markdown table {
-  border-radius: var(--radius) !important;
-  overflow: hidden !important;
-  border: 1px solid var(--border) !important;
-  margin: 1.5rem 0 !important;
-}
-
-.markdown thead {
-  background: var(--muted) !important;
-}
-
-.markdown th {
-  color: var(--foreground) !important;
-  border-color: var(--border) !important;
-  font-weight: 600 !important;
-}
-
-.markdown td {
-  border-color: var(--border) !important;
-  color: var(--foreground) !important;
-}
-
-.markdown tbody tr:hover {
-  background: color-mix(in oklab, var(--muted) 50%, transparent) !important;
-}
-
-/* Pagination styling */
-.pagination-nav__link {
-  border-radius: var(--radius) !important;
-  border: 1px solid var(--border) !important;
-  background: var(--card) !important;
-  transition: all 0.2s ease-in-out;
-}
-
-.pagination-nav__link:hover {
-  border-color: var(--primary) !important;
-  box-shadow: 0 0 0 1px var(--primary) !important;
-  background: color-mix(in oklab, var(--primary) 5%, var(--card)) !important;
-}
-
-.pagination-nav__label {
-  color: var(--primary) !important;
-  font-weight: 600 !important;
-}
-
-.pagination-nav__sublabel {
-  color: var(--muted-foreground) !important;
-}
-
-/* Footer styling */
-.footer {
-  background: var(--card) !important;
-  border-top: 1px solid var(--border) !important;
-  color: var(--muted-foreground) !important;
-}
-
-.footer__title {
-  color: var(--foreground) !important;
-  font-weight: 600 !important;
-}
-
-.footer__item {
-  color: var(--muted-foreground) !important;
-}
-
-.footer__link-item {
-  transition: all 0.2s ease-in-out;
-}
-
-.footer__link-item:hover {
-  color: var(--primary) !important;
-}
-
-/* Search styling */
+/* Search input styling */
 .DocSearch-Button {
   height: 40px !important;
   padding: 0 12px !important;
-  border: 1px solid var(--border) !important;
-  background: var(--background) !important;
-  color: var(--muted-foreground) !important;
-  border-radius: 8px !important;
-  transition: all 0.2s ease-in-out;
-}
-
-.DocSearch-Button:hover {
-  border-color: var(--primary) !important;
-  box-shadow: 0 0 0 1px var(--primary) !important;
+  border: 1px solid #e5e7eb !important;
+  background: white !important;
 }
 
 .DocSearch-SearchBar {
@@ -357,825 +151,42 @@
 }
 
 .DocSearch-Form {
-  box-shadow: 0 0 0 2px var(--primary) !important;
+  box-shadow: 0 0 0 1px #1a56db !important;
 }
 
 .DocSearch-MagnifierLabel {
-  color: var(--primary) !important;
+  color: #1a56db !important;
   margin-right: 12px !important;
 }
 
 .DocSearch-Input {
   font-size: 16px !important;
-  color: var(--foreground) !important;
 }
 
-/* Breadcrumbs styling */
-.breadcrumbs__item--active .breadcrumbs__link {
-  color: var(--primary) !important;
-}
-
-.breadcrumbs__link {
-  color: var(--muted-foreground) !important;
-  transition: all 0.2s ease-in-out;
-}
-
-.breadcrumbs__link:hover {
-  color: var(--primary) !important;
-}
-
-/* Edit this page and tags styling */
-.theme-edit-this-page {
-  color: var(--primary) !important;
-  transition: all 0.2s ease-in-out;
-}
-
-.theme-edit-this-page:hover {
-  text-decoration: underline !important;
-}
-
-/* Tag styling */
-.tag {
-  background: color-mix(in oklab, var(--primary) 10%, transparent) !important;
-  color: var(--primary) !important;
-  border: 1px solid color-mix(in oklab, var(--primary) 20%, transparent) !important;
-  border-radius: 20px !important;
-  transition: all 0.2s ease-in-out;
-}
-
-.tag:hover {
-  background: color-mix(in oklab, var(--primary) 15%, transparent) !important;
-  border-color: var(--primary) !important;
-}
-
-/* KB Highlights Card - Prevent unwanted text decoration */
-.kb-highlight-card,
-.kb-highlight-card:hover,
-.kb-highlight-card:focus,
-.kb-highlight-card:active {
-  text-decoration: none !important;
-}
-
-.kb-highlight-card *,
-.kb-highlight-card:hover *,
-.kb-highlight-card:focus *,
-.kb-highlight-card:active * {
-  text-decoration: none !important;
-}
-
-/* Additional specificity to override any possible link styles */
-a.kb-highlight-card,
-a.kb-highlight-card:hover,
-a.kb-highlight-card:focus,
-a.kb-highlight-card:active,
-a.kb-highlight-card:visited {
-  text-decoration: none !important;
-}
-
-a.kb-highlight-card h1,
-a.kb-highlight-card h2, 
-a.kb-highlight-card h3,
-a.kb-highlight-card h4,
-a.kb-highlight-card h5,
-a.kb-highlight-card h6,
-a.kb-highlight-card p,
-a.kb-highlight-card span,
-a.kb-highlight-card div,
-a.kb-highlight-card:hover h1,
-a.kb-highlight-card:hover h2,
-a.kb-highlight-card:hover h3,
-a.kb-highlight-card:hover h4,
-a.kb-highlight-card:hover h5,
-a.kb-highlight-card:hover h6,
-a.kb-highlight-card:hover p,
-a.kb-highlight-card:hover span,
-a.kb-highlight-card:hover div {
-  text-decoration: none !important;
-}
-
-/* Final override - maximum specificity for all possible combinations */
-a.group.kb-highlight-card,
-a.group.kb-highlight-card:hover,
-a.group.kb-highlight-card:focus,
-a.group.kb-highlight-card:active {
-  text-decoration: none !important;
-}
-
-a.group.kb-highlight-card *,
-a.group.kb-highlight-card:hover *,
-a.group.kb-highlight-card:focus *,
-a.group.kb-highlight-card:active * {
-  text-decoration: none !important;
-}
-
-/* Blog Cards - Prevent unwanted text decoration */
-.card-hover a,
-.card-hover a:hover,
-.card-hover a:focus,
-.card-hover a:active {
-  text-decoration: none !important;
-}
-
-.card-hover a *,
-.card-hover a:hover *,
-.card-hover a:focus *,
-.card-hover a:active * {
-  text-decoration: none !important;
-}
-
-/* Docusaurus Link components - Prevent underlines on card-like elements */
-a.hover\\:no-underline,
-a.hover\\:no-underline:hover,
-a.hover\\:no-underline:focus,
-a.hover\\:no-underline:active {
-  text-decoration: none !important;
-}
-
-a.hover\\:no-underline *,
-a.hover\\:no-underline:hover *,
-a.hover\\:no-underline:focus *,
-a.hover\\:no-underline:active * {
-  text-decoration: none !important;
-}
-
-/* Button links - Prevent unwanted text decoration */
-.btn,
-.btn:hover,
-.btn:focus,
-.btn:active,
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-outline,
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active {
-  text-decoration: none !important;
-}
-
-a.btn,
-a.btn:hover,
-a.btn:focus,
-a.btn:active,
-a.btn-primary,
-a.btn-primary:hover,
-a.btn-primary:focus,
-a.btn-primary:active,
-a.btn-outline,
-a.btn-outline:hover,
-a.btn-outline:focus,
-a.btn-outline:active {
-  text-decoration: none !important;
-}
-
-/* Blog Card Links - Specific targeting */
-.blog-card-link,
-.blog-card-link:hover,
-.blog-card-link:focus,
-.blog-card-link:active {
-  text-decoration: none !important;
-}
-
-.blog-card-link *,
-.blog-card-link:hover *,
-.blog-card-link:focus *,
-.blog-card-link:active * {
-  text-decoration: none !important;
-}
-
-a.blog-card-link,
-a.blog-card-link:hover,
-a.blog-card-link:focus,
-a.blog-card-link:active {
-  text-decoration: none !important;
-}
-
-a.blog-card-link *,
-a.blog-card-link:hover *,
-a.blog-card-link:focus *,
-a.blog-card-link:active * {
-  text-decoration: none !important;
-}
-
-/* Universal override for all anchor elements that should not have underlines */
-a[class*="btn"],
-a[class*="btn"]:hover,
-a[class*="btn"]:focus,
-a[class*="btn"]:active,
-a[class*="card"],
-a[class*="card"]:hover,
-a[class*="card"]:focus,
-a[class*="card"]:active,
-a[class*="hover:no-underline"],
-a[class*="hover:no-underline"]:hover,
-a[class*="hover:no-underline"]:focus,
-a[class*="hover:no-underline"]:active {
-  text-decoration: none !important;
-}
-
-/* Universal child element override */
-a[class*="btn"] *,
-a[class*="btn"]:hover *,
-a[class*="card"] *,
-a[class*="card"]:hover *,
-a[class*="hover:no-underline"] *,
-a[class*="hover:no-underline"]:hover * {
-  text-decoration: none !important;
-}
-
-/* Additional comprehensive underline prevention */
-.no-underline,
-.no-underline:hover,
-.no-underline:focus,
-.no-underline:active,
-.blog-card-link,
-.blog-card-link:hover,
-.blog-card-link:focus,
-.blog-card-link:active {
-  text-decoration: none !important;
-}
-
-.no-underline *,
-.no-underline:hover *,
-.no-underline:focus *,
-.no-underline:active *,
-.blog-card-link *,
-.blog-card-link:hover *,
-.blog-card-link:focus *,
-.blog-card-link:active * {
-  text-decoration: none !important;
-}
-
-/* Button specific underline prevention */
-a.btn,
-a.btn:hover,
-a.btn:focus,
-a.btn:active,
-button.btn,
-button.btn:hover,
-button.btn:focus,
-button.btn:active,
-[class*="btn"],
-[class*="btn"]:hover,
-[class*="btn"]:focus,
-[class*="btn"]:active {
-  text-decoration: none !important;
-}
-
-a.btn *,
-a.btn:hover *,
-button.btn *,
-button.btn:hover *,
-[class*="btn"] *,
-[class*="btn"]:hover * {
-  text-decoration: none !important;
-}
-
-/* Comments styling for Hyvor Talk */
-hyvor-talk-comments {
-  --ht-color-box: var(--card);
-  --ht-color-box-text: var(--foreground);
-  --ht-color-accent: var(--primary);
-  --ht-color-accent-text: var(--primary-foreground);
-  --ht-box-border: 1px solid var(--border);
-  --ht-box-border-radius: var(--radius);
-}
-
-/* Button enhancements */
-.button {
-  border-radius: var(--radius) !important;
-  font-weight: 600 !important;
-  transition: all 0.2s ease-in-out;
-}
-
-.button--primary {
-  background: var(--primary) !important;
-  color: var(--primary-foreground) !important;
-  border-color: var(--primary) !important;
-}
-
-.button--primary:hover {
-  background: oklch(from var(--primary) calc(l * 0.9) c h) !important;
-}
-
-.button--secondary {
-  background: var(--muted) !important;
-  color: var(--muted-foreground) !important;
-  border-color: var(--border) !important;
-}
-
-.button--secondary:hover {
-  background: var(--card) !important;
-  color: var(--foreground) !important;
-}
-
-/* Alert styling */
-.alert {
-  border-radius: var(--radius) !important;
-  border: 1px solid var(--border) !important;
-}
-
-.alert--primary {
-  background: color-mix(in oklab, var(--primary) 10%, transparent) !important;
-  border-color: var(--primary) !important;
-  color: var(--foreground) !important;
-}
-
-.alert--secondary {
-  background: var(--muted) !important;
-  border-color: var(--border) !important;
-  color: var(--foreground) !important;
-}
-
-.alert--success {
-  background: color-mix(in oklab, var(--success) 10%, transparent) !important;
-  border-color: var(--success) !important;
-  color: var(--foreground) !important;
-}
-
-.alert--warning {
-  background: color-mix(in oklab, var(--warning) 10%, transparent) !important;
-  border-color: var(--warning) !important;
-  color: var(--foreground) !important;
-}
-
-.alert--danger {
-  background: color-mix(in oklab, var(--destructive) 10%, transparent) !important;
-  border-color: var(--destructive) !important;
-  color: var(--foreground) !important;
-}
-
-/* Smooth transitions for theme switching */
-* {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease !important;
-}
-
-/* Focus styles using Opsora tokens */
-*:focus-visible {
-  outline: 2px solid var(--primary) !important;
-  outline-offset: 2px !important;
-}
-
-/* Selection colors */
-::selection {
-  background: color-mix(in oklab, var(--primary) 25%, transparent) !important;
-  color: var(--foreground) !important;
-}
-
-/* Scrollbar styling for webkit browsers */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--muted);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--muted-foreground);
-}
-
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-  .navbar__logo {
-    width: 120px;
-    height: 34px;
-  }
-  
-  .navbar__link {
-    padding: 6px 10px !important;
-  }
-}
-
-/* Print styles */
-@media print {
-  .navbar,
-  .footer,
-  .pagination-nav,
-  .theme-edit-this-page {
-    display: none !important;
-  }
-  
-  .markdown * {
-    color: black !important;
-    background: white !important;
-  }
-}
-
-/* ===============================================
-   GLOBAL HOVER UNDERLINE PREVENTION
-   =============================================== */
-
-/* Remove underlines from all card components */
-a.card,
-a[class*="card"],
-.card a,
-.card-link,
-.blog-card,
-.kb-card,
-.kb-highlight-card,
-a.group,
-.group a {
-  text-decoration: none !important;
-}
-
-a.card:hover,
-a.card:focus,
-a.card:active,
-a[class*="card"]:hover,
-a[class*="card"]:focus,
-a[class*="card"]:active,
-.card a:hover,
-.card a:focus,
-.card a:active,
-.card-link:hover,
-.card-link:focus,
-.card-link:active,
-.blog-card:hover,
-.blog-card:focus,
-.blog-card:active,
-.kb-card:hover,
-.kb-card:focus,
-.kb-card:active,
-.kb-highlight-card:hover,
-.kb-highlight-card:focus,
-.kb-highlight-card:active,
-a.group:hover,
-a.group:focus,
-a.group:active,
-.group a:hover,
-.group a:focus,
-.group a:active {
-  text-decoration: none !important;
-}
-
-/* Remove underlines from all nested elements in cards */
-a.card *,
-a[class*="card"] *,
-.card a *,
-.card-link *,
-.blog-card *,
-.kb-card *,
-.kb-highlight-card *,
-a.group *,
-.group a * {
-  text-decoration: none !important;
-}
-
-a.card:hover *,
-a.card:focus *,
-a.card:active *,
-a[class*="card"]:hover *,
-a[class*="card"]:focus *,
-a[class*="card"]:active *,
-.card a:hover *,
-.card a:focus *,
-.card a:active *,
-.card-link:hover *,
-.card-link:focus *,
-.card-link:active *,
-.blog-card:hover *,
-.blog-card:focus *,
-.blog-card:active *,
-.kb-card:hover *,
-.kb-card:focus *,
-.kb-card:active *,
-.kb-highlight-card:hover *,
-.kb-highlight-card:focus *,
-.kb-highlight-card:active *,
-a.group:hover *,
-a.group:focus *,
-a.group:active *,
-.group a:hover *,
-.group a:focus *,
-.group a:active * {
-  text-decoration: none !important;
-}
-
-/* Remove underlines from all button components */
-.btn,
-button,
-a.btn,
-a[class*="btn"],
-.button,
-[role="button"],
-.btn-primary,
-.btn-secondary,
-.btn-outline,
-.btn-ghost,
-.navbar__item a,
-.menu__link {
-  text-decoration: none !important;
-}
-
-.btn:hover,
-.btn:focus,
-.btn:active,
-button:hover,
-button:focus,
-button:active,
-a.btn:hover,
-a.btn:focus,
-a.btn:active,
-a[class*="btn"]:hover,
-a[class*="btn"]:focus,
-a[class*="btn"]:active,
-.button:hover,
-.button:focus,
-.button:active,
-[role="button"]:hover,
-[role="button"]:focus,
-[role="button"]:active,
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-secondary:hover,
-.btn-secondary:focus,
-.btn-secondary:active,
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active,
-.btn-ghost:hover,
-.btn-ghost:focus,
-.btn-ghost:active,
-.navbar__item a:hover,
-.navbar__item a:focus,
-.navbar__item a:active,
-.menu__link:hover,
-.menu__link:focus,
-.menu__link:active {
-  text-decoration: none !important;
-}
-
-/* Remove underlines from button content */
-.btn *,
-button *,
-a.btn *,
-a[class*="btn"] *,
-.button *,
-[role="button"] *,
-.btn-primary *,
-.btn-secondary *,
-.btn-outline *,
-.btn-ghost *,
-.navbar__item a *,
-.menu__link * {
-  text-decoration: none !important;
-}
-
-.btn:hover *,
-.btn:focus *,
-.btn:active *,
-button:hover *,
-button:focus *,
-button:active *,
-a.btn:hover *,
-a.btn:focus *,
-a.btn:active *,
-a[class*="btn"]:hover *,
-a[class*="btn"]:focus *,
-a[class*="btn"]:active *,
-.button:hover *,
-.button:focus *,
-.button:active *,
-[role="button"]:hover *,
-[role="button"]:focus *,
-[role="button"]:active *,
-.btn-primary:hover *,
-.btn-primary:focus *,
-.btn-primary:active *,
-.btn-secondary:hover *,
-.btn-secondary:focus *,
-.btn-secondary:active *,
-.btn-outline:hover *,
-.btn-outline:focus *,
-.btn-outline:active *,
-.btn-ghost:hover *,
-.btn-ghost:focus *,
-.btn-ghost:active *,
-.navbar__item a:hover *,
-.navbar__item a:focus *,
-.navbar__item a:active *,
-.menu__link:hover *,
-.menu__link:focus *,
-.menu__link:active * {
-  text-decoration: none !important;
-}
-
-/* Universal override for any missed interactive elements */
-*[class*="card"]:hover,
-*[class*="card"]:focus,
-*[class*="card"]:active,
-*[class*="btn"]:hover,
-*[class*="btn"]:focus,
-*[class*="btn"]:active,
-*[class*="button"]:hover,
-*[class*="button"]:focus,
-*[class*="button"]:active {
-  text-decoration: none !important;
-}
-
-*[class*="card"]:hover *,
-*[class*="card"]:focus *,
-*[class*="card"]:active *,
-*[class*="btn"]:hover *,
-*[class*="btn"]:focus *,
-*[class*="btn"]:active *,
-*[class*="button"]:hover *,
-*[class*="button"]:focus *,
-*[class*="button"]:active * {
-  text-decoration: none !important;
-}
-
-/* Specific Docusaurus element targeting */
-.footer__link-item,
-.pagination-nav__link,
-.theme-doc-sidebar-item-link {
-  text-decoration: none !important;
-}
-
-.footer__link-item:hover,
-.footer__link-item:focus,
-.footer__link-item:active,
-.pagination-nav__link:hover,
-.pagination-nav__link:focus,
-.pagination-nav__link:active,
-.theme-doc-sidebar-item-link:hover,
-.theme-doc-sidebar-item-link:focus,
-.theme-doc-sidebar-item-link:active {
-  text-decoration: none !important;
-}
-
-/* ===============================================
-   END HOVER UNDERLINE PREVENTION
-   =============================================== */
-
-/* ===============================================
-   MODERN BLOG CARD UTILITIES
-   =============================================== */
-
-/* Line clamp utilities for text truncation */
-.line-clamp-1 {
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* Enhanced shadow utilities */
-.shadow-xl {
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-}
-
-.shadow-2xl {
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-}
-
-[data-theme="dark"] .shadow-xl {
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.2);
-}
-
-[data-theme="dark"] .shadow-2xl {
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
-}
-
-/* Backdrop blur for glassmorphism effects */
-.backdrop-blur-md {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.backdrop-blur-lg {
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-/* Transform utilities for hover effects */
-.group:hover .group-hover\:scale-110 {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:translate-x-1 {
-  --tw-translate-x: 0.25rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:translate-y-0 {
-  --tw-translate-y: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:opacity-100 {
-  opacity: 1;
-}
-
-.group:hover .group-hover\:text-primary {
-  color: var(--primary);
-}
-
-.group:hover .group-hover\:text-primary\/80 {
-  color: color-mix(in oklab, var(--primary) 80%, transparent);
-}
-
-/* Animation delay utilities */
-.delay-100 {
-  transition-delay: 100ms;
-}
-
-.delay-200 {
-  transition-delay: 200ms;
-}
-
-.delay-300 {
-  transition-delay: 300ms;
-}
-
-/* Duration utilities */
-.duration-300 {
-  transition-duration: 300ms;
-}
-
-.duration-500 {
-  transition-duration: 500ms;
-}
-
-.duration-700 {
-  transition-duration: 700ms;
-}
-
-/* Ease utilities */
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Transform initialization */
-* {
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-}
-
-/* Blog card specific enhancements */
-.blog-card-container {
-  perspective: 1000px;
-}
-
-.blog-card-container:hover .blog-card-inner {
-  transform: rotateY(2deg) rotateX(1deg);
-}
-
-.blog-card-inner {
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  transform-style: preserve-3d;
-}
-
-/* Glassmorphism card variant */
-.glass-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-[data-theme="dark"] .glass-card {
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* ===============================================
-   END MODERN BLOG CARD UTILITIES
-   =============================================== */
+.DocSearch-Input:focus {
+  box-shadow: none !important;
+}
+/* Search button hover state */
+.DocSearch-Button:hover {
+  border-color: #1a56db !important;
+  box-shadow: none !important;
+}
+
+/* Ensure the border color stays the same when focused */
+.DocSearch-Button:focus {
+  border-color: #1a56db !important;
+  box-shadow: none !important;
+}
+
+/* .DocSearch-Dropdown-Container {
+  color: #1a56db !important;
+} */
+/* .DocSearch-Hit-source {
+  color: #1a56db !important;
+} */
+/* .DocSearch-Hit {
+  background-color: #1a56db !important;
+} */
+/* #docsearch-list {
+  background-color: #1a56db !important;
+} */
