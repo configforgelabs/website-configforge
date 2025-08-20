@@ -5,10 +5,10 @@ sidebar_position: 0
 slug: /packetfence-stepbystep
 authors: [Tobias]
 date: 2025-07-28
-keywords: [PacketFence,Intune,Security]
-tags: [PacketFence,Intune,Security]
+keywords: [PacketFence,Security,Intune]
+tags: [PacketFence,Security,Intune]
 last_update: 
- date: 2025-07-31
+ date: 2025-08-20
  author: Tobias
 ---
 
