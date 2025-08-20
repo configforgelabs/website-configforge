@@ -1,4 +1,5 @@
 import React from 'react';
+import Translate from '@docusaurus/Translate';
 
 // Mail Icon
 const MailIcon = ({ className = "" }) => (
@@ -174,23 +175,23 @@ export function Footer() {
                   ConfigForge
                 </h2>
                 <p className="text-sm strapline mb-4">
-                  Guides & tools for Microsoft 365 & Azure
+                  <Translate id="footer.brand.strapline">Guides & tools for Microsoft 365 & Azure</Translate>
                 </p>
                 <p className="text-sm body-text leading-relaxed mb-6 max-w-xs">
-                  I publish practical guides, templates, and small tools from real projects. If you need hands-on help, you can{' '}
+                  <Translate id="footer.brand.desc">I publish practical guides, templates, and small tools from real projects. If you need hands-on help, you can</Translate>{' '}
                   <a
                     href="https://opsora.io/contact?utm_source=configforge&utm_medium=footer&utm_campaign=book"
                     className="blue-link"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    book me via Opsora
+                    <Translate id="footer.brand.cta">book me via Opsora</Translate>
                   </a>.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-sm font-semibold section-heading mb-3">Contact</h3>
+                <h3 className="text-sm font-semibold section-heading mb-3"><Translate id="footer.contact.title">Contact</Translate></h3>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center gap-2">
                     <MailIcon className="icon" />
@@ -209,7 +210,7 @@ export function Footer() {
                       rel="noopener noreferrer"
                       className="text-sm regular-link"
                     >
-                      GitHub (ConfigForge)
+                      <Translate id="footer.links.github">GitHub (ConfigForge)</Translate>
                     </a>
                   </li>
                   <li className="flex items-center gap-2">
@@ -220,7 +221,7 @@ export function Footer() {
                       rel="noopener noreferrer"
                       className="text-sm regular-link"
                     >
-                      LinkedIn
+                      <Translate id="footer.links.linkedin">LinkedIn</Translate>
                     </a>
                   </li>
                 </ul>
@@ -228,11 +229,11 @@ export function Footer() {
                 <div className="space-y-1 text-xs meta-text">
                   <div className="flex items-center gap-2">
                     <UserIcon className="w-3 h-3" />
-                    <span>Maintained by Tobias Schüle</span>
+                    <span><Translate id="footer.meta.maintained">Maintained by Tobias Schüle</Translate></span>
                   </div>
                   <div className="flex items-center gap-2">
                     <HeartIcon className="w-3 h-3" />
-                    <span>Knowledge & tools — no sales pitches</span>
+                    <span><Translate id="footer.meta.knowledge">Knowledge & tools — no sales pitches</Translate></span>
                   </div>
                 </div>
               </div>
@@ -240,26 +241,26 @@ export function Footer() {
 
             {/* Navigation Column */}
             <nav aria-labelledby="nav-heading">
-              <h3 id="nav-heading" className="text-sm font-semibold section-heading mb-3">Navigation</h3>
+              <h3 id="nav-heading" className="text-sm font-semibold section-heading mb-3"><Translate id="footer.nav.title">Navigation</Translate></h3>
               <ul className="space-y-2">
                 <li>
                   <a href="/docs" className="text-sm regular-link">
-                    Docs
+                    <Translate id="footer.nav.docs">Docs</Translate>
                   </a>
                 </li>
                 <li>
                   <a href="/blog" className="text-sm regular-link">
-                    Resources
+                    <Translate id="footer.nav.resources">Resources</Translate>
                   </a>
                 </li>
                 <li>
                   <a href="/tools" className="text-sm regular-link">
-                    Tools
+                    <Translate id="footer.nav.tools">Tools</Translate>
                   </a>
                 </li>
                 <li>
                   <a href="/about" className="text-sm regular-link">
-                    About
+                    <Translate id="footer.nav.about">About</Translate>
                   </a>
                 </li>
               </ul>
@@ -267,31 +268,31 @@ export function Footer() {
 
             {/* Topics & Tools Column */}
             <section aria-labelledby="topics-heading">
-              <h3 id="topics-heading" className="text-sm font-semibold section-heading mb-3">Popular topics</h3>
+              <h3 id="topics-heading" className="text-sm font-semibold section-heading mb-3"><Translate id="footer.topics.title">Popular topics</Translate></h3>
               <ul className="space-y-2 mb-4">
                 <li>
                   <a href="/docs" className="text-sm regular-link">
-                    Identity & Security (Entra ID / CA)
+                    <Translate id="footer.topics.identity">Identity & Security (Entra ID / CA)</Translate>
                   </a>
                 </li>
                 <li>
                   <a href="/docs" className="text-sm regular-link">
-                    Endpoint with Intune (Autopilot, compliance)
+                    <Translate id="footer.topics.intune">Endpoint with Intune (Autopilot, compliance)</Translate>
                   </a>
                 </li>
                 <li>
                   <a href="/docs" className="text-sm regular-link">
-                    Azure Landing Zones (RBAC, policy)
+                    <Translate id="footer.topics.alz">Azure Landing Zones (RBAC, policy)</Translate>
                   </a>
                 </li>
                 <li>
                   <a href="/docs" className="text-sm regular-link">
-                    Tenant-to-Tenant & M365 migrations
+                    <Translate id="footer.topics.migrations">Tenant-to-Tenant & M365 migrations</Translate>
                   </a>
                 </li>
                 <li>
                   <a href="/docs" className="text-sm regular-link">
-                    Documentation patterns (Docusaurus, runbooks)
+                    <Translate id="footer.topics.docs">Documentation patterns (Docusaurus, runbooks)</Translate>
                   </a>
                 </li>
               </ul>
@@ -300,7 +301,7 @@ export function Footer() {
                   href="/tools"
                   className="text-sm font-medium blue-link"
                 >
-                  → See my tools
+                  <Translate id="footer.topics.toolsCta">→ See my tools</Translate>
                 </a>
               </p>
             </section>
@@ -315,7 +316,7 @@ export function Footer() {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 meta-text text-xs">
               <span>
-                © 2025 ConfigForge · by{' '}
+                <Translate id="footer.copyright.prefix">© 2025 ConfigForge · by</Translate>{' '}
                 <a
                   href="https://opsora.io/contact?utm_source=configforge&utm_medium=footer&utm_campaign=book"
                   className="blue-link"
@@ -324,15 +325,15 @@ export function Footer() {
                 >
                   Opsora
                 </a>{' '}
-                — All rights reserved.
+                <Translate id="footer.copyright.suffix">— All rights reserved.</Translate>
               </span>
               <div className="flex gap-4">
                 <a href="/privacy" className="regular-link">
-                  Privacy
+                  <Translate id="footer.legal.privacy">Privacy</Translate>
                 </a>
                 <span>·</span>
                 <a href="/imprint" className="regular-link">
-                  Imprint
+                  <Translate id="footer.legal.imprint">Imprint</Translate>
                 </a>
               </div>
             </div>
@@ -340,15 +341,15 @@ export function Footer() {
             <ul className="status-pills meta-text">
               <li className="status-pill">
                 <span className="status-dot dot-blue" aria-hidden="true"></span>
-                Knowledge-first
+                <Translate id="footer.status.knowledge">Knowledge-first</Translate>
               </li>
               <li className="status-pill">
                 <span className="status-dot dot-green" aria-hidden="true"></span>
-                Tools I built
+                <Translate id="footer.status.tools">Tools I built</Translate>
               </li>
               <li className="status-pill">
                 <span className="status-dot dot-purple" aria-hidden="true"></span>
-                Open-source friendly
+                <Translate id="footer.status.opensource">Open-source friendly</Translate>
               </li>
             </ul>
           </div>

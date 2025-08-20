@@ -1,6 +1,7 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Head from '@docusaurus/Head';
+import { translate } from '@docusaurus/Translate';
 
 import Hero from "../components/Home/Hero";
 import RelationshipStrip from "../components/Home/RelationshipStrip";
@@ -30,8 +31,14 @@ export default function Home() {
         </script>
       </Head>
       <Layout
-        title={`ConfigForge - guides & tools I use in Microsoft 365 and Azure work`}
-        description="I publish practical notes, templates, and small tools from real projects. For hands-on help, you can hire me via Opsora"
+        title={translate({
+          id: 'home.head.metaTitle',
+          message: 'ConfigForge - guides & tools I use in Microsoft 365 and Azure work',
+        })}
+        description={translate({
+          id: 'home.head.metaDescription',
+          message: 'I publish practical notes, templates, and small tools from real projects. For hands-on help, you can hire me via Opsora',
+        })}
       >
         <Hero />
         <LatestPosts />

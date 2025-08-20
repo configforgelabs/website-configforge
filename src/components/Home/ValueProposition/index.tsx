@@ -1,4 +1,5 @@
 import React from "react";
+import Translate from '@docusaurus/Translate';
 
 export default function ValueProposition() {
   const features = [
@@ -68,15 +69,13 @@ export default function ValueProposition() {
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
             </svg>
-            Why ConfigForge
+            <Translate id="vp.kicker">Why ConfigForge</Translate>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            How ConfigForge relates to Opsora
+            <Translate id="vp.title">How ConfigForge relates to Opsora</Translate>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I do client work under Opsora (architecture, implementations, migrations). 
-            I document patterns here on ConfigForge so others can reuse them. 
-            Want me to apply this in your tenant? Work with me on Opsora.
+            <Translate id="vp.desc">I do client work under Opsora (architecture, implementations, migrations). I document patterns here on ConfigForge so others can reuse them. Want me to apply this in your tenant? Work with me on Opsora.</Translate>
           </p>
         </div>
 
@@ -110,19 +109,19 @@ export default function ValueProposition() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/docs"
+                href="/docs/intro"
                 className="btn btn-primary px-6 py-3 rounded-full font-semibold"
               >
-                Browse Docs
+                <Translate id="vp.cta.docs">Browse Docs</Translate>
               </a>
               <div className="text-center">
                 <a
                   href="https://opsora.io/contact?utm_source=configforge&utm_medium=callout&utm_campaign=book"
                   className="btn btn-outline px-6 py-3 rounded-full font-semibold"
                 >
-                  Book a consultation
+                  <Translate id="vp.cta.book">Book a consultation via Opsora</Translate>
                 </a>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">handled via Opsora</p>
+                {/* <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">handled via Opsora</p> */}
               </div>
             </div>
           </div>

@@ -89,7 +89,7 @@ const config: Config = {
       colorMode: {
         defaultMode: "light",
         disableSwitch: false,
-        respectPrefersColorScheme: true,
+        respectPrefersColorScheme: false,
       },
       algolia: {
         // The application ID provided by Algolia
@@ -189,12 +189,7 @@ const config: Config = {
       liveCodeBlock: {
         playgroundPosition: "top",
       },
-      scripts: [
-        {
-          src: '/js/language-theme-persistence.js',
-          async: false,
-        },
-      ],
+      scripts: [],
     } satisfies Preset.ThemeConfig,
   plugins: [
     // require.resolve('docusaurus-lunr-search'),

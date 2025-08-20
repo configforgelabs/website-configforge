@@ -1,0 +1,78 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Trainings": {
+    "message": "Trainings",
+    "description": "The label for category Trainings in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Notes": {
+    "message": "Notes",
+    "description": "The label for category Notes in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Microsoft 365": {
+    "message": "Microsoft 365",
+    "description": "The label for category Microsoft 365 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Azure": {
+    "message": "Azure",
+    "description": "The label for category Azure in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Terraform": {
+    "message": "Terraform",
+    "description": "The label for category Terraform in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.PacketFence": {
+    "message": "PacketFence",
+    "description": "The label for category PacketFence in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Services": {
+    "message": "Services",
+    "description": "The label for category Services in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Scripts": {
+    "message": "Scripts",
+    "description": "The label for category Scripts in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Azure Virtual Desktop": {
+    "message": "Azure Virtual Desktop",
+    "description": "The label for category Azure Virtual Desktop in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Azure Automation": {
+    "message": "Azure Automation",
+    "description": "The label for category Azure Automation in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Microsoft Intune": {
+    "message": "Microsoft Intune",
+    "description": "The label for category Microsoft Intune in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Microsoft Loop": {
+    "message": "Microsoft Loop",
+    "description": "The label for category Microsoft Loop in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Microsoft Entra": {
+    "message": "Microsoft Entra",
+    "description": "The label for category Microsoft Entra in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Microsoft OnPrem": {
+    "message": "Microsoft OnPrem",
+    "description": "The label for category Microsoft OnPrem in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Remote Desktop Services": {
+    "message": "Remote Desktop Services",
+    "description": "The label for category Remote Desktop Services in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Development": {
+    "message": "Development",
+    "description": "The label for category Development in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Website guide": {
+    "message": "Website guide",
+    "description": "The label for category Website guide in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Apple": {
+    "message": "Apple",
+    "description": "The label for category Apple in sidebar tutorialSidebar"
+  }
+}

@@ -19,7 +19,7 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto mt-6">
               <Link
-                to="/docs"
+                to="/docs/intro"
                 className="btn btn-primary px-6 py-3 rounded-full font-semibold"
               >
                 Browse Docs

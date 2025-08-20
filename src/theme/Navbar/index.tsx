@@ -3,6 +3,7 @@ import OriginalNavbar from '@theme-original/Navbar';
 import ThemeSwitcher from '@site/src/components/ThemeSwitcher';
 import type { WrapperProps } from '@docusaurus/types';
 import type NavbarType from '@theme/Navbar';
+import Translate from '@docusaurus/Translate';
 
 type Props = WrapperProps<typeof NavbarType>;
 
@@ -33,7 +34,7 @@ export default function NavbarWrapper(props: Props): JSX.Element {
                 backdropFilter: 'blur(2px)'
               }}
             >
-              ConfigForge is still under construction
+              <Translate id="nav.banner.construction">ConfigForge is still under construction</Translate>
             </span>
             <span style={{ fontSize: '1.25rem' }} role="img" aria-label="construction">🚧</span>
           </div>
@@ -63,6 +64,7 @@ export default function NavbarWrapper(props: Props): JSX.Element {
           border-radius: 0.5rem;
           padding: 0.5rem 0.75rem;
           font-weight: 500;
+          text-decoration: none !important;
         }
         
         .navbar-wrapper :global(.navbar__link:hover) {
@@ -73,18 +75,14 @@ export default function NavbarWrapper(props: Props): JSX.Element {
         .navbar-wrapper :global(.navbar__link--active) {
           background: color-mix(in oklch, oklch(var(--primary)) 12%, transparent);
           color: oklch(var(--primary));
+          text-decoration: none !important;
         }
         
-        .navbar-wrapper :global(.navbar__link--active::after) {
-          content: '';
-          position: absolute;
-          bottom: -1px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 50%;
-          height: 2px;
-          background: oklch(var(--primary));
-          border-radius: 2px;
+        /* Remove any possible underline/decoration across states */
+        .navbar-wrapper :global(.navbar__link:hover),
+        .navbar-wrapper :global(.navbar__link:focus),
+        .navbar-wrapper :global(.navbar__link:active) {
+          text-decoration: none !important;
         }
         
         .navbar-wrapper :global(.btn.btn-primary) {
