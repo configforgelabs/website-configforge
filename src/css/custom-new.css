@@ -151,7 +151,7 @@
 }
 
 .menu__link--active {
-  background: color-mix(in oklab, var(--primary) 12%, transparent) !important;
+  background: color-mix(in oklab, var(--primary) 50%, transparent) !important;
   border-radius: 8px !important;
   color: var(--primary) !important;
   font-weight: 600 !important;
@@ -161,6 +161,12 @@
   background: color-mix(in oklab, var(--primary) 8%, transparent) !important;
   border-radius: 8px !important;
   color: var(--foreground) !important;
+}
+
+/* Ensure only the exact active page is highlighted; keep parent categories neutral */
+.menu__list-item-collapsible--active > .menu__link.menu__link--sublist:not(.menu__link--active) {
+  color: var(--muted-foreground) !important;
+  background: transparent !important;
 }
 
 /* Table of Contents styling */

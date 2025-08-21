@@ -107,7 +107,7 @@ export default function KBHighlights(props: KBHighlightsProps) {
                         <a
                             key={highlight.title}
                             href={highlight.href}
-                            className="group card card-hover p-8 bg-gradient-to-br from-white to-gray-50/50 dark:from-gray-800 dark:to-gray-800/70 border border-gray-200/60 dark:border-gray-700/60 hover:border-primary/30 dark:hover:border-primary/40 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 dark:hover:shadow-primary/10 hover:-translate-y-2 kb-highlight-card"
+                            className="group card card-hover p-8 bg-gradient-to-br from-white to-gray-50/50 dark:from-gray-800 dark:to-gray-800/70 border border-gray-200/60 dark:border-gray-700/60 hover:border-primary/30 dark:hover:border-primary/40 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 dark:hover:shadow-primary/10 hover:-translate-y-2 kb-highlight-card hover:no-underline"
                         >
                             {/* Icon and Title */}
                             <div className="flex items-start gap-4 mb-6">
@@ -158,7 +158,7 @@ export default function KBHighlights(props: KBHighlightsProps) {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <a
                             href="/docs/intro"
-                            className="btn btn-primary px-8 py-4 text-lg font-semibold rounded-full inline-flex items-center gap-3 shadow-lg hover:shadow-xl transition-all duration-300"
+                            className="btn btn-primary px-8 py-4 text-lg font-semibold rounded-full inline-flex items-center gap-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:no-underline"
                         >
                             <Translate id="kb.cta.docs">Browse Documentation</Translate>
                             <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -167,7 +167,7 @@ export default function KBHighlights(props: KBHighlightsProps) {
                         </a>
                         <a
                             href="/blog"
-                            className="btn btn-outline px-8 py-4 text-lg font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+                            className="btn btn-outline px-8 py-4 text-lg font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:no-underline"
                         >
                             <Translate id="kb.cta.blog">Read Latest Posts</Translate>
                         </a>

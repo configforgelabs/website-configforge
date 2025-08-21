@@ -33,7 +33,7 @@ export default function DocSidebarItemLink({
           "menu__link hover:text-primary-700",
           !isInternalLink && styles.menuExternalLink,
           {
-            // "menu__link--active": isActive,
+            "menu__link--active": isActive,
             "text-primary-700": isActive,
           }
         )}

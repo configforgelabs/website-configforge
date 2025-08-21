@@ -20,13 +20,13 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto mt-6">
               <Link
                 to="/docs/intro"
-                className="btn btn-primary px-6 py-3 rounded-full font-semibold"
+                className="btn btn-primary px-6 py-3 rounded-full font-semibold hover:no-underline"
               >
                 Browse Docs
               </Link>
               <a
                 href="/blog"
-                className="btn btn-outline px-6 py-3 rounded-full font-semibold"
+                className="btn btn-outline px-6 py-3 rounded-full font-semibold hover:no-underline"
               >
                 Latest Posts
               </a>
@@ -62,7 +62,7 @@ export default function Hero() {
               
               <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                 <a 
-                  className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+                  className="text-blue-600 hover:text-blue-700 text-sm font-medium hover:no-underline"
                   href="https://opsora.io/?utm_source=configforge&utm_medium=brand-card&utm_campaign=visit"
                   target="_blank"
                   rel="noopener noreferrer"

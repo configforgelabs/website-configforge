@@ -77,7 +77,7 @@ export default function LatestPosts(props: LatestPostsProps) {
           <div className="text-center mt-12">
             <a 
               href="/blog"
-              className="btn btn-outline px-8 py-4 text-lg font-semibold rounded-full inline-flex items-center gap-2"
+              className="btn btn-outline px-8 py-4 text-lg font-semibold rounded-full inline-flex items-center gap-2 hover:no-underline"
             >
               <Translate id="latest.viewAll">View All Posts</Translate>
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -108,6 +108,7 @@ export default function DocSidebarItemCategory({
     },
   });
   const {expandedItem, setExpandedItem} = useDocSidebarItemsExpandedState();
+  const isExpanded = collapsible ? !collapsed : false;
   // Use this instead of `setCollapsed`, because it is also reactive
   const updateCollapsed = (toCollapsed = !collapsed) => {
     setExpandedItem(toCollapsed ? null : index);
@@ -143,8 +144,9 @@ export default function DocSidebarItemCategory({
           className={clsx('menu__link', {
             'menu__link--sublist': collapsible,
             'menu__link--sublist-caret': !href && collapsible,
-            // 'menu__link--active': isActive,
-            'text-primary-700': isActive,
+            // Highlight when: category clicked/expanded OR current page is within this category
+            'menu__link--active': isExpanded || isActive || isCurrentPage,
+            'text-primary-700': isExpanded || isActive || isCurrentPage,
           })}
           onClick={
             collapsible

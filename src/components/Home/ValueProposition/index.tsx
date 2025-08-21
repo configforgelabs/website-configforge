@@ -110,14 +110,14 @@ export default function ValueProposition() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/docs/intro"
-                className="btn btn-primary px-6 py-3 rounded-full font-semibold"
+                className="btn btn-primary px-6 py-3 rounded-full font-semibold hover:no-underline"
               >
                 <Translate id="vp.cta.docs">Browse Docs</Translate>
               </a>
               <div className="text-center">
                 <a
                   href="https://opsora.io/contact?utm_source=configforge&utm_medium=callout&utm_campaign=book"
-                  className="btn btn-outline px-6 py-3 rounded-full font-semibold"
+                  className="btn btn-outline px-6 py-3 rounded-full font-semibold hover:no-underline"
                 >
                   <Translate id="vp.cta.book">Book a consultation via Opsora</Translate>
                 </a>
