@@ -109,6 +109,11 @@ export default function DocSidebarItemCategory({
   });
   const {expandedItem, setExpandedItem} = useDocSidebarItemsExpandedState();
   const isExpanded = collapsible ? !collapsed : false;
+  const isCurrentlyExpandedAtThisLevel = isExpanded && expandedItem === index;
+  // Highlight rules:
+  // - Always highlight if this category is the current page OR contains the active page (isActive)
+  // - Additionally, for top-level only (level === 1), highlight the most recently expanded item
+  const shouldHighlight = (isCurrentPage || isActive) || (level === 1 && isCurrentlyExpandedAtThisLevel);
   // Use this instead of `setCollapsed`, because it is also reactive
   const updateCollapsed = (toCollapsed = !collapsed) => {
     setExpandedItem(toCollapsed ? null : index);
@@ -144,9 +149,9 @@ export default function DocSidebarItemCategory({
           className={clsx('menu__link', {
             'menu__link--sublist': collapsible,
             'menu__link--sublist-caret': !href && collapsible,
-            // Highlight when: category clicked/expanded OR current page is within this category
-            'menu__link--active': isExpanded || isActive || isCurrentPage,
-            'text-primary-700': isExpanded || isActive || isCurrentPage,
+            // Highlight clicked/expanded category and the active path; suppress old top-level when another is expanded
+            'menu__link--active': shouldHighlight,
+            'text-primary-700': shouldHighlight,
           })}
           onClick={
             collapsible
