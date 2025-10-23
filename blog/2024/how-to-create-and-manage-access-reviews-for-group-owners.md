@@ -1,12 +1,12 @@
 ---
 title: PLACEHOLDER 2
-description: "Sixth blog entry"
+description: "Learn to enable group owners to manage access reviews in Microsoft Entra, ensuring governance of guest user access efficiently."
 sidebar_position: 0
 slug: /how-to-create-and-manage-access-reviews-for-group-owners
 authors: [Tobias]
 date: 2024-01-31
-keywords: [Azure]
-tags: [Azure]
+keywords: [Entra,Microsoft 365]
+tags: [Entra,Microsoft 365]
 image: https://ourcloudnetwork.com/wp-content/uploads/2023/12/How-to-create-and-manage-access-reviews-for-group-owners.png
 ---
 
