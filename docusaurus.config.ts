@@ -190,7 +190,6 @@ const config: Config = {
     [
       "./src/plugin/plugin-content-docs",
       {
-        id: "default",
         path: "docs",
         sidebarPath: "./sidebars.ts",
         editUrl: "https://github.com/InnovationForge-com/website/edit/master/",
@@ -199,7 +198,6 @@ const config: Config = {
     [
       "./src/plugin/plugin-content-blog",
       {
-        id: "default",
         path: "blog",
         // routeBasePath: '/',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
