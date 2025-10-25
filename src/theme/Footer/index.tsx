@@ -297,28 +297,8 @@ export function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="/docs" className="text-sm regular-link">
-                    <Translate id="footer.nav.docs">Docs</Translate>
-                  </a>
-                </li>
-                <li>
                   <a href="/blog" className="text-sm regular-link">
-                    <Translate id="footer.nav.resources">Resources</Translate>
-                  </a>
-                </li>
-                <li>
-                  <a href="/about" className="text-sm regular-link">
-                    <Translate id="footer.nav.about">About Tobias</Translate>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://opsora.io?utm_source=configforge&utm_medium=footer"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm regular-link"
-                  >
-                    ConfigForge (by Opsora)
+                    <Translate id="footer.nav.blog">Blog</Translate>
                   </a>
                 </li>
                 <li>
@@ -337,57 +317,57 @@ export function Footer() {
             {/* Key Services Column */}
             <section aria-labelledby="topics-heading">
               <h3 id="topics-heading" className="text-sm font-semibold section-heading mb-6">
-                <Translate id="footer.topics.title">Key Services</Translate>
+                <Translate id="footer.topics.title">Popular Topics</Translate>
               </h3>
               <ul className="space-y-3">
                 <li>
-                  <span className="text-sm body-text">
-                    <Translate id="footer.topics.m365">Microsoft 365 Architecture & Governance</Translate>
-                  </span>
-                </li>
-                <li>
-                  <span className="text-sm body-text">
-                    <Translate id="footer.topics.intune">Endpoint Management with Intune</Translate>
-                  </span>
-                </li>
-                <li>
-                  <span className="text-sm body-text">
-                    <Translate id="footer.topics.alz">Azure Architecture & Landing Zones</Translate>
-                  </span>
-                </li>
-                <li>
-                  <span className="text-sm body-text">
-                    <Translate id="footer.topics.ai">AI Integration & Automation Solutions</Translate>
-                  </span>
-                </li>
-                <li>
-                  <span className="text-sm body-text">
-                    <Translate id="footer.topics.identity">Identity Modernization & Cloud-Native Migration</Translate>
-                  </span>
-                </li>
-                <li>
-                  <span className="text-sm body-text">
-                    <Translate id="footer.topics.migrations">Migrations (M365, Azure, Hybrid)</Translate>
-                  </span>
-                </li>
-                <li>
-                  <span className="text-sm body-text">
-                    <Translate id="footer.topics.security">Security Hardening & Reviews</Translate>
-                  </span>
-                </li>
-                <li>
-                  <span className="text-sm body-text">
-                    <Translate id="footer.topics.delivery">Project Delivery & Handover</Translate>
-                  </span>
-                </li>
-                <li className="pt-2">
                   <a
-                    href="https://opsora.io/contact?utm_source=configforge&utm_medium=footer&utm_campaign=services"
+                    href="https://opsora.io/services#microsoft-365-architecture-governance"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium blue-link"
+                    className="text-sm regular-link"
                   >
-                    <Translate id="footer.topics.toolsCta">→ Book a Consultation</Translate>
+                    <Translate id="footer.topics.m365">Microsoft 365 Architecture & Governance</Translate>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://opsora.io/services#identity-modernization"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm regular-link"
+                  >
+                    <Translate id="footer.topics.identity">Identity Modernization</Translate>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://opsora.io/services#security-hardening"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm regular-link"
+                  >
+                    <Translate id="footer.topics.security">Security Hardening & Reviews</Translate>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://opsora.io/services#ai-solutions"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm regular-link"
+                  >
+                    <Translate id="footer.topics.ai">AI Solutions for Microsoft 365</Translate>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://opsora.io/services#endpoint-management"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm regular-link"
+                  >
+                    <Translate id="footer.topics.intune">Endpoint Management with Intune</Translate>
                   </a>
                 </li>
               </ul>
