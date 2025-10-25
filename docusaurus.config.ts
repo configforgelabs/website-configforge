@@ -104,7 +104,7 @@ const config: Config = {
         contextualSearch: true,
 
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: "external\\.com|innovationforge\\.com",
+        externalUrlRegex: "external\\.io|opsora\\.io",
 
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
         replaceSearchResultPathname: {
@@ -128,34 +128,26 @@ const config: Config = {
       image: "img/configforge-social-card.jpg",
       navbar: {
         logo: {
-          alt: "Home",
-          src: "img/branding/logo-color-menu.png",
+          alt: "ConfigForge",
+          src: "img/branding/logo-color-menu-light.png",
+          srcDark: "img/branding/logo-color-menu-dark.png",
+          href: "/",
         },
         items: [
-          {
-            to: "/docs/intro",
-            label: "Docs",
-            position: "left",
-          },
           {
             to: "/blog",
             label: "Blog",
             position: "left",
           },
           {
-            to: "/resources",
-            label: "Resources",
-            position: "left",
-          },
-          {
-            href: "https://opsora.io",
-            label: "Back to Opsora",
-            position: "right",
-            className: "btn btn-primary",
-          },
-          {
             type: "localeDropdown",
             position: "right",
+          },
+          {
+            href: "https://opsora.io/contact?utm_source=configforge&utm_medium=navbar&utm_campaign=book",
+            label: "Book Consultation",
+            position: "right",
+            className: "btn btn-primary navbar-cta-button",
           },
           {
             type: "search",
@@ -198,6 +190,7 @@ const config: Config = {
     [
       "./src/plugin/plugin-content-docs",
       {
+        id: "default",
         path: "docs",
         sidebarPath: "./sidebars.ts",
         editUrl: "https://github.com/InnovationForge-com/website/edit/master/",
@@ -206,6 +199,7 @@ const config: Config = {
     [
       "./src/plugin/plugin-content-blog",
       {
+        id: "default",
         path: "blog",
         // routeBasePath: '/',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>

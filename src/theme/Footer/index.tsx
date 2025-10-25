@@ -36,6 +36,20 @@ const HeartIcon = ({ className = "" }) => (
   </svg>
 );
 
+// Globe Icon
+const GlobeIcon = ({ className = "" }) => (
+  <svg className={`w-4 h-4 ${className}`} fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+  </svg>
+);
+
+// Clock Icon
+const ClockIcon = ({ className = "" }) => (
+  <svg className={`w-4 h-4 ${className}`} fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+);
+
 export function Footer() {
   return (
     <>
@@ -43,11 +57,16 @@ export function Footer() {
         .footer-grid {
           display: grid;
           grid-template-columns: 1fr;
-          gap: 2rem;
+          gap: 3rem;
+        }
+        @media (min-width: 768px) {
+          .footer-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
         }
         @media (min-width: 1024px) {
           .footer-grid {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 2fr 1fr 1fr;
             gap: 3rem;
           }
         }
@@ -73,9 +92,9 @@ export function Footer() {
           height: 6px;
           border-radius: 50%;
         }
-        .dot-blue { background-color: #3b82f6; }
-        .dot-green { background-color: #10b981; }
-        .dot-purple { background-color: #8b5cf6; }
+        .dot-blue { background-color: #60a5fa; }
+        .dot-green { background-color: #34d399; }
+        .dot-purple { background-color: #a78bfa; }
         
         /* Disable default Docusaurus underline behavior */
         .footer a {
@@ -84,8 +103,18 @@ export function Footer() {
         .footer a:hover {
           text-decoration: none !important;
         }
+        
+        /* Icon colors */
+        .footer .contact-icon {
+          color: #60a5fa;
+          flex-shrink: 0;
+        }
+        .footer .info-icon {
+          color: #9ca3af;
+          flex-shrink: 0;
+        }
 
-        /* Dark theme colors */
+        /* Dark theme colors - matching opsora.io */
         [data-theme='dark'] .footer {
           background-color: #111827 !important;
           color: #d1d5db !important;
@@ -98,87 +127,99 @@ export function Footer() {
         }
         [data-theme='dark'] .footer .section-heading {
           color: #ffffff !important;
+          font-weight: 600 !important;
         }
         [data-theme='dark'] .footer .body-text {
           color: #d1d5db !important;
         }
         [data-theme='dark'] .footer .regular-link {
           color: #d1d5db !important;
+          transition: color 0.2s ease !important;
         }
         [data-theme='dark'] .footer .regular-link:hover {
-          color: #93c5fd !important;
+          color: #60a5fa !important;
         }
         [data-theme='dark'] .footer .meta-text {
           color: #9ca3af !important;
         }
         [data-theme='dark'] .footer .blue-link {
           color: #60a5fa !important;
+          transition: color 0.2s ease !important;
         }
         [data-theme='dark'] .footer .blue-link:hover {
           color: #93c5fd !important;
         }
         [data-theme='dark'] .footer .footer-divider {
-          border-color: #4b5563 !important;
+          border-color: #374151 !important;
         }
         [data-theme='dark'] .footer .icon {
-          color: #9ca3af !important;
+          color: #60a5fa !important;
         }
 
-        /* Light theme colors */
+        /* Light theme colors - matching opsora.io light style */
         [data-theme='light'] .footer {
-          background-color: #f3f4f6 !important;
-          color: #4b5563 !important;
+          background-color: #1f2937 !important;
+          color: #d1d5db !important;
         }
         [data-theme='light'] .footer .brand-name {
-          color: #111827 !important;
+          color: #ffffff !important;
         }
         [data-theme='light'] .footer .strapline {
-          color: #6b7280 !important;
+          color: #9ca3af !important;
         }
         [data-theme='light'] .footer .section-heading {
-          color: #111827 !important;
+          color: #ffffff !important;
+          font-weight: 600 !important;
         }
         [data-theme='light'] .footer .body-text {
-          color: #4b5563 !important;
+          color: #d1d5db !important;
         }
         [data-theme='light'] .footer .regular-link {
-          color: #4b5563 !important;
+          color: #d1d5db !important;
+          transition: color 0.2s ease !important;
         }
         [data-theme='light'] .footer .regular-link:hover {
-          color: #1d4ed8 !important;
+          color: #60a5fa !important;
         }
         [data-theme='light'] .footer .meta-text {
-          color: #6b7280 !important;
+          color: #9ca3af !important;
         }
         [data-theme='light'] .footer .blue-link {
-          color: #2563eb !important;
+          color: #60a5fa !important;
+          transition: color 0.2s ease !important;
         }
         [data-theme='light'] .footer .blue-link:hover {
-          color: #1d4ed8 !important;
+          color: #93c5fd !important;
         }
         [data-theme='light'] .footer .footer-divider {
-          border-color: #d1d5db !important;
+          border-color: #374151 !important;
         }
         [data-theme='light'] .footer .icon {
-          color: #6b7280 !important;
+          color: #60a5fa !important;
         }
       `}</style>
 
       <footer className="footer bg-gray-900 text-gray-100 dark:bg-gray-900 dark:text-gray-100">
-        <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="footer-grid">
 
-            {/* Brand & Contact Column */}
+            {/* Brand & Contact Column - spans 2 columns on large screens */}
             <section aria-labelledby="brand-heading">
               <div className="mb-6">
-                <h2 id="brand-heading" className="text-xl font-bold brand-name mb-2">
-                  ConfigForge
-                </h2>
-                <p className="text-sm strapline mb-4">
-                  <Translate id="footer.brand.strapline">Guides & tools for Microsoft 365 & Azure</Translate>
-                </p>
-                <p className="text-sm body-text leading-relaxed mb-6 max-w-xs">
-                  <Translate id="footer.brand.desc">I publish practical guides, templates, and small tools from real projects. If you need hands-on help, you can</Translate>{' '}
+                <div className="mb-4">
+                  <img
+                    src="/img/branding/logo-footer.png"
+                    alt="ConfigForge by Opsora"
+                    style={{
+                      height: '60px',
+                      width: 'auto',
+                      maxWidth: '100%',
+                      objectFit: 'contain'
+                    }}
+                  />
+                </div>
+                <p className="text-sm body-text leading-relaxed mb-6 max-w-md">
+                  <Translate id="footer.brand.desc">Practical guides, templates, and small tools from real projects. For hands-on help, you can</Translate>{' '}
                   <a
                     href="https://opsora.io/contact?utm_source=configforge&utm_medium=footer&utm_campaign=book"
                     className="blue-link"
@@ -190,50 +231,55 @@ export function Footer() {
                 </p>
               </div>
 
-              <div>
-                <h3 className="text-sm font-semibold section-heading mb-3"><Translate id="footer.contact.title">Contact</Translate></h3>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center gap-2">
-                    <MailIcon className="icon" />
-                    <a 
-                      href="mailto:tobias@opsora.io"
-                      className="text-sm regular-link"
-                    >
-                      tobias@opsora.io
-                    </a>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <GitHubIcon className="icon" />
-                    <a 
-                      href="https://github.com/configforge"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm regular-link"
-                    >
-                      <Translate id="footer.links.github">GitHub (ConfigForge)</Translate>
-                    </a>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <LinkedInIcon className="icon" />
-                    <a 
-                      href="https://www.linkedin.com/in/tobias-schuele/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm regular-link"
-                    >
-                      <Translate id="footer.links.linkedin">LinkedIn</Translate>
-                    </a>
-                  </li>
-                </ul>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-sm font-semibold section-heading mb-3">
+                    <Translate id="footer.contact.title">Contact Tobias Schüle</Translate>
+                  </h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-center gap-3">
+                      <MailIcon className="contact-icon" />
+                      <a
+                        href="mailto:tobias@opsora.io"
+                        className="text-sm regular-link"
+                      >
+                        tobias@opsora.io
+                      </a>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <LinkedInIcon className="contact-icon" />
+                      <a 
+                        href="https://www.linkedin.com/in/tobias-schuele/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm regular-link"
+                      >
+                        <Translate id="footer.links.linkedin">Connect on LinkedIn</Translate>
+                      </a>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <GitHubIcon className="contact-icon" />
+                      <a 
+                        href="https://github.com/configforge"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm regular-link"
+                      >
+                        ConfigForge
+                      </a>
+                    </li>
+                  </ul>
+                </div>
 
-                <div className="space-y-1 text-xs meta-text">
-                  <div className="flex items-center gap-2">
-                    <UserIcon className="w-3 h-3" />
-                    <span><Translate id="footer.meta.maintained">Maintained by Tobias Schüle</Translate></span>
+                {/* Business Info */}
+                <div className="pt-4 border-t border-gray-700">
+                  <div className="flex items-center gap-3 text-sm meta-text mb-2">
+                    <GlobeIcon className="info-icon" />
+                    <span><Translate id="footer.meta.global">Serving clients globally</Translate></span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <HeartIcon className="w-3 h-3" />
-                    <span><Translate id="footer.meta.knowledge">Knowledge & tools — no sales pitches</Translate></span>
+                  <div className="flex items-center gap-3 text-sm meta-text">
+                    <ClockIcon className="info-icon" />
+                    <span><Translate id="footer.meta.response">Typically responds within 24 hours</Translate></span>
                   </div>
                 </div>
               </div>
@@ -241,8 +287,15 @@ export function Footer() {
 
             {/* Navigation Column */}
             <nav aria-labelledby="nav-heading">
-              <h3 id="nav-heading" className="text-sm font-semibold section-heading mb-3"><Translate id="footer.nav.title">Navigation</Translate></h3>
-              <ul className="space-y-2">
+              <h3 id="nav-heading" className="text-sm font-semibold section-heading mb-6">
+                <Translate id="footer.nav.title">Navigation</Translate>
+              </h3>
+              <ul className="space-y-3">
+                <li>
+                  <a href="/" className="text-sm regular-link">
+                    <Translate id="footer.nav.home">Home</Translate>
+                  </a>
+                </li>
                 <li>
                   <a href="/docs" className="text-sm regular-link">
                     <Translate id="footer.nav.docs">Docs</Translate>
@@ -254,102 +307,134 @@ export function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="/tools" className="text-sm regular-link">
-                    <Translate id="footer.nav.tools">Tools</Translate>
+                  <a href="/about" className="text-sm regular-link">
+                    <Translate id="footer.nav.about">About Tobias</Translate>
                   </a>
                 </li>
                 <li>
-                  <a href="/about" className="text-sm regular-link">
-                    <Translate id="footer.nav.about">About</Translate>
+                  <a
+                    href="https://opsora.io?utm_source=configforge&utm_medium=footer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm regular-link"
+                  >
+                    ConfigForge (by Opsora)
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://opsora.io/contact?utm_source=configforge&utm_medium=footer&utm_campaign=nav"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm regular-link"
+                  >
+                    <Translate id="footer.nav.contact">Contact / Book</Translate>
                   </a>
                 </li>
               </ul>
             </nav>
 
-            {/* Topics & Tools Column */}
+            {/* Key Services Column */}
             <section aria-labelledby="topics-heading">
-              <h3 id="topics-heading" className="text-sm font-semibold section-heading mb-3"><Translate id="footer.topics.title">Popular topics</Translate></h3>
-              <ul className="space-y-2 mb-4">
+              <h3 id="topics-heading" className="text-sm font-semibold section-heading mb-6">
+                <Translate id="footer.topics.title">Key Services</Translate>
+              </h3>
+              <ul className="space-y-3">
                 <li>
-                  <a href="/docs" className="text-sm regular-link">
-                    <Translate id="footer.topics.identity">Identity & Security (Entra ID / CA)</Translate>
-                  </a>
+                  <span className="text-sm body-text">
+                    <Translate id="footer.topics.m365">Microsoft 365 Architecture & Governance</Translate>
+                  </span>
                 </li>
                 <li>
-                  <a href="/docs" className="text-sm regular-link">
-                    <Translate id="footer.topics.intune">Endpoint with Intune (Autopilot, compliance)</Translate>
-                  </a>
+                  <span className="text-sm body-text">
+                    <Translate id="footer.topics.intune">Endpoint Management with Intune</Translate>
+                  </span>
                 </li>
                 <li>
-                  <a href="/docs" className="text-sm regular-link">
-                    <Translate id="footer.topics.alz">Azure Landing Zones (RBAC, policy)</Translate>
-                  </a>
+                  <span className="text-sm body-text">
+                    <Translate id="footer.topics.alz">Azure Architecture & Landing Zones</Translate>
+                  </span>
                 </li>
                 <li>
-                  <a href="/docs" className="text-sm regular-link">
-                    <Translate id="footer.topics.migrations">Tenant-to-Tenant & M365 migrations</Translate>
-                  </a>
+                  <span className="text-sm body-text">
+                    <Translate id="footer.topics.ai">AI Integration & Automation Solutions</Translate>
+                  </span>
                 </li>
                 <li>
-                  <a href="/docs" className="text-sm regular-link">
-                    <Translate id="footer.topics.docs">Documentation patterns (Docusaurus, runbooks)</Translate>
+                  <span className="text-sm body-text">
+                    <Translate id="footer.topics.identity">Identity Modernization & Cloud-Native Migration</Translate>
+                  </span>
+                </li>
+                <li>
+                  <span className="text-sm body-text">
+                    <Translate id="footer.topics.migrations">Migrations (M365, Azure, Hybrid)</Translate>
+                  </span>
+                </li>
+                <li>
+                  <span className="text-sm body-text">
+                    <Translate id="footer.topics.security">Security Hardening & Reviews</Translate>
+                  </span>
+                </li>
+                <li>
+                  <span className="text-sm body-text">
+                    <Translate id="footer.topics.delivery">Project Delivery & Handover</Translate>
+                  </span>
+                </li>
+                <li className="pt-2">
+                  <a
+                    href="https://opsora.io/contact?utm_source=configforge&utm_medium=footer&utm_campaign=services"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium blue-link"
+                  >
+                    <Translate id="footer.topics.toolsCta">→ Book a Consultation</Translate>
                   </a>
                 </li>
               </ul>
-              <p>
-                <a
-                  href="/tools"
-                  className="text-sm font-medium blue-link"
-                >
-                  <Translate id="footer.topics.toolsCta">→ See my tools</Translate>
-                </a>
-              </p>
             </section>
           </div>
         </div>
 
         {/* Divider */}
-        <hr className="footer-divider border-gray-600" />
+        <hr className="footer-divider max-w-7xl mx-auto px-6" />
 
         {/* Legal / Status Bar */}
-        <div className="max-w-7xl mx-auto px-6 pb-6">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 meta-text text-xs">
-              <span>
-                <Translate id="footer.copyright.prefix">© 2025 ConfigForge · by</Translate>{' '}
-                <a
-                  href="https://opsora.io/contact?utm_source=configforge&utm_medium=footer&utm_campaign=book"
-                  className="blue-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Opsora
-                </a>{' '}
-                <Translate id="footer.copyright.suffix">— All rights reserved.</Translate>
-              </span>
-              <div className="flex gap-4">
-                <a href="/privacy" className="regular-link">
-                  <Translate id="footer.legal.privacy">Privacy</Translate>
-                </a>
-                <span>·</span>
-                <a href="/imprint" className="regular-link">
-                  <Translate id="footer.legal.imprint">Imprint</Translate>
-                </a>
-              </div>
+        <div className="max-w-7xl mx-auto px-6 pb-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div className="meta-text text-sm">
+              <Translate id="footer.copyright.prefix">© 2025 Tobias Schüle / ConfigForge</Translate>{' '}
+              <a
+                href="https://opsora.io?utm_source=configforge&utm_medium=footer"
+                className="blue-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Translate id="footer.copyright.opsora">– by Opsora</Translate>
+              </a>{' '}
+              <Translate id="footer.copyright.suffix">— All rights reserved.</Translate>
             </div>
 
-            <ul className="status-pills meta-text">
-              <li className="status-pill">
-                <span className="status-dot dot-blue" aria-hidden="true"></span>
-                <Translate id="footer.status.knowledge">Knowledge-first</Translate>
-              </li>
+            <div className="flex items-center gap-4 text-sm meta-text">
+              <a href="/privacy" className="regular-link">
+                <Translate id="footer.legal.privacy">Privacy</Translate>
+              </a>
+              <a href="/imprint" className="regular-link">
+                <Translate id="footer.legal.imprint">Imprint</Translate>
+              </a>
+            </div>
+
+            <ul className="status-pills meta-text text-sm">
               <li className="status-pill">
                 <span className="status-dot dot-green" aria-hidden="true"></span>
-                <Translate id="footer.status.tools">Tools I built</Translate>
+                <Translate id="footer.status.experience">15+ years experience</Translate>
+              </li>
+              <li className="status-pill">
+                <span className="status-dot dot-blue" aria-hidden="true"></span>
+                <Translate id="footer.status.certified">Microsoft certified</Translate>
               </li>
               <li className="status-pill">
                 <span className="status-dot dot-purple" aria-hidden="true"></span>
-                <Translate id="footer.status.opensource">Open-source friendly</Translate>
+                <Translate id="footer.status.proven">Enterprise proven</Translate>
               </li>
             </ul>
           </div>

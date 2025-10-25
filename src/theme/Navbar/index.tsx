@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import OriginalNavbar from '@theme-original/Navbar';
 import ThemeSwitcher from '@site/src/components/ThemeSwitcher';
 import type { WrapperProps } from '@docusaurus/types';
@@ -8,41 +8,91 @@ import Translate from '@docusaurus/Translate';
 type Props = WrapperProps<typeof NavbarType>;
 
 export default function NavbarWrapper(props: Props): JSX.Element {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  useEffect(() => {
+    // Check if viewport is desktop
+    const checkViewport = () => {
+      setIsDesktop(window.innerWidth > 996); // Docusaurus mobile breakpoint
+    };
+
+    checkViewport();
+    window.addEventListener('resize', checkViewport);
+
+    return () => window.removeEventListener('resize', checkViewport);
+  }, []);
+
+  useEffect(() => {
+    // Only apply scroll behavior on desktop
+    if (!isDesktop) {
+      setIsVisible(true);
+      return;
+    }
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Show navbar when at top of page
+      if (currentScrollY < 10) {
+        setIsVisible(true);
+      }
+      // Hide when scrolling down, show when scrolling up
+      else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY, isDesktop]);
+
   return (
     <>
-      {/* Construction Notice Banner */}
-      <div
-        style={{
-          backgroundColor: '#D03801',
-          borderBottom: '2px solid #B43403',
-          color: 'white',
-          padding: '12px 16px',
-          textAlign: 'center' as const,
-          boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)'
-        }}
-      >
-        <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-            <span style={{ fontSize: '1.25rem' }} role="img" aria-label="construction">🚧</span>
-            <span
-              style={{
-                fontSize: '0.875rem',
-                fontWeight: '600',
-                backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                padding: '6px 12px',
-                borderRadius: '9999px',
-                backdropFilter: 'blur(2px)'
-              }}
-            >
-              <Translate id="nav.banner.construction">ConfigForge is still under construction</Translate>
-            </span>
-            <span style={{ fontSize: '1.25rem' }} role="img" aria-label="construction">🚧</span>
-          </div>
-        </div>
-      </div>
-      <div className="navbar-wrapper">
+      <div className={`navbar-wrapper ${isVisible ? 'navbar-visible' : 'navbar-hidden'}`}>
         <OriginalNavbar {...props} />
       <style jsx>{`
+        .navbar-wrapper {
+          position: relative;
+          z-index: 50;
+        }
+        
+        /* Only apply sticky behavior and hide/show on desktop */
+        @media (min-width: 997px) {
+          .navbar-wrapper {
+            position: sticky;
+            top: 0;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            will-change: transform;
+          }
+          
+          .navbar-wrapper.navbar-hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+          }
+          
+          .navbar-wrapper.navbar-visible {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+        
+        /* Mobile: always visible, no animations */
+        @media (max-width: 996px) {
+          .navbar-wrapper {
+            position: relative;
+            transform: none !important;
+            opacity: 1 !important;
+            pointer-events: auto !important;
+          }
+        }
+        
         .navbar-wrapper :global(.navbar) {
           background: oklch(var(--card)) !important;
           backdrop-filter: blur(8px);

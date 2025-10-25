@@ -66,6 +66,7 @@ export default function BlogPostGridItems({
               tags={tags}
               description={description}
               image={imageSrc}
+              date={date}
             />
           </motion.div>
         );

@@ -52,7 +52,7 @@ function BlogListPageContent(props: Props) {
           </div>
 
           {/* Posts Grid with New Card Design */}
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
             <BlogPostGridItems items={items} />
           </div>
           

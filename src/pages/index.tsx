@@ -43,7 +43,7 @@ export default function Home() {
         <Hero />
         <LatestPosts />
         <RelationshipStrip />
-        <KBHighlights />
+        {/* <KBHighlights /> */}
         <ValueProposition />
         {/* <ServicesOverview /> */}
         {/* <Testimonials /> */}

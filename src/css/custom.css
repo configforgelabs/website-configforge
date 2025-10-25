@@ -4,37 +4,54 @@
  * work well for content-centric websites.
  */
 
+/* Import Opsora Design System */
+@import './design-system.css';
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #1a56db;
+    --ifm-color-primary-dark: #1749c4;
+    --ifm-color-primary-darker: #1545b9;
+    --ifm-color-primary-darkest: #123998;
+    --ifm-color-primary-light: #3b6ede;
+    --ifm-color-primary-lighter: #4d7ae0;
+    --ifm-color-primary-lightest: #7095e5;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  --ifm-navbar-height: 100px;
+  --ifm-navbar-height: 72px;
 }
 
 @media screen and (max-width: 600px) {
   :root {
-    --ifm-navbar-height: 64px;
+    --ifm-navbar-height: 60px;
   }
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #5b8def;
+    --ifm-color-primary-dark: #3c75ec;
+    --ifm-color-primary-darker: #2a68ea;
+    --ifm-color-primary-darkest: #1749c4;
+    --ifm-color-primary-light: #7a9ff2;
+    --ifm-color-primary-lighter: #8daaf4;
+    --ifm-color-primary-lightest: #b3c7f8;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Dark mode with deep navy background matching opsora.io */
+    --ifm-background-color: #111827;
+    --ifm-background-surface-color: #1f2937;
+  
+    /* Override design system dark backgrounds to match opsora.io style */
+    --background: 18% 0.01 255;
+    /* deep navy #111827 */
+    --card: 22% 0.01 255;
+    /* slightly lighter #1f2937 */
+    --sidebar: 18% 0.01 255;
+    /* match main background */
+    --muted: 25% 0.01 255;
+    /* muted elements #374151 */
+    --border: 30% 0.01 255;
+    /* subtle borders #4b5563 */
 }
 
 [data-theme="dark"] hyvor-talk-comments {
@@ -49,127 +66,414 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hero gradient matching opsora.io style */
+.hero-gradient {
+  background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 50%, #ddd6fe 100%);
+}
+
+[data-theme="dark"] .hero-gradient {
+  background: linear-gradient(135deg, #1e293b 0%, #1e3a8a 50%, #312e81 100%);
+}
+
+/* Logo styling - preserve aspect ratio with reduced height */
 .navbar__logo {
-  width: 196px;
-  height: 56px;
+  height: 36px !important;
+    width: auto !important;
+    max-width: none !important;
+    object-fit: contain !important;
 }
 
 @media screen and (max-width: 600px) {
   .navbar__logo {
-    width: 140px;
-    height: 40px;
+    height: 31px !important;
+    }
+    }
+    
+    .navbar__brand {
+      flex-shrink: 0 !important;
+      margin-right: 0.5rem !important;
+    }
+    
+    /* Search input styling */
+    .DocSearch-Button {
+      height: 40px !important;
+      padding: 0 12px !important;
+      border: 1px solid #e5e7eb !important;
+      background: white !important;
+    }
+    
+    .DocSearch-SearchBar {
+      padding: 16px !important;
+    }
+    
+    .DocSearch-Form {
+      box-shadow: 0 0 0 1px #1a56db !important;
+    }
+    
+    .DocSearch-MagnifierLabel {
+      color: #1a56db !important;
+      margin-right: 12px !important;
+    }
+    
+    .DocSearch-Input {
+      font-size: 16px !important;
+    }
+    
+    .DocSearch-Input:focus {
+      box-shadow: none !important;
+    }
+    
+    /* Search button hover state */
+    .DocSearch-Button:hover {
+      border-color: #1a56db !important;
+      box-shadow: none !important;
+    }
+    
+    /* Navbar layout matching opsora.io EXACTLY - using Tailwind equivalent styles */
+    
+    /* Hide the site title text next to logo - show only logo image */
+    .navbar__title {
+      display: none !important;
+    }
+    
+    .navbar__logo {
+      margin-right: 0 !important;
+    }
+    
+    /* Main navbar container - reduced height */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e5e7eb;
+      background-color: rgba(255, 255, 255, 0.95);
+      transition: all 0.3s ease-in-out;
+      padding: 0 !important;
+      min-height: var(--ifm-navbar-height) !important;
+      height: var(--ifm-navbar-height) !important;
+    }
+    
+    [data-theme="dark"] .navbar {
+      border-bottom-color: #374151;
+      background-color: rgba(17, 24, 39, 0.95);
+    }
+    
+    /* Inner container - max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 */
+    .navbar__inner {
+      max-width: 80rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    @media (min-width: 640px) {
+      .navbar__inner {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .navbar__inner {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+    
+    /* Main flex container - flex items-center justify-between with reduced height */
+    .navbar .navbar__items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100% !important;
+      min-height: var(--ifm-navbar-height) !important;
+    }
+    
+    /* Left navbar items container - contains logo and menu items */
+    .theme-layout-navbar-left,
+    .navbar__items.theme-layout-navbar-left {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      flex: 0 0 auto !important;
+    }
+    
+    /* Desktop Navigation - left-aligned next to logo, not centered */
+    .navbar__items--left {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .navbar__items--left {
+        display: flex;
+        flex: 0 0 auto;
+        /* Don't grow, don't shrink */
+        justify-content: flex-start;
+        /* Left-align instead of center */
+        margin-left: 0 !important;
+        margin-right: auto;
+        /* Push right items to the right */
+        min-width: 0;
+        gap: 0.5rem;
+        /* Add spacing between items */
+      }
+    }
+/* Nav items container - flex items-center with spacing */
+.navbar__items--left>.navbar__item,
+.navbar__items--left>ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+.navbar__items--left .navbar__item {
+  flex-shrink: 0;
+  min-width: fit-content;
+}
+
+/* Individual nav links - reduced padding for smaller height */
+.navbar__items--left .navbar__link,
+.navbar__items--left .navbar__item .navbar__link,
+.navbar__items.navbar__items--left .navbar__link,
+.navbar__items.navbar__items--left .navbar__item .navbar__link,
+html .navbar__items--left a.navbar__link,
+html .navbar__items--left .navbar__item a.navbar__link {
+  padding: 0.375rem 1rem !important;
+  border-radius: 0.375rem !important;
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+  font-weight: 500 !important;
+  transition-property: color, background-color !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 150ms !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.25rem !important;
+  white-space: nowrap !important;
+  border-bottom: none !important;
+  flex-wrap: nowrap !important;
+  flex-shrink: 0 !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+
+  /* Default state - text-gray-600 dark:text-gray-300 */
+  color: #4b5563 !important;
+  background-color: transparent !important;
+}
+
+[data-theme="dark"] .navbar__items--left .navbar__link,
+[data-theme="dark"] .navbar__items--left .navbar__item .navbar__link,
+html[data-theme="dark"] .navbar__items--left a.navbar__link,
+html[data-theme="dark"] .navbar__items--left .navbar__item a.navbar__link {
+  color: #d1d5db !important;
+}
+
+/* Hover state - hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 */
+.navbar__items--left .navbar__link:hover,
+.navbar__items--left .navbar__item .navbar__link:hover,
+.navbar__items.navbar__items--left .navbar__link:hover,
+html .navbar__items--left a.navbar__link:hover,
+html .navbar__items--left .navbar__item a.navbar__link:hover {
+  color: #2563eb !important;
+  background-color: #f9fafb !important;
+  border-bottom: none !important;
+}
+
+[data-theme="dark"] .navbar__items--left .navbar__link:hover,
+[data-theme="dark"] .navbar__items--left .navbar__item .navbar__link:hover,
+html[data-theme="dark"] .navbar__items--left a.navbar__link:hover,
+html[data-theme="dark"] .navbar__items--left .navbar__item a.navbar__link:hover {
+  color: #60a5fa !important;
+  background-color: rgba(31, 41, 55, 0.5) !important;
+}
+
+/* Active state - text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 */
+.navbar__items--left .navbar__link--active,
+.navbar__items--left .navbar__item .navbar__link--active,
+.navbar__items.navbar__items--left .navbar__link--active,
+html .navbar__items--left a.navbar__link--active,
+html .navbar__items--left .navbar__item a.navbar__link--active {
+  color: #2563eb !important;
+  background-color: #eff6ff !important;
+  border-bottom: none !important;
+}
+
+[data-theme="dark"] .navbar__items--left .navbar__link--active,
+[data-theme="dark"] .navbar__items--left .navbar__item .navbar__link--active,
+html[data-theme="dark"] .navbar__items--left a.navbar__link--active,
+html[data-theme="dark"] .navbar__items--left .navbar__item a.navbar__link--active {
+  color: #60a5fa !important;
+  background-color: rgba(30, 58, 138, 0.2) !important;
+}
+
+/* Adjust padding on smaller screens to fit better */
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+  .navbar__items--left .navbar__link,
+  .navbar__items--left .navbar__item .navbar__link,
+  html .navbar__items--left a.navbar__link,
+  html .navbar__items--left .navbar__item a.navbar__link {
+    padding: 0.5rem 0.625rem !important;
+    font-size: 0.8125rem !important;
   }
 }
 
-.navbar .navbar__item {
-  margin-left: 12px;
-  margin-right: 12px;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+/* Opsora link - display as single line with inline label */
+.navbar-opsora-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  flex-wrap: nowrap !important;
+  gap: 0 !important;
+  max-width: none !important;
+  overflow: visible !important;
 }
 
-.navbar .navbar__link {
-  border-bottom: 2px solid rgba(255, 255, 255, 0);
-}
-
-.navbar .navbar__link--active {
-  border-bottom: 2px solid #1a56db;
-  /* border-bottom: 2px solid red; */
-}
-
-.navbar .navbar__link:hover,
-.navbar__link--active {
-  color: var(--ifm-navbar-link-color);
-  border-bottom: 2px solid #1a56db;
-}
-
-.dropdown--show .navbar__link {
-  color: var(--ifm-navbar-link-color);
-  border-bottom: 2px solid #1a56db;
-}
-
-.dropdown .navbar__link {
-  padding-bottom: 8.5px;
-}
-
-.dropdown .dropdown__link {
-  padding-bottom: 8.5px;
-}
-
-.dropdown--right .dropdown__menu {
-  width: max-content;
-  left: 0;
-  right: 0;
-  margin-top: 35px;
-}
-.navbar__link.dropdown-toggle::after {
-  content: ""; /* Clear default content */
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border: none;
-  background-image: url(../../static/img/chevron-down.svg); /* Custom arrow SVG */
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-left: 4px;
-  margin-bottom: 4px;
-  vertical-align: middle;
-  transform: rotate(180deg); /* Default state: downward arrow */
-}
-
-/* Style when the dropdown is expanded */
-.navbar__link.dropdown-toggle[aria-expanded="true"]::after {
-  transform: rotate(0deg); /* Rotate the arrow upward when expanded */
-}
-
-.dropdown__menu li {
+/* Add "by ConfigForge" label inline - text-xs text-gray-500 dark:text-gray-400 */
+.navbar-opsora-link::after {
+  content: " (by ConfigForge)";
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 400;
   color: #6b7280;
-}
+  white-space: nowrap;
+    margin-left: 0.25rem;
+  }
+  
+  [data-theme="dark"] .navbar-opsora-link::after {
+    color: #9ca3af;
+  }
+  
+  /* Ensure Opsora link gets the same hover/active background */
+  .navbar-opsora-link:hover {
+    color: #2563eb !important;
+    background-color: #f9fafb !important;
+  }
+  
+  [data-theme="dark"] .navbar-opsora-link:hover {
+    color: #60a5fa !important;
+    background-color: rgba(31, 41, 55, 0.5) !important;
+  }
+  
+  .navbar-opsora-link.navbar__link--active {
+    color: #2563eb !important;
+    background-color: #eff6ff !important;
+  }
+  
+  [data-theme="dark"] .navbar-opsora-link.navbar__link--active {
+    color: #60a5fa !important;
+    background-color: rgba(30, 58, 138, 0.2) !important;
+  }
+  
+  /* Hide external link icon */
+  .navbar-opsora-link .navbar__link-icon,
+  .navbar__link svg[aria-hidden="true"] {
+    display: none !important;
+  }
+  
+  /* Right items container - flex items-center with spacing */
+  .navbar__items--right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+  
+  /* Add spacing between right items */
+  .navbar__items--right>* {
+    margin-left: 0 !important;
+  }
+  
+  /* CTA Button - hidden lg:inline-flex - matching opsora.io exactly */
+  .navbar-cta-button {
+    display: none !important;
+  }
+  
+  @media (min-width: 1024px) {
+    .navbar-cta-button {
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      white-space: nowrap;
+      border-radius: 0.375rem;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-weight: 500;
+      padding: 0.375rem 1rem;
+      margin-left: 0.5rem;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+      border: 1px solid transparent;
+      text-decoration: none !important;
+      outline: none;
+      flex-shrink: 0;
 
-.dropdown__menu li :hover {
-  background: #1a56db1a;
-  color: #1a56db;
-}
+      /* Default button colors - bg-primary text-primary-foreground shadow-xs */
+      background-color: #1a1a1a;
+      color: #fafafa;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
 
-.dropdown__menu li .dropdown__link--active{
-  background: #1a56db1a;
-  color: #1a56db;
-}
+    .navbar-cta-button:hover {
+      background-color: rgba(26, 26, 26, 0.9);
+      color: #fafafa;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    }
 
-/* Search input styling */
-.DocSearch-Button {
-  height: 40px !important;
-  padding: 0 12px !important;
-  border: 1px solid #e5e7eb !important;
-  background: white !important;
-}
+    .navbar-cta-button:focus-visible {
+      border-color: #a3a3a3;
+      box-shadow: 0 0 0 3px rgba(163, 163, 163, 0.5);
+    }
 
-.DocSearch-SearchBar {
-  padding: 16px !important;
-}
+    [data-theme="dark"] .navbar-cta-button {
+      background-color: #fafafa;
+      color: #1a1a1a;
+    }
 
-.DocSearch-Form {
-  box-shadow: 0 0 0 1px #1a56db !important;
-}
+    [data-theme="dark"] .navbar-cta-button:hover {
+      background-color: rgba(250, 250, 250, 0.9);
+      color: #1a1a1a;
+    }
 
-.DocSearch-MagnifierLabel {
-  color: #1a56db !important;
-  margin-right: 12px !important;
-}
+    [data-theme="dark"] .navbar-cta-button:focus-visible {
+      border-color: #737373;
+      box-shadow: 0 0 0 3px rgba(115, 115, 115, 0.5);
+    }
+  }
+  
+  /* Hide external icon from button */
+  .navbar-cta-button .navbar__link-icon {
+    display: none !important;
+  }
 
-.DocSearch-Input {
-  font-size: 16px !important;
-}
-
-.DocSearch-Input:focus {
-  box-shadow: none !important;
-}
-/* Search button hover state */
-.DocSearch-Button:hover {
-  border-color: #1a56db !important;
-  box-shadow: none !important;
+  /* Theme toggle and other controls styling */
+  .navbar__items--right>*+* {
+    margin-left: 0.5rem;
+  }
+  
+    /* Mobile menu adjustments */
+    @media (max-width: 1023px) {
+      .navbar__inner {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+  
+      /* Hide Book Consultation button from top navbar on mobile (before opening menu) */
+      .navbar__items--right .navbar-cta-button {
+        display: none !important;
+      }
+        /* Show Book Consultation button inside mobile sidebar menu */
+        .navbar-sidebar .navbar-cta-button {
+          display: inline-flex !important;
+          width: 100%;
+          justify-content: center;
+          margin: 0.5rem 0;
+        }
 }
 
 /* Ensure the border color stays the same when focused */
@@ -190,3 +494,343 @@
 /* #docsearch-list {
   background-color: #1a56db !important;
 } */
+
+/* Sidebar menu styling - use blue for active items */
+.menu__link {
+  color: #6b7280;
+  transition: all 0.2s ease-in-out;
+}
+
+[data-theme="dark"] .menu__link {
+  color: #e5e7eb;
+}
+
+.menu__link--active {
+  background: transparent !important;
+  color: #1a56db !important;
+  /* Removed font-weight change - only color should change */
+}
+
+[data-theme="dark"] .menu__link--active {
+  color: #5b8def !important;
+}
+
+.menu__link:hover {
+  background: transparent !important;
+  color: #1a56db;
+}
+
+[data-theme="dark"] .menu__link:hover {
+  color: #5b8def;
+}
+
+/* Prevent expanded parent categories from turning blue */
+.menu__list-item-collapsible--active>.menu__link--sublist:not(.menu__link--active) {
+  color: #6b7280 !important;
+  background: transparent !important;
+}
+
+[data-theme="dark"] .menu__list-item-collapsible--active>.menu__link--sublist:not(.menu__link--active) {
+  color: #e5e7eb !important;
+}
+
+/* Ensure all category links stay gray unless they are the actual active page */
+.menu__link--sublist {
+  color: #6b7280 !important;
+}
+
+[data-theme="dark"] .menu__link--sublist {
+  color: #e5e7eb !important;
+}
+
+/* Override only for actual active category pages */
+.menu__link--sublist.menu__link--active {
+  color: #1a56db !important;
+  /* Removed font-weight change - only color should change */
+}
+
+/* Button arrow animation */
+.btn-arrow {
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Enhanced CTA button styles for hero section */
+.hero-gradient .btn {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  gap: 0.5rem;
+}
+
+.hero-gradient .btn-primary {
+  background: #1a56db !important;
+  color: white !important;
+  box-shadow: 0 10px 15px -3px rgba(26, 86, 219, 0.3), 0 4px 6px -2px rgba(26, 86, 219, 0.2);
+}
+
+.hero-gradient .btn-primary:hover {
+  background: #1749c4 !important;
+  box-shadow: 0 20px 25px -5px rgba(26, 86, 219, 0.3), 0 10px 10px -5px rgba(26, 86, 219, 0.2);
+  transform: translateY(-2px);
+}
+
+.hero-gradient .btn-outline {
+  border: 2px solid #e5e7eb;
+  background: transparent;
+  color: #1f2937;
+}
+
+[data-theme="dark"] .hero-gradient .btn-outline {
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+.hero-gradient .btn-outline:hover {
+  border-color: #1a56db;
+  background: rgba(26, 86, 219, 0.05);
+  color: #1a56db;
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .hero-gradient .btn-outline:hover {
+  border-color: #5b8def;
+  background: rgba(91, 141, 239, 0.1);
+  color: #5b8def;
+}
+
+/* Override design system code blocks to use original Docusaurus styling in light mode */
+:root {
+  --ifm-pre-background: #f6f8fa;
+  --ifm-code-background: #f6f8fa;
+}
+
+/* Code block styling - restore original Docusaurus appearance */
+pre,
+div[class*="codeBlock"] {
+  background: var(--ifm-pre-background) !important;
+  border: 1px solid #e1e4e8 !important;
+}
+
+:not(pre)>code {
+  background: var(--ifm-code-background) !important;
+  color: #24292e !important;
+  border: 1px solid #e1e4e8 !important;
+}
+
+/* Dark mode code blocks */
+[data-theme="dark"] {
+  --ifm-pre-background: #1e1e1e;
+  --ifm-code-background: #1e1e1e;
+}
+
+[data-theme="dark"] pre,
+[data-theme="dark"] div[class*="codeBlock"] {
+  background: var(--ifm-pre-background) !important;
+  border: 1px solid #374151 !important;
+}
+
+[data-theme="dark"] :not(pre)>code {
+  background: var(--ifm-code-background) !important;
+  color: #e5e7eb !important;
+  border: 1px solid #374151 !important;
+}
+
+/* ===================================
+   Mobile Menu (Sidebar) Styling
+   =================================== */
+
+/* Mobile sidebar should use full viewport height and proper width */
+.navbar-sidebar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  z-index: 9999 !important;
+}
+
+.navbar-sidebar__backdrop {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  z-index: 9998 !important;
+}
+
+.navbar-sidebar__brand {
+  height: var(--ifm-navbar-height) !important;
+  min-height: var(--ifm-navbar-height) !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 1rem !important;
+}
+
+/* Hide the "ConfigForge · by Opsora" text in mobile sidebar */
+.navbar-sidebar__brand .navbar__brand__text,
+.navbar-sidebar__brand .navbar__title,
+.navbar-sidebar .navbar__title {
+  display: none !important;
+}
+
+.navbar-sidebar__items {
+  height: calc(100vh - var(--ifm-navbar-height)) !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  padding: 1rem !important;
+  position: relative !important;
+}
+
+/* Override the panel sliding behavior - show first panel by default */
+.navbar-sidebar__items.navbar-sidebar__items--show-secondary .theme-layout-navbar-sidebar-panel:first-child {
+  transform: translateX(0) !important;
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+}
+
+.navbar-sidebar__items.navbar-sidebar__items--show-secondary .theme-layout-navbar-sidebar-panel:last-child {
+  display: none !important;
+}
+
+/* Default state - first panel visible */
+.navbar-sidebar__items .theme-layout-navbar-sidebar-panel:first-child {
+  transform: translateX(0) !important;
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+}
+
+/* Hide second panel completely */
+.navbar-sidebar__items .theme-layout-navbar-sidebar-panel:last-child {
+  display: none !important;
+}
+
+/* Ensure mobile menu items are properly styled with full width */
+.navbar-sidebar .menu__list {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.navbar-sidebar .menu__list-item {
+  margin: 0.5rem 0 !important;
+}
+
+.navbar-sidebar .navbar__item {
+  width: 100% !important;
+}
+
+.navbar-sidebar .navbar__link,
+.navbar-sidebar .menu__link {
+  display: block !important;
+  width: 100% !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 0.5rem !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+}
+
+.navbar-sidebar .menu__list-item {
+  margin: 0.5rem 0 !important;
+}
+
+.navbar-sidebar .navbar__item {
+  width: 100% !important;
+}
+
+.navbar-sidebar .navbar__link,
+.navbar-sidebar .menu__link {
+  display: block !important;
+  width: 100% !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 0.5rem !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+}
+
+/* Mobile-specific: Full height on mobile, navbar height on desktop */
+@media (max-width: 996px) {
+  .navbar {
+    height: var(--ifm-navbar-height) !important;
+    min-height: var(--ifm-navbar-height) !important;
+  }
+
+  .navbar-sidebar {
+    display: block !important;
+  }
+}
+
+@media (min-width: 997px) {
+  .navbar-sidebar {
+    display: none !important;
+  }
+}
+
+/* ===== Blog Post Dark Mode Improvements ===== */
+/* Designer's approach: Ensure proper contrast and readability in dark mode */
+
+/* Author name styling - fix dark mode readability */
+.avatar__name a,
+.avatar__name span {
+  color: #111827 !important;
+  /* Dark text for light mode */
+  font-weight: 500;
+}
+
+[data-theme="dark"] .avatar__name a,
+[data-theme="dark"] .avatar__name span {
+  color: #f9fafb !important;
+  /* Nearly white for excellent contrast in dark mode */
+}
+
+[data-theme="dark"] .avatar__name a:hover {
+  color: #60a5fa !important;
+  /* Blue on hover for interactivity */
+}
+
+/* ===== Blog Post Tag Styling - Dark Mode Fix ===== */
+
+/* Blog post header tags use Tailwind classes (bg-primary-100, text-primary-800) */
+/* Override these in dark mode for better readability */
+[data-theme="dark"] .bg-primary-100 {
+  background-color: rgba(96, 165, 250, 0.2) !important;
+}
+
+[data-theme="dark"] .text-primary-800 {
+  color: #dbeafe !important;
+}
+
+/* Footer tags and inline tags (using .tag class) */
+.tag {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background-color: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.tag:hover {
+  background-color: #dbeafe;
+  border-color: #93c5fd;
+  text-decoration: none;
+}
+
+[data-theme="dark"] .tag {
+  background-color: rgba(96, 165, 250, 0.2) !important;
+  color: #dbeafe !important;
+  border: 1px solid rgba(96, 165, 250, 0.4) !important;
+}
+
+[data-theme="dark"] .tag:hover {
+  background-color: rgba(96, 165, 250, 0.3) !important;
+  border-color: rgba(96, 165, 250, 0.6) !important;
+  color: #eff6ff !important;
+}

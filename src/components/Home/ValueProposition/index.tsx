@@ -60,7 +60,7 @@ export default function ValueProposition() {
   ];
 
   return (
-    <div className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
+    <div className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -82,7 +82,7 @@ export default function ValueProposition() {
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="card card-hover bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm p-6">
+            <div key={index} className="card bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-6 border border-gray-200/50 dark:border-gray-700/50">
               <div className="w-16 h-16 rounded-xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-4">
                 {feature.icon}
               </div>
@@ -98,7 +98,7 @@ export default function ValueProposition() {
 
         {/* CTA Section */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8 max-w-3xl mx-auto mb-12">
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-3xl p-8 max-w-3xl mx-auto mb-12 border border-gray-200/50 dark:border-gray-700/50">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Ready to get started?
             </h3>

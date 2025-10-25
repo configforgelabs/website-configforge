@@ -33,27 +33,21 @@ export default function LatestPosts(props: LatestPostsProps) {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             <Translate id="latest.section.title">Recent Posts</Translate>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            <Translate id="latest.section.desc">Recent notes from my Microsoft 365 and Azure work. Short reads with concrete steps you can apply immediately—no fluff.</Translate>
-          </p>
         </div>
 
         {/* Posts Grid */}
         {topSixPosts.length > 0 ? (
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
             {topSixPosts.map((doc, index) => (
-              <div 
-                key={doc.metadata.permalink} 
-                className="card card-hover transition-all duration-200"
-              >
-                <BlogCard
-                  permalink={doc.metadata.permalink}
-                  title={doc.metadata.title}
-                  tags={doc.metadata.tags}
-                  description={doc.metadata.description}
-                  image={doc.metadata.frontMatter.image}
-                />
-              </div>
+              <BlogCard
+                key={doc.metadata.permalink}
+                permalink={doc.metadata.permalink}
+                title={doc.metadata.title}
+                tags={doc.metadata.tags}
+                description={doc.metadata.description}
+                image={doc.metadata.frontMatter.image}
+                date={doc.metadata.formattedDate}
+              />
             ))}
           </div>
         ) : (
