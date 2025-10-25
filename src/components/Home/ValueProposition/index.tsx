@@ -108,12 +108,16 @@ export default function ValueProposition() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/docs/intro"
-                className="btn btn-primary px-6 py-3 rounded-full font-semibold hover:no-underline"
+              <button
+                disabled
+                className="btn btn-primary px-6 py-3 rounded-full font-semibold opacity-60 cursor-not-allowed relative"
+                title="Documentation is currently under development"
               >
                 <Translate id="vp.cta.docs">Browse Docs</Translate>
-              </a>
+                <span className="absolute -top-2 -right-2 bg-yellow-500 dark:bg-yellow-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap">
+                  In Development
+                </span>
+              </button>
               <div className="text-center">
                 <a
                   href="https://opsora.io/contact?utm_source=configforge&utm_medium=callout&utm_campaign=book"

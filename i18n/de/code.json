@@ -79,6 +79,12 @@
   "footer.legal.imprint": {"message": "Impressum"},
   "footer.status.knowledge": {"message": "Wissen zuerst"},
   "footer.status.tools": {"message": "Tools die ich gebaut habe"},
-  "footer.status.opensource": {"message": "Open-Source freundlich"}
+  "footer.status.opensource": {"message": "Open-Source freundlich"},
+
+  "privacy.title": {"message": "Datenschutzerklärung"},
+  "privacy.description": {"message": "Datenschutzerklärung für ConfigForge"},
+  
+  "imprint.title": {"message": "Impressum"},
+  "imprint.description": {"message": "Impressum für ConfigForge"}
 }
 

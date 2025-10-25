@@ -248,7 +248,7 @@ export function Footer() {
                     </li>
                     <li className="flex items-center gap-3">
                       <LinkedInIcon className="contact-icon" />
-                      <a 
+                      <a
                         href="https://www.linkedin.com/in/tobias-schuele/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -259,13 +259,13 @@ export function Footer() {
                     </li>
                     <li className="flex items-center gap-3">
                       <GitHubIcon className="contact-icon" />
-                      <a 
-                        href="https://github.com/configforge"
+                      <a
+                        href="https://github.com/configforgelabs"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm regular-link"
                       >
-                        ConfigForge
+                        GitHub
                       </a>
                     </li>
                   </ul>
