@@ -14,13 +14,8 @@ export default function Hero() {
               <Translate id="home.hero.title">Microsoft 365 & Azure configs that work</Translate>
             </h1>
             <p className="hero-subtitle text-base text-gray-600 dark:text-gray-300 mb-4 max-w-2xl mx-auto lg:mx-0">
-              <Translate
-                id="home.hero.subtitle"
-                values={{
-                  strong: (chunks) => <strong>{chunks}</strong>,
-                }}
-              >
-                {'I publish practical guides and tools. If you need hands-on help, you can {strong}book me via Opsora{/strong}.'}
+              <Translate id="home.hero.subtitle">
+                I publish practical guides and tools. If you need hands-on help, you can book me via Opsora.
               </Translate>
             </p>
 
@@ -42,21 +37,21 @@ export default function Hero() {
                   <Translate id="home.hero.inDevelopment">In Development</Translate>
                 </span>
               </button>
-              <a
-                href="/blog"
+              <Link
+                to="/blog"
                 className="btn btn-outline w-full sm:w-auto px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 inline-flex items-center justify-center gap-2 hover:no-underline"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
                 </svg>
                 <Translate id="home.hero.latestPosts">Latest Posts</Translate>
-              </a>
+              </Link>
             </div>
           </div>
 
           {/* Brand Card */}
           <div className="lg:col-span-2">
-            <div className="card card-hover bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-6 text-center">
+            <div className="card bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-6 text-center">
               {/* Profile Image */}
               <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white dark:border-gray-700 shadow-lg">
                 <img

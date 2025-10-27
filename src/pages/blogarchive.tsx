@@ -4,6 +4,7 @@ import Link from "@docusaurus/Link";
 import styles from "./styles.module.css";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useRef } from "react";
+import Translate, { translate } from '@docusaurus/Translate';
 
 // Idea and JS code from https://github.com/johnnyreilly/blog.johnnyreilly.com/blob/main/blog-website/src/pages/blog-handrolled.js
 
@@ -82,7 +83,7 @@ const Year: React.FC<YearProps> = ({ year, posts }) => {
         </div>
         <div>
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{year}</h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400">{posts.length} {posts.length === 1 ? 'post' : 'posts'}</p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">{posts.length} <Translate id="blogarchive.year.posts">posts</Translate></p>
         </div>
       </div>
 
@@ -151,8 +152,14 @@ const BlogArchive: React.FC = () => {
         }}
       />
       <Layout
-        title="Blog Archive"
-        description="Complete archive of my Microsoft 365 and Azure blog posts organized by year. Technical guides, implementations, and troubleshooting notes from real projects that also get added to my knowledge base."
+        title={translate({
+          id: 'blogarchive.meta.title',
+          message: 'Blog Archive',
+        })}
+        description={translate({
+          id: 'blogarchive.meta.desc',
+          message: 'Complete archive of my Microsoft 365 and Azure blog posts organized by year. Technical guides, implementations, and troubleshooting notes from real projects that also get added to my knowledge base.',
+        })}
       >
         {/* Hero Section with Gradient Background */}
         <div className="py-20 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50">
@@ -164,13 +171,13 @@ const BlogArchive: React.FC = () => {
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                Archive
+                <Translate id="blogarchive.kicker">Archive</Translate>
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                Blog Archive
+                <Translate id="blogarchive.title">Blog Archive</Translate>
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                All my blog posts from over the years, organized by date.
+                <Translate id="blogarchive.description">All my blog posts from over the years, organized by date.</Translate>
               </p>
             </div>
 
@@ -195,7 +202,7 @@ const BlogArchive: React.FC = () => {
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>
-                Back to Latest Blog Posts
+                <Translate id="blogarchive.backButton">Back to Latest Blog Posts</Translate>
               </Link>
             </div>
           </div>

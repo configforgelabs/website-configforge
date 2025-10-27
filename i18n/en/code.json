@@ -18,7 +18,28 @@
     "message": "Blog"
   },
   "blog.description": {
-    "message": "My Microsoft 365 and Azure blog posts from real projects. These insights also become part of my knowledge base - practical guides and troubleshooting notes with no marketing fluff, just what actually works."
+    "message": "My Microsoft 365 and Azure blog posts from real projects. Practical guides and solutions that actually work."
+  },
+  "blogarchive.meta.title": {
+    "message": "Blog Archive"
+  },
+  "blogarchive.meta.desc": {
+    "message": "Complete archive of my Microsoft 365 and Azure blog posts organized by year. Technical guides, implementations, and troubleshooting notes from real projects that also get added to my knowledge base."
+  },
+  "blogarchive.kicker": {
+    "message": "Archive"
+  },
+  "blogarchive.title": {
+    "message": "Blog Archive"
+  },
+  "blogarchive.description": {
+    "message": "All my blog posts from over the years, organized by date."
+  },
+  "blogarchive.year.posts": {
+    "message": "posts"
+  },
+  "blogarchive.backButton": {
+    "message": "Back to Latest Blog Posts"
   },
   "theme.blog.paginator.navAriaLabel": {
     "message": "Blog list page navigation",

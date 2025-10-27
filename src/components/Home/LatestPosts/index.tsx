@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import useGlobalData, { usePluginData } from "@docusaurus/useGlobalData";
+import Link from "@docusaurus/Link";
+import Translate from '@docusaurus/Translate';
 import Button from "../../ui/Button";
 import BlogCard from "../../BlogCard";
-import Translate from '@docusaurus/Translate';
 
 export interface LatestPostsProps { }
 
@@ -69,15 +70,15 @@ export default function LatestPosts(props: LatestPostsProps) {
         {/* View All Button */}
         {topSixPosts.length > 0 && (
           <div className="text-center mt-12">
-            <a 
-              href="/blog"
+            <Link 
+              to="/blog"
               className="btn btn-outline px-8 py-4 text-lg font-semibold rounded-full inline-flex items-center gap-2 hover:no-underline"
             >
               <Translate id="latest.viewAll">View All Posts</Translate>
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </Link>
           </div>
         )}
         

@@ -3,7 +3,9 @@
   "home.head.metaDescription": {"message": "Ich veröffentliche praxisnahe Notizen, Vorlagen und kleine Tools aus echten Projekten. Für praktische Unterstützung kannst du mich über Opsora buchen."},
 
   "home.hero.title": {"message": "Microsoft 365 & Azure Konfigurationen, die funktionieren"},
-  "home.hero.subtitle": {"message": "Ich veröffentliche praxisnahe Anleitungen und Tools. Wenn du praktische Hilfe brauchst, kannst du {strong}mich über Opsora buchen{/strong}."},
+  "home.hero.subtitle": {
+    "message": "Ich veröffentliche praxisnahe Anleitungen und Tools. Wenn du praktische Hilfe brauchst, kannst du mich über Opsora buchen."
+  },
   "home.hero.subtitle.prefix": {"message": "Ich veröffentliche praxisnahe Anleitungen und Tools. Wenn du praktische Hilfe brauchst, kannst du"},
   "home.hero.subtitle.cta": {"message": "mich über Opsora buchen"},
   "home.hero.browseDocs": {"message": "Dokumentation durchsuchen"},
@@ -105,7 +107,30 @@
   "blog.meta.desc": {"message": "Meine Microsoft 365- und Azure-Blogbeiträge – praxisnahe Einblicke aus echten Projekten, die auch in meine Wissensdatenbank einfließen. Technische Anleitungen, Implementierungen und Troubleshooting-Notizen ohne Marketing-Blabla."},
   "blog.kicker": {"message": "Neueste Beiträge"},
   "blog.title": {"message": "Blog"},
-  "blog.description": {"message": "Meine Microsoft 365- und Azure-Blogbeiträge aus realen Projekten. Diese Einblicke werden auch Teil meiner Wissensdatenbank – praxisnahe Anleitungen und Troubleshooting-Notizen ohne Marketing-Blabla."},
+  "blog.description": {
+    "message": "Meine Microsoft 365 und Azure Blog-Beiträge aus echten Projekten. Praxisnahe Anleitungen und Lösungen, die tatsächlich funktionieren."
+  },
+  "blogarchive.meta.title": {
+    "message": "Blog-Archiv"
+  },
+  "blogarchive.meta.desc": {
+    "message": "Vollständiges Archiv meiner Microsoft 365 und Azure Blog-Beiträge nach Jahr sortiert. Technische Anleitungen, Implementierungen und Troubleshooting-Notizen aus echten Projekten, die auch in meine Wissensdatenbank einfließen."
+  },
+  "blogarchive.kicker": {
+    "message": "Archiv"
+  },
+  "blogarchive.title": {
+    "message": "Blog-Archiv"
+  },
+  "blogarchive.description": {
+    "message": "Alle meine Blog-Beiträge der letzten Jahre, sortiert nach Datum."
+  },
+  "blogarchive.year.posts": {
+    "message": "Beiträge"
+  },
+  "blogarchive.backButton": {
+    "message": "Zurück zu den neuesten Blog-Beiträgen"
+  },
 
   "nav.banner.construction": {"message": "ConfigForge befindet sich noch im Aufbau"},
 
