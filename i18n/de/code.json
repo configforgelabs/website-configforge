@@ -7,7 +7,22 @@
   "home.hero.subtitle.prefix": {"message": "Ich veröffentliche praxisnahe Anleitungen und Tools. Wenn du praktische Hilfe brauchst, kannst du"},
   "home.hero.subtitle.cta": {"message": "mich über Opsora buchen"},
   "home.hero.browseDocs": {"message": "Dokumentation durchsuchen"},
+  "home.hero.browseDocs.tooltip": {
+    "message": "Die Dokumentation befindet sich derzeit in der Entwicklung"
+  },
+  "home.hero.inDevelopment": {
+    "message": "In Entwicklung"
+  },
   "home.hero.latestPosts": {"message": "Neueste Beiträge"},
+  "home.hero.card.role": {
+    "message": "Unabhängiger Microsoft 365 & Azure Architekt"
+  },
+  "home.hero.card.description": {
+    "message": "Ich helfe KMUs Lösungen zu bekommen, die zu ihren tatsächlichen Anforderungen passen, keine Upsells. Über 15 Jahre Erfahrung mit vollständiger Dokumentation und null Verkaufsdruck."
+  },
+  "home.hero.card.bookVia": {
+    "message": "Vertrauensvolle Beratung buchen über"
+  },
   "home.hero.brand.byOpsora": {"message": "von Opsora"},
   "home.hero.brand.subtitle": {"message": "Meine persönliche Wissens- und Tool-Sammlung"},
   "home.hero.brand.guides": {"message": "Anleitungen"},
@@ -42,9 +57,48 @@
   "vp.kicker": {"message": "Warum ConfigForge"},
   "vp.title": {"message": "Wie ConfigForge zu Opsora gehört"},
   "vp.desc": {"message": "Ich arbeite unter Opsora (Architektur, Implementierungen, Migrationen). Muster dokumentiere ich hier auf ConfigForge, damit andere sie wiederverwenden können. Soll ich das in Ihrem Tenant anwenden? Arbeiten Sie mit mir über Opsora."},
+  "vp.feature1.title": {
+    "message": "Aus echten Projekten"
+  },
+  "vp.feature1.desc": {
+    "message": "Jede Anleitung und Vorlage stammt aus meinen tatsächlichen Enterprise-Deployments. Keine theoretischen Beispiele - nur Lösungen, die in Produktionsumgebungen funktionieren."
+  },
+  "vp.feature2.title": {
+    "message": "Sofort einsetzbar"
+  },
+  "vp.feature2.desc": {
+    "message": "Überspringe die Recherchephase. Meine PowerShell-Skripte, ARM-Templates und Konfigurationen sind bereit, für deine Umgebung angepasst zu werden."
+  },
+  "vp.feature3.title": {
+    "message": "Muster die ich nutze"
+  },
+  "vp.feature3.desc": {
+    "message": "Lerne die Architekturmuster, die ich von KMU bis Enterprise umsetze. Governance, Sicherheit und Compliance von Anfang an integriert."
+  },
+  "vp.feature4.title": {
+    "message": "Mein Dokumentationsstil"
+  },
+  "vp.feature4.desc": {
+    "message": "Schritt-für-Schritt-Implementierungsanleitungen mit Troubleshooting-Abschnitten, Voraussetzungen und Post-Deployment-Validierungsschritten - so arbeite ich."
+  },
+  "vp.feature5.title": {
+    "message": "Zero-Trust zuerst"
+  },
+  "vp.feature5.desc": {
+    "message": "Sicherheits- und Governance-Muster, die Zero-Trust-Prinzipien von Grund auf implementieren. RBAC, Conditional Access und Compliance integriert."
+  },
+  "vp.feature6.title": {
+    "message": "Weniger Admin-Aufwand"
+  },
+  "vp.feature6.desc": {
+    "message": "Automatisierungs- und Self-Service-Muster, die manuelle Arbeit reduzieren. Weniger Tickets, weniger Eskalationen, mehr strategischer Fokus für IT-Teams."
+  },
   "vp.cta.title": {"message": "Bereit anzufangen?"},
   "vp.cta.desc": {"message": "Ich verkaufe hier keine Runbooks. Alles wird zum Lernen und zur Wiederverwendung geteilt."},
   "vp.cta.docs": {"message": "Dokumentation durchsuchen"},
+  "vp.cta.docs.tooltip": {
+    "message": "Die Dokumentation befindet sich derzeit in der Entwicklung"
+  },
   "vp.cta.book": {"message": "Eine Beratung über Opsora buchen"},
 
   "blog.meta.title": {"message": "Blog"},
@@ -62,12 +116,26 @@
   "footer.links.github": {"message": "GitHub (ConfigForge)"},
   "footer.links.linkedin": {"message": "LinkedIn"},
   "footer.meta.maintained": {"message": "Betreut von Tobias Schüle"},
-  "footer.meta.knowledge": {"message": "Wissen & Tools — keine Verkaufspitches"},
+  "footer.meta.knowledge": {
+    "message": "Wissen & Tools - keine Verkaufspitches"
+  },
   "footer.nav.title": {"message": "Navigation"},
   "footer.nav.docs": {"message": "Dokumentation"},
   "footer.nav.resources": {"message": "Ressourcen"},
   "footer.nav.tools": {"message": "Tools"},
   "footer.nav.about": {"message": "Über"},
+  "footer.nav.home": {
+    "message": "Startseite"
+  },
+  "footer.nav.blog": {
+    "message": "Blog"
+  },
+  "footer.nav.blogarchive": {
+    "message": "Blog-Archiv"
+  },
+  "footer.nav.contact": {
+    "message": "Kontakt / Buchen"
+  },
   "footer.topics.title": {"message": "Beliebte Themen"},
   "footer.topics.identity": {"message": "Identität & Sicherheit (Entra ID / CA)"},
   "footer.topics.intune": {"message": "Endpoints mit Intune (Autopilot, Compliance)"},

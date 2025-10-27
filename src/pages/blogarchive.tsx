@@ -87,7 +87,7 @@ const Year: React.FC<YearProps> = ({ year, posts }) => {
       </div>
 
       {/* Posts List */}
-      <ul className="space-y-4">
+      <ul className="space-y-4 list-none">
         {posts.map((post, index) => (
           <li key={post.date} className="group">
             <Link
@@ -170,7 +170,7 @@ const BlogArchive: React.FC = () => {
                 Blog Archive
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                My complete blog post history organized by year. Each entry represents learnings from real Microsoft 365 and Azure implementations that also get added to my knowledge base—solutions that actually worked in production.
+                All my blog posts from over the years, organized by date.
               </p>
             </div>
 
@@ -187,7 +187,10 @@ const BlogArchive: React.FC = () => {
             <div className="text-center mt-16">
               <Link 
                 to="/blog"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors hover:no-underline"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-200 hover:no-underline bg-[#1a56db] text-white hover:bg-[#1749c4] hover:text-white dark:bg-[#1a56db] dark:text-white dark:hover:bg-[#1749c4] dark:hover:text-white"
+                style={{
+                  boxShadow: '0 10px 15px -3px rgba(26, 86, 219, 0.3), 0 4px 6px -2px rgba(26, 86, 219, 0.2)'
+                }}
               >
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />

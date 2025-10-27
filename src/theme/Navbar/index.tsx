@@ -10,27 +10,8 @@ type Props = WrapperProps<typeof NavbarType>;
 export default function NavbarWrapper(props: Props): JSX.Element {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [isDesktop, setIsDesktop] = useState(true);
 
   useEffect(() => {
-    // Check if viewport is desktop
-    const checkViewport = () => {
-      setIsDesktop(window.innerWidth > 996); // Docusaurus mobile breakpoint
-    };
-
-    checkViewport();
-    window.addEventListener('resize', checkViewport);
-
-    return () => window.removeEventListener('resize', checkViewport);
-  }, []);
-
-  useEffect(() => {
-    // Only apply scroll behavior on desktop
-    if (!isDesktop) {
-      setIsVisible(true);
-      return;
-    }
-
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
@@ -50,7 +31,7 @@ export default function NavbarWrapper(props: Props): JSX.Element {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY, isDesktop]);
+  }, [lastScrollY]);
 
   return (
     <>
@@ -58,39 +39,22 @@ export default function NavbarWrapper(props: Props): JSX.Element {
         <OriginalNavbar {...props} />
       <style jsx>{`
         .navbar-wrapper {
-          position: relative;
+          position: sticky;
+          top: 0;
           z-index: 50;
+          transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+          will-change: transform;
         }
         
-        /* Only apply sticky behavior and hide/show on desktop */
-        @media (min-width: 997px) {
-          .navbar-wrapper {
-            position: sticky;
-            top: 0;
-            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            will-change: transform;
-          }
-          
-          .navbar-wrapper.navbar-hidden {
-            transform: translateY(-100%);
-            opacity: 0;
-            pointer-events: none;
-          }
-          
-          .navbar-wrapper.navbar-visible {
-            transform: translateY(0);
-            opacity: 1;
-          }
+        .navbar-wrapper.navbar-hidden {
+          transform: translateY(-100%);
+          opacity: 0;
+          pointer-events: none;
         }
         
-        /* Mobile: always visible, no animations */
-        @media (max-width: 996px) {
-          .navbar-wrapper {
-            position: relative;
-            transform: none !important;
-            opacity: 1 !important;
-            pointer-events: auto !important;
-          }
+        .navbar-wrapper.navbar-visible {
+          transform: translateY(0);
+          opacity: 1;
         }
         
         .navbar-wrapper :global(.navbar) {

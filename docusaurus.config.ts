@@ -140,6 +140,11 @@ const config: Config = {
             position: "left",
           },
           {
+            to: "/blogarchive",
+            label: "Blog Archive",
+            position: "left",
+          },
+          {
             type: "localeDropdown",
             position: "right",
           },

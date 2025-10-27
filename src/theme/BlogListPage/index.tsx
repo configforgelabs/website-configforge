@@ -47,7 +47,7 @@ function BlogListPageContent(props: Props) {
               <Translate id="blog.title">Blog</Translate>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              <Translate id="blog.description">My Microsoft 365 and Azure blog posts from real projects. These insights also become part of my knowledge base—practical guides and troubleshooting notes with no marketing fluff, just what actually works.</Translate>
+              <Translate id="blog.description">My Microsoft 365 and Azure blog posts from real projects. These insights also become part of my knowledge base - practical guides and troubleshooting notes with no marketing fluff, just what actually works.</Translate>
             </p>
           </div>
 

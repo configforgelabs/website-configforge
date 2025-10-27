@@ -18,7 +18,7 @@
     "message": "Blog"
   },
   "blog.description": {
-    "message": "My Microsoft 365 and Azure blog posts from real projects. These insights also become part of my knowledge base—practical guides and troubleshooting notes with no marketing fluff, just what actually works."
+    "message": "My Microsoft 365 and Azure blog posts from real projects. These insights also become part of my knowledge base - practical guides and troubleshooting notes with no marketing fluff, just what actually works."
   },
   "theme.blog.paginator.navAriaLabel": {
     "message": "Blog list page navigation",
@@ -46,7 +46,7 @@
     "message": "Maintained by Tobias Schüle"
   },
   "footer.meta.knowledge": {
-    "message": "Knowledge & tools — no sales pitches"
+    "message": "Knowledge & tools - no sales pitches"
   },
   "footer.nav.title": {
     "message": "Navigation"
@@ -62,6 +62,18 @@
   },
   "footer.nav.about": {
     "message": "About"
+  },
+  "footer.nav.home": {
+    "message": "Home"
+  },
+  "footer.nav.blog": {
+    "message": "Blog"
+  },
+  "footer.nav.blogarchive": {
+    "message": "Blog Archive"
+  },
+  "footer.nav.contact": {
+    "message": "Contact / Book"
   },
   "footer.topics.title": {
     "message": "Popular topics"
@@ -88,7 +100,7 @@
     "message": "© 2025 ConfigForge · by"
   },
   "footer.copyright.suffix": {
-    "message": "— All rights reserved."
+    "message": "- All rights reserved."
   },
   "footer.legal.privacy": {
     "message": "Privacy"
@@ -111,6 +123,9 @@
   "home.hero.title": {
     "message": "Microsoft 365 & Azure configs that work"
   },
+  "home.hero.subtitle": {
+    "message": "I publish practical guides and tools. If you need hands-on help, you can book me via Opsora."
+  },
   "home.hero.subtitle.prefix": {
     "message": "I publish practical guides and tools. If you need hands-on help, you can"
   },
@@ -120,8 +135,23 @@
   "home.hero.browseDocs": {
     "message": "Browse Docs"
   },
+  "home.hero.browseDocs.tooltip": {
+    "message": "Documentation is currently under development"
+  },
+  "home.hero.inDevelopment": {
+    "message": "In Development"
+  },
   "home.hero.latestPosts": {
     "message": "Latest Posts"
+  },
+  "home.hero.card.role": {
+    "message": "Independent Microsoft 365 & Azure Architect"
+  },
+  "home.hero.card.description": {
+    "message": "I help SMEs get solutions that fit their actual needs, not upsells. 15+ years experience with full documentation and zero sales pressure."
+  },
+  "home.hero.card.bookVia": {
+    "message": "Book trusted consulting via"
   },
   "home.hero.brand.byOpsora": {
     "message": "by Opsora"
@@ -172,7 +202,7 @@
     "message": "Recent Posts"
   },
   "latest.section.desc": {
-    "message": "Recent notes from my Microsoft 365 and Azure work. Short reads with concrete steps you can apply immediately—no fluff."
+    "message": "Recent notes from my Microsoft 365 and Azure work. Short reads with concrete steps you can apply immediately - no fluff."
   },
   "latest.empty.title": {
     "message": "No posts yet"
@@ -204,8 +234,53 @@
   "vp.desc": {
     "message": "I do client work under Opsora (architecture, implementations, migrations). I document patterns here on ConfigForge so others can reuse them. Want me to apply this in your tenant? Work with me on Opsora."
   },
+  "vp.feature1.title": {
+    "message": "From Real Projects"
+  },
+  "vp.feature1.desc": {
+    "message": "Every guide and template comes from my actual enterprise deployments. No theoretical examples - only solutions that work in production environments."
+  },
+  "vp.feature2.title": {
+    "message": "Ready to Use"
+  },
+  "vp.feature2.desc": {
+    "message": "Skip the research phase. My PowerShell scripts, ARM templates, and configurations are ready to adapt for your environment."
+  },
+  "vp.feature3.title": {
+    "message": "Patterns I Use"
+  },
+  "vp.feature3.desc": {
+    "message": "Learn the architectural patterns I implement from SMB to enterprise. Governance, security, and compliance built in from day one."
+  },
+  "vp.feature4.title": {
+    "message": "My Documentation Style"
+  },
+  "vp.feature4.desc": {
+    "message": "Step-by-step implementation guides with troubleshooting sections, prerequisites, and post-deployment validation steps - how I work."
+  },
+  "vp.feature5.title": {
+    "message": "Zero-Trust First"
+  },
+  "vp.feature5.desc": {
+    "message": "Security and governance patterns that implement Zero-Trust principles from the ground up. RBAC, Conditional Access, and compliance built in."
+  },
+  "vp.feature6.title": {
+    "message": "Reduced Admin Drag"
+  },
+  "vp.feature6.desc": {
+    "message": "Automation and self-service patterns that reduce manual work. Less tickets, fewer escalations, more strategic focus for IT teams."
+  },
+  "vp.cta.title": {
+    "message": "Ready to get started?"
+  },
+  "vp.cta.desc": {
+    "message": "I don't sell runbooks here. Everything is shared for learning and reuse."
+  },
   "vp.cta.docs": {
     "message": "Browse Docs"
+  },
+  "vp.cta.docs.tooltip": {
+    "message": "Documentation is currently under development"
   },
   "vp.cta.book": {
     "message": "Book a consultation via Opsora"

@@ -302,6 +302,11 @@ export function Footer() {
                   </a>
                 </li>
                 <li>
+                  <a href="/blogarchive" className="text-sm regular-link">
+                    <Translate id="footer.nav.blogarchive">Blog Archive</Translate>
+                  </a>
+                </li>
+                <li>
                   <a
                     href="https://opsora.io/contact?utm_source=configforge&utm_medium=footer&utm_campaign=nav"
                     target="_blank"
@@ -389,9 +394,9 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Translate id="footer.copyright.opsora">– by Opsora</Translate>
+                <Translate id="footer.copyright.opsora">- by Opsora</Translate>
               </a>{' '}
-              <Translate id="footer.copyright.suffix">— All rights reserved.</Translate>
+              <Translate id="footer.copyright.suffix">- All rights reserved.</Translate>
             </div>
 
             <div className="flex items-center gap-4 text-sm meta-text">
