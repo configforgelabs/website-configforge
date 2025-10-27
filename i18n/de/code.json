@@ -3,7 +3,7 @@
   "home.head.metaDescription": {"message": "Ich veröffentliche praxisnahe Notizen, Vorlagen und kleine Tools aus echten Projekten. Für praktische Unterstützung kannst du mich über Opsora buchen."},
 
   "home.hero.title": {"message": "Microsoft 365 & Azure Konfigurationen, die funktionieren"},
-  "home.hero.subtitle": {"message": "Ich veröffentliche praxisnahe Anleitungen und Tools. Wenn du praktische Hilfe brauchst, kannst du <strong>mich über Opsora buchen</strong>."},
+  "home.hero.subtitle": {"message": "Ich veröffentliche praxisnahe Anleitungen und Tools. Wenn du praktische Hilfe brauchst, kannst du {strong}mich über Opsora buchen{/strong}."},
   "home.hero.subtitle.prefix": {"message": "Ich veröffentliche praxisnahe Anleitungen und Tools. Wenn du praktische Hilfe brauchst, kannst du"},
   "home.hero.subtitle.cta": {"message": "mich über Opsora buchen"},
   "home.hero.browseDocs": {"message": "Dokumentation durchsuchen"},
