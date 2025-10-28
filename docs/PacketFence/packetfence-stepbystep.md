@@ -1,12 +1,12 @@
 ---
 title: Step-by-Step Guide- Setting Up PacketFence for Enterprise Network Access Control
-description: "Comprehensive guide to setting up PacketFence for enterprise network access control, covering configuration, PKI, and Intune integration."
+description: "Comprehensive guide to setting up PacketFence for enterprise network access control, covering installation, configuration, and security best practices."
 sidebar_position: 0
 slug: /packetfence-stepbystep
 authors: [Tobias]
 date: 2025-07-28
-keywords: [PacketFence,Security,Intune]
-tags: [PacketFence,Security,Intune]
+keywords: [PacketFence,Intune,Security]
+tags: [PacketFence,Intune,Security]
 last_update: 
  date: 2025-10-28
  author: Tobias
@@ -121,11 +121,7 @@ These commands extract the private key and certificate from a PKCS#12 bundle. Th
 
 :::tip
 
-:::note
-
-Important: The private key string needs to start with -----BEGIN RSA PRIVATE KEY----- and end with the corresponding footer. Also, make sure the intermediate certificate is added, otherwise the portal service over port 443 won't be available.
-
-:::
+The private key string needs to start with -----BEGIN RSA PRIVATE KEY----- and end with the corresponding footer. Also, make sure the intermediate certificate is added, otherwise the portal service over port 443 won't be available.
 
 :::
 
@@ -141,22 +137,18 @@ Important: The private key string needs to start with -----BEGIN RSA PRIVATE KEY
 4. Replace **HTTP Server Private Key** with the content of **server.key** - include the full text with BEGIN and END PRIVATE KEY lines
 5. Click **Save** to apply changes
 
-	![](./packetfence-stepbystep.23efa6da-3fef-806a-8c9c-f3a8f175d938.png)
+	![](./packetfence-stepbystep.29afa6da-3fef-8051-9746-f94471077b07.png)
 
 6. **IMPORTANT:** Restart services to make HTTP/80 available by clicking on the "Restart" button in the confirmation dialog
 
-	![](./packetfence-stepbystep.23efa6da-3fef-8088-babe-cb603b9901c8.png)
+	![](./packetfence-stepbystep.29afa6da-3fef-802b-99b2-e38be5907667.png)
 
 
 
-
-:::note
 
 :::tip
 
 After making certificate changes, verify that both HTTP and HTTPS services are functioning correctly. Use browser tools to check certificate validity. If you access the management interface and see a valid HTTPS connection without warnings, your certificate installation was successful. Remember that the captive portal needs to work on both HTTP and HTTPS to handle various client redirections properly.
-
-:::
 
 :::
 
@@ -178,7 +170,7 @@ PacketFence includes an integrated PKI (Public Key Infrastructure) that allows y
 
 2. Enter your organization's CA details and save. Include meaningful information in fields like Organization, Organizational Unit, and Common Name to identify your CA properly
 
-	![](./packetfence-stepbystep.23efa6da-3fef-80ca-b8b1-c6dd2463bc51.png)
+	![](./packetfence-stepbystep.29afa6da-3fef-8085-818d-c6e1048abddd.png)
 
 3. Copy and save the CA public cert as **ca.crt** - you'll need this file later for device configurations and RADIUS setup
 
@@ -202,7 +194,7 @@ Before creating certificate templates, we need to set up Intune integration to e
 	- DeviceManagementManagedDevices.ReadWrite.All
 	- DeviceManagementServiceConfig.ReadWrite.All
 
-	![](./packetfence-stepbystep.23efa6da-3fef-80c4-8188-d4749bab2849.png)
+	![](./packetfence-stepbystep.29afa6da-3fef-8044-a309-dbee88693a84.png)
 
 3. Create a client secret and copy its value - note that this secret will only be shown once during creation
 
@@ -238,7 +230,7 @@ We need to create two certificate templates with specific configurations:
 
 
 
-![](./packetfence-stepbystep.23efa6da-3fef-80fb-96e9-cdbce12c3ade.png)
+![](./packetfence-stepbystep.29afa6da-3fef-80fe-b83a-c88626fd0bfd.png)
 
 
 This template is used to generate the certificate that secures communications between wireless clients and the RADIUS server during 802.1X authentication.
@@ -268,9 +260,9 @@ For the User Certificate template, make sure to:
 2. Create a secure challenge password - this should be complex and randomly generated
 3. Enable Cloud Integration and select your Intune profile to link certificate enrollment with your MDM solution
 
+	![](./packetfence-stepbystep.29afa6da-3fef-808a-ada3-cb939241e780.png)
 
 
-![](./packetfence-stepbystep.23efa6da-3fef-8065-8b37-c7d514fef880.png)
 
 
 SCEP allows devices to request certificates automatically without manual intervention, while the Intune integration ensures that only managed devices can obtain certificates.
@@ -349,7 +341,7 @@ The -legacy parameter is needed because PacketFence uses an older encryption for
 ![](./packetfence-stepbystep.23efa6da-3fef-8099-a358-e7ad5550d5ee.png)
 
 
-![](./packetfence-stepbystep.23efa6da-3fef-8046-af1e-ee2844821fcf.png)
+![](./packetfence-stepbystep.29afa6da-3fef-80fc-899b-f3dfd5216871.png)
 
 
 These steps configure the RADIUS server to use your custom certificate for all 802.1X authentication transactions. This is critical for secure wireless deployments as it allows clients to verify the identity of the RADIUS server before sending credentials.
@@ -377,7 +369,7 @@ For security purposes, only publish the specific SCEP endpoint rather than expos
 2. Select **Configure an app** to create a new application proxy configuration
 3. For the Internal URL:
 
-	![](./packetfence-stepbystep.23efa6da-3fef-8081-8468-df430733b512.png)
+	![](./packetfence-stepbystep.29afa6da-3fef-80c2-b10e-c04a6e8003ba.png)
 
 	- Use HTTP (not HTTPS) - PacketFence's SCEP endpoint runs on HTTP
 	- Format should be: http://packetfence.yourdomain.com/scep/
