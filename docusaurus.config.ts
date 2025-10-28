@@ -52,8 +52,7 @@ const config: Config = {
     },
   },
   customFields: {
-    placeholderImageURL:
-      "https://ourcloudnetwork.com/wp-content/uploads/2023/10/Protecting-breakglassreakglass-accounts-with-Azure-Automation.png",
+    placeholderImageURL: "/img/placeholder/previewimage.png",
   },
   presets: [
     [
