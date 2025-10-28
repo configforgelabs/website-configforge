@@ -1,6 +1,6 @@
 ---
 title: Step-by-Step Guide- Setting Up PacketFence for Enterprise Network Access Control
-description: "Comprehensive guide to setting up PacketFence for enterprise network access control, covering installation, configuration, and security best practices."
+description: "Comprehensive guide for setting up PacketFence NAC with PKI integration, Intune connectivity, and secure device management."
 sidebar_position: 0
 slug: /packetfence-stepbystep
 authors: [Tobias]
@@ -595,11 +595,7 @@ The eapol_test utility can be found in the FreeRADIUS project and is available f
 
 :::tip
 
-:::note
-
 You can download eapol_test from the following repository: [https://github.com/janetuk/eapol_test](https://github.com/janetuk/eapol_test)
-
-:::
 
 :::
 
@@ -703,11 +699,7 @@ This command shows real-time authentication attempts and can be extremely helpfu
 
 :::tip
 
-:::note
-
-Note: When reviewing logs, you may see some warning messages about "No EAP types configured". These can safely be ignored as they are not errors, but rather informational messages from the RADIUS server.Note: When reviewing logs, you may see some warning messages about "No EAP types configured". These can safely be ignored as they are not errors, but rather informational messages from the RADIUS server.
-
-:::
+When reviewing logs, you may see some warning messages about "No EAP types configured". These can safely be ignored as they are not errors, but rather informational messages from the RADIUS server.
 
 :::
 
