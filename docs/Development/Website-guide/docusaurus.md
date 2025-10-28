@@ -1,14 +1,14 @@
 ---
 title: docusaurus
-description: "Instructions for DocuSaurus"
+description: "Docusaurus installation guide: Node.js setup, create instance, run commands for building and serving, and update instructions."
 sidebar_position: 1
 slug: /docusaurus
 authors: [Tobias]
 date: 2024-09-06
-keywords: [Docusaurus]
-tags: [Docusaurus]
+keywords: [Docusaurus,NPM]
+tags: [Docusaurus,NPM]
 last_update: 
- date: 2024-09-08
+ date: 2025-10-27
  author: Tobias
 ---
 
@@ -29,11 +29,13 @@ last_update:
 ### Run {#3e342a47361545b9bf8777815eb528c4}
 
 
-1. Build  `npm run build`
-2. Build and start `npm run start`
-3. Start `npm run serve`
-4. Build `npm run docusaurus build`
-5. Build and start `npm docusaurus start`
+1. For EN und DE support:
+`npm run build && npm run serve`
+2. Build  `npm run build`
+3. Build and start `npm run start`
+4. Start `npm run serve`
+5. Build `npm run docusaurus build`
+6. Build and start `npm docusaurus start`
 
 
 
